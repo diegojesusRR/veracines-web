@@ -1,21 +1,45 @@
 // Type imports
 import type { ManifestOptions } from "vite-plugin-pwa"
 
+const Metadata: Record<string, { title: string, description: string, canonical: string }> = {
+	home: {
+		title: "Veracines - Cines de Verano en Vera y Garrucha",
+		description: "Cine de verano en Vera y Garrucha. Descubre las películas de estreno en Vera y Garrucha. Disvruta la experiencia del cine de verano en Veracines.",
+		canonical: "https://www.veracines.es"
+	},
+
+	"cartelera-vera": {
+		title: "Cartelera Veracines",
+		description: "Cartelera del cine de verano en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine de verano en Veracines.",
+		canonical: "https://www.veracines.es/cartelera-vera"
+	},
+	"cartelera-garrucha": {
+		title: "Cartelera Cines",
+		description: "Cartelera de Cine Tenis de Garrucha. Descubre las películas de estreno en Garrucha. Disvruta la experiencia del cine de verano en Veracines.",
+		canonical: "https://www.veracines.es/cartelera-cines"
+	},
+	"cartelera-regio": {
+		title: "Cartelera Regio",
+		description: "Cartelera del cine de invierno en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine Regio en Veracines.",
+		canonical: "https://www.veracines.es/cartelera-regio"
+	},
+
+} as const
+
 /**
  * Defines the default SEO configuration for the website.
  */
 export const seoConfig = {
-	baseURL: "https://lavelada.es/", // Production URL.
-	description:
-		"Web Oficial de La Velada del Año IV, evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos.",
+	baseURL: Metadata.home.canonical, // Production URL.
+	description: Metadata.home.description,
 	type: "website",
 	image: {
-		url: "https://lavelada.es/img/og.jpg",
-		alt: "La Velada",
+		url: `${Metadata.home.canonical}/img/logo.jpg`,
+		alt: "Veracines",
 		width: 705,
 		height: 606,
 	},
-	siteName: "La Velada",
+	siteName: "Veracines",
 	twitter: {
 		card: "summary_large_image",
 	},
@@ -25,55 +49,18 @@ export const seoConfig = {
  * Defines the configuration for PWA webmanifest.
  */
 export const manifest: Partial<ManifestOptions> = {
-	name: "La Velada",
-	short_name: "La Velada",
-	description:
-		"Web Oficial de La Velada del Año IV, evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos.",
-	theme_color: "#d5ff00",
-	background_color: "#d5ff00",
+	name: Metadata.home.title,
+	short_name: "Veracines",
+	description: Metadata.home.description,
+	theme_color: "#2e4390",
+	background_color: "#2e4390",
 	display: "fullscreen",
 	icons: [
 		{
-			src: "/img/icons/favicon-192x192.png",
+			src: "/img/icons/favicon.png",
 			sizes: "192x192",
 			type: "image/png",
 		},
-		{
-			src: "/img/icons/favicon-512x512.png",
-			sizes: "512x512",
-			type: "image/png",
-		},
-		{
-			src: "/img/icons/favicon-512x512.png",
-			sizes: "512x512",
-			type: "image/png",
-			purpose: "any maskable",
-		},
-	],
-	screenshots: [
-		{
-			src: "/img/screenshots/desktop_1.jpg",
-			type: "image/jpeg",
-			sizes: "1024x964",
-			form_factor: "wide",
-		},
-		{
-			src: "/img/screenshots/desktop_2.jpg",
-			type: "image/jpeg",
-			sizes: "1024x964",
-			form_factor: "wide",
-		},
-		{
-			src: "/img/screenshots/mobile_1.jpg",
-			type: "image/jpeg",
-			sizes: "360x593",
-			form_factor: "narrow",
-		},
-		{
-			src: "/img/screenshots/mobile_2.jpg",
-			type: "image/jpeg",
-			sizes: "360x593",
-			form_factor: "narrow",
-		},
+
 	],
 }
