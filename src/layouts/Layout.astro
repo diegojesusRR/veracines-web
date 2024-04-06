@@ -1,0 +1,168 @@
+---
+import { ViewTransitions } from "astro:transitions"
+
+import ButtonUp from "@/components/ButtonUp.astro"
+import Header from "@/components/Header.astro"
+import KonamiCode from "@/components/KonamiCode.astro"
+
+import SEO from "@/components/SEO.astro"
+import type { Preload } from "@/types/Preload"
+
+import Toast from "@/components/ui/Toast.astro"
+import Footer from "@/sections/Footer.astro"
+import "@fontsource-variable/jost"
+
+interface Props {
+	title: string
+	description: string
+	preload?: Array<Preload>
+	canonical?: string
+	image?: string
+}
+
+const { title, description, preload, canonical, image } = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<SEO
+			canonical={canonical}
+			description={description}
+			image={image}
+			preload={preload}
+			title={title}
+		/>
+		<ViewTransitions />
+	</head>
+
+	<body
+		class="overflow-x-hidden selection:bg-primary selection:text-secondary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"
+	>
+		<Header />
+		<div
+			class="mx-auto min-h-screen max-w-6xl px-2 pt-16 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10"
+			id="main-content"
+		>
+			<slot />
+			<Footer />
+			<KonamiCode />
+			<Toast />
+			<!-----------------------------
+     `    ``               `
+      ``  _ `      `       ``
+     `   |_| `  `` ``    `  `
+    ``  -___-_` `   ` --------------
+  ``   /      )      | This is fine |`
+ `____/| (0) (0)_()  |/-------------  `
+/|   | |   ^____)      ``      ``
+||   |_|    \_//     Uɔ````   `` ``
+||    || |    |    ========`  ``  ``
+||    || |    |      ||     ``   `
+||     \\_\   |\     ||   ```    `
+=========||====||    ||  ``       `
+  || ||   \Ɔ || \Ɔ   ||   ``    ``
+  || ||      ||      ||  `     ``
+--------------------------------->
+		</div>
+		<ButtonUp />
+		<style is:global>
+			:root {
+				--color-primary: #2e4390;
+				--color-secondary: #fd7e14;
+				--color-tertiary: #dc3545;
+				--color-accent: #2e4390;
+				--color-accent-rgb: 10, 85, 205;
+
+				--color-azul: #2e4390;
+				--color-naranja: #fd7e14;
+				--color-rojo: #dc3545;
+
+				--background-color: repeating-linear-gradient(
+					135deg,
+					#f7f7f7,
+					#fafafa 500px,
+					#ffffff 500px,
+					#fcfcfc 1000px
+				);
+
+				--background-color-white: #ffffff;
+			}
+
+			@font-face {
+				font-family: Atomic;
+				font-display: swap;
+				src: url("/fonts/atomic.woff2") format("woff2");
+			}
+
+			html {
+				font-family: "Jost Variable", system-ui, sans-serif;
+				background: var(--background-color);
+				scrollbar-gutter: stable;
+			}
+
+			main {
+				position: relative;
+			}
+
+			body {
+				&:has(dialog[open]) {
+					overflow: hidden;
+				}
+			}
+
+			/* Hiding class, making content visible only to screen readers but not visually */
+			/* "sr" meaning "screen-reader" */
+			.sr-only:not(:focus):not(:active) {
+				clip: rect(0 0 0 0);
+				clip-path: inset(50%);
+				height: 1px;
+				overflow: hidden;
+				position: absolute;
+				white-space: nowrap;
+				width: 1px;
+			}
+
+			@supports selector(::-webkit-scrollbar) {
+				::-webkit-scrollbar {
+					width: 10px;
+					border-radius: 10px;
+				}
+
+				::-webkit-scrollbar-thumb {
+					border-radius: 10px;
+					background-color: theme("colors.primary");
+					border: 2px solid transparent;
+					background-clip: content-box;
+				}
+
+				::-webkit-scrollbar-thumb:active {
+					background-color: #666;
+				}
+
+				::-webkit-scrollbar-track {
+					background: var(--background-image);
+				}
+
+				::-webkit-scrollbar-corner {
+					background: var(--background-image);
+				}
+			}
+
+			@supports not selector(::-webkit-scrollbar) {
+				* {
+					scrollbar-color: theme("colors.primary") transparent;
+					scrollbar-width: thin;
+				}
+			}
+
+			.anchor-main-content {
+				pointer-events: none;
+			}
+
+			.anchor-main-content:focus {
+				pointer-events: all;
+			}
+		</style>
+	</body>
+</html>

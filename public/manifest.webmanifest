@@ -1,0 +1,16 @@
+{
+  "name": "Veracines",
+  "short_name": "Veracines",
+  "description": " ",
+  "theme_color": "#d5ff00",
+  "background_color": "#d5ff00",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/img/icons/favicon.png",
+      "sizes": "1280x1280",
+      "type": "image/png"
+    },
+
+  ]
+}
