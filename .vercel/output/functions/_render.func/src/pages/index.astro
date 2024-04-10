@@ -10,6 +10,8 @@ import SelectYourBoxer from "@/sections/SelectYourBoxer.astro"
 import Sponsors from "@/sections/Sponsors.astro"
 import {Metadata} from "../consts/metadata";
 import PeliculaPrincipal from "../components/peliculaPrincipal.astro";
+import ComprarEntradas from "../components/ComprarEntradas.astro";
+import SiguientePelicula from "../components/siguientePelicula.astro";
 
 export const prerender = false
 ---
@@ -22,6 +24,8 @@ export const prerender = false
 	<Hero />
 
 	<main>
+		<ComprarEntradas />
 		<PeliculaPrincipal />
+		<SiguientePelicula />
 	</main>
 </Layout>
