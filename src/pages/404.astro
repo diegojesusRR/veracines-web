@@ -1,11 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import Error from "@/sections/Error.astro"
+import {Metadata} from "../consts/metadata";
 ---
 
 <Layout
-	description="Web Oficial de La Velada del Año IV, evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos"
-	title="La Velada del Año 4 - Página no encontrada"
+	description={Metadata.home.description}
+	title={Metadata.home.title}
 >
 	<main>
 		<Error

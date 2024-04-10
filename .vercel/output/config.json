@@ -28,10 +28,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/combates\\/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^\\/legal-advice\\/?$",
 			"dest": "_render"
 		},
@@ -40,7 +36,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/pronosticos\\/?$",
+			"src": "^\\/cartelera-([^/]+?)\\/?$",
 			"dest": "_render"
 		},
 		{
