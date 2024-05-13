@@ -3,15 +3,10 @@ import Layout from "@/layouts/Layout.astro"
 import Countdown from "@/sections/Countdown.astro"
 
 import Hero from "@/sections/Hero.astro"
-import Info from "@/sections/Info.astro"
-import PresentationVideo from "@/sections/PresentationVideo.astro"
-import PrincipalDate from "@/sections/PrincipalDate.astro"
-import SelectYourBoxer from "@/sections/SelectYourBoxer.astro"
-import Sponsors from "@/sections/Sponsors.astro"
+
 import {Metadata} from "../consts/metadata";
 import PeliculaPrincipal from "../components/peliculaPrincipal.astro";
 import ComprarEntradas from "../components/ComprarEntradas.astro";
-import SiguientePelicula from "../components/siguientePelicula.astro";
 
 export const prerender = false
 ---
@@ -26,5 +21,6 @@ export const prerender = false
 	<main>
 		<ComprarEntradas />
 		<PeliculaPrincipal />
+
 	</main>
 </Layout>
