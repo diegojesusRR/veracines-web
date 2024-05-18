@@ -5,12 +5,13 @@ import {PELICULAS} from "../consts/peliculas";
 const { cine } = Astro.props;
 
 const gruposProyecciones: number[] = [... new Set(PROYECCIONES.filter(proyeccion => proyeccion.cineId === cine.url && proyeccion.fecha >= new Date())?.map(x => x.grupo))];
-
-console.log(gruposProyecciones);
 ---
 
-<div>
+<section id=`proyecciones-${cine.url}`>
     {
+        gruposProyecciones.length === 0 ?
+            <p>Actualmente no hay proyecciones disponibles.</p> :
+
         gruposProyecciones.map(grupo => {
             const proyecciones = PROYECCIONES.filter(proyeccion => proyeccion.cineId === cine.url && proyeccion.grupo === grupo);
             const pelicula = PELICULAS.find(pelicula => pelicula.id === proyecciones[0].peliculaId);
@@ -19,4 +20,4 @@ console.log(gruposProyecciones);
             );
         })
     }
-</div>
+</section>

@@ -6,14 +6,17 @@ const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Vierne
 
 const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
 ---
-
-<div class="p-2 m-4 border-2 align-middle bg-white bg-opacity-80">
-    <h2 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{pelicula.nombre}</h2>
-    <div class=`flex flex-col-reverse md:flex-row flex-grow`>
-        <div class=`flex flex-col justify-around justify-center items-center p-5`>
-            <div class="flex flex-col">
-                <h3 class=`flex-1 text-${cine.color} text-center font-bold underline mt-2`>Proyecciones</h3>
-                <ul class=`flex-2 text-center text-${cine.color} list-none list-inside`>
+<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8">
+    <h2 class=`text-xl col-span-3 text-${cine.color} text-center font-bold underline mb-2`>{pelicula.nombre}</h2>
+    <div class="row-span-3 col-span-1">
+            <img class=`w-full border-4 border-${cine.color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
+            <p class=`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color}`>{pelicula.edadRedomendada}</p>
+    </div>
+    <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align`>
+        <div class=`flex flex-col justify-around justify-left items-center p-5`>
+            <div class="flex flex-col align-left text-center">
+                <h3 class=`flex-1 text-${cine.color} font-bold underline mt-2`>Proyecciones</h3>
+                <ul class=`flex-2 text-${cine.color} list-none list-inside`>
                     {diasProyeccion.map(dia => {
                         const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
 
@@ -25,26 +28,15 @@ const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fec
                     })}
                 </ul>
             </div>
-            <p class=`text-center text-${cine.color} text-s mt-2 mb-2`>{pelicula.descripcion.slice(0,300)}</p>
-
-            <Action
-                    class=`w-3/4 text-base md:text-xs`
-                    as=`a`
-                    aria-disabled=`false`
-                    href=`/cartelera-${cine.url}/`
-                    target=`_blank`
-                    rel=`noopener noreferrer`
-                    aria-label=`Comprar entradas para ${pelicula.nombre} en ${cine.nombre}`
-                    color=`${cine.color}`
-            >
-                Comprar entradas
-            </Action>
+            <div class="relative flex h-2 w-full flex-col items-center m-4">
+                <div class=" absolute w-full items-center justify-between">
+                    <div
+                            class="h-[2px] w-full rounded-l-[30%] border-t-0"
+                            style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"
+                    >
+                    </div>
+                </div>
         </div>
-        <div class="flex w-auto align-middle min-w-[200px]">
-            <div class=`flex flex-col md:mt-2 m-auto max-w-[300px]`>
-                <img class=`md:w-auto w-[300px] h-auto mr-auto ml-auto border-2 border-${cine.color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
-                <p class=`text-center text-${cine.color} text-xs font-bold w-auto p-2 border-2 border-${cine.color}`>{pelicula.edadRedomendada}</p>
-            </div>
+            <p class=`text-center text-${cine.color} line-clamp-5`>{pelicula.descripcion}</p>
         </div>
-    </div>
 </div>

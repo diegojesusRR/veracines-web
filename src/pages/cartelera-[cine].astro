@@ -16,7 +16,7 @@ const cine = CINES.find(cine => cine.url === Astro.params.cine);
 >
 
     <main>
-        <h1 class=`text-xl text-${cine.color} text-center font-bold`>Cartelera de {cine.nombre}</h1>
+        <h1 class=`text-xl text-${cine.color} text-center font-bold p-2`>Cartelera de {cine.nombre}</h1>
         <ProyeccionesCine cine={cine} />
     </main>
 </Layout>
