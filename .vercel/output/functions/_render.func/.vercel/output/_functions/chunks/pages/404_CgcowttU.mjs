@@ -103,9 +103,9 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$Header;
   const pages = [
     { name: "P\xE1gina Principal", href: "/" },
-    { name: "Cine Regio", href: "/cartelera-regio" },
     { name: "Terraza de verano de Vera", href: "/cartelera-vera" },
-    { name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" }
+    { name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
+    { name: "Cine Regio", href: "/cartelera-regio" }
   ].map((page) => ({
     ...page,
     active: Astro2.url.pathname === page.href
@@ -165,7 +165,7 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title, description, preload, canonical, image } = Astro2.props;
-  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-16 selection:bg-primary md:pt-20 lg:px-10" id="main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "KonamiCode", $$KonamiCode, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
+  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-16 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "KonamiCode", $$KonamiCode, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
 }, "/Users/diego.ramos/veracines-web/src/layouts/Layout.astro", void 0);
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -175,7 +175,7 @@ const $$Action = createComponent(async ($$result, $$props, $$slots) => {
   const { as: Tag, class: className, color, ...props } = Astro2.props;
   return renderTemplate`${renderComponent($$result, "Tag", Tag, { "class:list": [
     `inline-block skew-x-[-21deg] cursor-pointer border-2 border-${color ?? "primary"} text-center`,
-    `font-semibold uppercase`,
+    `font-semibold uppercase text-${color ?? "primary"}`,
     `px-5 py-2.5`,
     `before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-${color ?? "primary"}`,
     `hover:scale-110 hover:text-white hover:before:origin-left hover:before:scale-x-100`,
@@ -191,7 +191,7 @@ const $$Error = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$Error;
   const { error, message, contextMessage } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<section class="m-auto flex w-full flex-wrap place-items-center items-center justify-center text-primary"> <div class="m-5 mt-16 text-center"> ${renderComponent($$result, "Typography", $$Typography, { "as": "h1", "variant": "h3", "color": "primary", "class:list": "mb-10 font-bold" }, { "default": ($$result2) => renderTemplate`
-error ${error}` })} ${renderComponent($$result, "Typography", $$Typography, { "as": "h2", "variant": "h2", "color": "neutral", "class:list": "text-white" }, { "default": ($$result2) => renderTemplate` <p>${message}</p> ` })} <p class="mt-5 max-w-80 text-xl">${contextMessage}</p> ${renderComponent($$result, "Action", $$Action, { "class": "mt-7 text-center", "href": "/", "aria-label": "Volver a la p\xE1gina principal", "as": "a" }, { "default": ($$result2) => renderTemplate`
+error ${error}` })} ${renderComponent($$result, "Typography", $$Typography, { "as": "h2", "variant": "h2", "color": "neutral", "class:list": "text-primary" }, { "default": ($$result2) => renderTemplate` <p>${message}</p> ` })} <p class="mt-5 max-w-80 text-xl">${contextMessage}</p> ${renderComponent($$result, "Action", $$Action, { "class": "mt-7 text-center", "href": "/", "aria-label": "Volver a la p\xE1gina principal", "as": "a" }, { "default": ($$result2) => renderTemplate`
 Ir al inicio
 ` })} </div> </section>`;
 }, "/Users/diego.ramos/veracines-web/src/sections/Error.astro", void 0);

@@ -7,9 +7,9 @@ import { MOBILE_MENU_CONTENT_ID } from "@/consts/mobile-menu"
 
 const pages = [
 	{ name: "Página Principal", href: "/" },
-	{ name: "Cine Regio", href: "/cartelera-regio"},
 	{ name: "Terraza de verano de Vera", href: "/cartelera-vera"},
 	{ name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
+	{ name: "Cine Regio", href: "/cartelera-regio"},
 ].map((page) => ({
 	...page,
 	active: Astro.url.pathname === page.href,

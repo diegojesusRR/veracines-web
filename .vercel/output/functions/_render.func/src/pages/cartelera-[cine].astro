@@ -7,6 +7,10 @@ import {Metadata} from "../consts/metadata";
 import ProyeccionesCine from "../components/proyeccionesCine.astro";
 
 const cine = CINES.find(cine => cine.url === Astro.params.cine);
+
+if (!cine) {
+    return new Response(JSON.stringify("Cine Not found"), { status: 404 })
+}
 ---
 
 <Layout
@@ -16,7 +20,7 @@ const cine = CINES.find(cine => cine.url === Astro.params.cine);
 >
 
     <main>
-        <h1 class=`text-xl text-${cine.color} text-center font-bold p-2`>Cartelera de {cine.nombre}</h1>
+        <h1 class=`text-xl text-${cine.color} text-center font-bold`>Cartelera de {cine.nombre}</h1>
         <ProyeccionesCine cine={cine} />
     </main>
 </Layout>
