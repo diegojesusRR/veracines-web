@@ -17,7 +17,7 @@ const { percentage } = Astro.props
 	import { $ } from "@/lib/dom-selector"
 
 	const COLORS = {
-		"accent": "#b4cd02",
+		"primary": "#b4cd02",
 		"white": "#fff",
 		"white-50": "rgba(255, 255, 255, 0.5)",
 	}
@@ -41,8 +41,8 @@ const { percentage } = Astro.props
 			const radius = (canvas.width - arcWidth * 2) / 2 - 10
 
 			const gradientArc = ctx.createLinearGradient(0, 0, 0, canvas.height)
-			gradientArc.addColorStop(0, COLORS.accent)
-			gradientArc.addColorStop(0.25, COLORS.accent)
+			gradientArc.addColorStop(0, COLORS.primary)
+			gradientArc.addColorStop(0.25, COLORS.primary)
 			gradientArc.addColorStop(1, "transparent")
 
 			ctx.strokeStyle = gradientArc

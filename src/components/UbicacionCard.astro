@@ -1,0 +1,27 @@
+---
+import Action from "./Action.astro";
+const { cine } = Astro.props;
+---
+<div class=`flex flex-col md:flex-row p-2 m-4 border-2 align-middle flex-grow bg-white bg-opacity-80`>
+    <div class=`flex flex-col justify-around justify-center items-center p-5`>
+        <h2 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{cine.nombre}</h2>
+        <p class=`text-center text-${cine.color}`>{cine.localizacion.descripcion}</p>
+        <Action
+                class=`w-3/4 text-base md:text-xs`
+                as=`a`
+                aria-disabled=`false`
+                href=`/cartelera-${cine.url}/`
+                rel=`noopener noreferrer`
+                aria-label=`Enlace a la cartelera de ${cine.nombre}`
+        >
+            Consultar cartelera
+        </Action>
+
+    </div>
+    <div class=`flex flex-col md:mt-2`>
+        <iframe class=`align-middle w-auto` src=`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}` width=`400` height=`250` style=`border:0;` allowfullscreen=`` loading=`lazy` referrerpolicy=`no-referrer-when-downgrade`></iframe>
+        <p class=`text-center text-${cine.color} text-xs font-bold w-auto p-2`>{cine.localizacion.direccion}</p>
+    </div>
+
+
+</div>

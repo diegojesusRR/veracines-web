@@ -1,0 +1,13 @@
+---
+import UbicacionCard from "./UbicacionCard.astro";
+import {CINES} from "../consts/cines";
+---
+
+<section>
+    <h2 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h2>
+    {
+        CINES.map((cine) => (
+            <UbicacionCard cine={cine}/>
+        ))
+    }
+</section>

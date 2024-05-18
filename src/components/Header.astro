@@ -7,9 +7,9 @@ import { MOBILE_MENU_CONTENT_ID } from "@/consts/mobile-menu"
 
 const pages = [
 	{ name: "Página Principal", href: "/" },
-	{ name: "Cine Regio", href: "/cartelera-regio", disabled: true, soonDate: "En construcción"},
-	{ name: "Terraza de verano de Vera", href: "/cartelera-vera", disabled: true, soonDate: "Proximamente"},
-	{ name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" , disabled: true, soonDate: "Proximamente"},
+	{ name: "Cine Regio", href: "/cartelera-regio"},
+	{ name: "Terraza de verano de Vera", href: "/cartelera-vera"},
+	{ name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
 ].map((page) => ({
 	...page,
 	active: Astro.url.pathname === page.href,
@@ -26,19 +26,18 @@ const pages = [
 						class:list={[
 							"nav-item relative hidden h-full select-none flex-col items-center justify-center gap-1 text-center text-xl uppercase  lg:flex lg:px-7 xl:px-10 text-nowrap",
 							{ "pointer-events-none": disabled },
-							{ "current-page text-accent": active },
+							{ "current-page text-primary": active },
 							{ "text-primary": !active },
 						]}
 						id={`nav-link-${key}`}
 					>
 						<span class="z-10">{name}</span>
 						{disabled ? (
-							<span class="absolute mt-10 -skew-x-6 text-xs text-accent">{soonDate}</span>
+							<span class="absolute mt-10 -skew-x-6 text-xs text-primary">{soonDate}</span>
 						) : (
 							<div class="background absolute -z-10 h-full w-full" />
 						)}
 					</a>
-					{key === 1 && <div class:list={"hidden w-64 lg:block"} />}
 				</>
 			))
 		}
@@ -76,7 +75,7 @@ const pages = [
 								id={`navmob-link-${key}`}
 							>
 								<span class="z-10 uppercase text-primary">{name}</span>
-								{disabled && <span class="text-accent">{soonDate}</span>}
+								{disabled && <span class="text-primary">{soonDate}</span>}
 							</a>
 							<hr
 								class="h-[2px] w-full border-t-0"
@@ -93,20 +92,11 @@ const pages = [
 		</div>
 	</nav>
 	<div class="relative flex h-2 w-full flex-col items-center">
-		<div class="gridBottomBarContainer absolute grid w-full items-center justify-between">
+		<div class=" absolute w-full items-center justify-between">
 			<div
 				class="h-[2px] w-full rounded-l-[30%] border-t-0"
-				style="background:linear-gradient(to right, transparent 3%, white 35%, white 100%)"
+				style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"
 			>
-			</div>
-			<div class="focus-within-ring -ml-[8px] -mr-[4px]">
-			</div>
-
-			<div
-				class="h-[2px] w-full rounded-r-[30%] border-t-0 bg-white"
-				style="background:linear-gradient(to left, transparent 3%, white 35%, white 100%);"
-			>
-			</div>
 		</div>
 	</div>
 </header>
@@ -143,15 +133,15 @@ const pages = [
 		pointer-events: all;
 	}
 
-	.accent-drop-shadow {
-		filter: drop-shadow(0px 0px 25px rgba(var(--color-accent-rgb), 0.25));
+	.primary-drop-shadow {
+		filter: drop-shadow(0px 0px 25px rgba(var(--color-primary-rgb), 0.25));
 	}
 
 	.current-page {
 	}
 	.current-page:before {
 		view-transition-name: nav-item;
-		background: var(--color-accent);
+		background: var(--color-primary);
 		width: 100%;
 		content: "";
 		position: absolute;
@@ -161,7 +151,7 @@ const pages = [
 	}
 
 	.current-page-mob:before {
-		background: var(--color-accent);
+		background: var(--color-primary);
 		width: 10px;
 		content: "";
 		position: absolute;
@@ -173,13 +163,13 @@ const pages = [
 	}
 
 	.gridBottomBarContainer {
-		grid-template-columns: 1fr 6rem 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 4px;
 	}
 
 	@media (min-width: 1024px) {
 		.gridBottomBarContainer {
-			grid-template-columns: 1fr 9rem 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 	@media (prefers-reduced-motion) {
