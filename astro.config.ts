@@ -1,4 +1,3 @@
-import db from "@astrojs/db"
 import sitemap from "@astrojs/sitemap"
 import tailwind from "@astrojs/tailwind"
 import vercel from "@astrojs/vercel/serverless"
@@ -16,7 +15,7 @@ export default defineConfig({
 	devToolbar: {
 		enabled: false,
 	},
-	integrations: [tailwind(), sitemap(), auth(), db()],
+	integrations: [tailwind(), sitemap(), auth()],
 	adapter: vercel({
 		webAnalytics: {
 			enabled: true,
