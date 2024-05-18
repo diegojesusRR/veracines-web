@@ -1,0 +1,50 @@
+---
+import Action from "./Action.astro";
+const { proyecciones, pelicula, cine } = Astro.props;
+
+const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+
+const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
+---
+
+<div class="p-2 m-4 border-2 align-middle bg-white bg-opacity-80">
+    <h2 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{pelicula.nombre}</h2>
+    <div class=`flex flex-col-reverse md:flex-row flex-grow`>
+        <div class=`flex flex-col justify-around justify-center items-center p-5`>
+            <div class="flex flex-col">
+                <h3 class=`flex-1 text-${cine.color} text-center font-bold underline mt-2`>Proyecciones</h3>
+                <ul class=`flex-2 text-center text-${cine.color} list-none list-inside`>
+                    {diasProyeccion.map(dia => {
+                        const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
+
+                        const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
+                        return (<li>
+                            <span>{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
+                            - {proyeccionesDia.map(proyeccion => proyeccion.hora).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora}`}
+                        </li>)
+                    })}
+                </ul>
+            </div>
+            <p class=`text-center text-${cine.color} text-s mt-2 mb-2`>{pelicula.descripcion.slice(0,300)}</p>
+
+            <Action
+                    class=`w-3/4 text-base md:text-xs`
+                    as=`a`
+                    aria-disabled=`false`
+                    href=`/cartelera-${cine.url}/`
+                    target=`_blank`
+                    rel=`noopener noreferrer`
+                    aria-label=`Comprar entradas para ${pelicula.nombre} en ${cine.nombre}`
+                    color=`${cine.color}`
+            >
+                Comprar entradas
+            </Action>
+        </div>
+        <div class="flex w-auto align-middle min-w-[200px]">
+            <div class=`flex flex-col md:mt-2 m-auto max-w-[300px]`>
+                <img class=`md:w-auto w-[300px] h-auto mr-auto ml-auto border-2 border-${cine.color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
+                <p class=`text-center text-${cine.color} text-xs font-bold w-auto p-2 border-2 border-${cine.color}`>{pelicula.edadRedomendada}</p>
+            </div>
+        </div>
+    </div>
+</div>

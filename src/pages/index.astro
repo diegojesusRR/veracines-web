@@ -1,12 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import Countdown from "@/sections/Countdown.astro"
 
 import Hero from "@/sections/Hero.astro"
 
 import {Metadata} from "../consts/metadata";
-import PeliculaPrincipal from "../components/peliculaPrincipal.astro";
-import ComprarEntradas from "../components/ComprarEntradas.astro";
+import Ubicaciones from "../components/ubicaciones.astro";
 
 export const prerender = false
 ---
@@ -19,8 +17,6 @@ export const prerender = false
 	<Hero />
 
 	<main>
-		<ComprarEntradas />
-		<PeliculaPrincipal />
-
+		<Ubicaciones />
 	</main>
 </Layout>

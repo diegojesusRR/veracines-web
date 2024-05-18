@@ -36,34 +36,13 @@ const { title, description, preload, canonical, image } = Astro.props
 		<ViewTransitions />
 	</head>
 
-	<body
-		class="overflow-x-hidden selection:bg-primary selection:text-secondary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"
-	>
+	<body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary">
 		<Header />
-		<div
-			class="mx-auto min-h-screen max-w-6xl px-2 pt-16 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10"
-			id="main-content"
-		>
+		<div class="mx-auto min-h-screen max-w-6xl px-2 pt-16 selection:bg-primary md:pt-20 lg:px-10" id="main-content">
 			<slot />
 			<Footer />
 			<KonamiCode />
 			<Toast />
-			<!-----------------------------
-     `    ``               `
-      ``  _ `      `       ``
-     `   |_| `  `` ``    `  `
-    ``  -___-_` `   ` --------------
-  ``   /      )      | This is fine |`
- `____/| (0) (0)_()  |/-------------  `
-/|   | |   ^____)      ``      ``
-||   |_|    \_//     Uɔ````   `` ``
-||    || |    |    ========`  ``  ``
-||    || |    |      ||     ``   `
-||     \\_\   |\     ||   ```    `
-=========||====||    ||  ``       `
-  || ||   \Ɔ || \Ɔ   ||   ``    ``
-  || ||      ||      ||  `     ``
---------------------------------->
 		</div>
 		<ButtonUp />
 		<style is:global>
@@ -71,8 +50,8 @@ const { title, description, preload, canonical, image } = Astro.props
 				--color-primary: #2e4390;
 				--color-secondary: #fd7e14;
 				--color-tertiary: #dc3545;
-				--color-accent: #2e4390;
-				--color-accent-rgb: 10, 85, 205;
+				--color-accent: #fd7e14;
+				--color-primary-rgb: 10, 85, 205;
 
 				--color-azul: #2e4390;
 				--color-naranja: #fd7e14;
@@ -81,9 +60,9 @@ const { title, description, preload, canonical, image } = Astro.props
 				--background-color: repeating-linear-gradient(
 					135deg,
 					#f7f7f7,
-					#fafafa 500px,
-					#ffffff 500px,
-					#fcfcfc 1000px
+					#fafafa 25%,
+					#ffffff 25%,
+					#fcfcfc 25%
 				);
 
 				--background-color-white: #ffffff;
