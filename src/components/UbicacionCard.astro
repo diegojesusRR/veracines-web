@@ -19,8 +19,10 @@ const { cine } = Astro.props;
 
     </div>
     <div class=`flex flex-col md:mt-2`>
-        <iframe class=`align-middle w-auto` src=`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}` width=`400` height=`250` style=`border:0;` allowfullscreen=`` loading=`lazy` referrerpolicy=`no-referrer-when-downgrade`></iframe>
-        <p class=`text-center text-${cine.color} text-xs font-bold w-auto p-2`>{cine.localizacion.direccion}</p>
+        <div class=`border-4 border-primary`>
+            <iframe class=`align-middle w-auto` src=`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}` width=`400` height=`250` style=`border:0;` allowfullscreen=`` loading=`lazy` referrerpolicy=`no-referrer-when-downgrade`></iframe>
+        </div>
+        <p class=`text-center underline text-${cine.color} text-xs font-bold w-auto p-2`>{cine.localizacion.direccion}</p>
     </div>
 
 
