@@ -14,9 +14,9 @@ if (!cine) {
 ---
 
 <Layout
-        description={Metadata.home.description}
-        title={Metadata.home.title}
-        canonical={Metadata.home.canonical}
+        description={Metadata[`cartelera-${cine.url}`].description}
+        title={Metadata[`cartelera-${cine.url}`].title}
+        canonical={Metadata[`cartelera-${cine.url}`].canonical}
 >
 
     <main>
