@@ -1,0 +1,37 @@
+---
+import {PROYECCIONES} from "../consts/proyecciones";
+import {CINES} from "../consts/cines";
+import ProyeccionesPelicula from "./ProyeccionesPelicula.astro";
+const { pelicula } = Astro.props;
+
+const color = 'primary';
+---
+<div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3">
+    <div class="row-span-3 col-span-1 mr-1 ml-1">
+        <img class=`w-full border-4 border-${color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
+        <p class=`text-center text-${color} text-xs font-bold w-auto text-white p-2 bg-${color}`>{pelicula.edadRedomendada}</p>
+    </div>
+    <div class="col-span-2 flex flex-col justify-between">
+        <div class="flex flex-col justify-around justify-left items-center p-2">
+            <div class="flex flex-col align-left text-center">
+                <h3 class=`flex-1 text-${color} font-bold underline mt-2`>Sinopsis</h3>
+                <p class=`flex-2 text-${color} text-justify`>{pelicula.descripcion}</p>
+            </div>
+            <div class="relative flex h-2 w-full flex-col items-center m-4">
+                <div class=" absolute w-full items-center justify-between">
+                    <div
+                            class="h-[2px] w-full rounded-l-[30%] border-t-0"
+                            style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"
+                    >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`>
+            <div class=`grid grid-cols-1 md:grid-cols-2 gap-4 justify-top justify-left items-center pl-2 pr-2`>
+                {CINES.map(cine => <ProyeccionesPelicula cine={cine} pelicula={pelicula}/>)}
+            </div>
+        </div>
+    </div>
+</div>
+<iframe class="w-full h-96" src={pelicula.videoUrl} title={`Trailer de la pelicula ${pelicula.nombre}`}></iframe>

@@ -1,7 +1,7 @@
 import type {Proyeccion} from "@/types/Proyeccion.ts";
 
 const proyeccionesGarrucha: Proyeccion[] = [
-    /*{
+    {
         grupo: 1,
         cineId: 'garrucha',
         peliculaId: 'garfield',
@@ -56,11 +56,11 @@ const proyeccionesGarrucha: Proyeccion[] = [
         peliculaId: 'deadpool-y-lobezno',
         fecha: new Date('2024-07-01'),
         hora: '22:00'
-    },*/
+    }
     ];
 
 const proyeccionesVera: Proyeccion[] = [
-    /*{
+    {
         grupo: 1,
         cineId: 'vera',
         peliculaId: 'garfield',
@@ -136,14 +136,14 @@ const proyeccionesVera: Proyeccion[] = [
         peliculaId: 'bad-boys-ride-or-die',
         fecha: new Date('2024-07-04'),
         hora: '22:00'
-    },*/
+    },
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
     ];
 
 export const PROYECCIONES: Proyeccion[] = [
-    ...proyeccionesVera,
-    ...proyeccionesGarrucha,
-    ...proyeccionesRegio
+    //...proyeccionesVera,
+    //...proyeccionesGarrucha,
+    //...proyeccionesRegio
 ]

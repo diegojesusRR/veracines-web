@@ -2,16 +2,16 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BvmcH-Yh.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { a as $$Action, M as Metadata, $ as $$Layout } from './404_CgcowttU.mjs';
+import { a as $$Action, M as Metadata, $ as $$Layout } from './404_BvUyFJe6.mjs';
 import 'clsx';
 /* empty css                          */
-import { C as CINES } from './cartelera-_cine__CqyrWPoN.mjs';
+import { C as CINES } from './_pelicula__zgd8brnA.mjs';
 
 const $$Astro$3 = createAstro("https://www.veracines.es");
 const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Hero;
-  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col place-items-center gap-4 lg:gap-3" data-astro-cid-shwxrd6l> <h1 class="sr-only bg-black/30" data-astro-cid-shwxrd6l>Veracines</h1> <img src="/img/veracines-logo.png" alt="Veracines" class="w-48 lg:w-72" data-astro-cid-shwxrd6l> <h2 class="mb-5 text-2xl lg:text-xl text-primary text-center font-bold" data-astro-cid-shwxrd6l>Disfruta de los mejores estrenos de cine durante todo el año en Veracines. Vive con nosotros la experiencia del cine de verano en nuestras terrazas de Vera y Garrucha, así como durante el resto del año en Cine Regio de Vera</h2> </section> `;
+  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col place-items-center gap-4 lg:gap-3" data-astro-cid-shwxrd6l> <h1 class="sr-only bg-black/30" data-astro-cid-shwxrd6l>Veracines</h1> <img src="/img/veracines-logo.png" alt="Veracines" class="w-48 lg:w-72" data-astro-cid-shwxrd6l> <h2${addAttribute(`text-center text-lg text-primary mb-5`, "class")} data-astro-cid-shwxrd6l>Disfruta de los mejores estrenos de cine durante todo el año en Veracines. Vive con nosotros la experiencia del cine de verano en nuestras terrazas de Vera y Garrucha, así como durante el resto del año en Cine Regio de Vera.</h2> </section> `;
 }, "/Users/diego.ramos/veracines-web/src/sections/Hero.astro", void 0);
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
