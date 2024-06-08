@@ -1,4 +1,4 @@
-// Type imports
+// Type importsyarn
 import type { ManifestOptions } from "vite-plugin-pwa"
 
 const Metadata: Record<string, { title: string, description: string, canonical: string }> = {

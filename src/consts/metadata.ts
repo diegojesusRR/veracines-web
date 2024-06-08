@@ -6,7 +6,7 @@ export const Metadata: Record<string, { title: string, description: string, cano
     },
 
     "cartelera-vera": {
-        title: "Cartelera Cine Terraza de Vera - Veracines",
+        title: "Cartelera Cine Terraza de Verano de Vera - Veracines",
         description: "Cartelera del cine de verano en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine de verano en Veracines.",
         canonical: "https://www.veracines.es/cartelera-vera/"
     },
