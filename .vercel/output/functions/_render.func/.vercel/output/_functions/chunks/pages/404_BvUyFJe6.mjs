@@ -165,7 +165,7 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title, description, preload, canonical, image } = Astro2.props;
-  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-16 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "KonamiCode", $$KonamiCode, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
+  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "KonamiCode", $$KonamiCode, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
 }, "/Users/diego.ramos/veracines-web/src/layouts/Layout.astro", void 0);
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -178,7 +178,7 @@ const $$Action = createComponent(async ($$result, $$props, $$slots) => {
     `font-semibold uppercase text-${color ?? "primary"}`,
     `px-5 py-2.5`,
     `before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-${color ?? "primary"}`,
-    `hover:scale-110 hover:text-white hover:before:origin-left hover:before:scale-x-100`,
+    `hover:scale-110 hover:before:bg-${color ?? "primary"} hover:text-white hover:before:origin-left hover:before:scale-x-100`,
     `aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111]`,
     `ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out`,
     className
@@ -198,24 +198,24 @@ Ir al inicio
 
 const Metadata = {
   home: {
-    title: "Veracines - Cines de Verano en Vera y Garrucha",
+    title: "Cines de Verano en Vera y Garrucha - Veracines",
     description: "Cine de verano en Vera y Garrucha. Descubre las películas de estreno en Vera y Garrucha. Disvruta la experiencia del cine de verano en Veracines.",
-    canonical: "www.veracines.es"
+    canonical: "https://www.veracines.es"
   },
   "cartelera-vera": {
-    title: "Cartelera Veracines",
+    title: "Cartelera Cine Terraza de Verano de Vera - Veracines",
     description: "Cartelera del cine de verano en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine de verano en Veracines.",
-    canonical: "www.veracines.es/cartelera-vera"
+    canonical: "https://www.veracines.es/cartelera-vera/"
   },
   "cartelera-garrucha": {
-    title: "Cartelera Cines",
+    title: "Cartelera Cine Tenis de Garrucha - Veracines",
     description: "Cartelera de Cine Tenis de Garrucha. Descubre las películas de estreno en Garrucha. Disvruta la experiencia del cine de verano en Veracines.",
-    canonical: "www.veracines.es/cartelera-cines"
+    canonical: "https://www.veracines.es/cartelera-garrucha/"
   },
   "cartelera-regio": {
-    title: "Cartelera Regio",
-    description: "Cartelera del cine de invierno en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine Regio en Veracines.",
-    canonical: "www.veracines.es/cartelera-regio"
+    title: "Cartelera Cine Regio de Vera - Veracines",
+    description: "Cartelera del cine Regio de invierno en Vera. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine Regio en Veracines.",
+    canonical: "https://www.veracines.es/cartelera-regio/"
   }
 };
 

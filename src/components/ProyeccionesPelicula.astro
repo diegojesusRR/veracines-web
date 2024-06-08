@@ -1,0 +1,29 @@
+---
+import {PROYECCIONES} from "../consts/proyecciones";
+
+const { pelicula, cine } = Astro.props;
+
+const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+
+const grupoProyeccion: number|undefined = [... new Set(PROYECCIONES.filter(proyeccion => proyeccion.cineId == cine.url && proyeccion.fecha >= new Date())?.map(x => x.grupo))].at(0);
+const proyecciones = PROYECCIONES.filter(proyeccion => proyeccion.cineId == cine.url && proyeccion.grupo == grupoProyeccion);
+const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
+---
+
+{
+    proyecciones.length > 0 && <div class="flex flex-col align-left text-center mb-5">
+        <h3 class=`flex-1 text-${cine.color} font-bold underline`>Proyecciones {cine.corto}</h3>
+        <ul class=`flex-2 text-${cine.color} list-none list-inside`>
+            {diasProyeccion.map(dia => {
+                const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
+
+                const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
+                const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
+                return (<li>
+                    <span>{diaText}</span>
+                    <span> - {proyeccionesDia.map(proyeccion => proyeccion.hora).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora}`}</span>
+                </li>)
+            })}
+        </ul>
+    </div>
+    }

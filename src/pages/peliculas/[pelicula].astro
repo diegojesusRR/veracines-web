@@ -1,0 +1,30 @@
+---
+
+import Layout from "@/layouts/Layout.astro"
+
+import {PELICULAS} from "../../consts/peliculas";
+import PeliculaCard from "../../components/PeliculaCard.astro";
+
+const pelicula = PELICULAS.find(pelicula => pelicula.id === Astro.params.pelicula);
+
+if (!pelicula) {
+    return new Response(JSON.stringify("Pelicula Not found"), { status: 404 })
+}
+---
+
+<Layout
+        description={`${pelicula.nombre} en Veracines. Consulta nuestra programación en los cines de Vera y Garrucha.`}
+        title={`${pelicula.nombre} en cines de Vera y Garrucha - Veracines`}
+        canonical={`https://veracines.com/peliculas/${pelicula.id}`}
+>
+
+    <main>
+        <h2 class=`text-xl col-span-3 text-white bg-primary text-center font-bold pb-2 pt-2 mr-1 ml-1`>{pelicula.nombre}</h2>
+        <PeliculaCard pelicula={pelicula}/>
+    </main>
+</Layout>
+
+<section>
+
+
+</section>
