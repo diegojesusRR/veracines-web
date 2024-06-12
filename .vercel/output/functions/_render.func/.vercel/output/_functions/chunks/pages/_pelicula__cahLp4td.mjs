@@ -2,7 +2,7 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BvmcH-Yh.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Layout } from './404_BvUyFJe6.mjs';
+import { $ as $$Layout } from './404_D3qMtfHr.mjs';
 import 'clsx';
 
 const PELICULAS = [
@@ -40,7 +40,8 @@ const CINES = [
       direccion: "C. Antonio de Torres, 2, 04620 Vera, Almería",
       descripcion: "Situado junto al colegio Reyes Católicos, en la calle Antonio de Torres, el cine de verano de Vera es un lugar ideal para disfrutar de una película al aire libre en Vera."
     },
-    servicios: []
+    servicios: [],
+    horaFijaProyeccion: "22:00"
   },
   {
     url: "garrucha",
@@ -52,7 +53,8 @@ const CINES = [
       direccion: "C. Tenis, 04630 Garrucha, Almería",
       descripcion: "Se encuentra junto a Mercadona en Garrucha, en la calle Tenis, el cine Tenis de Garrucha es un lugar ideal para disfrutar de una película al aire libre en Garrucha."
     },
-    servicios: []
+    servicios: [],
+    horaFijaProyeccion: "22:00"
   },
   {
     url: "regio",
@@ -69,7 +71,7 @@ const CINES = [
 ];
 
 const PROYECCIONES = [
-  //...proyeccionesVera,
+  // ...proyeccionesVera,
   //...proyeccionesGarrucha,
   //...proyeccionesRegio
 ];

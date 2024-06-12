@@ -4,7 +4,7 @@ const { cine } = Astro.props;
 ---
 <div class=`flex flex-col md:flex-row p-2 m-4 border-2 align-middle flex-grow bg-white bg-opacity-80`>
     <div class=`flex flex-col justify-around justify-center items-center p-5`>
-        <h2 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{cine.nombre}</h2>
+        <h4 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{cine.nombre}</h4>
         <p class=`text-center text-${cine.color}`>{cine.localizacion.descripcion}</p>
         <Action
                 class=`w-3/4 text-base md:text-xs`
