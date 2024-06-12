@@ -1,7 +1,7 @@
 /* empty css                                     */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { P as PROYECCIONES, C as CINES, a as PELICULAS, $ as $$Layout } from './404_B4fFa-6H.mjs';
+import { P as PROYECCIONES, C as CINES, a as PELICULAS, $ as $$Layout } from './404_C5fiYS-9.mjs';
 import 'clsx';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
