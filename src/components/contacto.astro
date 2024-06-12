@@ -1,9 +1,43 @@
 ---
 
 import {CONTACTO} from "../consts/contacto";
+import Phone from "./icons/phone.astro";
+import Whatsapp from "./icons/whatsapp.astro";
+import Email from "./icons/email.astro";
 ---
 
 <section>
     <h3 class="text-xl text-primary text-center font-bold">Contacta con nosotros</h3>
     <p class=`text-center text-lg text-primary mt-5`>Si necesitas mas información,  estaremos encantados de contestarte. Puedes ponerte en contacto con nosotros a través de nuestro teléfono <a href=`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` class="font-bold" target="_blank">{CONTACTO.telefono.numero}</a>, nuestro <a class="font-bold" href=`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank">WhatsApp</a> o a traves de nuestro email en <a href=`mailto:${CONTACTO.email}` class="font-bold" target="_blank">{CONTACTO.email}</a>.</p>
+
+    <div class="grid grid-cols-6 gap-6 mt-5 ">
+        <div class="flex flex-col items-center gap-4 text-center col-span-2">
+            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full">
+                <Phone class="h-12 w-12 text-primary" />
+                <div class="grid gap-2">
+                    <h3 class="text-xl text-primary font-semibold">Teléfono</h3>
+                </div>
+                <a class="absolute w-full h-full" href=`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank"></a>
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 text-center col-span-2">
+            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full">
+                <Whatsapp class="h-12 w-12 text-primary" />
+                <div class="grid gap-2">
+                    <h3 class="text-xl text-primary font-semibold">Whatsapp</h3>
+                </div>
+                <a class="absolute w-full h-full" href=`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank"></a>
+
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 text-center col-span-2">
+            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full">
+                <Email class="h-12 w-12 text-primary" />
+                <div class="grid gap-2">
+                    <h3 class="text-xl text-primary font-semibold">Email</h3>
+                </div>
+                <a class="absolute w-full h-full" href=`mailto:${CONTACTO.email}` target="_blank"></a>
+            </div>
+        </div>
+    </div>
 </section>

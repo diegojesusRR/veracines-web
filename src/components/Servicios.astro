@@ -12,41 +12,52 @@ import {CINES} from "../consts/cines";
         <p class="text-center text-lg text-primary">
             Además de una buena película al aire libre, disponemos de servicios como:
         </p>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-4 lg:grid-cols-6 mt-5">
-            <div class="flex flex-col items-center gap-4 rounded-lg bg-white bg-opacity-70 border-2 p-6 text-center dark:bg-gray-800 sm:col-span-2">
-                <Burguer class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Bocadillos y Hamburguesas</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Disponemos de una carta de bocadillos y hamburguesas con precios realmente populares</p>
+        <div class="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-10 mt-5 ">
+            <div class="flex flex-col items-center gap-4 text-center col-span-2">
+                <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
+                    <Burguer class="h-12 w-12 text-primary" />
+                    <div class="grid gap-2">
+                        <h3 class="text-xl text-primary font-semibold">Bocadillos y Hamburguesas</h3>
+                        <!--<p class="text-gray-500">Disponemos de una carta de bocadillos y hamburguesas con precios realmente populares</p>-->
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-4 rounded-lg bg-white bg-opacity-70 border-2 p-6 text-center dark:bg-gray-800 sm:col-span-2">
-                <Popcorn class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Palomitas</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Indispensables en una sesión de cine</p>
+            <div class="flex flex-col items-center gap-4 text-center col-span-2">
+                <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
+                    <Popcorn class="h-12 w-12 text-primary" />
+                    <div class="grid gap-2">
+                        <h3 class="text-xl text-primary font-semibold">Palomitas</h3>
+                        <!--<p class="text-gray-500">Indispensables en una sesión de cine</p>-->
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-4 rounded-lg bg-white bg-opacity-70 border-2 p-6 text-center dark:bg-gray-800 sm:col-span-2">
-                <Icecream class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Helados</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Refrescate con nuestra selección de helados</p>
+            <div class="flex flex-col items-center gap-4 text-center col-span-2">
+                <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
+                    <Icecream class="h-12 w-12 text-primary" />
+                    <div class="grid gap-2">
+                        <h3 class="text-xl text-primary font-semibold">Helados</h3>
+                        <!--<p class="text-gray-500">Refrescate con nuestra selección de helados</p>-->
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-4 rounded-lg bg-white bg-opacity-70 border-2 p-6 text-center dark:bg-gray-800 sm:col-span-2 lg:col-start-2">
-                <Parking class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Parking Gratuito</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Disponemos de un amplio parking para facilitar tu llegada. (Solo disponible en {CINES.find(x => x.url==='vera').nombre})</p>
+            <div class="flex flex-col items-center gap-4 text-center col-span-2 sm:col-start-2 lg:col-start-auto">
+                <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
+                    <Projector class="h-12 w-12 text-primary" />
+                    <div class="grid gap-2">
+                        <h3 class="text-xl text-primary font-semibold">Proyector 2K</h3>
+                        <!--<p class="text-gray-500">Todas nuestras salas cuentan con proyectores con resolución 2K</p>-->
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-4 rounded-lg bg-white bg-opacity-70 border-2 p-6 text-center dark:bg-gray-800 sm:col-span-2 md:col-start-2 lg:col-start-4">
-                <Projector class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Proyector 2K</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Todas nuestras salas cuentan con proyectores con resolución 2K</p>
+            <div class="flex flex-col items-center gap-4 text-center col-span-2 col-start-2 sm:col-start-auto">
+                <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
+                    <Parking class="h-12 w-12 text-primary" />
+                    <div class="grid gap-2">
+                        <h3 class="text-xl text-primary font-semibold">Parking Gratuito</h3>
+                        <!--<p class="text-gray-500">Disponemos de un amplio parking para facilitar tu llegada. (Solo disponible en {CINES.find(x => x.url==='vera').nombre})</p>-->
+                    </div>
                 </div>
+                <p class="text-gray-500 text-xs">Solo disponible en {CINES.find(x => x.url==='vera').nombre}</p>
             </div>
         </div>
 </section>
