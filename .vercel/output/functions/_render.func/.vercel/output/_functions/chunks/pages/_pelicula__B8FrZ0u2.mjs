@@ -2,7 +2,7 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BvmcH-Yh.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Layout } from './404_D3qMtfHr.mjs';
+import { $ as $$Layout } from './404_Bi9FLozQ.mjs';
 import 'clsx';
 
 const PELICULAS = [
