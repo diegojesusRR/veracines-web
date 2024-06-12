@@ -298,7 +298,7 @@ const $$RichResults = createComponent(async ($$result, $$props, $$slots) => {
       }))
     ]
   };
-  return renderTemplate(_b || (_b = __template$1(['<script type="application/ld+json">', "<\/script> ", '<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(organizationSchema)), eventsSchema && eventsSchema.length && renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(eventsSchema))), unescapeHTML(JSON.stringify(FAQSchema)));
+  return renderTemplate(_b || (_b = __template$1(['<script type="application/ld+json">', "<\/script> ", '<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(organizationSchema)), eventsSchema && eventsSchema.length > 0 && renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(eventsSchema))), unescapeHTML(JSON.stringify(FAQSchema)));
 }, "/Users/diego.ramos/veracines-web/src/components/RichResults.astro", void 0);
 
 var __freeze = Object.freeze;
