@@ -143,7 +143,7 @@ const proyeccionesRegio: Proyeccion[] = [
     ];
 
 export const PROYECCIONES: Proyeccion[] = [
-    ...proyeccionesVera,
+    // ...proyeccionesVera,
     //...proyeccionesGarrucha,
     //...proyeccionesRegio
 ]

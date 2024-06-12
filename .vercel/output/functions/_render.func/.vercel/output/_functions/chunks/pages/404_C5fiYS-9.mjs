@@ -185,87 +185,8 @@ const CINES = [
   }
 ];
 
-const proyeccionesVera = [
-  {
-    grupo: 1,
-    cineId: "vera",
-    peliculaId: "garfield",
-    fecha: /* @__PURE__ */ new Date("2024-06-24"),
-    hora: "22:00"
-  },
-  {
-    grupo: 1,
-    cineId: "vera",
-    peliculaId: "garfield",
-    fecha: /* @__PURE__ */ new Date("2024-06-25"),
-    hora: "22:00"
-  },
-  {
-    grupo: 1,
-    cineId: "vera",
-    peliculaId: "garfield",
-    fecha: /* @__PURE__ */ new Date("2024-06-26"),
-    hora: "22:00"
-  },
-  {
-    grupo: 1,
-    cineId: "vera",
-    peliculaId: "garfield",
-    fecha: /* @__PURE__ */ new Date("2024-06-27"),
-    hora: "22:00"
-  },
-  {
-    grupo: 2,
-    cineId: "vera",
-    peliculaId: "deadpool-y-lobezno",
-    fecha: /* @__PURE__ */ new Date("2024-06-28"),
-    hora: "22:00"
-  },
-  {
-    grupo: 2,
-    cineId: "vera",
-    peliculaId: "deadpool-y-lobezno",
-    fecha: /* @__PURE__ */ new Date("2024-06-29"),
-    hora: "22:00"
-  },
-  {
-    grupo: 2,
-    cineId: "vera",
-    peliculaId: "deadpool-y-lobezno",
-    fecha: /* @__PURE__ */ new Date("2024-06-30"),
-    hora: "22:00"
-  },
-  {
-    grupo: 2,
-    cineId: "vera",
-    peliculaId: "deadpool-y-lobezno",
-    fecha: /* @__PURE__ */ new Date("2024-07-01"),
-    hora: "22:00"
-  },
-  {
-    grupo: 3,
-    cineId: "vera",
-    peliculaId: "bad-boys-ride-or-die",
-    fecha: /* @__PURE__ */ new Date("2024-07-02"),
-    hora: "22:00"
-  },
-  {
-    grupo: 3,
-    cineId: "vera",
-    peliculaId: "bad-boys-ride-or-die",
-    fecha: /* @__PURE__ */ new Date("2024-07-03"),
-    hora: "22:00"
-  },
-  {
-    grupo: 3,
-    cineId: "vera",
-    peliculaId: "bad-boys-ride-or-die",
-    fecha: /* @__PURE__ */ new Date("2024-07-04"),
-    hora: "22:00"
-  }
-];
 const PROYECCIONES = [
-  ...proyeccionesVera
+  // ...proyeccionesVera,
   //...proyeccionesGarrucha,
   //...proyeccionesRegio
 ];
