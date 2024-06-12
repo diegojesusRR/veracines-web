@@ -90,5 +90,5 @@ const FAQSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-{eventsSchema && eventsSchema.length && <script type="application/ld+json" set:html={JSON.stringify(eventsSchema)} />}
+{eventsSchema && eventsSchema.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(eventsSchema)} />}
 <script type="application/ld+json" set:html={JSON.stringify(FAQSchema)} />
