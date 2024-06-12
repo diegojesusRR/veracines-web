@@ -1,7 +1,7 @@
 /* empty css                                     */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { P as PROYECCIONES, a as PELICULAS, C as CINES, M as Metadata, $ as $$Layout } from './404_EGBvnM3f.mjs';
+import { P as PROYECCIONES, a as PELICULAS, C as CINES, M as Metadata, $ as $$Layout } from './404_Tx7iyyIN.mjs';
 import 'clsx';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -40,7 +40,7 @@ const $$Carteleracine = createComponent(async ($$result, $$props, $$slots) => {
   if (!cine) {
     return new Response(JSON.stringify("Cine Not found"), { status: 404 });
   }
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata[`cartelera-${cine.url}`].description, "title": Metadata[`cartelera-${cine.url}`].title, "canonical": Metadata[`cartelera-${cine.url}`].canonical }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main> <h1${addAttribute(`text-xl text-${cine.color} text-center font-bold`, "class")}>Cartelera de ${cine.nombre}</h1> <h2${addAttribute(`text-center text-lg text-${cine.color}`, "class")}>Próximas películas en ${cine.nombre}. Consulta nuestra programación.</h2> ${cine.horaFijaProyeccion ? renderTemplate`<p${addAttribute(`text-center text-lg text-${cine.color} mt-2`, "class")}>En ${cine.nombre} todas las proyecciones se comenzarán a las ${cine.horaFijaProyeccion}. La taquilla estará disponible 45min antes del inicio de la proyección</p>` : null} ${renderComponent($$result2, "ProyeccionesCine", $$ProyeccionesCine, { "cine": cine })} </main> ` })} <section></section>`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata[`cartelera-${cine.url}`].description, "title": Metadata[`cartelera-${cine.url}`].title, "canonical": Metadata[`cartelera-${cine.url}`].canonical }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main> <h1${addAttribute(`text-xl text-${cine.color} text-center font-bold`, "class")}>Cartelera de ${cine.nombre}</h1> <h2${addAttribute(`text-center text-lg text-${cine.color}`, "class")}>Próximas películas en ${cine.nombre}. Consulta nuestra programación.</h2> ${cine.horaFijaProyeccion ? renderTemplate`<p${addAttribute(`text-center text-sm text-white mt-2 border-2 rounded-lg text-center p-2 w-5/6 m-auto bg-${cine.color} bg-opacity-80`, "class")}>En ${cine.nombre} todas las proyecciones se comenzarán a las ${cine.horaFijaProyeccion}. La taquilla estará disponible 45 minutos antes del inicio de la proyección</p>` : null} ${renderComponent($$result2, "ProyeccionesCine", $$ProyeccionesCine, { "cine": cine })} </main> ` })} <section></section>`;
 }, "/Users/diego.ramos/veracines-web/src/pages/cartelera-[cine].astro", void 0);
 
 const $$file = "/Users/diego.ramos/veracines-web/src/pages/cartelera-[cine].astro";
