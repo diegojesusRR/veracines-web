@@ -5,6 +5,8 @@ import Hero from "@/sections/Hero.astro"
 
 import {Metadata} from "../consts/metadata";
 import Ubicaciones from "../components/ubicaciones.astro";
+import Contacto from "../components/contacto.astro";
+import Servicios from "../components/Servicios.astro";
 
 export const prerender = false
 ---
@@ -17,6 +19,10 @@ export const prerender = false
 	<Hero />
 
 	<main>
+		<div class="grid gap-14">
 		<Ubicaciones />
+		<Servicios />
+		<Contacto />
+		</div>
 	</main>
 </Layout>

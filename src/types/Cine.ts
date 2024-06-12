@@ -11,5 +11,6 @@ export interface Cine {
         direccion: string,
         descripcion: string,
     }
-    servicios: Servicio[]
+    servicios: Servicio[],
+    horaFijaProyeccion?: string
 }

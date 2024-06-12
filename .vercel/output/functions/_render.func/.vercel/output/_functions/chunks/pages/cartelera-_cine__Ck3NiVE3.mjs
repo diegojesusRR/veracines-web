@@ -2,8 +2,8 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BvmcH-Yh.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { M as Metadata, $ as $$Layout } from './404_BvUyFJe6.mjs';
-import { P as PROYECCIONES, a as PELICULAS, C as CINES } from './_pelicula__zgd8brnA.mjs';
+import { M as Metadata, $ as $$Layout } from './404_D3qMtfHr.mjs';
+import { P as PROYECCIONES, a as PELICULAS, C as CINES } from './_pelicula__cahLp4td.mjs';
 import 'clsx';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -13,7 +13,7 @@ const $$ProyeccionCard = createComponent(async ($$result, $$props, $$slots) => {
   const { proyecciones, pelicula, cine } = Astro2.props;
   const DIASSEMANA = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
   const diasProyeccion = [...new Set(proyecciones.map((proyeccion) => proyeccion.fecha.getDate()))];
-  return renderTemplate`${maybeRenderHead()}<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 relative"> <h2${addAttribute(`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1`, "class")}>${pelicula.nombre}</h2> <div class="row-span-3 col-span-1 mr-1 ml-1"> <img${addAttribute(`w-full border-4 border-${cine.color}`, "class")}${addAttribute(`/img/peliculas/${pelicula.id}.jpeg`, "src")}${addAttribute(`Imagen de la pelicula: ${pelicula.nombre}`, "alt")}> <p${addAttribute(`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color}`, "class")}>${pelicula.edadRedomendada}</p> </div> <div${addAttribute(`col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-left items-center p-2`, "class")}> <div class="flex flex-col align-left text-center"> <h3${addAttribute(`flex-1 text-${cine.color} font-bold underline mt-2`, "class")}>Proyecciones</h3> <ul${addAttribute(`flex-2 text-${cine.color} list-none list-inside`, "class")}> ${diasProyeccion.map((dia) => {
+  return renderTemplate`${maybeRenderHead()}<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 relative"> <h3${addAttribute(`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1`, "class")}>${pelicula.nombre}</h3> <div class="row-span-3 col-span-1 mr-1 ml-1"> <img${addAttribute(`w-full border-4 border-${cine.color}`, "class")}${addAttribute(`/img/peliculas/${pelicula.id}.jpeg`, "src")}${addAttribute(`Imagen de la pelicula: ${pelicula.nombre}`, "alt")}> <p${addAttribute(`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color}`, "class")}>${pelicula.edadRedomendada}</p> </div> <div${addAttribute(`col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-left items-center p-2`, "class")}> <div class="flex flex-col align-left text-center"> <p${addAttribute(`flex-1 text-${cine.color} font-bold underline mt-2`, "class")}>Proyecciones</p> <ul${addAttribute(`flex-2 text-${cine.color} list-none list-inside`, "class")}> ${diasProyeccion.map((dia) => {
     const proyeccionesDia = proyecciones.filter((proyeccion) => proyeccion.fecha.getDate() === dia);
     const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
     return renderTemplate`<li> <span>${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}</span>
@@ -42,7 +42,7 @@ const $$Carteleracine = createComponent(async ($$result, $$props, $$slots) => {
   if (!cine) {
     return new Response(JSON.stringify("Cine Not found"), { status: 404 });
   }
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata[`cartelera-${cine.url}`].description, "title": Metadata[`cartelera-${cine.url}`].title, "canonical": Metadata[`cartelera-${cine.url}`].canonical }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main> <h1${addAttribute(`text-xl text-${cine.color} text-center font-bold`, "class")}>Cartelera de ${cine.nombre}</h1> <h2${addAttribute(`text-center text-lg text-${cine.color}`, "class")}>Próximas películas en ${cine.nombre}. Consulta nuestra programación.</h2> ${renderComponent($$result2, "ProyeccionesCine", $$ProyeccionesCine, { "cine": cine })} </main> ` })} <section></section>`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata[`cartelera-${cine.url}`].description, "title": Metadata[`cartelera-${cine.url}`].title, "canonical": Metadata[`cartelera-${cine.url}`].canonical }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main> <h1${addAttribute(`text-xl text-${cine.color} text-center font-bold`, "class")}>Cartelera de ${cine.nombre}</h1> <h2${addAttribute(`text-center text-lg text-${cine.color}`, "class")}>Próximas películas en ${cine.nombre}. Consulta nuestra programación.</h2> ${cine.horaFijaProyeccion ? renderTemplate`<p${addAttribute(`text-center text-lg text-${cine.color} mt-2`, "class")}>En ${cine.nombre} todas las proyecciones se comenzarán a las ${cine.horaFijaProyeccion}. La taquilla estará disponible 45min antes del inicio de la proyección</p>` : null} ${renderComponent($$result2, "ProyeccionesCine", $$ProyeccionesCine, { "cine": cine })} </main> ` })} <section></section>`;
 }, "/Users/diego.ramos/veracines-web/src/pages/cartelera-[cine].astro", void 0);
 
 const $$file = "/Users/diego.ramos/veracines-web/src/pages/cartelera-[cine].astro";

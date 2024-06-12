@@ -12,7 +12,8 @@ export const CINES: Cine[] = [
             direccion: "C. Antonio de Torres, 2, 04620 Vera, Almería",
             descripcion: "Situado junto al colegio Reyes Católicos, en la calle Antonio de Torres, el cine de verano de Vera es un lugar ideal para disfrutar de una película al aire libre en Vera."
         },
-        servicios:[]
+        servicios:[],
+        horaFijaProyeccion: "22:00"
     },
     {
         url: "garrucha",
@@ -24,7 +25,8 @@ export const CINES: Cine[] = [
             direccion: "C. Tenis, 04630 Garrucha, Almería",
             descripcion: "Se encuentra junto a Mercadona en Garrucha, en la calle Tenis, el cine Tenis de Garrucha es un lugar ideal para disfrutar de una película al aire libre en Garrucha."
         },
-        servicios: []
+        servicios: [],
+        horaFijaProyeccion: "22:00"
     },
     {
         url: "regio",
