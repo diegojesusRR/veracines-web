@@ -6,8 +6,8 @@ const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Vierne
 
 const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
 ---
-<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8">
-    <h2 class=`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1`>{pelicula.nombre}</h2>
+<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 relative">
+    <h3 class=`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1`>{pelicula.nombre}</h3>
     <div class="row-span-3 col-span-1 mr-1 ml-1">
             <img class=`w-full border-4 border-${cine.color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
             <p class=`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color}`>{pelicula.edadRedomendada}</p>
@@ -15,7 +15,7 @@ const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fec
     <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`>
         <div class=`flex flex-col justify-around justify-left items-center p-2`>
             <div class="flex flex-col align-left text-center">
-                <h3 class=`flex-1 text-${cine.color} font-bold underline mt-2`>Proyecciones</h3>
+                <p class=`flex-1 text-${cine.color} font-bold underline mt-2`>Proyecciones</p>
                 <ul class=`flex-2 text-${cine.color} list-none list-inside`>
                     {diasProyeccion.map(dia => {
                         const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
@@ -39,4 +39,6 @@ const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fec
         </div>
             <p class=`text-center text-${cine.color} line-clamp-4`>{pelicula.descripcion}</p>
         </div>
+    </div>
+    <a href={`https://www.veracines.es/peliculas/${pelicula.id}`} class=`text-center text-${cine.color} absolute inset-0`></a>
 </div>
