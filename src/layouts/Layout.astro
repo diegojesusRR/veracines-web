@@ -3,7 +3,6 @@ import { ViewTransitions } from "astro:transitions"
 
 import ButtonUp from "@/components/ButtonUp.astro"
 import Header from "@/components/Header.astro"
-import KonamiCode from "@/components/KonamiCode.astro"
 
 import SEO from "@/components/SEO.astro"
 import type { Preload } from "@/types/Preload"
@@ -41,7 +40,6 @@ const { title, description, preload, canonical, image } = Astro.props
 		<div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id="main-content">
 			<slot />
 			<Footer />
-			<KonamiCode />
 			<Toast />
 		</div>
 		<ButtonUp />

@@ -1,34 +1,33 @@
 /* empty css                                     */
-import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, m as maybeRenderHead, f as renderComponent, g as renderSlot, F as Fragment, h as renderHead } from '../astro_BvmcH-Yh.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, m as maybeRenderHead, f as renderComponent, g as renderSlot, F as Fragment, u as unescapeHTML, h as renderHead } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import 'html-escaper';
 import 'clsx';
 
-const $$Astro$g = createAstro("https://www.veracines.es");
+const $$Astro$h = createAstro("https://www.veracines.es");
 const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$h, $$props, $$slots);
   Astro2.self = $$ViewTransitions;
   const { fallback = "animate" } = Astro2.props;
   return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>`;
 }, "/Users/diego.ramos/veracines-web/node_modules/astro/components/ViewTransitions.astro", void 0);
 
-const $$Astro$f = createAstro("https://www.veracines.es");
+const $$Astro$g = createAstro("https://www.veracines.es");
 const $$ButtonUp = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
   Astro2.self = $$ButtonUp;
   return renderTemplate`${maybeRenderHead()}<div id="button-up" class="fixed bottom-2 right-2 opacity-0 transition-opacity"> <button id="scroll-to-top" aria-label="Volver al inicio de la página" class="group flex size-12 cursor-default items-center justify-center rounded-lg border-2 border-primary bg-black/10 text-primary backdrop-blur hover:scale-105 hover:border-primary motion-safe:transition"> <svg aria-label="Subir al inicio de la página" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6 -rotate-45 group-hover:-rotate-90 group-hover:text-primary motion-safe:transition" width="20px"> <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path> </svg> </button> </div> `;
 }, "/Users/diego.ramos/veracines-web/src/components/ButtonUp.astro", void 0);
 
-const $$Astro$e = createAstro("https://www.veracines.es");
+const $$Astro$f = createAstro("https://www.veracines.es");
 const $$DrawnXLogo = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$DrawnXLogo;
   return renderTemplate`${maybeRenderHead()}<img src="/img/logo.png" class="w-16">`;
 }, "/Users/diego.ramos/veracines-web/src/components/DrawnXLogo.astro", void 0);
 
-const $$Astro$d = createAstro("https://www.veracines.es");
+const $$Astro$e = createAstro("https://www.veracines.es");
 const $$Typography = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$Typography;
   const { as: Tag, class: className, variant, color, ...props } = Astro2.props;
   const variantClasses = {
@@ -57,9 +56,9 @@ const $$Typography = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Tag", Tag, { "class:list": classes, ...props, "tabindex": "0" }, { "default": ($$result2) => renderTemplate` ${renderSlot($$result2, $$slots["default"])} ` })}`;
 }, "/Users/diego.ramos/veracines-web/src/components/Typography.astro", void 0);
 
-const $$Astro$c = createAstro("https://www.veracines.es");
+const $$Astro$d = createAstro("https://www.veracines.es");
 const $$FooterContent = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$FooterContent;
   return renderTemplate`${maybeRenderHead()}<div class="flex flex-col gap-4 text-center md:flex-row lg:gap-6"> ${renderComponent($$result, "Typography", $$Typography, { "as": "span", "variant": "body", "color": "primary", "class:list": "text-center" }, { "default": ($$result2) => renderTemplate`
 &copy; ${(/* @__PURE__ */ new Date()).getFullYear()} Veracines <span aria-hidden="true" class="hidden md:inline">|</span><br aria-hidden="true" class="block md:hidden"> Todos los derechos reservados.
@@ -68,9 +67,9 @@ const $$FooterContent = createComponent(async ($$result, $$props, $$slots) => {
 
 const MOBILE_MENU_CONTENT_ID = "menuMobileContent";
 
-const $$Astro$b = createAstro("https://www.veracines.es");
+const $$Astro$c = createAstro("https://www.veracines.es");
 const $$HamburgerButton = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$HamburgerButton;
   const width = "w-6";
   const genericHamburgerLine = `h-[2px] ${width} bg-gray-300 transition ease transform duration-300`;
@@ -83,18 +82,25 @@ const $$HamburgerButton = createComponent(async ($$result, $$props, $$slots) => 
   ], "class:list")}></span> </button> `;
 }, "/Users/diego.ramos/veracines-web/src/components/HamburgerButton.astro", void 0);
 
-const $$Astro$a = createAstro("https://www.veracines.es");
+const $$Astro$b = createAstro("https://www.veracines.es");
 const $$Instagram = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$Instagram;
   return renderTemplate`${maybeRenderHead()}<svg width="48" height="48" fill="none" viewBox="0 0 48 48"${addAttribute(Astro2.props.class, "class:list")} role="img" aria-label="Logotipo de Instagram"> <path fill="currentColor" d="M24.016 9.242c4.8 0 5.392.03 7.262.093 1.745.094 2.712.374 3.335.623.842.312 1.434.717 2.057 1.34.623.624 1.029 1.216 1.34 2.058.25.623.53 1.59.624 3.335.093 1.901.093 2.462.093 7.262 0 4.8-.03 5.393-.093 7.263-.094 1.745-.374 2.711-.624 3.335-.311.841-.716 1.433-1.34 2.057-.623.623-1.215 1.028-2.057 1.34-.623.25-1.59.53-3.335.623-1.901.094-2.462.094-7.262.094-4.8 0-5.393-.031-7.263-.094-1.745-.093-2.711-.374-3.335-.623-.841-.312-1.434-.717-2.057-1.34-.623-.624-1.029-1.216-1.34-2.057-.25-.624-.53-1.59-.624-3.335-.093-1.902-.093-2.463-.093-7.263s.031-5.392.093-7.262c.094-1.745.374-2.712.624-3.335.311-.842.717-1.434 1.34-2.057.623-.624 1.216-1.029 2.057-1.34.624-.25 1.59-.53 3.335-.624 1.87-.062 2.463-.093 7.263-.093Zm0-3.242c-4.894 0-5.517.031-7.419.094-1.9.093-3.21.405-4.363.841a8.936 8.936 0 0 0-3.18 2.088 8.629 8.629 0 0 0-2.119 3.18c-.436 1.153-.748 2.462-.841 4.363C6.03 18.5 6 19.122 6 24.016c0 4.893.031 5.517.094 7.418.093 1.901.405 3.21.841 4.363a8.936 8.936 0 0 0 2.088 3.18 8.936 8.936 0 0 0 3.18 2.088c1.153.436 2.462.748 4.363.842C18.5 42 19.091 42 23.984 42c4.894 0 5.517-.031 7.419-.093 1.9-.094 3.21-.406 4.363-.842a8.936 8.936 0 0 0 3.18-2.088 8.938 8.938 0 0 0 2.088-3.18c.436-1.153.748-2.462.841-4.363.094-1.933.094-2.525.094-7.418 0-4.894-.031-5.517-.094-7.419-.093-1.9-.405-3.21-.841-4.363a8.937 8.937 0 0 0-2.088-3.18 8.936 8.936 0 0 0-3.18-2.088c-1.153-.436-2.462-.748-4.363-.841C29.5 6.03 28.909 6 24.016 6Z"></path><path fill="currentColor" d="M24.015 14.758a9.258 9.258 0 0 0 0 18.515 9.258 9.258 0 0 0 0-18.515Zm0 15.242A6.02 6.02 0 0 1 18 23.984a6.02 6.02 0 0 1 6.015-6.015c3.335 0 5.985 2.711 5.985 6.046A5.986 5.986 0 0 1 24.015 30ZM33.615 16.535a2.15 2.15 0 1 0 0-4.301 2.15 2.15 0 0 0 0 4.3Z"></path> </svg>`;
-}, "/Users/diego.ramos/veracines-web/src/icons/instagram.astro", void 0);
+}, "/Users/diego.ramos/veracines-web/src/components/icons/instagram.astro", void 0);
+
+const $$Astro$a = createAstro("https://www.veracines.es");
+const $$Facebook = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  Astro2.self = $$Facebook;
+  return renderTemplate`${maybeRenderHead()}<svg width="48" height="48" fill="none" viewBox="-5.5 0 32 32"${addAttribute(Astro2.props.class, "class:list")} role="img" aria-label="Logotipo de Instagram"> <path fill="currentColor" d="M1.188 5.594h18.438c0.625 0 1.188 0.563 1.188 1.188v18.438c0 0.625-0.563 1.188-1.188 1.188h-18.438c-0.625 0-1.188-0.563-1.188-1.188v-18.438c0-0.625 0.563-1.188 1.188-1.188zM14.781 17.281h2.875l0.125-2.75h-3v-2.031c0-0.781 0.156-1.219 1.156-1.219h1.75l0.063-2.563s-0.781-0.125-1.906-0.125c-2.75 0-3.969 1.719-3.969 3.563v2.375h-2.031v2.75h2.031v7.625h2.906v-7.625z"></path> </svg>`;
+}, "/Users/diego.ramos/veracines-web/src/components/icons/facebook.astro", void 0);
 
 const $$Astro$9 = createAstro("https://www.veracines.es");
 const $$SocialButtons = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$SocialButtons;
-  return renderTemplate`${maybeRenderHead()}<nav${addAttribute(`${Astro2.props.class}`, "class:list")}> <ul class="flex flex-row items-center gap-x-6" aria-label="redes sociales y botón para alternar tema"> <li> <a target="_blank" rel="noopener" aria-label="Instagram de Veracines, se abrirá en una nueva pestaña" href="https://www.instagram.com/veracines.sl" class="inline-block any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "InstagramIcon", $$Instagram, { "class": "text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0" })} </a> </li> </ul> </nav>`;
+  return renderTemplate`${maybeRenderHead()}<nav${addAttribute(`${Astro2.props.class}`, "class:list")}> <div class="flex flex-row items-center gap-x-2" aria-label="redes sociales"> <div class="item"> <a target="_blank" rel="noopener" aria-label="Instagram de Veracines, se abrirá en una nueva pestaña" href="https://www.instagram.com/veracines.sl" class="inline-block any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "Facebook", $$Facebook, { "class": "text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0" })} </a> </div> <div class="item"> <a target="_blank" rel="noopener" aria-label="Instagram de Veracines, se abrirá en una nueva pestaña" href="https://www.instagram.com/veracines.sl" class="inline-block any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "Instagram", $$Instagram, { "class": "text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0" })} </a> </div> </div> </nav>`;
 }, "/Users/diego.ramos/veracines-web/src/components/SocialButtons.astro", void 0);
 
 const $$Astro$8 = createAstro("https://www.veracines.es");
@@ -122,16 +128,257 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   ], "class:list")}${addAttribute(`navmob-link-${key}`, "id")} data-astro-cid-3ef6ksr2> <span class="z-10 uppercase text-primary" data-astro-cid-3ef6ksr2>${name}</span> ${disabled && renderTemplate`<span class="text-primary" data-astro-cid-3ef6ksr2>${soonDate}</span>`} </a> <hr class="h-[2px] w-full border-t-0" style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)" data-astro-cid-3ef6ksr2> ` })}`)} <nav class="my-4 flex flex-col gap-10" data-astro-cid-3ef6ksr2> ${renderComponent($$result, "FooterContent", $$FooterContent, { "data-astro-cid-3ef6ksr2": true })} ${renderComponent($$result, "SocialButtons", $$SocialButtons, { "class": "flex items-center justify-center", "data-astro-cid-3ef6ksr2": true })} </nav> </nav> </div> </nav> <div class="relative flex h-2 w-full flex-col items-center" data-astro-cid-3ef6ksr2> <div class=" absolute w-full items-center justify-between" data-astro-cid-3ef6ksr2> <div class="h-[2px] w-full rounded-l-[30%] border-t-0" style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)" data-astro-cid-3ef6ksr2></div> </div> </div></header>  `;
 }, "/Users/diego.ramos/veracines-web/src/components/Header.astro", void 0);
 
-const $$Astro$7 = createAstro("https://www.veracines.es");
-const $$KonamiCode = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
-  Astro2.self = $$KonamiCode;
-  return renderTemplate``;
-}, "/Users/diego.ramos/veracines-web/src/components/KonamiCode.astro", void 0);
-
 const jost = "/_astro/jost-latin-wght-normal.CfFW3YMY.woff2";
 
 const atomic = "/fonts/atomic.woff2";
+
+const CINES = [
+  {
+    url: "vera",
+    nombre: "Cine Terraza de Verano de Vera",
+    corto: "Vera",
+    color: "primary",
+    localizacion: {
+      ubicacionKey: "!1m18!1m12!1m3!1d6352.183416503645!2d-1.8651944235623443!3d37.24553154246919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7ad505dc0deb95%3A0x20c4e16b3ec9e8ba!2sCine%20de%20Vera!5e0!3m2!1ses!2ses!4v1715622722058!5m2!1ses!2ses",
+      direccion: "C. Antonio de Torres, 2, 04620 Vera, Almería",
+      descripcion: "Situado junto al colegio Reyes Católicos, en la calle Antonio de Torres, el cine de verano de Vera es un lugar ideal para disfrutar de una película al aire libre en Vera.",
+      ciudad: "Vera",
+      provincia: "Almería",
+      codigoPostal: "04620",
+      adressCounty: "ES"
+    },
+    servicios: [],
+    horaFijaProyeccion: "22:00"
+  },
+  {
+    url: "garrucha",
+    nombre: "Cine Tenis de Garrucha",
+    corto: "Garrucha",
+    "color": "primary",
+    localizacion: {
+      ubicacionKey: "!1m18!1m12!1m3!1d25418.563129508486!2d-1.8616586513771942!3d37.21636849263374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7b29f1d4fe4b9b%3A0xda525c0a7e7bc5d5!2sCine%20Tenis!5e0!3m2!1ses!2ses!4v1715623188288!5m2!1ses!2ses",
+      direccion: "C. Tenis, 04630 Garrucha, Almería",
+      descripcion: "Se encuentra junto a Mercadona en Garrucha, en la calle Tenis, el cine Tenis de Garrucha es un lugar ideal para disfrutar de una película al aire libre en Garrucha.",
+      ciudad: "Garrucha",
+      provincia: "Almería",
+      codigoPostal: "04630",
+      adressCounty: "ES"
+    },
+    servicios: [],
+    horaFijaProyeccion: "22:00"
+  },
+  {
+    url: "regio",
+    nombre: "Cine Regio de Vera",
+    corto: "Regio",
+    color: "primary",
+    localizacion: {
+      ubicacionKey: "!1m18!1m12!1m3!1d3176.0496114881794!2d-1.8706054238921004!3d37.24653037212324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7ad503b6424b21%3A0xb294666e35a7e06c!2sC.%20Radio%20Nacional%2C%20s%2Fn%2C%2004620%20Vera%2C%20Almer%C3%ADa!5e0!3m2!1ses!2ses!4v1716051070703!5m2!1ses!2ses",
+      direccion: "C. Radio Nacional, s/n, 04620 Vera, Almería",
+      descripcion: "Situado en pleno centro de Vera, junto a la Plaza Mayor, en Cine Regio de Vera entre otorño y primavera podrás disfrutar de las mejores películas en un ambiente único.",
+      ciudad: "Vera",
+      provincia: "Almería",
+      codigoPostal: "04620",
+      adressCounty: "ES"
+    },
+    servicios: []
+  }
+];
+
+const proyeccionesVera = [
+  {
+    grupo: 1,
+    cineId: "vera",
+    peliculaId: "garfield",
+    fecha: /* @__PURE__ */ new Date("2024-06-24"),
+    hora: "22:00"
+  },
+  {
+    grupo: 1,
+    cineId: "vera",
+    peliculaId: "garfield",
+    fecha: /* @__PURE__ */ new Date("2024-06-25"),
+    hora: "22:00"
+  },
+  {
+    grupo: 1,
+    cineId: "vera",
+    peliculaId: "garfield",
+    fecha: /* @__PURE__ */ new Date("2024-06-26"),
+    hora: "22:00"
+  },
+  {
+    grupo: 1,
+    cineId: "vera",
+    peliculaId: "garfield",
+    fecha: /* @__PURE__ */ new Date("2024-06-27"),
+    hora: "22:00"
+  },
+  {
+    grupo: 2,
+    cineId: "vera",
+    peliculaId: "deadpool-y-lobezno",
+    fecha: /* @__PURE__ */ new Date("2024-06-28"),
+    hora: "22:00"
+  },
+  {
+    grupo: 2,
+    cineId: "vera",
+    peliculaId: "deadpool-y-lobezno",
+    fecha: /* @__PURE__ */ new Date("2024-06-29"),
+    hora: "22:00"
+  },
+  {
+    grupo: 2,
+    cineId: "vera",
+    peliculaId: "deadpool-y-lobezno",
+    fecha: /* @__PURE__ */ new Date("2024-06-30"),
+    hora: "22:00"
+  },
+  {
+    grupo: 2,
+    cineId: "vera",
+    peliculaId: "deadpool-y-lobezno",
+    fecha: /* @__PURE__ */ new Date("2024-07-01"),
+    hora: "22:00"
+  },
+  {
+    grupo: 3,
+    cineId: "vera",
+    peliculaId: "bad-boys-ride-or-die",
+    fecha: /* @__PURE__ */ new Date("2024-07-02"),
+    hora: "22:00"
+  },
+  {
+    grupo: 3,
+    cineId: "vera",
+    peliculaId: "bad-boys-ride-or-die",
+    fecha: /* @__PURE__ */ new Date("2024-07-03"),
+    hora: "22:00"
+  },
+  {
+    grupo: 3,
+    cineId: "vera",
+    peliculaId: "bad-boys-ride-or-die",
+    fecha: /* @__PURE__ */ new Date("2024-07-04"),
+    hora: "22:00"
+  }
+];
+const PROYECCIONES = [
+  ...proyeccionesVera
+  //...proyeccionesGarrucha,
+  //...proyeccionesRegio
+];
+
+const PELICULAS = [
+  {
+    id: "garfield",
+    nombre: "Garfield: La Pelicula",
+    descripcion: "El mundialmente famoso Garfield, el gato casero que odia los lunes y que adora la lasaña, está a punto de vivir una aventura ¡en el salvaje mundo exterior! Tras una inesperada reunión con su largamente perdido padre –el desaliñado gato callejero Vic– Garfield y su amigo canino Odie se ven forzados a abandonar sus perfectas y consentidas vidas al unirse a Vic en un hilarante y muy arriesgado atraco.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/w5OVkrlQdxg"
+  },
+  {
+    id: "deadpool-y-lobezno",
+    nombre: "Deadpool y Lobezno",
+    descripcion: 'Tercera entrega de la saga "Deadpool", ahora integrada en el Universo Cinematográfico de Marvel (MCU) pero manteniendo su enfoque para adultos, con calificación R. En septiembre de 2022 se confirmó la aparición de Hugh Jackman como Lobezno, por primera vez desde "Logan".',
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/tTM5weeCFvQ"
+  },
+  {
+    id: "bad-boys-ride-or-die",
+    nombre: "Bad Boys: Ride or Die",
+    descripcion: "Los policías más famosos del mundo regresan con su icónica mezcla de acción al límite y comedia escandalosa, pero esta vez con un giro inesperado: ¡Los mejores de Miami se dan a la fuga! Cuarta entrega de la saga 'Dos policías rebeldes'.",
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/LOZqqEXURzg"
+  }
+];
+
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
+var _a$1, _b;
+const $$Astro$7 = createAstro("https://www.veracines.es");
+const $$RichResults = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
+  Astro2.self = $$RichResults;
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://veracines.es",
+    "image": "/img/og.jpg",
+    "sameAs": [
+      "https://www.instagram.com/veracines.sl"
+    ],
+    "logo": "/img/logo.jpg",
+    "name": "Veracines - Cines de verano en Vera y Garrucha",
+    "alternateName": "Veracines - Salas al aire libre en Vera y Garrucha",
+    "description": "Conoce "
+  };
+  const eventsSchema = PROYECCIONES.map((proyeccion) => {
+    const cine = CINES.find((cine2) => cine2.url === proyeccion.cineId);
+    const pelicula = PELICULAS.find((pelicula2) => pelicula2.id === proyeccion.peliculaId);
+    return {
+      "@context": "https://schema.org",
+      "@type": "ScreeningEvent",
+      "name": `${pelicula.nombre} en ${cine.nombre}`,
+      "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${cine.horaFijaProyeccion ?? proyeccion.hora}`,
+      "location": {
+        "@type": "Place",
+        "name": cine.nombre,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": cine.localizacion,
+          "addressLocality": "Vera",
+          "postalCode": "04620",
+          "addressRegion": "Almer\xEDa",
+          "addressCountry": "ES"
+        }
+      },
+      "image": [`https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`],
+      "description": pelicula.descripcion,
+      "workPresented": {
+        "@type": "Movie",
+        "name": pelicula.nombre,
+        "image": `https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`,
+        "description": pelicula.descripcion
+      }
+    };
+  });
+  const FAQs = [
+    {
+      question: "\xBFSe puede pasar con comida y bebida en Veracines?",
+      answer: "Si, se permite la entrada de comida y bebida, aunque el cine cuenta con todos los servicios para que no necesites traer nada."
+    },
+    CINES.filter((x) => x.horaFijaProyeccion).map((cine) => ({
+      question: `\xBFA que hora empiezan las peliculas en ${cine.nombre}?`,
+      answer: `En ${cine.nombre} todas las proyecciones comienzan a las ${cine.horaFijaProyeccion}`
+    })),
+    CINES.map((cine) => ({
+      question: `\xBFDonde est\xE1 el ${cine.nombre}?`,
+      answer: `El ${cine.nombre} est\xE1 en ${cine.localizacion}`
+    })),
+    CINES.map((cine) => ({
+      question: `\xBFCuanto cuesta la entrada al ${cine.nombre}?`,
+      answer: `La entrada al ${cine.nombre} cuesta 5,50\u20AC`
+    }))
+  ];
+  const FAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      FAQs.map(({ answer, question }) => ({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      }))
+    ]
+  };
+  return renderTemplate(_b || (_b = __template$1(['<script type="application/ld+json">', "<\/script> ", '<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(organizationSchema)), eventsSchema && eventsSchema.length && renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(eventsSchema))), unescapeHTML(JSON.stringify(FAQSchema)));
+}, "/Users/diego.ramos/veracines-web/src/components/RichResults.astro", void 0);
 
 var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
@@ -143,7 +390,7 @@ const $$SEO = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$SEO;
   const { title, description, preload, canonical, image = "/img/logo.jpg" } = Astro2.props;
   const canonicalURL = canonical ? `https://${canonical}` : `https://${Astro2.url.pathname}`;
-  return renderTemplate(_a || (_a = __template(["<title>", '</title><meta charset="UTF-8"><meta name="description"', '><link rel="preload"', ' as="font" type="font/woff2" crossorigin><link rel="preload"', ' as="font" type="font/woff2" crossorigin>', '<link rel="canonical"', '><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#d5ff00"><meta name="keywords" content="cine de verano, estreno, cine, peliculas, verano, vera, garrucha, almer\xEDa"><meta name="og:image"', '><meta name="og:title"', '><meta name="og:description"', '><meta name="og:url"', '><meta name="og:site_name" content="La Velada 4"><meta name="og:type" content="website"><meta name="og:locale" content="es_ES"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><link rel="icon" type="image/png" href="/img/logo.png"><meta name="msapplication-config" content="/browserconfig.xml"><script src="/registerSW.js"><\/script><link rel="manifest" href="/manifest.webmanifest">'])), title, addAttribute(description, "content"), addAttribute(atomic, "href"), addAttribute(jost, "href"), preload?.map(({ href, as, type, rel = "preload", crossorigin }) => renderTemplate`<link${addAttribute(rel, "rel")}${addAttribute(href, "href")}${addAttribute(as, "as")}${addAttribute(type, "type")}${addAttribute(crossorigin, "crossorigin")}>`), addAttribute(canonicalURL, "href"), addAttribute(new URL(image, Astro2.url), "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(Astro2.url, "content"));
+  return renderTemplate(_a || (_a = __template(["<title>", '</title><meta charset="UTF-8"><meta name="description"', '><link rel="preload"', ' as="font" type="font/woff2" crossorigin><link rel="preload"', ' as="font" type="font/woff2" crossorigin>', '<link rel="canonical"', '><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#d5ff00"><meta name="keywords" content="cine de verano, estreno, cine, peliculas, verano, vera, garrucha, almer\xEDa"><meta name="og:image"', '><meta name="og:title"', '><meta name="og:description"', '><meta name="og:url"', '><meta name="og:site_name" content="La Velada 4"><meta name="og:type" content="website"><meta name="og:locale" content="es_ES"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><link rel="icon" type="image/png" href="/img/logo.png"><meta name="msapplication-config" content="/browserconfig.xml"><script src="/registerSW.js"><\/script><link rel="manifest" href="/manifest.webmanifest">', ""])), title, addAttribute(description, "content"), addAttribute(atomic, "href"), addAttribute(jost, "href"), preload?.map(({ href, as, type, rel = "preload", crossorigin }) => renderTemplate`<link${addAttribute(rel, "rel")}${addAttribute(href, "href")}${addAttribute(as, "as")}${addAttribute(type, "type")}${addAttribute(crossorigin, "crossorigin")}>`), addAttribute(canonicalURL, "href"), addAttribute(new URL(image, Astro2.url), "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(Astro2.url, "content"), renderComponent($$result, "RichResults", $$RichResults, {}));
 }, "/Users/diego.ramos/veracines-web/src/components/SEO.astro", void 0);
 
 const $$Astro$5 = createAstro("https://www.veracines.es");
@@ -165,7 +412,7 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title, description, preload, canonical, image } = Astro2.props;
-  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "KonamiCode", $$KonamiCode, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
+  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
 }, "/Users/diego.ramos/veracines-web/src/layouts/Layout.astro", void 0);
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -236,4 +483,4 @@ const _404 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$Layout as $, Metadata as M, _404 as _, $$Action as a };
+export { $$Layout as $, CINES as C, Metadata as M, PROYECCIONES as P, _404 as _, PELICULAS as a, $$Action as b };

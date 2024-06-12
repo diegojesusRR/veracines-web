@@ -1,5 +1,8 @@
 ---
 import { BOXERS } from "@/consts/boxers"
+import {CINES} from "../consts/cines";
+import {PROYECCIONES} from "../consts/proyecciones";
+import {PELICULAS} from "../consts/peliculas";
 
 /** https://developers.google.com/search/docs/appearance/structured-data/organization */
 const organizationSchema = {
@@ -17,57 +20,56 @@ const organizationSchema = {
 		"Conoce ",
 }
 
-/** https://developers.google.com/search/docs/appearance/structured-data/event */
-const eventSchema = {
-	"@context": "https://schema.org",
-	"@type": "Event",
-	"name": "Veracines",
-	"startDate": "2024-07-13T19:00:00",
-	"endDate": "2024-07-13T22:00:00",
-	"eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode", // https://schema.org/EventAttendanceModeEnumeration
-	"eventStatus": "https://schema.org/EventScheduled", // https://schema.org/EventStatusType
-	"location": {
-		"@type": "Place",
-		"name": "Estadio Santiago Bernabéu",
-		"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "Av. de Concha Espina, 1",
-			"addressLocality": "Chamartín",
-			"postalCode": "28036",
-			"addressRegion": "Madrid",
-			"addressCountry": "ES",
-		},
-	},
-	"image": ["/img/og.jpg"],
-	"description":
-		"La Velada del Año es un evento de boxeo aficionado entre streamers, creadores de contenido y celebridades, organizado por Ibai Llanos.",
-	/* "offers": {}, // Añadir cuando las entradas estén disponibles https://schema.org/Offer */
-	"performer": BOXERS.map(({ name }) => ({
-		"@type": "Person",
-		"name": name,
-	})),
-	"organizer": {
-		"@type": "Person",
-		"name": "Ibai Llanos",
-		"url": "https://www.twitch.tv/ibai",
-	},
-}
+const eventsSchema = PROYECCIONES.map(proyeccion => {
+
+    const cine = CINES.find(cine => cine.url === proyeccion.cineId)
+    const pelicula = PELICULAS.find(pelicula => pelicula.id === proyeccion.peliculaId)
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "ScreeningEvent",
+        "name": `${pelicula.nombre} en ${cine.nombre}`,
+        "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${cine.horaFijaProyeccion??proyeccion.hora}`,
+        "location": {
+            "@type": "Place",
+            "name": cine.nombre,
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": cine.localizacion,
+                "addressLocality": "Vera",
+                "postalCode": "04620",
+                "addressRegion": "Almería",
+                "addressCountry": "ES",
+            },
+        },
+        "image": [`https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`],
+        "description": pelicula.descripcion,
+        "workPresented": {
+            "@type": "Movie",
+            "name": pelicula.nombre,
+            "image": `https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`,
+            "description": pelicula.descripcion,
+        },
+    }
+})
 
 const FAQs = [
 	{
-		question: "¿Quién va a participar en La Velada del Año 4?",
-		answer: `Los participantes de esta edición serán: ${BOXERS.map(({ name }) => name).join(", ")}`,
+		question: "¿Se puede pasar con comida y bebida en Veracines?",
+		answer: "Si, se permite la entrada de comida y bebida, aunque el cine cuenta con todos los servicios para que no necesites traer nada.",
 	},
-	{
-		question: "¿Cuándo tendrá lugar La Velada del Año 4?",
-		answer:
-			"La Velada del Año 4 tendrá lugar el <strong>sábado 13 de julio de 2024</strong> en el Estadio Santiago Bernabéu",
-	},
-	{
-		question: "¿Dónde tendrá lugar La Velada del Año 4?",
-		answer:
-			"La Velada del Año 4 tendrá lugar el sábado 13 de julio de 2024 en el <strong>Estadio Santiago Bernabéu</strong>",
-	},
+    CINES.filter(x => x.horaFijaProyeccion).map(cine => ({
+        question: `¿A que hora empiezan las peliculas en ${cine.nombre}?`,
+        answer: `En ${cine.nombre} todas las proyecciones comienzan a las ${cine.horaFijaProyeccion}`,
+    })),
+    CINES.map(cine => ({
+        question: `¿Donde está el ${cine.nombre}?`,
+        answer: `El ${cine.nombre} está en ${cine.localizacion}`,
+    })),
+	    CINES.map(cine => ({
+        question: `¿Cuanto cuesta la entrada al ${cine.nombre}?`,
+        answer: `La entrada al ${cine.nombre} cuesta 5,50€`,
+    })),
 ]
 
 /** https://developers.google.com/search/docs/appearance/structured-data/faqpage */
@@ -88,5 +90,5 @@ const FAQSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
+{eventsSchema && eventsSchema.length && <script type="application/ld+json" set:html={JSON.stringify(eventsSchema)} />}
 <script type="application/ld+json" set:html={JSON.stringify(FAQSchema)} />
