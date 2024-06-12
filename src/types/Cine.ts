@@ -10,6 +10,10 @@ export interface Cine {
         ubicacionKey: string,
         direccion: string,
         descripcion: string,
+        codigoPostal: string,
+        ciudad: string,
+        provincia: string,
+        adressCounty: string,
     }
     servicios: Servicio[],
     horaFijaProyeccion?: string

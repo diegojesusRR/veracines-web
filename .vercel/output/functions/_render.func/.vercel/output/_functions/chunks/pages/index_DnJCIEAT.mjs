@@ -1,11 +1,9 @@
 /* empty css                                     */
-import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent, s as spreadAttributes } from '../astro_BvmcH-Yh.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent, s as spreadAttributes } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import 'html-escaper';
-import { a as $$Action, M as Metadata, $ as $$Layout } from './404_Bi9FLozQ.mjs';
+import { b as $$Action, C as CINES, M as Metadata, $ as $$Layout } from './404_B4fFa-6H.mjs';
 import 'clsx';
 /* empty css                          */
-import { C as CINES } from './_pelicula__B8FrZ0u2.mjs';
 
 const $$Astro$d = createAstro("https://www.veracines.es");
 const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
@@ -19,9 +17,9 @@ const $$UbicacionCard = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$UbicacionCard;
   const { cine } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col md:flex-row p-2 m-4 border-2 align-middle flex-grow bg-white bg-opacity-80`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-center items-center p-5`, "class")}> <h4${addAttribute(`text-xl text-${cine.color} text-center font-bold underline mb-2`, "class")}>${cine.nombre}</h4> <p${addAttribute(`text-center text-${cine.color}`, "class")}>${cine.localizacion.descripcion}</p> ${renderComponent($$result, "Action", $$Action, { "class": `w-3/4 text-base md:text-xs`, "as": `a`, "aria-disabled": `false`, "href": `/cartelera-${cine.url}/`, "rel": `noopener noreferrer`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col md:flex-row p-2 m-4 rounded-lg bg-white bg-opacity-70 border-2 align-middle flex-grow bg-white bg-opacity-80`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-center items-center p-5`, "class")}> <h4${addAttribute(`text-xl text-${cine.color} text-center font-bold underline mb-2`, "class")}>${cine.nombre}</h4> <p${addAttribute(`text-center text-${cine.color}`, "class")}>${cine.localizacion.descripcion}</p> ${renderComponent($$result, "Action", $$Action, { "class": `w-3/4 text-base md:text-xs`, "as": `a`, "aria-disabled": `false`, "href": `/cartelera-${cine.url}/`, "rel": `noopener noreferrer`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
 Consultar cartelera
-` })} </div> <div${addAttribute(`flex flex-col md:mt-2`, "class")}> <div${addAttribute(`border-4 border-primary`, "class")}> <iframe${addAttribute(`align-middle w-auto`, "class")}${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")}${addAttribute(`400`, "width")}${addAttribute(`250`, "height")}${addAttribute(`border:0;`, "style")}${addAttribute(``, "allowfullscreen")}${addAttribute(`lazy`, "loading")}${addAttribute(`no-referrer-when-downgrade`, "referrerpolicy")}></iframe> </div> <p${addAttribute(`text-center underline text-${cine.color} text-xs font-bold w-auto p-2`, "class")}>${cine.localizacion.direccion}</p> </div> </div>`;
+` })} </div> <div${addAttribute(`flex flex-col md:mt-2`, "class")}> <div${addAttribute(`border-4 border-primary rounded-lg`, "class")}> <iframe${addAttribute(`align-middle w-auto rounded-lg`, "class")}${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")}${addAttribute(`400`, "width")}${addAttribute(`250`, "height")}${addAttribute(`border:0;`, "style")}${addAttribute(``, "allowfullscreen")}${addAttribute(`lazy`, "loading")}${addAttribute(`no-referrer-when-downgrade`, "referrerpolicy")}></iframe> </div> <p${addAttribute(`text-center underline text-${cine.color} text-xs font-bold w-auto p-2`, "class")}>${cine.localizacion.direccion}</p> </div> </div>`;
 }, "/Users/diego.ramos/veracines-web/src/components/UbicacionCard.astro", void 0);
 
 const $$Astro$b = createAstro("https://www.veracines.es");

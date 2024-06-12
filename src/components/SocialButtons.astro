@@ -1,14 +1,13 @@
 ---
-import InstagramIcon from "@/icons/instagram.astro"
-import FacebookIcon from "@/icons/facebook.astro"
+import Instagram from "./icons/instagram.astro"
+import Facebook from "./icons/facebook.astro"
+import Phone from "./icons/phone.astro";
 ---
 
 <nav class:list={`${Astro.props.class}`}>
-	<ul
-		class="flex flex-row items-center gap-x-6"
-		aria-label="redes sociales y botón para alternar tema"
-	>
-		<li>
+
+	<div class="flex flex-row items-center gap-x-2" aria-label="redes sociales">
+		<div class="item">
 			<a
 				target="_blank"
 				rel="noopener"
@@ -16,10 +15,19 @@ import FacebookIcon from "@/icons/facebook.astro"
 				href="https://www.instagram.com/veracines.sl"
 				class="inline-block any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"
 			>
-				<InstagramIcon
-					class="text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0"
-				/>
+				<Facebook class="text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0"/>
 			</a>
-		</li>
-	</ul>
+		</div>
+		<div class="item">
+			<a
+				target="_blank"
+				rel="noopener"
+				aria-label="Instagram de Veracines, se abrirá en una nueva pestaña"
+				href="https://www.instagram.com/veracines.sl"
+				class="inline-block any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"
+			>
+				<Instagram class="text-primary transition-colors duration-300 hover:text-primary motion-reduce:duration-0"/>
+			</a>
+		</div>
+	</div>
 </nav>

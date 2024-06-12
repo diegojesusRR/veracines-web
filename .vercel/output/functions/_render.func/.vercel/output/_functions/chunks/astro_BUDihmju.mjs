@@ -1,6 +1,6 @@
 import { bold } from 'kleur/colors';
-import { escape } from 'html-escaper';
 import { clsx } from 'clsx';
+import { escape } from 'html-escaper';
 import 'cssesc';
 
 const ClientAddressNotAvailable = {
@@ -417,8 +417,28 @@ function createAstro(site) {
 function isPromise(value) {
   return !!value && typeof value === "object" && typeof value.then === "function";
 }
+async function* streamAsyncIterator(stream) {
+  const reader = stream.getReader();
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done)
+        return;
+      yield value;
+    }
+  } finally {
+    reader.releaseLock();
+  }
+}
 
 const escapeHTML = escape;
+class HTMLBytes extends Uint8Array {
+}
+Object.defineProperty(HTMLBytes.prototype, Symbol.toStringTag, {
+  get() {
+    return "HTMLBytes";
+  }
+});
 class HTMLString extends String {
   get [Symbol.toStringTag]() {
     return "HTMLString";
@@ -435,6 +455,49 @@ const markHTMLString = (value) => {
 };
 function isHTMLString(value) {
   return Object.prototype.toString.call(value) === "[object HTMLString]";
+}
+function markHTMLBytes(bytes) {
+  return new HTMLBytes(bytes);
+}
+function hasGetReader(obj) {
+  return typeof obj.getReader === "function";
+}
+async function* unescapeChunksAsync(iterable) {
+  if (hasGetReader(iterable)) {
+    for await (const chunk of streamAsyncIterator(iterable)) {
+      yield unescapeHTML(chunk);
+    }
+  } else {
+    for await (const chunk of iterable) {
+      yield unescapeHTML(chunk);
+    }
+  }
+}
+function* unescapeChunks(iterable) {
+  for (const chunk of iterable) {
+    yield unescapeHTML(chunk);
+  }
+}
+function unescapeHTML(str) {
+  if (!!str && typeof str === "object") {
+    if (str instanceof Uint8Array) {
+      return markHTMLBytes(str);
+    } else if (str instanceof Response && str.body) {
+      const body = str.body;
+      return unescapeChunksAsync(body);
+    } else if (typeof str.then === "function") {
+      return Promise.resolve(str).then((value) => {
+        return unescapeHTML(value);
+      });
+    } else if (str[Symbol.for("astro:slot-string")]) {
+      return str;
+    } else if (Symbol.iterator in str) {
+      return unescapeChunks(str);
+    } else if (Symbol.asyncIterator in str || hasGetReader(str)) {
+      return unescapeChunksAsync(str);
+    }
+  }
+  return markHTMLString(str);
 }
 
 const AstroJSX = "astro:jsx";
@@ -2082,4 +2145,4 @@ function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   return markHTMLString(output);
 }
 
-export { AstroError as A, renderJSX as B, chunkToString as C, DEFAULT_404_COMPONENT as D, ExpectedImage as E, Fragment as F, GetStaticPathsRequired as G, LocalsNotAnObject as H, IncompatibleDescriptorOptions as I, clientLocalsSymbol as J, clientAddressSymbol as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, ClientAddressNotAvailable as O, PageNumberParamNotFound as P, ASTRO_VERSION as Q, ResponseSentError as R, StaticClientAddressNotAvailable as S, responseSentSymbol as T, UnsupportedImageFormat as U, AstroResponseHeadersReassigned as V, renderPage as W, renderEndpoint as X, REROUTABLE_STATUS_CODES as Y, UnsupportedImageConversion as a, MissingSharp as b, createAstro as c, createComponent as d, addAttribute as e, renderComponent as f, renderSlot as g, renderHead as h, InvalidImageService as i, ExpectedImageOptions as j, FailedToFetchRemoteImageDimensions as k, ImageMissingAlt as l, maybeRenderHead as m, MiddlewareNoDataOrNextCalled as n, MiddlewareNotAResponse as o, ROUTE_TYPE_HEADER as p, REROUTE_DIRECTIVE_HEADER as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsReturn as t, InvalidGetStaticPathsEntry as u, GetStaticPathsExpectedParams as v, GetStaticPathsInvalidRouteParam as w, PrerenderDynamicEndpointPathCollide as x, ReservedSlotName as y, renderSlotToString as z };
+export { AstroError as A, renderSlotToString as B, renderJSX as C, DEFAULT_404_COMPONENT as D, ExpectedImage as E, Fragment as F, GetStaticPathsRequired as G, chunkToString as H, IncompatibleDescriptorOptions as I, LocalsNotAnObject as J, clientLocalsSymbol as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, clientAddressSymbol as O, PageNumberParamNotFound as P, ClientAddressNotAvailable as Q, ResponseSentError as R, StaticClientAddressNotAvailable as S, ASTRO_VERSION as T, UnsupportedImageFormat as U, responseSentSymbol as V, AstroResponseHeadersReassigned as W, renderPage as X, renderEndpoint as Y, REROUTABLE_STATUS_CODES as Z, UnsupportedImageConversion as a, MissingSharp as b, createAstro as c, createComponent as d, addAttribute as e, renderComponent as f, renderSlot as g, renderHead as h, InvalidImageService as i, ExpectedImageOptions as j, FailedToFetchRemoteImageDimensions as k, ImageMissingAlt as l, maybeRenderHead as m, MiddlewareNoDataOrNextCalled as n, MiddlewareNotAResponse as o, ROUTE_TYPE_HEADER as p, REROUTE_DIRECTIVE_HEADER as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsReturn as t, unescapeHTML as u, InvalidGetStaticPathsEntry as v, GetStaticPathsExpectedParams as w, GetStaticPathsInvalidRouteParam as x, PrerenderDynamicEndpointPathCollide as y, ReservedSlotName as z };
