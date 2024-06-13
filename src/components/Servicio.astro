@@ -5,8 +5,8 @@ import Parking from "./icons/parking.astro";
 const {aclaracion, clasesExtra, label} = Astro.props;
 ---
 <div class=`flex flex-col items-center gap-4 text-center col-span-2 ${clasesExtra}`>
-    <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full">
-        <slot />
+    <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100">
+        <slot class=" transition-colors duration-300 hover:text-primary motion-reduce:duration-0"/>
         <div class="grid gap-2">
             <h3 class="text-xl text-primary font-semibold">{label}</h3>
             <!--<p class="text-gray-500">Disponemos de un amplio parking para facilitar tu llegada. (Solo disponible en {CINES.find(x => x.url==='vera').nombre})</p>-->
