@@ -28,7 +28,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/legal-advice\\/?$",
+			"src": "^\\/aviso-legal\\/?$",
 			"dest": "_render"
 		},
 		{
@@ -36,7 +36,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/privacy-policy\\/?$",
+			"src": "^\\/politica-privacidad\\/?$",
 			"dest": "_render"
 		},
 		{
