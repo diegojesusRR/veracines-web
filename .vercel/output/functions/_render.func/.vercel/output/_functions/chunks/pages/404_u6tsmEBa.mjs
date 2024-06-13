@@ -1,4 +1,4 @@
-/* empty css                                     */
+/* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, m as maybeRenderHead, f as renderComponent, g as renderSlot, F as Fragment, u as unescapeHTML, h as renderHead } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
 import 'clsx';
@@ -62,7 +62,7 @@ const $$FooterContent = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$FooterContent;
   return renderTemplate`${maybeRenderHead()}<div class="flex flex-col gap-4 text-center md:flex-row lg:gap-6"> ${renderComponent($$result, "Typography", $$Typography, { "as": "span", "variant": "body", "color": "primary", "class:list": "text-center" }, { "default": ($$result2) => renderTemplate`
 &copy; ${(/* @__PURE__ */ new Date()).getFullYear()} Veracines <span aria-hidden="true" class="hidden md:inline">|</span><br aria-hidden="true" class="block md:hidden"> Todos los derechos reservados.
-` })} </div>`;
+` })} ${renderComponent($$result, "Typography", $$Typography, { "as": "span", "variant": "body", "color": "primary", "class:list": "text-center small" }, { "default": ($$result2) => renderTemplate` <a href="https://www.veracines.es/politica-privacidad" target="_blank" rel="noopener noreferrer" class="underline">Politica de Privacidad</a> <a href="https://www.veracines.es/aviso-legal" target="_blank" rel="noopener noreferrer" class="underline">Aviso Legal</a> ` })} </div>`;
 }, "/Users/diego.ramos/veracines-web/src/components/FooterContent.astro", void 0);
 
 const MOBILE_MENU_CONTENT_ID = "menuMobileContent";
