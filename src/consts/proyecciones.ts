@@ -1,149 +1,43 @@
 import type {Proyeccion} from "@/types/Proyeccion.ts";
 
-const proyeccionesGarrucha: Proyeccion[] = [
-    {
-        grupo: 1,
-        cineId: 'garrucha',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-24'),
-        hora: '22:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'garrucha',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-25'),
-        hora: '22:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'garrucha',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-26'),
-        hora: '20:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'garrucha',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-26'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'garrucha',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-28'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'garrucha',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-29'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'garrucha',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-30'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'garrucha',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-07-01'),
-        hora: '22:00'
+
+function getProyecciones(fechaInicio: Date, fechaFin: Date, pelicula: string, grupo: number, hora: string, cine: string): Proyeccion[] {
+    //Array con los dias entre fecha inicio y fecha fin
+    const dias = [];
+    for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
+        dias.push(new Date(d));
     }
+
+    return dias.map((fecha) => {
+        return {
+            grupo,
+            cineId: cine,
+            peliculaId: pelicula,
+            fecha,
+            hora
+        }
+    });
+}
+
+const proyeccionesGarrucha: Proyeccion[] = [
+    ...getProyecciones(new Date('2024-06-28'), new Date('2024-07-01'),'un-lugar-tranquilo-dia-1', 1, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-02'), new Date('2024-07-04'),'el-reino-del-planeta-de-los-simios', 2, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-05'), new Date('2024-07-08'), 'bad-boys-ride-or-die', 3, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-09'), new Date('2024-07-11'), 'gru-4-mi-villano-favorito', 4, '22:00', 'garrucha')
     ];
 
 const proyeccionesVera: Proyeccion[] = [
-    {
-        grupo: 1,
-        cineId: 'vera',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-24'),
-        hora: '22:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'vera',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-25'),
-        hora: '22:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'vera',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-26'),
-        hora: '22:00'
-    },
-    {
-        grupo: 1,
-        cineId: 'vera',
-        peliculaId: 'garfield',
-        fecha: new Date('2024-06-27'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'vera',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-28'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'vera',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-29'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'vera',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-06-30'),
-        hora: '22:00'
-    },
-    {
-        grupo: 2,
-        cineId: 'vera',
-        peliculaId: 'deadpool-y-lobezno',
-        fecha: new Date('2024-07-01'),
-        hora: '22:00'
-    },
-    {
-        grupo: 3,
-        cineId: 'vera',
-        peliculaId: 'bad-boys-ride-or-die',
-        fecha: new Date('2024-07-02'),
-        hora: '22:00'
-    },
-    {
-        grupo: 3,
-        cineId: 'vera',
-        peliculaId: 'bad-boys-ride-or-die',
-        fecha: new Date('2024-07-03'),
-        hora: '22:00'
-    },
-    {
-        grupo: 3,
-        cineId: 'vera',
-        peliculaId: 'bad-boys-ride-or-die',
-        fecha: new Date('2024-07-04'),
-        hora: '22:00'
-    },
+    ...getProyecciones(new Date('2024-06-28'), new Date('2024-07-01'),'el-reino-del-planeta-de-los-simios', 1, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-02'), new Date('2024-07-04'),'un-lugar-tranquilo-dia-1', 2, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-05'), new Date('2024-07-08'), 'gru-4-mi-villano-favorito', 3, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-09'), new Date('2024-07-11'), 'bad-boys-ride-or-die', 4, '22:00', 'vera')
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
     ];
 
 export const PROYECCIONES: Proyeccion[] = [
-    // ...proyeccionesVera,
-    //...proyeccionesGarrucha,
-    //...proyeccionesRegio
+     ...proyeccionesVera,
+    ...proyeccionesGarrucha,
+    ...proyeccionesRegio
 ]
