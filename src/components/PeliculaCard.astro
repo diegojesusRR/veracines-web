@@ -8,8 +8,8 @@ const color = 'primary';
 ---
 <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3">
     <div class="row-span-3 col-span-1 mr-1 ml-1">
-        <img class=`w-full border-4 border-${color}` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
-        <p class=`text-center text-${color} text-xs font-bold w-auto text-white p-2 bg-${color}`>{pelicula.edadRedomendada}</p>
+        <img class=`w-full border-4 border-${color} rounded-lg` src=`/img/peliculas/${pelicula.id}.jpeg` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
+        <p class=`text-center text-${color} text-xs font-bold w-auto text-white p-2 bg-${color} rounded-lg mt-2`>{pelicula.edadRedomendada}</p>
     </div>
     <div class="col-span-2 flex flex-col justify-between">
         <div class="flex flex-col justify-around justify-left items-center p-2">
@@ -34,4 +34,4 @@ const color = 'primary';
         </div>
     </div>
 </div>
-<iframe class="w-full h-96" src={pelicula.videoUrl} title={`Trailer de la pelicula ${pelicula.nombre}`}></iframe>
+<iframe class="w-full h-96 rounded-lg" src={pelicula.videoUrl} title={`Trailer de la pelicula ${pelicula.nombre}`}></iframe>
