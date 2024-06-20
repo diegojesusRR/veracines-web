@@ -298,7 +298,7 @@ const $$RichResults = createComponent(async ($$result, $$props, $$slots) => {
         "name": cine.nombre,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": cine.localizacion,
+          "streetAddress": cine.localizacion.direccion,
           "addressLocality": "Vera",
           "postalCode": "04620",
           "addressRegion": "Almer\xEDa",
