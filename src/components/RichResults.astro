@@ -35,7 +35,7 @@ const eventsSchema = PROYECCIONES.map(proyeccion => {
             "name": cine.nombre,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": cine.localizacion,
+                "streetAddress": cine.localizacion.direccion,
                 "addressLocality": "Vera",
                 "postalCode": "04620",
                 "addressRegion": "Almería",
