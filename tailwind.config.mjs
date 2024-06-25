@@ -10,8 +10,10 @@ export default {
 				atomic: ["Atomic", "cursive"],
 			},
 			colors: {
-				primary: "var(--color-primary)",
-				secondary: "var(--color-secondary)",
+				azul: "var(--color-azul)",
+				naranja: "var(--color-naranja)",
+				primary: "var(--color-azul)",
+				secondary: "var(--color-naranja)",
 				accent: "var(--color-accent)",
 				twitch: "var(--color-twitch)",
 				ice: "var(--color-twitch-ice)",

@@ -42,12 +42,12 @@ const eventsSchema = PROYECCIONES.map(proyeccion => {
                 "addressCountry": "ES",
             },
         },
-        "image": [`https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`],
+        "image": [`https://www.veracines.es/img/peliculas/${pelicula.image}`],
         "description": pelicula.descripcion,
         "workPresented": {
             "@type": "Movie",
             "name": pelicula.nombre,
-            "image": `https://www.veracines.es/img/peliculas/${pelicula.id}.jpeg`,
+            "image": `https://www.veracines.es/img/peliculas/${pelicula.image}`,
             "description": pelicula.descripcion,
         },
     }
