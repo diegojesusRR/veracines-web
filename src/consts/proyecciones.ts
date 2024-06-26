@@ -27,8 +27,8 @@ const proyeccionesGarrucha: Proyeccion[] = [
 
     ...getProyecciones(new Date('2024-07-12'), new Date('2024-07-15'), 'fly-by-the-moon', 5, '22:00', 'garrucha'),
     ...getProyecciones(new Date('2024-07-16'), new Date('2024-07-18'), 'inside-out-2', 6, '22:00', 'garrucha'),
-    ...getProyecciones(new Date('2024-07-19'), new Date('2024-07-22'), 'padre-no-hay-mas-que-uno-4', 7, '22:00', 'garrucha'),
-    ...getProyecciones(new Date('2024-07-23'), new Date('2024-07-26'), 'twisters', 8, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-19'), new Date('2024-07-22'), 'twisters', 7, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-23'), new Date('2024-07-26'), 'padre-no-hay-mas-que-uno-4', 8, '22:00', 'garrucha'),
 
     ];
 
@@ -40,8 +40,8 @@ const proyeccionesVera: Proyeccion[] = [
 
     ...getProyecciones(new Date('2024-07-12'), new Date('2024-07-15'), 'inside-out-2', 5, '22:00', 'vera'),
     ...getProyecciones(new Date('2024-07-16'), new Date('2024-07-18'), 'fly-by-the-moon', 6, '22:00', 'vera'),
-    ...getProyecciones(new Date('2024-07-19'), new Date('2024-07-22'), 'twisters', 7, '22:00', 'vera'),
-    ...getProyecciones(new Date('2024-07-23'), new Date('2024-07-26'), 'padre-no-hay-mas-que-uno-4', 8, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-19'), new Date('2024-07-22'), 'padre-no-hay-mas-que-uno-4', 7, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-23'), new Date('2024-07-26'), 'twisters', 8, '22:00', 'vera'),
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
