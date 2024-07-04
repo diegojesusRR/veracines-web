@@ -26,7 +26,10 @@ const $$ProyeccionesCine = createComponent(async ($$result, $$props, $$slots) =>
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$ProyeccionesCine;
   const { cine } = Astro2.props;
-  const gruposProyecciones = [...new Set(PROYECCIONES.filter((proyeccion) => proyeccion.cineId === cine.url && proyeccion.fecha >= /* @__PURE__ */ new Date())?.map((x) => x.grupo))];
+  const gruposProyecciones = [...new Set(PROYECCIONES.filter((proyeccion) => {
+    proyeccion.fecha = new Date(proyeccion.fecha.setHours(23, 59, 59));
+    return proyeccion.cineId === cine.url && proyeccion.fecha >= /* @__PURE__ */ new Date();
+  })?.map((x) => x.grupo))];
   return renderTemplate`${maybeRenderHead()}<section${addAttribute(`proyecciones-${cine.url}`, "id")}> ${gruposProyecciones.length === 0 ? renderTemplate`<div${addAttribute(`p-2 m-4 align-middle text-${cine.color}`, "class")}> <p>Actualmente no hay proyecciones disponibles.</p> </div>` : gruposProyecciones.map((grupo) => {
     const proyecciones = PROYECCIONES.filter((proyeccion) => proyeccion.cineId === cine.url && proyeccion.grupo === grupo);
     const pelicula = PELICULAS.find((pelicula2) => pelicula2.id === proyecciones[0].peliculaId);

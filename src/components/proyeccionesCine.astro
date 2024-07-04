@@ -4,7 +4,10 @@ import ProyeccionCard from "./proyeccionCard.astro";
 import {PELICULAS} from "../consts/peliculas";
 const { cine } = Astro.props;
 
-const gruposProyecciones: number[] = [... new Set(PROYECCIONES.filter(proyeccion => proyeccion.cineId === cine.url && proyeccion.fecha >= new Date())?.map(x => x.grupo))];
+const gruposProyecciones: number[] = [... new Set(PROYECCIONES.filter(proyeccion => {
+    proyeccion.fecha = new Date(proyeccion.fecha.setHours(23,59,59));
+    return proyeccion.cineId === cine.url && proyeccion.fecha >= new Date()
+})?.map(x => x.grupo))];
 ---
 
 <section id=`proyecciones-${cine.url}`>
