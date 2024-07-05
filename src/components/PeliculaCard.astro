@@ -27,8 +27,8 @@ const color = 'primary';
                 </div>
             </div>
         </div>
-        <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`>
-            <div class=`grid grid-cols-1 md:grid-cols-2 gap-4 justify-top justify-left items-center pl-2 pr-2`>
+        <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base justify-center`>
+            <div class=`grid grid-cols-1 md:grid-cols-2 gap-4 justify-top justify-left items-start pl-2 pr-2`>
                 {CINES.map(cine => <ProyeccionesPelicula cine={cine} pelicula={pelicula}/>)}
             </div>
         </div>
