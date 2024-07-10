@@ -218,7 +218,7 @@ const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-12"), /* @__PURE__ */ new Date("2024-07-15"), "inside-out-2", 5, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-16"), /* @__PURE__ */ new Date("2024-07-18"), "fly-by-the-moon", 6, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-19"), /* @__PURE__ */ new Date("2024-07-22"), "padre-no-hay-mas-que-uno-4", 7, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-26"), "twisters", 8, "22:00", "vera")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-25"), "twisters", 8, "22:00", "vera")
 ];
 const proyeccionesRegio = [];
 const PROYECCIONES = [
