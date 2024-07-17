@@ -30,8 +30,8 @@ const proyeccionesGarrucha: Proyeccion[] = [
     ...getProyecciones(new Date('2024-07-19'), new Date('2024-07-22'), 'twisters', 7, '22:00', 'garrucha'),
     ...getProyecciones(new Date('2024-07-23'), new Date('2024-07-26'), 'padre-no-hay-mas-que-uno-4', 8, '22:00', 'garrucha'),
 
-    ...getProyecciones(new Date('2024-07-27'), new Date('2024-07-29'), 'gru-4-mi-villano-favorito', 9, '22:00', 'vera'),
-    ...getProyecciones(new Date('2024-07-30'), new Date('2024-08-01'), 'deadpool-y-lobezno', 10, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-07-27'), new Date('2024-07-29'), 'gru-4-mi-villano-favorito', 9, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-07-30'), new Date('2024-08-01'), 'deadpool-y-lobezno', 10, '22:00', 'garrucha'),
     ];
 
 const proyeccionesVera: Proyeccion[] = [
