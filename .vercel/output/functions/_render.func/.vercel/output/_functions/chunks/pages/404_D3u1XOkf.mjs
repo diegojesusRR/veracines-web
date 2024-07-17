@@ -208,7 +208,9 @@ const proyeccionesGarrucha = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-12"), /* @__PURE__ */ new Date("2024-07-15"), "fly-by-the-moon", 5, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-16"), /* @__PURE__ */ new Date("2024-07-18"), "inside-out-2", 6, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-19"), /* @__PURE__ */ new Date("2024-07-22"), "twisters", 7, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-26"), "padre-no-hay-mas-que-uno-4", 8, "22:00", "garrucha")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-26"), "padre-no-hay-mas-que-uno-4", 8, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-27"), /* @__PURE__ */ new Date("2024-07-29"), "gru-4-mi-villano-favorito", 9, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "deadpool-y-lobezno", 10, "22:00", "vera")
 ];
 const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-06-28"), /* @__PURE__ */ new Date("2024-07-01"), "el-reino-del-planeta-de-los-simios", 1, "22:00", "vera"),
@@ -218,7 +220,9 @@ const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-12"), /* @__PURE__ */ new Date("2024-07-15"), "inside-out-2", 5, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-16"), /* @__PURE__ */ new Date("2024-07-18"), "fly-by-the-moon", 6, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-19"), /* @__PURE__ */ new Date("2024-07-22"), "padre-no-hay-mas-que-uno-4", 7, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-25"), "twisters", 8, "22:00", "vera")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-25"), "twisters", 8, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-26"), /* @__PURE__ */ new Date("2024-07-29"), "deadpool-y-lobezno", 9, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "gru-4-mi-villano-favorito", 10, "22:00", "vera")
 ];
 const proyeccionesRegio = [];
 const PROYECCIONES = [
