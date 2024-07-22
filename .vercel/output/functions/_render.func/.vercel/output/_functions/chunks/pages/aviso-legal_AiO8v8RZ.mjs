@@ -1,7 +1,7 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, f as renderComponent, m as maybeRenderHead, e as addAttribute } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from './404_CGqZOWqy.mjs';
+import { $ as $$Layout } from './404_BufDtDxZ.mjs';
 
 const $$Astro = createAstro("https://www.veracines.es");
 const $$AvisoLegal = createComponent(async ($$result, $$props, $$slots) => {
