@@ -32,7 +32,10 @@ const proyeccionesGarrucha: Proyeccion[] = [
 
     ...getProyecciones(new Date('2024-07-27'), new Date('2024-07-29'), 'gru-4-mi-villano-favorito', 9, '22:00', 'garrucha'),
     ...getProyecciones(new Date('2024-07-30'), new Date('2024-08-01'), 'deadpool-y-lobezno', 10, '22:00', 'garrucha'),
-    ];
+    ...getProyecciones(new Date('2024-08-02'), new Date('2024-08-05'), 'inside-out-2', 11, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-06'), new Date('2024-08-08'), 'padre-no-hay-mas-que-uno-4', 12, '22:00', 'garrucha'),
+
+];
 
 const proyeccionesVera: Proyeccion[] = [
     ...getProyecciones(new Date('2024-06-28'), new Date('2024-07-01'),'el-reino-del-planeta-de-los-simios', 1, '22:00', 'vera'),
@@ -47,6 +50,10 @@ const proyeccionesVera: Proyeccion[] = [
 
     ...getProyecciones(new Date('2024-07-26'), new Date('2024-07-29'), 'deadpool-y-lobezno', 9, '22:00', 'vera'),
     ...getProyecciones(new Date('2024-07-30'), new Date('2024-08-01'), 'gru-4-mi-villano-favorito', 10, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-02'), new Date('2024-08-05'), 'padre-no-hay-mas-que-uno-4', 11, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-06'), new Date('2024-08-08'), 'inside-out-2', 12, '22:00', 'vera'),
+
+
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
