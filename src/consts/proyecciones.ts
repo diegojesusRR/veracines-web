@@ -35,6 +35,9 @@ const proyeccionesGarrucha: Proyeccion[] = [
     ...getProyecciones(new Date('2024-08-02'), new Date('2024-08-05'), 'inside-out-2', 11, '22:00', 'garrucha'),
     ...getProyecciones(new Date('2024-08-06'), new Date('2024-08-08'), 'padre-no-hay-mas-que-uno-4', 12, '22:00', 'garrucha'),
 
+    ...getProyecciones(new Date('2024-08-09'), new Date('2024-08-12'), 'la-trampa', 13, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-13'), new Date('2024-08-15'), 'cuerpo-escombro', 14, '22:00', 'garrucha'),
+
 ];
 
 const proyeccionesVera: Proyeccion[] = [
@@ -53,6 +56,9 @@ const proyeccionesVera: Proyeccion[] = [
     ...getProyecciones(new Date('2024-08-02'), new Date('2024-08-05'), 'padre-no-hay-mas-que-uno-4', 11, '22:00', 'vera'),
     ...getProyecciones(new Date('2024-08-06'), new Date('2024-08-08'), 'inside-out-2', 12, '22:00', 'vera'),
 
+    ...getProyecciones(new Date('2024-08-09'), new Date('2024-08-12'), 'cuerpo-escombro', 13, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-13'), new Date('2024-08-15'), 'la-trampa', 14, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-16'), new Date('2024-08-19'), 'buffalo-kids', 15, '22:00', 'vera'),
 
 ];
 
