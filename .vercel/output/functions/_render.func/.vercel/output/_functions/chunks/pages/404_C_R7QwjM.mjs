@@ -46,6 +46,7 @@ const $$Typography = createComponent(async ($$result, $$props, $$slots) => {
     white: "text-white",
     black: "text-black",
     primary: "text-primary",
+    secondary: "text-secondary",
     neutral: "text-neutral-300"
   };
   const classes = [
@@ -212,7 +213,9 @@ const proyeccionesGarrucha = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-27"), /* @__PURE__ */ new Date("2024-07-29"), "gru-4-mi-villano-favorito", 9, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "deadpool-y-lobezno", 10, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-02"), /* @__PURE__ */ new Date("2024-08-05"), "inside-out-2", 11, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "padre-no-hay-mas-que-uno-4", 12, "22:00", "garrucha")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "padre-no-hay-mas-que-uno-4", 12, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "la-trampa", 13, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "cuerpo-escombro", 14, "22:00", "garrucha")
 ];
 const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-06-28"), /* @__PURE__ */ new Date("2024-07-01"), "el-reino-del-planeta-de-los-simios", 1, "22:00", "vera"),
@@ -226,7 +229,10 @@ const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-26"), /* @__PURE__ */ new Date("2024-07-29"), "deadpool-y-lobezno", 9, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "gru-4-mi-villano-favorito", 10, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-02"), /* @__PURE__ */ new Date("2024-08-05"), "padre-no-hay-mas-que-uno-4", 11, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "inside-out-2", 12, "22:00", "vera")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "inside-out-2", 12, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "cuerpo-escombro", 13, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "la-trampa", 14, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-19"), "buffalo-kids", 15, "22:00", "vera")
 ];
 const proyeccionesRegio = [];
 const PROYECCIONES = [
@@ -315,6 +321,30 @@ const PELICULAS = [
     descripcion: 'Tercera entrega de la saga "Deadpool", ahora integrada en el Universo Cinematográfico de Marvel (MCU) pero manteniendo su enfoque para adultos, con calificación R. En septiembre de 2022 se confirmó la aparición de Hugh Jackman como Lobezno, por primera vez desde "Logan".',
     edadRedomendada: "No recomendada menores 16 años",
     videoUrl: "https://www.youtube.com/embed/tTM5weeCFvQ"
+  },
+  {
+    id: "cuerpo-escombro",
+    image: "cuerpo-escombro.jpg",
+    nombre: "Cuerpo Escombro",
+    descripcion: "Ante los problemas para encontrar trabajo y liado por su hermano Fermín, Javi se hace pasar por discapacitado para conseguir un puesto que necesita desesperadamente. Pero fingir parálisis cerebral es más complicado de lo que parece, sobre todo cuando se enamora de su jefa.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/l-W4M9QrhS8"
+  },
+  {
+    id: "la-trampa",
+    image: "la-trampa.jpg",
+    nombre: "La Trampa",
+    descripcion: "Un padre y su hija adolescente asisten a un concierto de música pop, donde se dan cuenta de que están en el centro de un oscuro y siniestro suceso.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/v7BpWoDJDaI"
+  },
+  {
+    id: "buffalo-kids",
+    image: "buffalo-kids.jpg",
+    nombre: "Buffalo Kids",
+    descripcion: "Tom y Mary, dos hermanos huérfanos, desembarcan en Nueva York a finales del siglo XIX. Para reunirse con su tío, se aventuran como polizones en un tren por el Salvaje Oeste donde conocerán a Nick, un nuevo y extraordinario amigo que cambiará sus vidas para siempre. Juntos se embarcarán en un peligroso viaje, enfrentándose a malvados villanos, haciendo inesperados amigos y viviendo situaciones únicas.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/JyEU5-a4G44"
   }
 ];
 

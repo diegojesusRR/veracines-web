@@ -83,4 +83,28 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/tTM5weeCFvQ"
     },
+    {
+        id: "cuerpo-escombro",
+        image: "cuerpo-escombro.jpg",
+        nombre: "Cuerpo Escombro",
+        descripcion: "Ante los problemas para encontrar trabajo y liado por su hermano Fermín, Javi se hace pasar por discapacitado para conseguir un puesto que necesita desesperadamente. Pero fingir parálisis cerebral es más complicado de lo que parece, sobre todo cuando se enamora de su jefa.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/l-W4M9QrhS8"
+    },
+    {
+        id: "la-trampa",
+        image: "la-trampa.jpg",
+        nombre: "La Trampa",
+        descripcion: "Un padre y su hija adolescente asisten a un concierto de música pop, donde se dan cuenta de que están en el centro de un oscuro y siniestro suceso.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/v7BpWoDJDaI"
+    },
+    {
+        id: "buffalo-kids",
+        image: "buffalo-kids.jpg",
+        nombre: "Buffalo Kids",
+        descripcion:"Tom y Mary, dos hermanos huérfanos, desembarcan en Nueva York a finales del siglo XIX. Para reunirse con su tío, se aventuran como polizones en un tren por el Salvaje Oeste donde conocerán a Nick, un nuevo y extraordinario amigo que cambiará sus vidas para siempre. Juntos se embarcarán en un peligroso viaje, enfrentándose a malvados villanos, haciendo inesperados amigos y viviendo situaciones únicas.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/JyEU5-a4G44"
+    }
 ];
