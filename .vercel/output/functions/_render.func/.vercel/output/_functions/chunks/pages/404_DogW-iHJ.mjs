@@ -215,7 +215,12 @@ const proyeccionesGarrucha = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-02"), /* @__PURE__ */ new Date("2024-08-05"), "inside-out-2", 11, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "padre-no-hay-mas-que-uno-4", 12, "22:00", "garrucha"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "la-trampa", 13, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "cuerpo-escombro", 14, "22:00", "garrucha")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "cuerpo-escombro", 14, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-17"), "gru-4-mi-villano-favorito", 15, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-18"), /* @__PURE__ */ new Date("2024-08-19"), "deadpool-y-lobezno", 16, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-20"), /* @__PURE__ */ new Date("2024-08-22"), "buffalo-kids", 17, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-23"), /* @__PURE__ */ new Date("2024-08-26"), "parpadea-dos-veces", 18, "22:00", "garrucha"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-27"), /* @__PURE__ */ new Date("2024-08-29"), "odio-el-verano", 19, "22:00", "garrucha")
 ];
 const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-06-28"), /* @__PURE__ */ new Date("2024-07-01"), "el-reino-del-planeta-de-los-simios", 1, "22:00", "vera"),
@@ -232,7 +237,10 @@ const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "inside-out-2", 12, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "cuerpo-escombro", 13, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "la-trampa", 14, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-19"), "buffalo-kids", 15, "22:00", "vera")
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-19"), "buffalo-kids", 15, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-20"), /* @__PURE__ */ new Date("2024-08-22"), "padre-no-hay-mas-que-uno-4", 16, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-23"), /* @__PURE__ */ new Date("2024-08-26"), "odio-el-verano", 17, "22:00", "vera"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-27"), /* @__PURE__ */ new Date("2024-08-29"), "parpadea-dos-veces", 18, "22:00", "vera")
 ];
 const proyeccionesRegio = [];
 const PROYECCIONES = [
@@ -345,6 +353,22 @@ const PELICULAS = [
     descripcion: "Tom y Mary, dos hermanos huérfanos, desembarcan en Nueva York a finales del siglo XIX. Para reunirse con su tío, se aventuran como polizones en un tren por el Salvaje Oeste donde conocerán a Nick, un nuevo y extraordinario amigo que cambiará sus vidas para siempre. Juntos se embarcarán en un peligroso viaje, enfrentándose a malvados villanos, haciendo inesperados amigos y viviendo situaciones únicas.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/JyEU5-a4G44"
+  },
+  {
+    id: "parpadea-dos-veces",
+    image: "parpadea-dos-veces.jpg",
+    nombre: "Parpadea dos veces",
+    descripcion: "Cuando el magnate de la tecnología Slater King (Channing Tatum) conoce a la camarera Frida (Naomi Ackie) en su gala de recaudación de fondos, saltan chispas. Él la invita a acompañarle a él y a sus amigos a unas vacaciones de ensueño en su isla privada. Un auténtico paraíso. Las noches salvajes se mezclan con mañanas bañadas por el sol y todo el mundo se lo pasa en grande. Nadie quiere que el viaje termine, pero cuando empiezan a suceder cosas extrañas, Frida intuye que algo anda mal en ese lugar. Tendrá que descubrir la verdad si quiere salir viva de la fiesta.",
+    edadRedomendada: "Pendiente de calificación",
+    videoUrl: "https://www.youtube.com/embed/5yZOzi5h54U"
+  },
+  {
+    id: "odio-el-verano",
+    image: "odio-el-verano.jpg",
+    nombre: "Odio el verano",
+    descripcion: "Alonso (barrendero; Roberto Álamo) y Marisa (tarotista; Malena Alterio), Torres y Fátima (propietarios de una charcutería; Jordi Sánchez y María Botto) y Calatrava (cirujano estético; Julián López) y Vicky (influencer; Kira Miró) han reservado una casa aislada en Canarias para pasar las mejores vacaciones de su vida con sus respectivas familias. Lo que no saben es que, por un error de la agencia, han alquilado la misma casa. Ninguno está dispuesto a renunciar a ella y tampoco hay muchas alternativas, por lo que se ven obligados a compartir habitáculo durante todas sus vacaciones. Las patentes diferencias entre cada uno de sus miembros convierten esos días en un caótico cúmulo de divertidas y desmadradas situaciones. A pesar de ello, tienen que aprender a convivir y comprender a toda esa gente tan distinta... Y a ellos mismos.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/eNkDXNfmzzs"
   }
 ];
 
