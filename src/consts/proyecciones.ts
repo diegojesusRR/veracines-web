@@ -38,6 +38,12 @@ const proyeccionesGarrucha: Proyeccion[] = [
     ...getProyecciones(new Date('2024-08-09'), new Date('2024-08-12'), 'la-trampa', 13, '22:00', 'garrucha'),
     ...getProyecciones(new Date('2024-08-13'), new Date('2024-08-15'), 'cuerpo-escombro', 14, '22:00', 'garrucha'),
 
+    ...getProyecciones(new Date('2024-08-16'), new Date('2024-08-17'), 'gru-4-mi-villano-favorito', 15, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-18'), new Date('2024-08-19'), 'deadpool-y-lobezno', 16, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-20'), new Date('2024-08-22'), 'buffalo-kids', 17, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-23'), new Date('2024-08-26'), 'parpadea-dos-veces', 18, '22:00', 'garrucha'),
+    ...getProyecciones(new Date('2024-08-27'), new Date('2024-08-29'), 'odio-el-verano', 19, '22:00', 'garrucha'),
+
 ];
 
 const proyeccionesVera: Proyeccion[] = [
@@ -60,6 +66,9 @@ const proyeccionesVera: Proyeccion[] = [
     ...getProyecciones(new Date('2024-08-13'), new Date('2024-08-15'), 'la-trampa', 14, '22:00', 'vera'),
     ...getProyecciones(new Date('2024-08-16'), new Date('2024-08-19'), 'buffalo-kids', 15, '22:00', 'vera'),
 
+    ...getProyecciones(new Date('2024-08-20'), new Date('2024-08-22'), 'padre-no-hay-mas-que-uno-4', 16, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-23'), new Date('2024-08-26'), 'odio-el-verano', 17, '22:00', 'vera'),
+    ...getProyecciones(new Date('2024-08-27'), new Date('2024-08-29'), 'parpadea-dos-veces', 18, '22:00', 'vera'),
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
