@@ -1,7 +1,7 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent, s as spreadAttributes, g as renderSlot } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { b as $$Action, C as CINES, M as Metadata, $ as $$Layout } from './404_DogW-iHJ.mjs';
+import { b as $$Action, C as CINES, M as Metadata, $ as $$Layout } from './404_vxHModi9.mjs';
 import 'clsx';
 /* empty css                          */
 
