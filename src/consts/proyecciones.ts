@@ -77,7 +77,15 @@ const proyeccionesVera: Proyeccion[] = [
 ];
 
 const proyeccionesRegio: Proyeccion[] = [
-    ];
+    ...getProyecciones(new Date('2024-11-15'), new Date('2024-11-17'), 'gladiator-2', 1, '17:30', 'regio'),
+    ...getProyecciones(new Date('2024-11-15'), new Date('2024-11-17'), 'gladiator-2', 1, '20:30', 'regio'),
+    ...getProyecciones(new Date('2024-11-21'), new Date('2024-11-21'), 'gladiator-2', 1, '20:00', 'regio'),
+
+    ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'), 'wicked', 2, '17:30', 'regio'),
+    ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'), 'wicked', 2, '20:30', 'regio'),
+    ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'), 'wicked', 2, '20:00', 'regio'),
+
+];
 
 export const PROYECCIONES: Proyeccion[] = [
      ...proyeccionesVera,
