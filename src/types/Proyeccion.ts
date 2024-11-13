@@ -4,4 +4,5 @@ export interface Proyeccion {
     cineId: string
     fecha: Date
     hora: string
+    vose?: string
 }

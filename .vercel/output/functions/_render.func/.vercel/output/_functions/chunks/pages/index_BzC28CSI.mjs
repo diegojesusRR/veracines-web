@@ -1,7 +1,7 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent, s as spreadAttributes, g as renderSlot } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { b as $$Action, C as CINES, M as Metadata, $ as $$Layout } from './404_vxHModi9.mjs';
+import { b as $$Action, C as CINES, M as Metadata, $ as $$Layout } from './404_MQBDwc_v.mjs';
 import 'clsx';
 /* empty css                          */
 
@@ -26,7 +26,12 @@ const $$Astro$c = createAstro("https://www.veracines.es");
 const $$Ubicaciones = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Ubicaciones;
-  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${CINES.map((cine) => renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": cine })}`)} </section>`;
+  const regio = CINES.find((cine) => cine.url === "regio");
+  const garrucha = CINES.find((cine) => cine.url === "garrucha");
+  const vera = CINES.find((cine) => cine.url === "vera");
+  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}
+        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
+        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": garrucha })}`} </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/ubicaciones.astro", void 0);
 
 const CONTACTO = {

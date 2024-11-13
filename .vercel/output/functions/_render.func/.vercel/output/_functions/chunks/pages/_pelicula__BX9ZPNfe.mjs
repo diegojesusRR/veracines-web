@@ -1,7 +1,7 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { P as PROYECCIONES, C as CINES, a as PELICULAS, $ as $$Layout } from './404_vxHModi9.mjs';
+import { P as PROYECCIONES, C as CINES, a as PELICULAS, $ as $$Layout } from './404_MQBDwc_v.mjs';
 import 'clsx';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -17,7 +17,7 @@ const $$ProyeccionesPelicula = createComponent(async ($$result, $$props, $$slots
     const proyeccionesDia = proyecciones.filter((proyeccion) => proyeccion.fecha.getDate() === dia);
     const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
     const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
-    return renderTemplate`<li><span>${diaText}</span><span> - ${proyeccionesDia.map((proyeccion) => proyeccion.hora).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora}`}</span></li>`;
+    return renderTemplate`<li><span>${diaText}</span><span> - ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora} ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? " (VOSE)" : ""}`}</span></li>`;
   })}</ul></div>`}`;
 }, "/Users/diego.ramos/veracines-web/src/components/ProyeccionesPelicula.astro", void 0);
 
