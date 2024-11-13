@@ -136,6 +136,22 @@ export const PELICULAS: Pelicula[] = [
         nombre: "Alien: Romulus",
         descripcion: "Mientras rebuscan en las profundidades de una estación espacial abandonada, un grupo de jóvenes colonizadores del espacio se encuentra cara a cara con la forma de vida más aterradora del universo.",
         edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/HCjuv9STNps"
+    },
+    {
+        id: "gladiator-2",
+        image: "gladiator-2.jpg",
+        nombre: "Gladiator II",
+        descripcion: "Años después de presenciar la muerte del admirado héroe Máximo a manos de su tío, Lucio (Paul Mescal) se ve forzado a entrar en el Coliseo tras ser testigo de la conquista de su hogar por parte de los tiránicos emperadores que dirigen Roma con puño de hierro. Con un corazón desbordante de furia y el futuro del imperio en juego, Lucio debe rememorar su pasado en busca de la fuerza y el honor que devuelvan al pueblo la gloria perdida de Roma.",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/ozlGL6qsB_I"
+    },
+    {
+        id: "wicked",
+        image: "wicked.jpg",
+        nombre: "Wicked",
+        descripcion: "La historia de cómo una mujer de piel verde esmeralda se convierte en la Malvada Bruja del Oeste; largometraje basado en el musical de Broadway.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/UNHQgy3jawI"
     }
 ];
