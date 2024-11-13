@@ -1,7 +1,12 @@
-/* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, m as maybeRenderHead, f as renderComponent, g as renderSlot, F as Fragment, u as unescapeHTML, h as renderHead } from '../astro_BUDihmju.mjs';
+/* empty css                                */
+import crypto from 'node:crypto';
 import 'kleur/colors';
 import 'clsx';
+
+if (!globalThis.crypto) globalThis.crypto = crypto;
+if (typeof globalThis.crypto.subtle === "undefined") globalThis.crypto.subtle = crypto.webcrypto.subtle;
+if (typeof globalThis.crypto.randomUUID === "undefined") globalThis.crypto.randomUUID = crypto.randomUUID;
 
 const $$Astro$h = createAstro("https://www.veracines.es");
 const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => {
