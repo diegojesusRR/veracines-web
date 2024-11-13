@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@astrojs/db": "0.9.5",
+    "@astrojs/netlify": "^5.5.4",
     "@auth/core": "0.18.6",
     "@fontsource-variable/jost": "5.0.18",
     "@vercel/analytics": "1.2.2",
