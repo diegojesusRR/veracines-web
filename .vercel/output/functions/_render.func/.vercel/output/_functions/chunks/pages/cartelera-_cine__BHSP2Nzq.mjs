@@ -1,7 +1,7 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, f as renderComponent } from '../astro_BUDihmju.mjs';
 import 'kleur/colors';
-import { P as PROYECCIONES, a as PELICULAS, C as CINES, M as Metadata, $ as $$Layout } from './404_vxHModi9.mjs';
+import { P as PROYECCIONES, a as PELICULAS, C as CINES, M as Metadata, $ as $$Layout } from './404_MQBDwc_v.mjs';
 import 'clsx';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");
@@ -17,7 +17,7 @@ const $$ProyeccionCard = createComponent(async ($$result, $$props, $$slots) => {
     const proyeccionesDia = proyecciones.filter((proyeccion) => proyeccion.fecha.getDate() === dia);
     const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
     return renderTemplate`<li> <span>${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}</span>
-- ${proyeccionesDia.map((proyeccion) => proyeccion.hora).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora}`} </li>`;
+- ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora} ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? " (VOSE)" : ""}`} </li>`;
   })} </ul> </div> <div class="relative flex h-2 w-full flex-col items-center m-4"> <div class=" absolute w-full items-center justify-between"> <div class="h-[2px] w-full rounded-l-[30%] border-t-0" style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"></div> </div> </div> <p${addAttribute(`text-center text-${cine.color} line-clamp-4`, "class")}>${pelicula.descripcion}</p> </div> </div> <a${addAttribute(`https://www.veracines.es/peliculas/${pelicula.id}`, "href")}${addAttribute(`text-center text-${cine.color} absolute inset-0`, "class")}></a> </div>`;
 }, "/Users/diego.ramos/veracines-web/src/components/proyeccionCard.astro", void 0);
 

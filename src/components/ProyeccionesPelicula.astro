@@ -21,7 +21,7 @@ const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fec
                 const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
                 return (<li>
                     <span>{diaText}</span>
-                    <span> - {proyeccionesDia.map(proyeccion => proyeccion.hora).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora}`}</span>
+                    <span> - {proyeccionesDia.map(proyeccion => `${proyeccion.hora} ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}</span>
                 </li>)
             })}
         </ul>

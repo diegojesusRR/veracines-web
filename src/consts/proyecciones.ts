@@ -1,7 +1,7 @@
 import type {Proyeccion} from "@/types/Proyeccion.ts";
 
 
-function getProyecciones(fechaInicio: Date, fechaFin: Date, pelicula: string, grupo: number, hora: string, cine: string): Proyeccion[] {
+function getProyecciones(fechaInicio: Date, fechaFin: Date, pelicula: string, grupo: number, hora: string, cine: string, vose?: string): Proyeccion[] {
     //Array con los dias entre fecha inicio y fecha fin
     const dias = [];
     for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
@@ -14,7 +14,8 @@ function getProyecciones(fechaInicio: Date, fechaFin: Date, pelicula: string, gr
             cineId: cine,
             peliculaId: pelicula,
             fecha,
-            hora
+            hora,
+            vose
         }
     });
 }
@@ -79,11 +80,11 @@ const proyeccionesVera: Proyeccion[] = [
 const proyeccionesRegio: Proyeccion[] = [
     ...getProyecciones(new Date('2024-11-15'), new Date('2024-11-17'), 'gladiator-2', 1, '17:30', 'regio'),
     ...getProyecciones(new Date('2024-11-15'), new Date('2024-11-17'), 'gladiator-2', 1, '20:30', 'regio'),
-    ...getProyecciones(new Date('2024-11-21'), new Date('2024-11-21'), 'gladiator-2', 1, '20:00', 'regio'),
+    ...getProyecciones(new Date('2024-11-21'), new Date('2024-11-21'), 'gladiator-2', 1, '20:00', 'regio', 'en'),
 
     ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'), 'wicked', 2, '17:30', 'regio'),
     ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'), 'wicked', 2, '20:30', 'regio'),
-    ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'), 'wicked', 2, '20:00', 'regio'),
+    ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'), 'wicked', 2, '20:00', 'regio', 'en'),
 
 ];
 

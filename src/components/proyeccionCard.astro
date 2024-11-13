@@ -25,7 +25,7 @@ const mesesProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fe
                         const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
                         return (<li>
                             <span>{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
-                            - {proyeccionesDia.map(proyeccion => proyeccion.hora).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora}`}
+                            - {proyeccionesDia.map(proyeccion => `${proyeccion.hora} ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}
                         </li>)
                     })}
                 </ul>

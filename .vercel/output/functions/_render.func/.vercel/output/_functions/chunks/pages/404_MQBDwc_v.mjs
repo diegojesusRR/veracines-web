@@ -186,7 +186,7 @@ const CINES = [
   }
 ];
 
-function getProyecciones(fechaInicio, fechaFin, pelicula, grupo, hora, cine) {
+function getProyecciones(fechaInicio, fechaFin, pelicula, grupo, hora, cine, vose) {
   const dias = [];
   for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
     dias.push(new Date(d));
@@ -197,7 +197,8 @@ function getProyecciones(fechaInicio, fechaFin, pelicula, grupo, hora, cine) {
       cineId: cine,
       peliculaId: pelicula,
       fecha,
-      hora
+      hora,
+      vose
     };
   });
 }
@@ -245,7 +246,14 @@ const proyeccionesVera = [
   ...getProyecciones(/* @__PURE__ */ new Date("2024-08-30"), /* @__PURE__ */ new Date("2024-09-02"), "alien-romulus", 19, "22:00", "vera"),
   ...getProyecciones(/* @__PURE__ */ new Date("2024-09-03"), /* @__PURE__ */ new Date("2024-09-03"), "buffalo-kids", 20, "22:00", "vera")
 ];
-const proyeccionesRegio = [];
+const proyeccionesRegio = [
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "gladiator-2", 1, "17:30", "regio"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "gladiator-2", 1, "20:30", "regio"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-21"), /* @__PURE__ */ new Date("2024-11-21"), "gladiator-2", 1, "20:00", "regio", "en"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "wicked", 2, "17:30", "regio"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "wicked", 2, "20:30", "regio"),
+  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-28"), /* @__PURE__ */ new Date("2024-11-28"), "wicked", 2, "20:00", "regio", "en")
+];
 const PROYECCIONES = [
   ...proyeccionesVera,
   ...proyeccionesGarrucha,
@@ -387,7 +395,23 @@ const PELICULAS = [
     nombre: "Alien: Romulus",
     descripcion: "Mientras rebuscan en las profundidades de una estación espacial abandonada, un grupo de jóvenes colonizadores del espacio se encuentra cara a cara con la forma de vida más aterradora del universo.",
     edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/HCjuv9STNps"
+  },
+  {
+    id: "gladiator-2",
+    image: "gladiator-2.jpg",
+    nombre: "Gladiator II",
+    descripcion: "Años después de presenciar la muerte del admirado héroe Máximo a manos de su tío, Lucio (Paul Mescal) se ve forzado a entrar en el Coliseo tras ser testigo de la conquista de su hogar por parte de los tiránicos emperadores que dirigen Roma con puño de hierro. Con un corazón desbordante de furia y el futuro del imperio en juego, Lucio debe rememorar su pasado en busca de la fuerza y el honor que devuelvan al pueblo la gloria perdida de Roma.",
+    edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/ozlGL6qsB_I"
+  },
+  {
+    id: "wicked",
+    image: "wicked.jpg",
+    nombre: "Wicked",
+    descripcion: "La historia de cómo una mujer de piel verde esmeralda se convierte en la Malvada Bruja del Oeste; largometraje basado en el musical de Broadway.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/UNHQgy3jawI"
   }
 ];
 
