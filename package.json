@@ -20,8 +20,9 @@
     "@auth/core": "0.18.6",
     "@fontsource-variable/jost": "5.0.18",
     "@vercel/analytics": "1.2.2",
-    "astro": "4.5.10",
+    "astro": "^4.16.11",
     "auth-astro": "4.1.1",
+    "sharp": "^0.33.5",
     "valibot": "0.30.0"
   },
   "devDependencies": {
