@@ -1,46 +1,59 @@
 ---
 import Action from "./Action.astro";
-const { proyecciones, pelicula, cine } = Astro.props;
+const { proyecciones, pelicula, cine, entradas } = Astro.props;
 
-const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 const MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
 const mesesProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getMonth()))];
+
+const entradasLink = entradas?.espanol ?? '';
+const entradasVoseLink = entradas?.vose ?? '';
 ---
 <div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 rounded-lg relative">
-    <h3 class=`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1 rounded-lg mb-2 px-2`>{pelicula.nombre}</h3>
+    <h3 class={`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1 rounded-lg mb-2 px-2`}>
+        {pelicula.nombre}
+    </h3>
     <div class="row-span-3 col-span-1 mr-1 ml-1 rounded-lg">
-            <img class=`w-full border-4 border-${cine.color} rounded-lg` src=`/img/peliculas/${pelicula.image}` alt={`Imagen de la pelicula: ${pelicula.nombre}`} />
-            <p class=`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color} mt-2 rounded-lg`>{pelicula.edadRedomendada}</p>
+        <img class={`w-full border-4 border-${cine.color} rounded-lg`} src={`/img/peliculas/${pelicula.image}`} alt={`Imagen de la película: ${pelicula.nombre}`} />
+        <p class={`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color} mt-2 rounded-lg`}>
+            {pelicula.edadRedomendada}
+        </p>
     </div>
-    <div class=` col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`>
-        <div class=`flex flex-col justify-around justify-left items-center p-2`>
+    <div class={`col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`}>
+        <div class={`flex flex-col justify-around items-center p-2`}>
             <div class="flex flex-col align-left text-center">
-                <p class=`flex-1 text-${cine.color} font-bold underline mt-2`>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
-                <ul class=`flex-2 text-${cine.color} list-none list-inside`>
+                <p class={`flex-1 text-${cine.color} font-bold underline mt-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
+                <ul class={`flex-2 text-${cine.color} list-none list-inside`}>
                     {diasProyeccion.map(dia => {
                         const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
-
-                        const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
-                        return (<li>
-                            <span>{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
-                            - {proyeccionesDia.map(proyeccion => `${proyeccion.hora} ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}
-                        </li>)
+                        const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
+                        return (
+                                <li>
+                                    <span>{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
+                                    - {proyeccionesDia.map(proyeccion => `${proyeccion.hora} ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}
+                                    {ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}
+                                </li>
+                        );
                     })}
                 </ul>
             </div>
+            { entradasLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs my-1`} aria-label={`Enlace a los tickets de ${cine.nombre} para la película ${pelicula.nombre}`} href={entradasLink} color={cine.color}>
+                Comprar entradas
+            </Action>}
+            { entradasVoseLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs`} aria-label={`Enlace a la cartelera de ${cine.nombre} para la película ${pelicula.nombre} en VOSE`} href={entradasVoseLink} color={cine.color}>
+                Comprar entradas VOSE
+            </Action>}
             <div class="relative flex h-2 w-full flex-col items-center m-4">
-                <div class=" absolute w-full items-center justify-between">
-                    <div
-                            class="h-[2px] w-full rounded-l-[30%] border-t-0"
-                            style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"
-                    >
+                <div class="absolute w-full items-center justify-between">
+                    <div class="h-[2px] w-full rounded-l-[30%] border-t-0"
+                         style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)">
                     </div>
                 </div>
-        </div>
-            <p class=`text-center text-${cine.color} line-clamp-4`>{pelicula.descripcion}</p>
+            </div>
+            <p class={`text-center text-${cine.color} line-clamp-4`}>{pelicula.descripcion}</p>
+            <a href={`https://www.veracines.es/peliculas/${pelicula.id}`} class={`text-right text-${cine.color} mt-4 mb-2 font-bold`}>Leer mas</a>
         </div>
     </div>
-    <a href={`https://www.veracines.es/peliculas/${pelicula.id}`} class=`text-center text-${cine.color} absolute inset-0`></a>
 </div>

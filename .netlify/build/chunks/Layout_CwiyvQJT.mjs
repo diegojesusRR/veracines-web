@@ -182,80 +182,6 @@ const CINES = [
   }
 ];
 
-function getProyecciones(fechaInicio, fechaFin, pelicula, grupo, hora, cine, vose) {
-  const dias = [];
-  for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
-    dias.push(new Date(d));
-  }
-  return dias.map((fecha) => {
-    return {
-      grupo,
-      cineId: cine,
-      peliculaId: pelicula,
-      fecha,
-      hora,
-      vose
-    };
-  });
-}
-const proyeccionesGarrucha = [
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-06-28"), /* @__PURE__ */ new Date("2024-07-01"), "un-lugar-tranquilo-dia-1", 1, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-02"), /* @__PURE__ */ new Date("2024-07-04"), "el-reino-del-planeta-de-los-simios", 2, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-05"), /* @__PURE__ */ new Date("2024-07-08"), "bad-boys-ride-or-die", 3, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-09"), /* @__PURE__ */ new Date("2024-07-11"), "gru-4-mi-villano-favorito", 4, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-12"), /* @__PURE__ */ new Date("2024-07-15"), "fly-by-the-moon", 5, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-16"), /* @__PURE__ */ new Date("2024-07-18"), "inside-out-2", 6, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-19"), /* @__PURE__ */ new Date("2024-07-22"), "twisters", 7, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-26"), "padre-no-hay-mas-que-uno-4", 8, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-27"), /* @__PURE__ */ new Date("2024-07-29"), "gru-4-mi-villano-favorito", 9, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "deadpool-y-lobezno", 10, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-02"), /* @__PURE__ */ new Date("2024-08-05"), "inside-out-2", 11, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "padre-no-hay-mas-que-uno-4", 12, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "la-trampa", 13, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "cuerpo-escombro", 14, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-17"), "gru-4-mi-villano-favorito", 15, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-18"), /* @__PURE__ */ new Date("2024-08-19"), "deadpool-y-lobezno", 16, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-20"), /* @__PURE__ */ new Date("2024-08-22"), "buffalo-kids", 17, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-23"), /* @__PURE__ */ new Date("2024-08-26"), "parpadea-dos-veces", 18, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-27"), /* @__PURE__ */ new Date("2024-08-29"), "odio-el-verano", 19, "22:00", "garrucha"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-30"), /* @__PURE__ */ new Date("2024-09-02"), "romper-el-circulo", 20, "22:00", "garrucha")
-];
-const proyeccionesVera = [
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-06-28"), /* @__PURE__ */ new Date("2024-07-01"), "el-reino-del-planeta-de-los-simios", 1, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-02"), /* @__PURE__ */ new Date("2024-07-04"), "un-lugar-tranquilo-dia-1", 2, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-05"), /* @__PURE__ */ new Date("2024-07-08"), "gru-4-mi-villano-favorito", 3, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-09"), /* @__PURE__ */ new Date("2024-07-11"), "bad-boys-ride-or-die", 4, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-12"), /* @__PURE__ */ new Date("2024-07-15"), "inside-out-2", 5, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-16"), /* @__PURE__ */ new Date("2024-07-18"), "fly-by-the-moon", 6, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-19"), /* @__PURE__ */ new Date("2024-07-22"), "padre-no-hay-mas-que-uno-4", 7, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-23"), /* @__PURE__ */ new Date("2024-07-25"), "twisters", 8, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-26"), /* @__PURE__ */ new Date("2024-07-29"), "deadpool-y-lobezno", 9, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-07-30"), /* @__PURE__ */ new Date("2024-08-01"), "gru-4-mi-villano-favorito", 10, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-02"), /* @__PURE__ */ new Date("2024-08-05"), "padre-no-hay-mas-que-uno-4", 11, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-06"), /* @__PURE__ */ new Date("2024-08-08"), "inside-out-2", 12, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-09"), /* @__PURE__ */ new Date("2024-08-12"), "cuerpo-escombro", 13, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-13"), /* @__PURE__ */ new Date("2024-08-15"), "la-trampa", 14, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-16"), /* @__PURE__ */ new Date("2024-08-19"), "buffalo-kids", 15, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-20"), /* @__PURE__ */ new Date("2024-08-22"), "padre-no-hay-mas-que-uno-4", 16, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-23"), /* @__PURE__ */ new Date("2024-08-26"), "odio-el-verano", 17, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-27"), /* @__PURE__ */ new Date("2024-08-29"), "parpadea-dos-veces", 18, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-08-30"), /* @__PURE__ */ new Date("2024-09-02"), "alien-romulus", 19, "22:00", "vera"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-09-03"), /* @__PURE__ */ new Date("2024-09-03"), "buffalo-kids", 20, "22:00", "vera")
-];
-const proyeccionesRegio = [
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "gladiator-2", 1, "17:30", "regio"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "gladiator-2", 1, "20:30", "regio"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-21"), /* @__PURE__ */ new Date("2024-11-21"), "gladiator-2", 1, "20:00", "regio", "en"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "wicked", 2, "17:30", "regio"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "wicked", 2, "20:30", "regio"),
-  ...getProyecciones(/* @__PURE__ */ new Date("2024-11-28"), /* @__PURE__ */ new Date("2024-11-28"), "wicked", 2, "20:00", "regio", "en")
-];
-const PROYECCIONES = [
-  ...proyeccionesVera,
-  ...proyeccionesGarrucha,
-  ...proyeccionesRegio
-];
-
 const PELICULAS = [
   {
     id: "el-reino-del-planeta-de-los-simios",
@@ -411,6 +337,56 @@ const PELICULAS = [
   }
 ];
 
+function getProyecciones(fechaInicio, fechaFin, hora, vose) {
+  const dias = [];
+  for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
+    dias.push(new Date(d));
+  }
+  return dias.map((fecha) => {
+    return {
+      fecha,
+      hora,
+      vose
+    };
+  });
+}
+CINES.find((cine) => cine.url === "garrucha");
+const gruposProyeccionesGarrucha = [];
+CINES.find((cine) => cine.url === "vera");
+const gruposProyeccionesVera = [];
+const cineRegio = CINES.find((cine) => cine.url === "regio");
+const gruposProyeccionesRegio = [
+  {
+    grupo: 1,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "gladiator-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "17:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "20:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-21"), /* @__PURE__ */ new Date("2024-11-21"), "20:00", "en")
+    ],
+    entradas: {
+      espanol: "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1133&cine=REGIO",
+      vose: "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1134&cine=REGIO"
+    }
+  },
+  {
+    grupo: 2,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "wicked"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "17:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-24"), "20:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-28"), /* @__PURE__ */ new Date("2024-11-28"), "20:00", "en")
+    ]
+  }
+];
+const GRUPOSPROYECCIONES = [
+  ...gruposProyeccionesVera,
+  ...gruposProyeccionesGarrucha,
+  ...gruposProyeccionesRegio
+];
+
 var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
 var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
@@ -429,35 +405,33 @@ const $$RichResults = createComponent(($$result, $$props, $$slots) => {
     "alternateName": "Veracines - Salas al aire libre en Vera y Garrucha",
     "description": "Conoce "
   };
-  const eventsSchema = PROYECCIONES.map((proyeccion) => {
-    const cine = CINES.find((cine2) => cine2.url === proyeccion.cineId);
-    const pelicula = PELICULAS.find((pelicula2) => pelicula2.id === proyeccion.peliculaId);
-    return {
+  const eventsSchema = GRUPOSPROYECCIONES.map((grupopProyeccion) => {
+    return grupopProyeccion.proyecciones.map((proyeccion) => ({
       "@context": "https://schema.org",
       "@type": "ScreeningEvent",
-      "name": `${pelicula.nombre} en ${cine.nombre}`,
-      "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${cine.horaFijaProyeccion ?? proyeccion.hora}`,
+      "name": `${grupopProyeccion.pelicula.nombre} en ${grupopProyeccion.cine.nombre}`,
+      "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupopProyeccion.cine.horaFijaProyeccion ?? proyeccion.hora}`,
       "location": {
         "@type": "Place",
-        "name": cine.nombre,
+        "name": grupopProyeccion.cine.nombre,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": cine.localizacion.direccion,
+          "streetAddress": grupopProyeccion.cine.localizacion.direccion,
           "addressLocality": "Vera",
           "postalCode": "04620",
           "addressRegion": "Almer\xEDa",
           "addressCountry": "ES"
         }
       },
-      "image": [`https://www.veracines.es/img/peliculas/${pelicula.image}`],
-      "description": pelicula.descripcion,
+      "image": [`https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`],
+      "description": grupopProyeccion.pelicula.descripcion,
       "workPresented": {
         "@type": "Movie",
-        "name": pelicula.nombre,
-        "image": `https://www.veracines.es/img/peliculas/${pelicula.image}`,
-        "description": pelicula.descripcion
+        "name": grupopProyeccion.pelicula.nombre,
+        "image": `https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`,
+        "description": grupopProyeccion.pelicula.descripcion
       }
-    };
+    })).flat(1);
   });
   const FAQs = [
     {
@@ -523,4 +497,4 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} <div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id=" main-content"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "Toast", $$Toast, {})} </div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
 }, "/Users/diego.ramos/veracines-web/src/layouts/Layout.astro", void 0);
 
-export { $$Typography as $, CINES as C, PROYECCIONES as P, $$Layout as a, PELICULAS as b };
+export { $$Typography as $, CINES as C, GRUPOSPROYECCIONES as G, PELICULAS as P, $$Layout as a };

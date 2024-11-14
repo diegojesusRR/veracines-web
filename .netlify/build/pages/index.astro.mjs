@@ -1,10 +1,9 @@
-import { C as CINES, a as $$Layout } from '../chunks/Layout_CTUevyY0.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_CwiyvQJT.mjs';
 import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, c as createAstro, d as renderComponent, s as spreadAttributes, e as renderSlot } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
 import 'clsx';
 /* empty css                                 */
-import { M as Metadata } from '../chunks/metadata_BAvqYMtC.mjs';
-import { $ as $$Action } from '../chunks/Action_B9qopVnx.mjs';
+import { $ as $$Action, M as Metadata } from '../chunks/metadata_BZOBfiP0.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
@@ -16,7 +15,7 @@ const $$UbicacionCard = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$UbicacionCard;
   const { cine } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col sm:flex-row p-2 m-4 rounded-lg bg-white bg-opacity-70 border-2 align-middle flex-grow bg-white bg-opacity-80`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-center items-center p-5`, "class")}> <h4${addAttribute(`text-xl text-${cine.color} text-center font-bold underline mb-2`, "class")}>${cine.nombre}</h4> <p${addAttribute(`text-center text-${cine.color}`, "class")}>${cine.localizacion.descripcion}</p> ${renderComponent($$result, "Action", $$Action, { "class": `w-3/4 text-base md:text-xs`, "as": `a`, "aria-disabled": `false`, "href": `/cartelera-${cine.url}/`, "rel": `noopener noreferrer`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col sm:flex-row p-2 m-4 rounded-lg bg-white bg-opacity-70 border-2 align-middle flex-grow bg-white bg-opacity-80`, "class")}> <div${addAttribute(`flex flex-col justify-around justify-center items-center p-5`, "class")}> <h4${addAttribute(`text-xl text-${cine.color} text-center font-bold underline mb-2`, "class")}>${cine.nombre}</h4> <p${addAttribute(`text-center text-${cine.color}`, "class")}>${cine.localizacion.descripcion}</p> ${renderComponent($$result, "Action", $$Action, { "class": `w-3/4 text-base md:text-xs`, "as": `a`, "aria-disabled": `false`, "href": `/cartelera-${cine.url}/`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
 Consultar cartelera
 ` })} </div> <div${addAttribute(`flex flex-col md:mt-2`, "class")}> <div${addAttribute(`border-4 border-primary rounded-lg m-auto`, "class")}> <iframe${addAttribute(`align-middle w-auto rounded-lg`, "class")}${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")}${addAttribute(`400`, "width")}${addAttribute(`250`, "height")}${addAttribute(`border:0;`, "style")}${addAttribute(``, "allowfullscreen")}${addAttribute(`lazy`, "loading")}${addAttribute(`no-referrer-when-downgrade`, "referrerpolicy")}></iframe> </div> <p${addAttribute(`text-center underline text-${cine.color} text-xs font-bold w-auto p-2`, "class")}>${cine.localizacion.direccion}</p> </div> </div>`;
 }, "/Users/diego.ramos/veracines-web/src/components/UbicacionCard.astro", void 0);

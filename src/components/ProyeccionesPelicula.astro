@@ -1,12 +1,13 @@
 ---
-import {PROYECCIONES} from "../consts/proyecciones";
+import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
+import {GrupoProyeccion} from "../types/Proyeccion";
 
 const { pelicula, cine } = Astro.props;
 
 const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
-const grupoProyeccion: number|undefined = [... new Set(PROYECCIONES.filter(proyeccion => proyeccion.cineId == cine.url && pelicula.id === proyeccion.peliculaId && proyeccion.fecha >= new Date())?.map(x => x.grupo))].at(0);
-const proyecciones = PROYECCIONES.filter(proyeccion => proyeccion.cineId == cine.url && proyeccion.grupo == grupoProyeccion);
+const grupoProyeccion: GrupoProyeccion[] = GRUPOSPROYECCIONES.filter(grupo => grupo.cine.url == cine.url && pelicula.id === grupo.pelicula.id && grupo.proyecciones[0].fecha >= new Date());
+const proyecciones = grupoProyeccion[0].proyecciones;
 const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
 ---
 

@@ -1,4 +1,4 @@
-import { P as PROYECCIONES, C as CINES, b as PELICULAS, a as $$Layout } from '../../chunks/Layout_CTUevyY0.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, P as PELICULAS, a as $$Layout } from '../../chunks/Layout_CwiyvQJT.mjs';
 import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent } from '../../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
 import 'clsx';
@@ -10,8 +10,8 @@ const $$ProyeccionesPelicula = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$ProyeccionesPelicula;
   const { pelicula, cine } = Astro2.props;
   const DIASSEMANA = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-  const grupoProyeccion = [...new Set(PROYECCIONES.filter((proyeccion) => proyeccion.cineId == cine.url && pelicula.id === proyeccion.peliculaId && proyeccion.fecha >= /* @__PURE__ */ new Date())?.map((x) => x.grupo))].at(0);
-  const proyecciones = PROYECCIONES.filter((proyeccion) => proyeccion.cineId == cine.url && proyeccion.grupo == grupoProyeccion);
+  const grupoProyeccion = GRUPOSPROYECCIONES.filter((grupo) => grupo.cine.url == cine.url && pelicula.id === grupo.pelicula.id && grupo.proyecciones[0].fecha >= /* @__PURE__ */ new Date());
+  const proyecciones = grupoProyeccion[0].proyecciones;
   const diasProyeccion = [...new Set(proyecciones.map((proyeccion) => proyeccion.fecha.getDate()))];
   return renderTemplate`${proyecciones.length > 0 && renderTemplate`${maybeRenderHead()}<div class="flex flex-col align-left text-center mb-5 justify-center"><h3${addAttribute(`flex-1 text-${cine.color} font-bold underline`, "class")}>Proyecciones ${cine.corto}</h3><ul${addAttribute(`flex-2 text-${cine.color} list-none list-inside`, "class")}>${diasProyeccion.map((dia) => {
     const proyeccionesDia = proyecciones.filter((proyeccion) => proyeccion.fecha.getDate() === dia);
