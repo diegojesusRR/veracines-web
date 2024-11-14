@@ -1,7 +1,7 @@
 ---
 import { BOXERS } from "@/consts/boxers"
 import {CINES} from "../consts/cines";
-import {PROYECCIONES} from "../consts/proyecciones";
+import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
 import {PELICULAS} from "../consts/peliculas";
 
 /** https://developers.google.com/search/docs/appearance/structured-data/organization */
@@ -20,37 +20,34 @@ const organizationSchema = {
 		"Conoce ",
 }
 
-const eventsSchema = PROYECCIONES.map(proyeccion => {
+const eventsSchema = GRUPOSPROYECCIONES.map(grupopProyeccion => {
 
-    const cine = CINES.find(cine => cine.url === proyeccion.cineId)
-    const pelicula = PELICULAS.find(pelicula => pelicula.id === proyeccion.peliculaId)
-
-    return {
+    return grupopProyeccion.proyecciones.map(proyeccion => ({
         "@context": "https://schema.org",
         "@type": "ScreeningEvent",
-        "name": `${pelicula.nombre} en ${cine.nombre}`,
-        "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${cine.horaFijaProyeccion??proyeccion.hora}`,
+        "name": `${grupopProyeccion.pelicula.nombre} en ${grupopProyeccion.cine.nombre}`,
+        "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupopProyeccion.cine.horaFijaProyeccion??proyeccion.hora}`,
         "location": {
             "@type": "Place",
-            "name": cine.nombre,
+            "name": grupopProyeccion.cine.nombre,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": cine.localizacion.direccion,
+                "streetAddress": grupopProyeccion.cine.localizacion.direccion,
                 "addressLocality": "Vera",
                 "postalCode": "04620",
                 "addressRegion": "Almería",
                 "addressCountry": "ES",
             },
         },
-        "image": [`https://www.veracines.es/img/peliculas/${pelicula.image}`],
-        "description": pelicula.descripcion,
+        "image": [`https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`],
+        "description": grupopProyeccion.pelicula.descripcion,
         "workPresented": {
             "@type": "Movie",
-            "name": pelicula.nombre,
-            "image": `https://www.veracines.es/img/peliculas/${pelicula.image}`,
-            "description": pelicula.descripcion,
+            "name": grupopProyeccion.pelicula.nombre,
+            "image": `https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`,
+            "description": grupopProyeccion.pelicula.descripcion,
         },
-    }
+    })).flat(1)
 })
 
 const FAQs = [

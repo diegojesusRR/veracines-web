@@ -1,8 +1,7 @@
-import { $ as $$Typography, a as $$Layout } from '../chunks/Layout_CTUevyY0.mjs';
+import { $ as $$Typography, a as $$Layout } from '../chunks/Layout_CwiyvQJT.mjs';
 import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, d as renderComponent } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { $ as $$Action } from '../chunks/Action_B9qopVnx.mjs';
-import { M as Metadata } from '../chunks/metadata_BAvqYMtC.mjs';
+import { $ as $$Action, M as Metadata } from '../chunks/metadata_BZOBfiP0.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://www.veracines.es");
