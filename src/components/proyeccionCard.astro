@@ -26,7 +26,7 @@ const entradasVoseLink = entradas?.vose ?? '';
             <div class="flex flex-col align-left text-center">
                 <p class={`flex-1 text-${cine.color} font-bold underline mt-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
                 <ul class={`flex-2 text-${cine.color} list-none list-inside`}>
-                    {diasProyeccion.map(dia => {
+                    {diasProyeccion.sort().map(dia => {
                         const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
                         const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
                         return (
