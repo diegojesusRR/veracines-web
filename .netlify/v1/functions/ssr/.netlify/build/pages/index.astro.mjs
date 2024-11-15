@@ -1,4 +1,4 @@
-import { C as CINES, a as $$Layout } from '../chunks/Layout_CwiyvQJT.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_CVDcOek8.mjs';
 import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, c as createAstro, d as renderComponent, s as spreadAttributes, e as renderSlot } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
 import 'clsx';

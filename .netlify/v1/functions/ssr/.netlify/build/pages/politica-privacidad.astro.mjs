@@ -1,4 +1,4 @@
-import { a as $$Layout } from '../chunks/Layout_CwiyvQJT.mjs';
+import { a as $$Layout } from '../chunks/Layout_CVDcOek8.mjs';
 import { a as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead, b as addAttribute } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
 export { renderers } from '../renderers.mjs';
