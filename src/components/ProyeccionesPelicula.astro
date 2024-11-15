@@ -15,7 +15,7 @@ const diasProyeccion = [...new Set(proyecciones?.map(proyeccion => proyeccion.fe
     proyecciones && proyecciones.length > 0 && <div class="flex flex-col align-left text-center mb-5 justify-center">
         <h3 class=`flex-1 text-${cine.color} font-bold underline`>Proyecciones {cine.corto}</h3>
         <ul class=`flex-2 text-${cine.color} list-none list-inside`>
-            {diasProyeccion.map(dia => {
+            {diasProyeccion.sort().map(dia => {
                 const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
 
                 const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();

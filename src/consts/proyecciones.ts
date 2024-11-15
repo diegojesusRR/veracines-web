@@ -46,8 +46,10 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked')!,
         cine: cineRegio,
         proyecciones: [
-            ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'),  '17:30'),
-            ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-24'),  '20:30'),
+            ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-22'),  '20:00'),
+            ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '17:30'),
+            ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '20:30'),
+            ...getProyecciones(new Date('2024-11-24'), new Date('2024-11-24'),  '17:30'),
             ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'),  '20:00', 'en')
         ],
     }
