@@ -144,7 +144,7 @@ export const PELICULAS: Pelicula[] = [
         nombre: "Gladiator II",
         descripcion: "Años después de presenciar la muerte del admirado héroe Máximo a manos de su tío, Lucio (Paul Mescal) se ve forzado a entrar en el Coliseo tras ser testigo de la conquista de su hogar por parte de los tiránicos emperadores que dirigen Roma con puño de hierro. Con un corazón desbordante de furia y el futuro del imperio en juego, Lucio debe rememorar su pasado en busca de la fuerza y el honor que devuelvan al pueblo la gloria perdida de Roma.",
         edadRedomendada: "No recomendada menores 12 años",
-        videoUrl: "https://www.youtube.com/embed/ozlGL6qsB_I"
+        videoUrl: "https://www.youtube.com/embed/HCjuv9STNps"
     },
     {
         id: "wicked",
