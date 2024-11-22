@@ -32,10 +32,9 @@ const $$ProyeccionesCine = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$ProyeccionesCine;
   const { cine } = Astro2.props;
+  const proximasPoyecciones = GRUPOSPROYECCIONES.filter((grupo) => grupo.cine.url === cine.url && grupo.proyecciones.reduce((a, b) => a.fecha > b.fecha ? a : b).fecha >= /* @__PURE__ */ new Date());
   return renderTemplate`${maybeRenderHead()}<section${addAttribute(`proyecciones-${cine.url}`, "id")}> ${GRUPOSPROYECCIONES.length === 0 ? renderTemplate`<div${addAttribute(`p-2 m-4 align-middle text-${cine.color}`, "class")}> <p>Actualmente no hay proyecciones disponibles.</p> </div>` : renderTemplate`<div> ${renderComponent($$result, "Action", $$Action, { "as": "a", "class": `w-full sm:text-xs my-1`, "aria-label": `Enlace a todos los tickets disponibles de ${cine.nombre}`, "color": cine.color, "href": "https://kinetike.com:83/views/init.aspx?cine=REGIO" }, { "default": ($$result2) => renderTemplate`Encuentra tus entradas aquí
-` })} ${GRUPOSPROYECCIONES.filter((x) => x.cine.url === cine.url).map((grupo) => renderTemplate`${renderComponent($$result, "ProyeccionCard", $$ProyeccionCard, { "cine": cine, "entradas": grupo.entradas, "proyecciones": grupo.proyecciones, "pelicula": grupo.pelicula })}`)} </div>`})
-    }
-</section>`;
+` })} ${proximasPoyecciones.filter((x) => x.cine.url === cine.url).map((grupo) => renderTemplate`${renderComponent($$result, "ProyeccionCard", $$ProyeccionCard, { "cine": cine, "entradas": grupo.entradas, "proyecciones": grupo.proyecciones, "pelicula": grupo.pelicula })}`)} </div>`} </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/proyeccionesCine.astro", void 0);
 
 const $$Astro = createAstro("https://www.veracines.es");
