@@ -52,6 +52,10 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2024-11-24'), new Date('2024-11-24'),  '17:30'),
             ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'),  '20:00', 'en')
         ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
     }
 ]
 
