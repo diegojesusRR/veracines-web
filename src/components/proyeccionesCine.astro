@@ -1,6 +1,7 @@
 ---
 import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
 import ProyeccionCard from "./proyeccionCard.astro";
+import Action from "./Action.astro";
 const { cine } = Astro.props;
 ---
 
@@ -12,6 +13,9 @@ const { cine } = Astro.props;
                 </div> :
 
             GRUPOSPROYECCIONES.filter(x => x.cine.url === cine.url).map(grupo => {
+                <div>
+                    <Action as="a" class={`w-3/4 sm:text-xs my-1`} aria-label={`Enlace a todos los tickets disponibles de ${cine.nombre}`} color={cine.color} href="https://kinetike.com:83/views/init.aspx?cine=REGIO">Encuentra tus entradas aquí</Action>
+                </div>
             return (
                     <ProyeccionCard cine={cine} entradas={grupo.entradas} proyecciones={grupo.proyecciones} pelicula={grupo.pelicula}/>
             );

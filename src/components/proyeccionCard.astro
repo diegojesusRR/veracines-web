@@ -39,10 +39,10 @@ const entradasVoseLink = entradas?.vose ?? '';
                     })}
                 </ul>
             </div>
-            { entradasLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs my-1`} aria-label={`Enlace a los tickets de ${cine.nombre} para la película ${pelicula.nombre}`} href={entradasLink} color={cine.color}>
+            { entradasLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs my-1`} aria-label={`Enlace a los tickets de ${cine.nombre} para la película ${pelicula.nombre}`} href={entradasLink} color={cine.color} target="_blank">
                 Comprar entradas
             </Action>}
-            { entradasVoseLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs`} aria-label={`Enlace a la cartelera de ${cine.nombre} para la película ${pelicula.nombre} en VOSE`} href={entradasVoseLink} color={cine.color}>
+            { entradasVoseLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs`} aria-label={`Enlace a la cartelera de ${cine.nombre} para la película ${pelicula.nombre} en VOSE`} href={entradasVoseLink} color={cine.color} target="_blank">
                 Comprar entradas VOSE
             </Action>}
             <div class="relative flex h-2 w-full flex-col items-center m-4">
