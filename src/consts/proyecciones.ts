@@ -57,6 +57,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
+    {
+        grupo: 3,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-infiltrada')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2024-11-30'), new Date('2024-12-01'),  '18:00'),
+            ...getProyecciones(new Date('2024-11-30'), new Date('2024-11-30'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
     // {
     //     grupo: 2,
     //     pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked')!,
