@@ -337,6 +337,14 @@ const PELICULAS = [
     descripcion: "Basada en la historia real de Aranzazu Berradre Marín, pseudónimo con el que se infiltró una agente de la Policía nacional en la banda terrorista ETA, durante 8 años. Cuando contaba apenas 20 años, la joven consiguió adentrarse en la izquierda abertzale, siendo la única mujer que convivió en un piso con dirigentes de ETA. Durante su infiltración se vio obligada a cortar totalmente lazos familiares, todo para poder desarticular el comando Donosti en un momento crucial en el que la banda declaraba falsamente estar en tregua. Es la historia de una mujer valiente, que cambió su vida para intentar salvar la de otros.\n",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/_eAYhtaEQGM"
+  },
+  {
+    id: "vaiana-2",
+    image: "vaiana-2.jpeg",
+    nombre: "Vaiana 2",
+    descripcion: 'Tras recibir una inesperada llamada de sus antepasados, Vaiana debe viajar a los lejanos mares de Oceanía y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes. Secuela de "Vaiana".\n',
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/O5lPAcMEKvE"
   }
 ];
 
@@ -401,23 +409,34 @@ const gruposProyeccionesRegio = [
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
     //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
     // }
+  },
+  {
+    grupo: 4,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "gladiator-2"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-06"), /* @__PURE__ */ new Date("2024-12-08"), "17:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-07"), /* @__PURE__ */ new Date("2024-12-07"), "20:30")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 4,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "vaiana-2"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-13"), /* @__PURE__ */ new Date("2024-12-13"), "19:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-14"), /* @__PURE__ */ new Date("2024-12-15"), "17:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-14"), /* @__PURE__ */ new Date("2024-12-14"), "19:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
   }
-  // {
-  //     grupo: 2,
-  //     pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked')!,
-  //     cine: cineRegio,
-  //     proyecciones: [
-  //         ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-22'),  '20:00'),
-  //         ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '17:30'),
-  //         ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '20:30'),
-  //         ...getProyecciones(new Date('2024-11-24'), new Date('2024-11-24'),  '17:30'),
-  //         ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'),  '20:00', 'en')
-  //     ],
-  //     // entradas: {
-  //     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-  //     //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-  //     // }
-  // }
 ];
 const GRUPOSPROYECCIONES = [
   ...gruposProyeccionesVera,
