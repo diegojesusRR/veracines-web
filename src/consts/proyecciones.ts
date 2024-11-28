@@ -70,22 +70,33 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
-    // {
-    //     grupo: 2,
-    //     pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked')!,
-    //     cine: cineRegio,
-    //     proyecciones: [
-    //         ...getProyecciones(new Date('2024-11-22'), new Date('2024-11-22'),  '20:00'),
-    //         ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '17:30'),
-    //         ...getProyecciones(new Date('2024-11-23'), new Date('2024-11-23'),  '20:30'),
-    //         ...getProyecciones(new Date('2024-11-24'), new Date('2024-11-24'),  '17:30'),
-    //         ...getProyecciones(new Date('2024-11-28'), new Date('2024-11-28'),  '20:00', 'en')
-    //     ],
-    //     // entradas: {
-    //     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    //     // }
-    // }
+    {
+        grupo: 4,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'gladiator-2')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2024-12-06'), new Date('2024-12-08'),  '17:30'),
+            ...getProyecciones(new Date('2024-12-07'), new Date('2024-12-07'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
+    {
+        grupo: 4,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'vaiana-2')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2024-12-13'), new Date('2024-12-13'),  '19:00'),
+            ...getProyecciones(new Date('2024-12-14'), new Date('2024-12-15'),  '17:00'),
+            ...getProyecciones(new Date('2024-12-14'), new Date('2024-12-14'),  '19:00'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    }
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
