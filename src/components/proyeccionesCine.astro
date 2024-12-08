@@ -4,8 +4,10 @@ import ProyeccionCard from "./proyeccionCard.astro";
 import Action from "./Action.astro";
 const {cine} = Astro.props;
 
-const proximasPoyecciones = GRUPOSPROYECCIONES.filter(grupo => grupo.cine.url === cine.url && (grupo.proyecciones
-    .reduce((a, b) => (a.fecha > b.fecha ? a : b)).fecha >= new Date()));
+const proximasProyecciones = GRUPOSPROYECCIONES.filter(grupo => {
+    return grupo.cine.url === cine.url && (grupo.proyecciones
+        .reduce((a, b) => (a.fecha > b.fecha ? a : b)).fecha >= new Date())
+});
 ---
 
 <section id=`proyecciones-${cine.url}`>
@@ -20,7 +22,7 @@ const proximasPoyecciones = GRUPOSPROYECCIONES.filter(grupo => grupo.cine.url ==
                             href="https://kinetike.com:83/views/init.aspx?cine=REGIO">Encuentra tus entradas aquí
                     </Action>
 
-                    {proximasPoyecciones.filter(x => x.cine.url === cine.url).map(grupo =>
+                    {proximasProyecciones.filter(x => x.cine.url === cine.url).map(grupo =>
                     <ProyeccionCard cine={cine} entradas={grupo.entradas} proyecciones={grupo.proyecciones} pelicula={grupo.pelicula}/>)}
 
                 </div>

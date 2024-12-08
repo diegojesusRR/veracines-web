@@ -351,7 +351,9 @@ const PELICULAS = [
 function getProyecciones(fechaInicio, fechaFin, hora, vose) {
   const dias = [];
   for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
-    dias.push(new Date(d));
+    const fecha = new Date(d);
+    fecha.setHours(23, 59, 59, 999);
+    dias.push(fecha);
   }
   return dias.map((fecha) => {
     return {

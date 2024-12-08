@@ -7,7 +7,9 @@ function getProyecciones(fechaInicio: Date, fechaFin: Date, hora: string, vose?:
     //Array con los dias entre fecha inicio y fecha fin
     const dias = [];
     for (let d = fechaInicio; d <= fechaFin; d.setDate(d.getDate() + 1)) {
-        dias.push(new Date(d));
+        const fecha = new Date(d);
+        fecha.setHours(23, 59, 59, 999);
+        dias.push(fecha);
     }
 
     return dias.map((fecha) => {
