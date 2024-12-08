@@ -54,7 +54,7 @@ function AstroAuthHandler(prefix, options = authConfig) {
   };
 }
 function AstroAuth(options = authConfig) {
-  const { AUTH_SECRET, AUTH_TRUST_HOST, VERCEL, NODE_ENV } = Object.assign(__vite_import_meta_env__, { _: process.env._, NODE: process.env.NODE, NODE_ENV: process.env.NODE_ENV });
+  const { AUTH_SECRET, AUTH_TRUST_HOST, VERCEL, NODE_ENV } = Object.assign(__vite_import_meta_env__, { NODE: process.env.NODE, _: process.env._, NODE_ENV: process.env.NODE_ENV });
   options.secret ??= AUTH_SECRET;
   options.trustHost ??= !!(AUTH_TRUST_HOST ?? VERCEL ?? NODE_ENV !== "production");
   const { prefix = "/api/auth", ...authOptions } = options;
