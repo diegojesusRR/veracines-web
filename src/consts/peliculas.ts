@@ -169,5 +169,21 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Tras recibir una inesperada llamada de sus antepasados, Vaiana debe viajar a los lejanos mares de Oceanía y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes. Secuela de \"Vaiana\".\n",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/O5lPAcMEKvE"
+    },
+    {
+        id: "mufasa",
+        image: "mufasa.jpg",
+        nombre: "Mufasa: El Rey León",
+        descripcion: "Rafiki debe transmitir la leyenda de Mufasa a la joven cachorro de león Kiara, hija de Simba y Nala, con Timón y Pumba aportando su estilo característico. La historia se cuenta en flashbacks y presenta a Mufasa como un cachorro huérfano, perdido y solo hasta que conoce a un simpático león llamado Taka, heredero de un linaje real. Este encuentro casual pone en marcha un viaje de un extraordinario grupo de inadaptados que buscan su destino. Y sus vínculos se pondrán a prueba mientras trabajan juntos para escapar de un enemigo amenazador y letal.\n",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/_mxeKCt4_Zs"
+    },
+    {
+        id: "sonic-3",
+        image: "sonic-3.jpg",
+        nombre: "Sonic 3: La Película",
+        descripcion: "Sonic, Knuckles y Tails se reúnen para enfrentarse a un nuevo y poderoso adversario, Shadow, un misterioso villano cuyos poderes no se parecen a nada de lo que nuestros héroes han conocido hasta ahora. Con sus facultades superadas en todos los sentidos, el Equipo Sonic tendrá que establecer una insólita alianza con la esperanza de detener a Shadow y proteger el planeta.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/2YJXP8CKrNE"
     }
 ];
