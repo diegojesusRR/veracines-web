@@ -98,6 +98,34 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
+    },
+    {
+        grupo: 5,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'mufasa')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2024-12-20'), new Date('2024-12-23'),  '18:00'),
+            ...getProyecciones(new Date('2024-12-20'), new Date('2024-12-23'),  '20:30'),
+            ...getProyecciones(new Date('2024-12-26'), new Date('2024-12-26'),  '18:00'),
+            ...getProyecciones(new Date('2024-12-26'), new Date('2024-12-26'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
+    {
+        grupo: 6,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'sonic-3')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2024-12-27'), new Date('2024-12-30'),  '18:00'),
+            ...getProyecciones(new Date('2024-12-27'), new Date('2024-12-30'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
     }
 ]
 
