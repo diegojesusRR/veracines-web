@@ -126,6 +126,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
+    },
+    {
+        grupo: 7,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'mufasa')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-01-02'), new Date('2025-01-04'),  '18:00'),
+            ...getProyecciones(new Date('2025-01-04'), new Date('2025-01-04'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
     }
 ]
 
