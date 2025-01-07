@@ -361,6 +361,14 @@ const PELICULAS = [
     descripcion: "Sonic, Knuckles y Tails se reúnen para enfrentarse a un nuevo y poderoso adversario, Shadow, un misterioso villano cuyos poderes no se parecen a nada de lo que nuestros héroes han conocido hasta ahora. Con sus facultades superadas en todos los sentidos, el Equipo Sonic tendrá que establecer una insólita alianza con la esperanza de detener a Shadow y proteger el planeta.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/2YJXP8CKrNE"
+  },
+  {
+    id: "un-lio-de-millones",
+    image: "un-lio-de-millones.jpg",
+    nombre: "Un lío de millones",
+    descripcion: "En un pueblo de la Sierra de Madrid, Bego (Gracia Olayo) y Agustín (Antonio Resines) viven una jubilación tranquila entre recetas, su huerto, la pelu y los juegos de cartas con los amigos. Pero desde que sus hijos, Miguel (Alberto Olmo) y Carla (Clara Lago), se independizaron para irse a vivir a la ciudad, el síndrome del nido vacío parece haberse instalado en el matrimonio, y empiezan a comprobar, con tristeza, que sus hijos se han empezado a olvidar de ellos. Para colmo, los muy sinvergüenzas no aparecen a la comida que Bego había preparado por el cumple de su hijo, y acto seguido anuncian que no irán a casa por Navidad, lo que lleva a sus padres a idear un arriesgado plan para que vuelvan a su lado: fingirán que han ganado la lotería y que son multimillonarios. Remake de la película francesa 'Mes Très Chers Enfants' de Alexandra Leclère.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/2kLLWjs6SoM"
   }
 ];
 
@@ -490,6 +498,19 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-02"), /* @__PURE__ */ new Date("2025-01-04"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-04"), /* @__PURE__ */ new Date("2025-01-04"), "20:30")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 7,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "un-lio-de-millones"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-10"), /* @__PURE__ */ new Date("2025-01-11"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-12"), /* @__PURE__ */ new Date("2025-01-12"), "18:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
