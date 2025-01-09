@@ -509,8 +509,8 @@ const gruposProyeccionesRegio = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "un-lio-de-millones"),
     cine: cineRegio,
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-10"), /* @__PURE__ */ new Date("2025-01-11"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-12"), /* @__PURE__ */ new Date("2025-01-12"), "18:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-11"), /* @__PURE__ */ new Date("2025-01-12"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-10"), /* @__PURE__ */ new Date("2025-01-11"), "20:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
