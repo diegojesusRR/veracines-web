@@ -152,6 +152,21 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
+    },
+    {
+        grupo: 8,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'conclave')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-01-17'), new Date('2025-01-17'),  '20:00'),
+            ...getProyecciones(new Date('2025-01-18'), new Date('2025-01-19'),  '18:00'),
+            ...getProyecciones(new Date('2025-01-18'), new Date('2025-01-18'),  '20:30'),
+            ...getProyecciones(new Date('2025-01-23'), new Date('2025-01-23'),  '20:00', 'en'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
     }
 ]
 
