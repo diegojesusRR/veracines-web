@@ -193,5 +193,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "En un pueblo de la Sierra de Madrid, Bego (Gracia Olayo) y Agustín (Antonio Resines) viven una jubilación tranquila entre recetas, su huerto, la pelu y los juegos de cartas con los amigos. Pero desde que sus hijos, Miguel (Alberto Olmo) y Carla (Clara Lago), se independizaron para irse a vivir a la ciudad, el síndrome del nido vacío parece haberse instalado en el matrimonio, y empiezan a comprobar, con tristeza, que sus hijos se han empezado a olvidar de ellos. Para colmo, los muy sinvergüenzas no aparecen a la comida que Bego había preparado por el cumple de su hijo, y acto seguido anuncian que no irán a casa por Navidad, lo que lleva a sus padres a idear un arriesgado plan para que vuelvan a su lado: fingirán que han ganado la lotería y que son multimillonarios. Remake de la película francesa 'Mes Très Chers Enfants' de Alexandra Leclère.",
         edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/2kLLWjs6SoM"
+    },
+    {
+        id: "conclave",
+        image: "conclave.jpg",
+        nombre: "Conclave",
+        descripcion: "Tras la inesperada muerte del Sumo Pontífice, el cardenal Lawrence es designado como responsable para liderar uno de los rituales más secretos y antiguos del mundo: la elección de un nuevo Papa. Cuando los líderes más poderosos de la Iglesia Católica se reúnen en los salones del Vaticano, Lawrence se ve atrapado dentro de una compleja conspiración a la vez que descubre un secreto que podría sacudir los cimientos de la Iglesia.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/aMiOsqSkcYg"
     }
 ];
