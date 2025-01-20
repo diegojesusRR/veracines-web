@@ -377,6 +377,14 @@ const PELICULAS = [
     descripcion: "Tras la inesperada muerte del Sumo Pontífice, el cardenal Lawrence es designado como responsable para liderar uno de los rituales más secretos y antiguos del mundo: la elección de un nuevo Papa. Cuando los líderes más poderosos de la Iglesia Católica se reúnen en los salones del Vaticano, Lawrence se ve atrapado dentro de una compleja conspiración a la vez que descubre un secreto que podría sacudir los cimientos de la Iglesia.",
     edadRedomendada: "No recomendada menores 7 años",
     videoUrl: "https://www.youtube.com/embed/aMiOsqSkcYg"
+  },
+  {
+    id: "al-otro-barrio",
+    image: "al-otro-barrio.jpg",
+    nombre: "Al otro barrio",
+    descripcion: "Intentar engañar a Hacienda ha sido una opción demasiado tentadora para Andrés (Quim Gutiérrez), pero no contaba con que le acabaran pillando. Y eso es exactamente lo que le ha sucedido. Además de la multa millonaria que le ha caído encima, ahora debe trasladar sus oficinas al barrio de Los Caños, en el extrarradio más marginal de la capital, o eso le parece a él. Pero es que Andrés estaba aprovechándose de una jugosa subvención por tener allí su sede, sin que hubiese puesto jamás los pies en el barrio. A regañadientes, él y sus empleados se trasladan a Los Caños y aquello no es tan malo como esperaban... Es peor.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/1Sp7NbEf4HQ"
   }
 ];
 
@@ -534,6 +542,19 @@ const gruposProyeccionesRegio = [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-18"), /* @__PURE__ */ new Date("2025-01-19"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-18"), /* @__PURE__ */ new Date("2025-01-18"), "20:30"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-23"), /* @__PURE__ */ new Date("2025-01-23"), "20:00", "en")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 9,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "al-otro-barrio"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-25"), /* @__PURE__ */ new Date("2025-01-26"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-24"), /* @__PURE__ */ new Date("2025-01-25"), "20:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
