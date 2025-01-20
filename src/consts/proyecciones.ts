@@ -167,6 +167,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
+    },
+    {
+        grupo: 9,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'al-otro-barrio')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-01-25'), new Date('2025-01-26'),  '18:00'),
+            ...getProyecciones(new Date('2025-01-24'), new Date('2025-01-25'),  '20:00'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
     }
 ]
 
