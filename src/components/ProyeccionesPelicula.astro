@@ -8,7 +8,8 @@ const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Vierne
 
 const grupoProyeccion: GrupoProyeccion[] = GRUPOSPROYECCIONES.filter(grupo => grupo.cine.url == cine.url && pelicula.id === grupo.pelicula.id && grupo.proyecciones[0].fecha >= new Date());
 const proyecciones = grupoProyeccion[0]?.proyecciones;
-const diasProyeccion = [...new Set(proyecciones?.map(proyeccion => proyeccion.fecha.getDate()))];
+const diasProyeccion = [...new Set(proyecciones?.map(proyeccion => `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}`))].sort();
+
 ---
 
 {
@@ -16,7 +17,7 @@ const diasProyeccion = [...new Set(proyecciones?.map(proyeccion => proyeccion.fe
         <h3 class=`flex-1 text-${cine.color} font-bold underline`>Proyecciones {cine.corto}</h3>
         <ul class=`flex-2 text-${cine.color} list-none list-inside`>
             {diasProyeccion.sort().map(dia => {
-                const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
+                const proyeccionesDia = proyecciones.filter(proyeccion => `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
 
                 const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
                 const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
