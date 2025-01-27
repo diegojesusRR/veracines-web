@@ -5,11 +5,13 @@ const { proyecciones, pelicula, cine, entradas } = Astro.props;
 const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 const MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-const diasProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getDate()))];
+const diasProyeccion = [...new Set(proyecciones.map(proyeccion => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}`))];
 const mesesProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getMonth()))];
 
 const entradasLink = entradas?.espanol ?? '';
 const entradasVoseLink = entradas?.vose ?? '';
+
+console.log(diasProyeccion)
 ---
 <div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 rounded-lg relative">
     <h3 class={`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1 rounded-lg mb-2 px-2`}>
@@ -27,7 +29,7 @@ const entradasVoseLink = entradas?.vose ?? '';
                 <p class={`flex-1 text-${cine.color} font-bold underline mt-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
                 <ul class={`flex-2 text-${cine.color} list-none list-inside`}>
                     {diasProyeccion.sort().map(dia => {
-                        const proyeccionesDia = proyecciones.filter(proyeccion => proyeccion.fecha.getDate() === dia);
+                        const proyeccionesDia = proyecciones.filter(proyeccion => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
                         const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
                         return (
                                 <li>

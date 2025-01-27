@@ -385,6 +385,14 @@ const PELICULAS = [
     descripcion: "Intentar engañar a Hacienda ha sido una opción demasiado tentadora para Andrés (Quim Gutiérrez), pero no contaba con que le acabaran pillando. Y eso es exactamente lo que le ha sucedido. Además de la multa millonaria que le ha caído encima, ahora debe trasladar sus oficinas al barrio de Los Caños, en el extrarradio más marginal de la capital, o eso le parece a él. Pero es que Andrés estaba aprovechándose de una jugosa subvención por tener allí su sede, sin que hubiese puesto jamás los pies en el barrio. A regañadientes, él y sus empleados se trasladan a Los Caños y aquello no es tan malo como esperaban... Es peor.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/1Sp7NbEf4HQ"
+  },
+  {
+    id: "the-brutalist",
+    image: "the-brutalist.jpg",
+    nombre: "The Brutalist",
+    descripcion: "Huyendo de la Europa de la posguerra, el visionario arquitecto László Toth llega a Estados Unidos para reconstruir su vida, su obra y su matrimonio con su esposa Erzsébet tras verse obligados a separarse durante la guerra a causa de los cambios de fronteras y regímenes. Solo y en un nuevo país totalmente desconocido para él, László se establece en Pensilvania, donde el adinerado y prominente empresario industrial Harrison Lee Van Buren reconoce su talento para la arquitectura. Pero amasar poder y forjarse un legado tiene su precio...",
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/vna5bN96xJg"
   }
 ];
 
@@ -555,6 +563,32 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-25"), /* @__PURE__ */ new Date("2025-01-26"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-01-24"), /* @__PURE__ */ new Date("2025-01-25"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 10,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "conclave"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-30"), /* @__PURE__ */ new Date("2025-01-30"), "20:00", "en")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 11,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "the-brutalist"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-31"), /* @__PURE__ */ new Date("2025-01-31"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-01"), /* @__PURE__ */ new Date("2025-02-02"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-06"), /* @__PURE__ */ new Date("2025-02-06"), "20:00", "en")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
