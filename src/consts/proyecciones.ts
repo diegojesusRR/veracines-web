@@ -180,7 +180,33 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
-    }
+    },
+    {
+        grupo: 10,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'conclave')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-01-30'), new Date('2025-01-30'),  '20:00', 'en'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
+    {
+        grupo: 11,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'the-brutalist')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-01-31'), new Date('2025-01-31'),  '20:00'),
+            ...getProyecciones(new Date('2025-02-01'), new Date('2025-02-02'),  '18:00'),
+            ...getProyecciones(new Date('2025-02-06'), new Date('2025-02-06'),  '20:00', 'en'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
