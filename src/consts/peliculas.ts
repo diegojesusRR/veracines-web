@@ -217,5 +217,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Huyendo de la Europa de la posguerra, el visionario arquitecto László Toth llega a Estados Unidos para reconstruir su vida, su obra y su matrimonio con su esposa Erzsébet tras verse obligados a separarse durante la guerra a causa de los cambios de fronteras y regímenes. Solo y en un nuevo país totalmente desconocido para él, László se establece en Pensilvania, donde el adinerado y prominente empresario industrial Harrison Lee Van Buren reconoce su talento para la arquitectura. Pero amasar poder y forjarse un legado tiene su precio...",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/vna5bN96xJg"
+    },
+    {
+        id: "mikaela",
+        image: "mikaela.jpg",
+        nombre: "Mikaela",
+        descripcion: "En la víspera del día de Reyes una tormenta de nieve sin precedentes asola España. En medio del caos de una autopista colapsada, un grupo de atracadores aprovecha la oportunidad para asaltar un furgón blindado. A escasos metros se encuentra Leo (Antonio Resines), un policía en las últimas que no tiene nada que perder. Con la ayuda inesperada de una joven (Natalia Azahara) tratarán de evitar que la banda huya con el botín en una persecución a contrarreloj en medio de la tempestad.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/iAJcJqPY4zI"
     }
 ];
