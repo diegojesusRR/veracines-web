@@ -220,6 +220,20 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
+    {
+        grupo: 14,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'polican')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-02-14'), new Date('2025-02-14'),  '19:00'),
+            ...getProyecciones(new Date('2025-02-15'), new Date('2025-02-16'),  '18:00'),
+            ...getProyecciones(new Date('2025-02-15'), new Date('2025-02-15'),  '20:00'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [

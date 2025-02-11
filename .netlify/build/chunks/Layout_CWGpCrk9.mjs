@@ -401,6 +401,14 @@ const PELICULAS = [
     descripcion: "En la víspera del día de Reyes una tormenta de nieve sin precedentes asola España. En medio del caos de una autopista colapsada, un grupo de atracadores aprovecha la oportunidad para asaltar un furgón blindado. A escasos metros se encuentra Leo (Antonio Resines), un policía en las últimas que no tiene nada que perder. Con la ayuda inesperada de una joven (Natalia Azahara) tratarán de evitar que la banda huya con el botín en una persecución a contrarreloj en medio de la tempestad.",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/iAJcJqPY4zI"
+  },
+  {
+    id: "polican",
+    image: "polican.jpg",
+    nombre: "Policán",
+    descripcion: "Un fiel perro policía y su agente humano sufren graves heridas mientras cumplen con su deber, y solo se les puede salvar mediante una operación descabellada en la que ambos se fusionan en uno, convirtiéndose en Policán. El nuevo agente jura proteger y servir, pero también sabe buscar, sentarse y dar la patita. Policán acepta su nueva identidad y se esfuerza en complacer a su Jefe. Ahora debe detener las malvadas intenciones del supervillano felino Perico. El último plan de Perico es clonarse para crear al gatito Periquillo y disponer del doble de posibilidades para cometer fechorías. Pero las cosas se complicarán cuando Periquillo y Policán se hacen amigos inesperadamente. Adaptación del fenómeno literario de Dav Pilkey.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/86o3-BJ8YqU"
   }
 ];
 
@@ -610,6 +618,20 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-08"), /* @__PURE__ */ new Date("2025-02-09"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-07"), /* @__PURE__ */ new Date("2025-02-08"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 14,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "polican"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-14"), /* @__PURE__ */ new Date("2025-02-14"), "19:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-16"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-15"), "20:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
