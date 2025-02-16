@@ -409,6 +409,14 @@ const PELICULAS = [
     descripcion: "Un fiel perro policía y su agente humano sufren graves heridas mientras cumplen con su deber, y solo se les puede salvar mediante una operación descabellada en la que ambos se fusionan en uno, convirtiéndose en Policán. El nuevo agente jura proteger y servir, pero también sabe buscar, sentarse y dar la patita. Policán acepta su nueva identidad y se esfuerza en complacer a su Jefe. Ahora debe detener las malvadas intenciones del supervillano felino Perico. El último plan de Perico es clonarse para crear al gatito Periquillo y disponer del doble de posibilidades para cometer fechorías. Pero las cosas se complicarán cuando Periquillo y Policán se hacen amigos inesperadamente. Adaptación del fenómeno literario de Dav Pilkey.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/86o3-BJ8YqU"
+  },
+  {
+    id: "bridget-jones",
+    image: "bridget-jones.jpg",
+    nombre: "Bridget Jones: Loca por él",
+    descripcion: "Bridget está sola después de enviudar hace cuatro años, cuando Mark murió durante una misión humanitaria en Sudán. Es la madre de Billy, de nueve años, y de Mabel, de cuatro, y se encuentra en una especie de limbo emocional mientras cuida a los niños con la ayuda de sus mejores amigos y de un antiguo amante, Daniel Cleaver. Presionada por su familia urbana, compuesta por Shazzer, Jude y Tom, su compañera de trabajo, Miranda, su madre y su ginecóloga, la Dra. Rawlings, se siente obligada a interesarse por la vida y el amor. Trabaja de nuevo e incluso prueba con una app de citas, a través de la cual conoce a un soñador bastante más joven que ella. Mujer trabajadora, ama de casa, madre y enamorada (a medias), Bridget se enfrenta al enjuiciamiento de las madres perfectas en el colegio, se preocupa por Billy, que no acaba de acostumbrarse a no tener un padre, y mantiene una extraña relación con el muy racional profesor de Ciencias de su hijo.\n",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/o6F5Mnm9sNM"
   }
 ];
 
@@ -632,6 +640,21 @@ const gruposProyeccionesRegio = [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-14"), /* @__PURE__ */ new Date("2025-02-14"), "19:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-16"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-15"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 14,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "bridget-jones"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-21"), /* @__PURE__ */ new Date("2025-02-21"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-23"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-22"), "20:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-27"), /* @__PURE__ */ new Date("2025-02-27"), "20:00", "en")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',

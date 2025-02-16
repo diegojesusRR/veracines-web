@@ -234,6 +234,22 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
+    {
+        grupo: 14,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'bridget-jones')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-02-21'), new Date('2025-02-21'),  '20:00'),
+            ...getProyecciones(new Date('2025-02-22'), new Date('2025-02-23'),  '18:00'),
+            ...getProyecciones(new Date('2025-02-22'), new Date('2025-02-22'),  '20:30'),
+            ...getProyecciones(new Date('2025-02-27'), new Date('2025-02-27'),  '20:00', 'en'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
+
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
