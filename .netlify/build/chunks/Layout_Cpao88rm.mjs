@@ -417,6 +417,14 @@ const PELICULAS = [
     descripcion: "Bridget está sola después de enviudar hace cuatro años, cuando Mark murió durante una misión humanitaria en Sudán. Es la madre de Billy, de nueve años, y de Mabel, de cuatro, y se encuentra en una especie de limbo emocional mientras cuida a los niños con la ayuda de sus mejores amigos y de un antiguo amante, Daniel Cleaver. Presionada por su familia urbana, compuesta por Shazzer, Jude y Tom, su compañera de trabajo, Miranda, su madre y su ginecóloga, la Dra. Rawlings, se siente obligada a interesarse por la vida y el amor. Trabaja de nuevo e incluso prueba con una app de citas, a través de la cual conoce a un soñador bastante más joven que ella. Mujer trabajadora, ama de casa, madre y enamorada (a medias), Bridget se enfrenta al enjuiciamiento de las madres perfectas en el colegio, se preocupa por Billy, que no acaba de acostumbrarse a no tener un padre, y mantiene una extraña relación con el muy racional profesor de Ciencias de su hijo.\n",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/o6F5Mnm9sNM"
+  },
+  {
+    id: "capitan-america-un-mundo-nuevo",
+    image: "capitan-america-un-mundo-nuevo.webp",
+    nombre: "Capitán América: Un mundo nuevo",
+    descripcion: "Tras reunirse con el recién elegido presidente de Estados Unidos Thaddeus Ross (Harrison Ford), Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto complot global antes de que la verdadera mente maestra tenga al mundo entero viendo rojo. Cuarta película de la franquicia del Capitán América.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/wl2I9HOovUQ"
   }
 ];
 
@@ -655,6 +663,20 @@ const gruposProyeccionesRegio = [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-23"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-22"), "20:30"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-27"), /* @__PURE__ */ new Date("2025-02-27"), "20:00", "en")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 15,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "capitan-america-un-mundo-nuevo"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-02"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-01"), "20:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-06"), /* @__PURE__ */ new Date("2025-03-06"), "20:00", "en")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
