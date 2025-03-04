@@ -249,5 +249,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Tras reunirse con el recién elegido presidente de Estados Unidos Thaddeus Ross (Harrison Ford), Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto complot global antes de que la verdadera mente maestra tenga al mundo entero viendo rojo. Cuarta película de la franquicia del Capitán América.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/wl2I9HOovUQ"
+    },
+    {
+        id: "paddington-aventura-en-la-selva",
+        image: "paddington-aventura-en-la-selva.jpg",
+        nombre: "Paddington: Aventura en la selva",
+        descripcion: "Paddington y la familia Brown visitan a la tía Lucy en Perú, pero un misterio los envía a la selva amazónica y a las montañas peruanas.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/W0p9jThOHEU"
     }
 ];
