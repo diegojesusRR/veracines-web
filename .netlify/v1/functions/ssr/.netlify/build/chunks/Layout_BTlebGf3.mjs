@@ -425,6 +425,14 @@ const PELICULAS = [
     descripcion: "Tras reunirse con el recién elegido presidente de Estados Unidos Thaddeus Ross (Harrison Ford), Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto complot global antes de que la verdadera mente maestra tenga al mundo entero viendo rojo. Cuarta película de la franquicia del Capitán América.",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/wl2I9HOovUQ"
+  },
+  {
+    id: "paddington-aventura-en-la-selva",
+    image: "paddington-aventura-en-la-selva.jpg",
+    nombre: "Paddington: Aventura en la selva",
+    descripcion: "Paddington y la familia Brown visitan a la tía Lucy en Perú, pero un misterio los envía a la selva amazónica y a las montañas peruanas.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/W0p9jThOHEU"
   }
 ];
 
@@ -677,6 +685,19 @@ const gruposProyeccionesRegio = [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-02"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-01"), "20:30"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-06"), /* @__PURE__ */ new Date("2025-03-06"), "20:00", "en")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 16,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "paddington-aventura-en-la-selva"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-09"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-08"), "20:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
