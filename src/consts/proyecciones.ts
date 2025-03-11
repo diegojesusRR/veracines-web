@@ -276,6 +276,20 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
+    {
+        grupo: 17,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'a-complete-unknown')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-03-14'), new Date('2025-03-14'),  '20:00'),
+            ...getProyecciones(new Date('2025-03-15'), new Date('2025-03-16'),  '18:00'),
+            ...getProyecciones(new Date('2025-03-15'), new Date('2025-03-15'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
 
 ]
 
