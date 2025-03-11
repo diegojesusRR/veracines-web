@@ -257,5 +257,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Paddington y la familia Brown visitan a la tía Lucy en Perú, pero un misterio los envía a la selva amazónica y a las montañas peruanas.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/W0p9jThOHEU"
+    },
+    {
+        id: "a-complete-unknown",
+        image: "a-complete-unknown.jpg",
+        nombre: "A Complete Unknown",
+        descripcion: "Ambientada en la influyente escena musical de Nueva York de principios de los años 60, 'A Complete Unknown' cuenta la historia del meteórico ascenso del músico de Minnesota Bob Dylan, un cantante de folk de 19 años, hasta las salas de conciertos y lo más alto de las listas de éxitos. Las canciones y la mística de Dylan, de nombre Robert Allen Zimmerman, se convirtieron en un fenómeno mundial que culminó en 1965 con su transgresora actuación de rock eléctrico en el Newport Folk Festival.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/5WGNuAR__NM"
     }
 ];

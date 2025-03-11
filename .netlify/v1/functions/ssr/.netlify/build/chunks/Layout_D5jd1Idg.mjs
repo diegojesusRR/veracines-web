@@ -433,6 +433,14 @@ const PELICULAS = [
     descripcion: "Paddington y la familia Brown visitan a la tía Lucy en Perú, pero un misterio los envía a la selva amazónica y a las montañas peruanas.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/W0p9jThOHEU"
+  },
+  {
+    id: "a-complete-unknown",
+    image: "a-complete-unknown.jpg",
+    nombre: "A Complete Unknown",
+    descripcion: "Ambientada en la influyente escena musical de Nueva York de principios de los años 60, 'A Complete Unknown' cuenta la historia del meteórico ascenso del músico de Minnesota Bob Dylan, un cantante de folk de 19 años, hasta las salas de conciertos y lo más alto de las listas de éxitos. Las canciones y la mística de Dylan, de nombre Robert Allen Zimmerman, se convirtieron en un fenómeno mundial que culminó en 1965 con su transgresora actuación de rock eléctrico en el Newport Folk Festival.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/5WGNuAR__NM"
   }
 ];
 
@@ -698,6 +706,20 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-09"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-08"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 17,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "a-complete-unknown"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-14"), /* @__PURE__ */ new Date("2025-03-14"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-15"), /* @__PURE__ */ new Date("2025-03-16"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-15"), /* @__PURE__ */ new Date("2025-03-15"), "20:30")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
