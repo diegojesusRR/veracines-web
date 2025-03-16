@@ -284,6 +284,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-03-14'), new Date('2025-03-14'),  '20:00'),
             ...getProyecciones(new Date('2025-03-15'), new Date('2025-03-16'),  '18:00'),
             ...getProyecciones(new Date('2025-03-15'), new Date('2025-03-15'),  '20:30'),
+            ...getProyecciones(new Date('2025-03-20'), new Date('2025-03-20'),  '20:00', 'en'),
         ],
         // entradas: {
         //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
