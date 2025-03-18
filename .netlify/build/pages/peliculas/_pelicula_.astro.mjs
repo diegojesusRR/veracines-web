@@ -1,7 +1,7 @@
 /* empty css                                          */
 import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent } from '../../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { G as GRUPOSPROYECCIONES, C as CINES, P as PELICULAS, a as $$Layout } from '../../chunks/Layout_DupHLBel.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, P as PELICULAS, a as $$Layout } from '../../chunks/Layout_CQpGYDws.mjs';
 import 'clsx';
 export { renderers } from '../../renderers.mjs';
 
@@ -18,7 +18,7 @@ const $$ProyeccionesPelicula = createComponent(($$result, $$props, $$slots) => {
     const proyeccionesDia = proyecciones.filter((proyeccion) => `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
     const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
     const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
-    return renderTemplate`<li><span>${diaText}</span><span> - ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora} ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? " (VOSE)" : ""}`}</span></li>`;
+    return renderTemplate`<li><span>${diaText}</span><span> - ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora}h ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")}${ultimaProyeccion && ` y ${ultimaProyeccion.hora}h ${ultimaProyeccion.vose ? " (VOSE)" : ""}`}</span></li>`;
   })}</ul></div>`}`;
 }, "/Users/diego.ramos/veracines-web/src/components/ProyeccionesPelicula.astro", void 0);
 

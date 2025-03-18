@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_DupHLBel.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_CQpGYDws.mjs';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_BZOBfiP0.mjs';
 export { renderers } from '../renderers.mjs';
 
@@ -21,7 +21,7 @@ const $$ProyeccionCard = createComponent(($$result, $$props, $$slots) => {
     const proyeccionesDia = proyecciones.filter((proyeccion) => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
     const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
     return renderTemplate`<li> <span>${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}</span>
-- ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora} ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")} ${ultimaProyeccion && ` y ${ultimaProyeccion.hora} ${ultimaProyeccion.vose ? " (VOSE)" : ""}`} </li>`;
+- ${proyeccionesDia.map((proyeccion) => `${proyeccion.hora}h ${proyeccion.vose ? " (VOSE)" : ""}`).join(", ")} ${ultimaProyeccion && ` y ${ultimaProyeccion.hora}h ${ultimaProyeccion.vose ? " (VOSE)" : ""}`} </li>`;
   })} </ul> </div> ${entradasLink && proyecciones[proyecciones.length - 1].fecha >= /* @__PURE__ */ new Date() && renderTemplate`${renderComponent($$result, "Action", $$Action, { "as": "a", "class": `w-3/4 sm:text-xs my-1`, "aria-label": `Enlace a los tickets de ${cine.nombre} para la pel\xEDcula ${pelicula.nombre}`, "href": entradasLink, "color": cine.color, "target": "_blank" }, { "default": ($$result2) => renderTemplate`
 Comprar entradas
 ` })}`} ${entradasVoseLink && proyecciones[proyecciones.length - 1].fecha >= /* @__PURE__ */ new Date() && renderTemplate`${renderComponent($$result, "Action", $$Action, { "as": "a", "class": `w-3/4 sm:text-xs`, "aria-label": `Enlace a la cartelera de ${cine.nombre} para la pel\xEDcula ${pelicula.nombre} en VOSE`, "href": entradasVoseLink, "color": cine.color, "target": "_blank" }, { "default": ($$result2) => renderTemplate`
