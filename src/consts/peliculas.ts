@@ -265,5 +265,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Ambientada en la influyente escena musical de Nueva York de principios de los años 60, 'A Complete Unknown' cuenta la historia del meteórico ascenso del músico de Minnesota Bob Dylan, un cantante de folk de 19 años, hasta las salas de conciertos y lo más alto de las listas de éxitos. Las canciones y la mística de Dylan, de nombre Robert Allen Zimmerman, se convirtieron en un fenómeno mundial que culminó en 1965 con su transgresora actuación de rock eléctrico en el Newport Folk Festival.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/5WGNuAR__NM"
+    },
+    {
+        id: "wolfgang",
+        image: "wolfgang.jpg",
+        nombre: "Wolfgang (Extraordinario)",
+        descripcion: "Wolfgang, un niño de diez años con un cociente intelectual de 152 y trastorno del espectro autista, se ve obligado a vivir con su padre, Carles, a quien no ha visto nunca, tras la repentina muerte de su madre. Carles afronta el reto con ganas y voluntad, pero Wolfgang no soporta su desorden ni su desorganización y lo considera un “bajocien” por su falta de intelecto. Así que, a escondidas, Wolfgang planea conseguir su sueño: entrar en la academia de música Grimald de París, donde estudió su madre, y convertirse en el mejor pianista del mundo. Cuando Carles lo descubre, debe decidir entre su gran oportunidad como actor o convertirse en el padre que necesita un niño como Wolfgang.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/Wm9o1N69WY0"
     }
 ];
