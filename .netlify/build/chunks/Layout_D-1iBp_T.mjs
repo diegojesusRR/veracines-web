@@ -449,6 +449,14 @@ const PELICULAS = [
     descripcion: "Wolfgang, un niño de diez años con un cociente intelectual de 152 y trastorno del espectro autista, se ve obligado a vivir con su padre, Carles, a quien no ha visto nunca, tras la repentina muerte de su madre. Carles afronta el reto con ganas y voluntad, pero Wolfgang no soporta su desorden ni su desorganización y lo considera un “bajocien” por su falta de intelecto. Así que, a escondidas, Wolfgang planea conseguir su sueño: entrar en la academia de música Grimald de París, donde estudió su madre, y convertirse en el mejor pianista del mundo. Cuando Carles lo descubre, debe decidir entre su gran oportunidad como actor o convertirse en el padre que necesita un niño como Wolfgang.",
     edadRedomendada: "No recomendada menores 7 años",
     videoUrl: "https://www.youtube.com/embed/Wm9o1N69WY0"
+  },
+  {
+    id: "blancanieves",
+    image: "blancanieves.avif",
+    nombre: "Blancanieves",
+    descripcion: "Una adaptación en acción real del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/Iqhf2jglRdc"
   }
 ];
 
@@ -742,6 +750,19 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-22"), /* @__PURE__ */ new Date("2025-03-23"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-21"), /* @__PURE__ */ new Date("2025-03-22"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 19,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "blancanieves"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-29"), /* @__PURE__ */ new Date("2025-03-30"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-28"), /* @__PURE__ */ new Date("2025-03-29"), "20:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
