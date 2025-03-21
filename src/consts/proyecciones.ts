@@ -304,7 +304,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
-
+    {
+        grupo: 19,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'blancanieves')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-03-29'), new Date('2025-03-30'),  '18:00'),
+            ...getProyecciones(new Date('2025-03-28'), new Date('2025-03-29'),  '20:00'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
