@@ -273,5 +273,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Wolfgang, un niño de diez años con un cociente intelectual de 152 y trastorno del espectro autista, se ve obligado a vivir con su padre, Carles, a quien no ha visto nunca, tras la repentina muerte de su madre. Carles afronta el reto con ganas y voluntad, pero Wolfgang no soporta su desorden ni su desorganización y lo considera un “bajocien” por su falta de intelecto. Así que, a escondidas, Wolfgang planea conseguir su sueño: entrar en la academia de música Grimald de París, donde estudió su madre, y convertirse en el mejor pianista del mundo. Cuando Carles lo descubre, debe decidir entre su gran oportunidad como actor o convertirse en el padre que necesita un niño como Wolfgang.",
         edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/Wm9o1N69WY0"
+    },
+    {
+        id: "blancanieves",
+        image: "blancanieves.avif",
+        nombre: "Blancanieves",
+        descripcion: "Una adaptación en acción real del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/Iqhf2jglRdc"
     }
 ];
