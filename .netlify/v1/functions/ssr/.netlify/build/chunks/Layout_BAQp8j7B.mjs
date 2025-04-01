@@ -457,6 +457,14 @@ const PELICULAS = [
     descripcion: "Una adaptación en acción real del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/Iqhf2jglRdc"
+  },
+  {
+    id: "a-working-man",
+    image: "a-working-man.jpg",
+    nombre: "A Working Man",
+    descripcion: 'Levon Cade ha dejado atrás su profesión para ser "honrado" y trabajar en la construcción. Quiere vivir una vida sencilla y ser un buen padre para su hija. Pero cuando Jenny, la hija adolescente de su jefe, desaparece, se ve obligado a volver a emplear las habilidades que le convirtieron en una figura legendaria en el oscuro mundo de las operaciones encubiertas. Su búsqueda de la universitaria desaparecida le lleva al corazón de una siniestra conspiración criminal que creará una reacción en cadena que amenazará su nueva forma de vida.',
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/gGOXUdcE6hk"
   }
 ];
 
@@ -763,6 +771,21 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-29"), /* @__PURE__ */ new Date("2025-03-30"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-03-28"), /* @__PURE__ */ new Date("2025-03-29"), "20:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 20,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "a-working-man"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-04"), /* @__PURE__ */ new Date("2025-04-04"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "20:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-06"), /* @__PURE__ */ new Date("2025-04-06"), "18:00")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
