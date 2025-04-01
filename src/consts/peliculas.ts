@@ -281,5 +281,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Una adaptación en acción real del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/Iqhf2jglRdc"
+    },
+    {
+        id: "a-working-man",
+        image: "a-working-man.jpg",
+        nombre: "A Working Man",
+        descripcion: "Levon Cade ha dejado atrás su profesión para ser \"honrado\" y trabajar en la construcción. Quiere vivir una vida sencilla y ser un buen padre para su hija. Pero cuando Jenny, la hija adolescente de su jefe, desaparece, se ve obligado a volver a emplear las habilidades que le convirtieron en una figura legendaria en el oscuro mundo de las operaciones encubiertas. Su búsqueda de la universitaria desaparecida le lleva al corazón de una siniestra conspiración criminal que creará una reacción en cadena que amenazará su nueva forma de vida.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/gGOXUdcE6hk"
     }
 ];
