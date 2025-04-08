@@ -465,6 +465,14 @@ const PELICULAS = [
     descripcion: 'Levon Cade ha dejado atrás su profesión para ser "honrado" y trabajar en la construcción. Quiere vivir una vida sencilla y ser un buen padre para su hija. Pero cuando Jenny, la hija adolescente de su jefe, desaparece, se ve obligado a volver a emplear las habilidades que le convirtieron en una figura legendaria en el oscuro mundo de las operaciones encubiertas. Su búsqueda de la universitaria desaparecida le lleva al corazón de una siniestra conspiración criminal que creará una reacción en cadena que amenazará su nueva forma de vida.',
     edadRedomendada: "No recomendada menores 16 años",
     videoUrl: "https://www.youtube.com/embed/gGOXUdcE6hk"
+  },
+  {
+    id: "tierra-de-nadie",
+    image: "tierra-de-nadie.jpg",
+    nombre: "Tierra de nadie",
+    descripcion: 'La historia de tres viejos amigos. Mateo "el Gallego", un heroico -a su pesar- guardia civil, Juan "el Antxale", un pescador convertido en narco por la mala suerte y el paro, y Benito "el Yeye", un resignado e inteligente depositario judicial siempre a medio camino entre la ley y la delincuencia. Tres amigos separados por un lugar, Cádiz, y un momento, el presente. Atrapados los tres entre el abandono de las instituciones, el violento e imparable ascenso del narco en la provincia y el peligroso aumento del descontento social. Tres amigos atrapados en un polvorín que pondrá a prueba su amistad. El traslado rutinario de un yate incautado a un peligroso cártel se convierte en una aventura entre la vida y la muerte.',
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/G_t2mTodCpk"
   }
 ];
 
@@ -786,6 +794,19 @@ const gruposProyeccionesRegio = [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "18:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "20:30"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-04-06"), /* @__PURE__ */ new Date("2025-04-06"), "18:00")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 21,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "tierra-de-nadie"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-12"), /* @__PURE__ */ new Date("2025-04-13"), "18:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-12"), /* @__PURE__ */ new Date("2025-04-12"), "20:30")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
