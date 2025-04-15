@@ -473,6 +473,14 @@ const PELICULAS = [
     descripcion: 'La historia de tres viejos amigos. Mateo "el Gallego", un heroico -a su pesar- guardia civil, Juan "el Antxale", un pescador convertido en narco por la mala suerte y el paro, y Benito "el Yeye", un resignado e inteligente depositario judicial siempre a medio camino entre la ley y la delincuencia. Tres amigos separados por un lugar, Cádiz, y un momento, el presente. Atrapados los tres entre el abandono de las instituciones, el violento e imparable ascenso del narco en la provincia y el peligroso aumento del descontento social. Tres amigos atrapados en un polvorín que pondrá a prueba su amistad. El traslado rutinario de un yate incautado a un peligroso cártel se convierte en una aventura entre la vida y la muerte.',
     edadRedomendada: "No recomendada menores 16 años",
     videoUrl: "https://www.youtube.com/embed/G_t2mTodCpk"
+  },
+  {
+    id: "una-pelicula-de-minecraft",
+    image: "una-pelicula-de-minecraft.jpg",
+    nombre: "Una película de Minecraft",
+    descripcion: 'Bienvenido al mundo de Minecraft, donde la creatividad no sólo ayuda a crear, sino que es esencial para la supervivencia. Cuatro inadaptados -Garrett "El Basurero" Garrison (Momoa), Henry (Hansen), Natalie (Myers) y Dawn (Brooks)- se encuentran luchando con problemas ordinarios cuando de repente se ven arrastrados a través de un misterioso portal al Mundo Exterior: un extraño país de las maravillas cúbico que se nutre de la imaginación. Para volver a casa, tendrán que dominar este mundo (y protegerlo de cosas malvadas como Piglins y Zombies, también) mientras se embarcan en una búsqueda mágica con un inesperado experto artesano, Steve (Black). Juntos, su aventura desafiará a los cinco a ser audaces y a volver a conectar con las cualidades que hacen que cada uno de ellos sea único y creativo... las mismas habilidades que necesitan para prosperar en el mundo real.',
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/yxrjSE8XddA"
   }
 ];
 
@@ -812,6 +820,19 @@ const gruposProyeccionesRegio = [
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
     //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
     // }
+  },
+  {
+    grupo: 22,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "una-pelicula-de-minecraft"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "18:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "20:30")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
   }
 ];
 const GRUPOSPROYECCIONES = [
@@ -838,7 +859,13 @@ const $$RichResults = createComponent(($$result, $$props, $$slots) => {
     "alternateName": "Veracines - Salas al aire libre en Vera y Garrucha",
     "description": "Conoce "
   };
-  const eventsSchema = GRUPOSPROYECCIONES.map((grupopProyeccion) => {
+  const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter((grupopProyeccion) => {
+    return grupopProyeccion.proyecciones.some((proyeccion) => {
+      const fecha = new Date(proyeccion.fecha);
+      return fecha >= /* @__PURE__ */ new Date();
+    });
+  });
+  const eventsSchema = gruposProyeccionesProximas.map((grupopProyeccion) => {
     return grupopProyeccion.proyecciones.map((proyeccion) => ({
       "@context": "https://schema.org",
       "@type": "ScreeningEvent",
