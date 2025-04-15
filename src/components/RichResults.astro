@@ -20,7 +20,14 @@ const organizationSchema = {
 		"Conoce ",
 }
 
-const eventsSchema = GRUPOSPROYECCIONES.map(grupopProyeccion => {
+const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter(grupopProyeccion => {
+    return grupopProyeccion.proyecciones.some(proyeccion => {
+        const fecha = new Date(proyeccion.fecha)
+        return fecha >= new Date()
+    })
+})
+
+const eventsSchema = gruposProyeccionesProximas.map(grupopProyeccion => {
 
     return grupopProyeccion.proyecciones.map(proyeccion => ({
         "@context": "https://schema.org",
