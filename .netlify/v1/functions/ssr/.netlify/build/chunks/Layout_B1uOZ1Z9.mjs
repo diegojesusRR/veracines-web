@@ -481,6 +481,14 @@ const PELICULAS = [
     descripcion: 'Bienvenido al mundo de Minecraft, donde la creatividad no sólo ayuda a crear, sino que es esencial para la supervivencia. Cuatro inadaptados -Garrett "El Basurero" Garrison (Momoa), Henry (Hansen), Natalie (Myers) y Dawn (Brooks)- se encuentran luchando con problemas ordinarios cuando de repente se ven arrastrados a través de un misterioso portal al Mundo Exterior: un extraño país de las maravillas cúbico que se nutre de la imaginación. Para volver a casa, tendrán que dominar este mundo (y protegerlo de cosas malvadas como Piglins y Zombies, también) mientras se embarcan en una búsqueda mágica con un inesperado experto artesano, Steve (Black). Juntos, su aventura desafiará a los cinco a ser audaces y a volver a conectar con las cualidades que hacen que cada uno de ellos sea único y creativo... las mismas habilidades que necesitan para prosperar en el mundo real.',
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/yxrjSE8XddA"
+  },
+  {
+    id: "un-funeral-de-locos",
+    image: "un-funeral-de-locos.jpg",
+    nombre: "Un funeral de locos",
+    descripcion: "Los miembros de una familia acuden a despedir al patriarca, recién fallecido. Pero lo que debería ser un sentido velatorio se convierte en una reunión enloquecida cuando uno de los asistentes saca a la luz el secreto mejor guardado del difunto.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/mI2j6-PyB1E"
   }
 ];
 
@@ -828,6 +836,19 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "18:30"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "20:30")
+    ]
+    // entradas: {
+    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+    // }
+  },
+  {
+    grupo: 23,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "un-funeral-de-locos"),
+    cine: cineRegio,
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-26"), /* @__PURE__ */ new Date("2025-04-27"), "18:30"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-25"), /* @__PURE__ */ new Date("2025-04-26"), "20:30")
     ]
     // entradas: {
     //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
