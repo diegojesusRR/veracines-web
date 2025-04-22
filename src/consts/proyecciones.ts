@@ -359,6 +359,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
         // }
     },
+    {
+        grupo: 23,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'un-funeral-de-locos')!,
+        cine: cineRegio,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-04-26'), new Date('2025-04-27'),  '18:30'),
+            ...getProyecciones(new Date('2025-04-25'), new Date('2025-04-26'),  '20:30'),
+        ],
+        // entradas: {
+        //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
+        //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
+        // }
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
