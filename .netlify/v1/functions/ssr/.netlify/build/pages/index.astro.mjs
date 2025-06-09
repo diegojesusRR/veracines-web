@@ -1,10 +1,10 @@
 /* empty css                                       */
 import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, c as createAstro, d as renderComponent, s as spreadAttributes, e as renderSlot } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { C as CINES, a as $$Layout } from '../chunks/Layout_B1uOZ1Z9.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_DnktkkLo.mjs';
 import 'clsx';
 /* empty css                                 */
-import { $ as $$Action, M as Metadata } from '../chunks/metadata_BZOBfiP0.mjs';
+import { $ as $$Action, M as Metadata } from '../chunks/metadata_DfkSlpR6.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
@@ -23,11 +23,9 @@ Consultar cartelera
 
 const $$Ubicaciones = createComponent(($$result, $$props, $$slots) => {
   const regio = CINES.find((cine) => cine.url === "regio");
-  const garrucha = CINES.find((cine) => cine.url === "garrucha");
   const vera = CINES.find((cine) => cine.url === "vera");
-  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}
-        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
-        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": garrucha })}`} </section>`;
+  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
+        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}`} </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/ubicaciones.astro", void 0);
 
 const CONTACTO = {

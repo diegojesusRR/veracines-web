@@ -1,8 +1,8 @@
 /* empty css                                       */
 import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderComponent } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_B1uOZ1Z9.mjs';
-import { $ as $$Action, M as Metadata } from '../chunks/metadata_BZOBfiP0.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_DnktkkLo.mjs';
+import { $ as $$Action, M as Metadata } from '../chunks/metadata_DfkSlpR6.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$2 = createAstro("https://www.veracines.es");

@@ -102,7 +102,7 @@ const $$Header = createComponent(($$result, $$props, $$slots) => {
   const pages = [
     { name: "P\xE1gina Principal", href: "/" },
     { name: "Terraza de verano de Vera", href: "/cartelera-vera" },
-    { name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
+    //{ name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
     { name: "Cine Regio", href: "/cartelera-regio" }
   ].map((page) => ({
     ...page,
@@ -142,23 +142,24 @@ const CINES = [
     servicios: [],
     horaFijaProyeccion: "22:00"
   },
-  {
-    url: "garrucha",
-    nombre: "Cine Tenis de Garrucha",
-    corto: "Garrucha",
-    "color": "primary",
-    localizacion: {
-      ubicacionKey: "!1m18!1m12!1m3!1d25418.563129508486!2d-1.8616586513771942!3d37.21636849263374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7b29f1d4fe4b9b%3A0xda525c0a7e7bc5d5!2sCine%20Tenis!5e0!3m2!1ses!2ses!4v1715623188288!5m2!1ses!2ses",
-      direccion: "C. Tenis, 04630 Garrucha, Almería",
-      descripcion: "Se encuentra junto a Mercadona en Garrucha, en la calle Tenis, el cine Tenis de Garrucha es un lugar ideal para disfrutar de una película al aire libre en Garrucha.",
-      ciudad: "Garrucha",
-      provincia: "Almería",
-      codigoPostal: "04630",
-      adressCounty: "ES"
-    },
-    servicios: [],
-    horaFijaProyeccion: "22:00"
-  },
+  // {
+  //     url: "garrucha",
+  //     nombre: "Cine Tenis de Garrucha",
+  //     corto: "Garrucha",
+  //     "color": "primary",
+  //     localizacion: {
+  //         ubicacionKey: "!1m18!1m12!1m3!1d25418.563129508486!2d-1.8616586513771942!3d37.21636849263374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7b29f1d4fe4b9b%3A0xda525c0a7e7bc5d5!2sCine%20Tenis!5e0!3m2!1ses!2ses!4v1715623188288!5m2!1ses!2ses",
+  //         direccion: "C. Tenis, 04630 Garrucha, Almería",
+  //         descripcion: "Se encuentra junto a Mercadona en Garrucha, en la calle Tenis, el cine Tenis de Garrucha es un lugar ideal para disfrutar de una película al aire libre en Garrucha.",
+  //         ciudad: "Garrucha",
+  //         provincia: "Almería",
+  //         codigoPostal: "04630",
+  //         adressCounty: "ES"
+  //
+  //     },
+  //     servicios: [],
+  //     horaFijaProyeccion: "22:00"
+  // },
   {
     url: "regio",
     nombre: "Cine Regio de Vera",
@@ -507,8 +508,6 @@ function getProyecciones(fechaInicio, fechaFin, hora, vose) {
     };
   });
 }
-CINES.find((cine) => cine.url === "garrucha");
-const gruposProyeccionesGarrucha = [];
 CINES.find((cine) => cine.url === "vera");
 const gruposProyeccionesVera = [];
 const cineRegio = CINES.find((cine) => cine.url === "regio");
@@ -858,7 +857,7 @@ const gruposProyeccionesRegio = [
 ];
 const GRUPOSPROYECCIONES = [
   ...gruposProyeccionesVera,
-  ...gruposProyeccionesGarrucha,
+  //...gruposProyeccionesGarrucha,
   ...gruposProyeccionesRegio
 ];
 
