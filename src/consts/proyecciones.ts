@@ -21,8 +21,8 @@ function getProyecciones(fechaInicio: Date, fechaFin: Date, hora: string, vose?:
     });
 }
 
-const cineGarrucha = CINES.find(cine => cine.url === 'garrucha')!;
-const gruposProyeccionesGarrucha: GrupoProyeccion[] = []
+//const cineGarrucha = CINES.find(cine => cine.url === 'garrucha')!;
+//const gruposProyeccionesGarrucha: GrupoProyeccion[] = []
 
 const cineVera = CINES.find(cine => cine.url === 'vera')!;
 const gruposProyeccionesVera: GrupoProyeccion[] = []
@@ -376,6 +376,6 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
     ...gruposProyeccionesVera,
-    ...gruposProyeccionesGarrucha,
+    //...gruposProyeccionesGarrucha,
     ...gruposProyeccionesRegio
 ]
