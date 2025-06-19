@@ -12,17 +12,18 @@ export const prerender = false
 ---
 
 <Layout
-	description={Metadata.home.description}
-	title={Metadata.home.title}
-	canonical={Metadata.home.canonical}
+        description={Metadata.home.description}
+        title={Metadata.home.title}
+        canonical={Metadata.home.canonical}
 >
-	<Hero />
 
-	<main>
-		<div class="grid gap-14">
-		<Ubicaciones />
-		<Servicios />
-		<Contacto />
-		</div>
-	</main>
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        <div class="grid gap-14">
+            <Hero/>
+
+            <Ubicaciones/>
+            <Servicios/>
+            <Contacto/>
+        </div>
+    </main>
 </Layout>

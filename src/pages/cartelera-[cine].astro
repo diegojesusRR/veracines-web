@@ -1,35 +1,59 @@
 ---
-
 import Layout from "@/layouts/Layout.astro"
 
-import {CINES} from "../consts/cines";
-import {Metadata} from "../consts/metadata";
+import { CINES } from "../consts/cines";
+import { Metadata } from "../consts/metadata";
 import ProyeccionesCine from "../components/proyeccionesCine.astro";
+import Action from "/src/components/Action.astro";
 
 const cine = CINES.find(cine => cine.url === Astro.params.cine);
 
-if (!cine) {
-    return new Response(JSON.stringify("Cine Not found"), { status: 404 })
-}
+if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 404 });
 ---
 
 <Layout
-        description={Metadata[`cartelera-${cine.url}`].description}
-        title={Metadata[`cartelera-${cine.url}`].title}
-        canonical={Metadata[`cartelera-${cine.url}`].canonical}
+        description={Metadata[`cartelera-${cine.url}`]?.description}
+        title={Metadata[`cartelera-${cine.url}`]?.title}
+        canonical={Metadata[`cartelera-${cine.url}`]?.canonical}
 >
-
-    <main>
-        <h1 class=`text-xl text-${cine.color} text-center font-bold`>Cartelera de {cine.nombre}</h1>
-        <h2 class=`text-center text-lg text-${cine.color}`>Próximas películas en {cine.nombre}. Consulta nuestra programación.</h2>
-        {cine.horaFijaProyeccion ? (
-            <p class=`text-center text-sm text-white mt-2 border-2 rounded-lg text-center p-2 w-5/6 m-auto bg-${cine.color} bg-opacity-80`>En {cine.nombre} todas las proyecciones comenzarán a las {cine.horaFijaProyeccion}. La taquilla estará disponible 45 minutos antes del inicio de la proyección</p>
-        ) : null}
-        <ProyeccionesCine cine={cine} />
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        <section class="mb-8">
+            <h1 class={`text-3xl sm:text-4xl font-extrabold text-center text-${cine.color} mb-2 drop-shadow`}>
+                Cartelera de {cine.nombre}
+            </h1>
+            <h2 class={`text-center text-lg sm:text-xl text-${cine.color} mb-4`}>
+                Próximas películas en {cine.nombre}. Consulta nuestra programación.
+            </h2>
+            {cine.ventaOnline ? (
+                    <Action
+                            as="a"
+                            class={`block w-full mx-auto text-center text-base sm:text-sm my-2 bg-${cine.color} text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-opacity-90 transition`}
+                            aria-label={`Enlace a todos los tickets disponibles de ${cine.nombre}`}
+                            color={cine.color}
+                            href="https://kinetike.com:83/views/init.aspx?cine=REGIO"
+                    >
+                        🎟️ Comprar entradas online
+                    </Action>
+            ) : (
+                    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded mb-4 text-center">
+                        <p class="font-semibold">Entradas solo en taquilla</p>
+                        <p class="text-sm">
+                            {cine.nombre} cuenta con asientos no numerados, por lo que no es posible realizar venta online.<br />
+                            La venta de entradas se realizará exclusivamente en taquilla, el mismo día de la proyección, hasta completar aforo.<br />
+                            <span class="font-bold">¡Te recomendamos venir con antelación para asegurarte tu plaza!</span>
+                        </p>
+                    </div>
+            )}
+            {cine.horaFijaProyeccion && (
+                    <div class={`flex items-center justify-center mb-4`}>
+        <span class={`inline-block bg-${cine.color} bg-opacity-90 text-white text-base sm:text-lg rounded-lg px-5 py-3 shadow`}>
+            🕒 Todas las funciones de hoy empiezan a las <b>{cine.horaFijaProyeccion}</b>. La taquilla abre 45 minutos antes de la primera proyección.
+        </span>
+                    </div>
+            )}
+        </section>
+        <section>
+            <ProyeccionesCine cine={cine} />
+        </section>
     </main>
 </Layout>
-
-<section>
-
-
-</section>
