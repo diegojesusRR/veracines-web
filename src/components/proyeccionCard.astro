@@ -11,51 +11,69 @@ const mesesProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fe
 const entradasLink = entradas?.espanol ?? '';
 const entradasVoseLink = entradas?.vose ?? '';
 
-console.log(diasProyeccion)
 ---
-<div class="p-2 m-4 grid xs:grid-cols-1 md:grid-cols-4 grid-flow-row border-2 align-middle bg-white bg-opacity-8 rounded-lg relative">
-    <h3 class={`text-xl col-span-3 text-white bg-${cine.color} text-center font-bold pb-2 pt-2 mr-1 ml-1 rounded-lg mb-2 px-2`}>
-        {pelicula.nombre}
-    </h3>
-    <div class="row-span-3 col-span-1 mr-1 ml-1 rounded-lg">
-        <img class={`w-full border-4 border-${cine.color} rounded-lg`} src={`/img/peliculas/${pelicula.image}`} alt={`Imagen de la película: ${pelicula.nombre}`} />
-        <p class={`text-center text-${cine.color} text-xs font-bold w-auto text-white p-2 bg-${cine.color} mt-2 rounded-lg`}>
+<div class="p-4 m-4 grid grid-cols-1 md:grid-cols-3 gap-4 border-2 align-middle bg-white bg-opacity-90 rounded-2xl shadow-xl relative transition-transform hover:scale-105 md:[direction:rtl]">
+    <!-- Título -->
+    <div class="flex flex-col justify-between md:col-span-3">
+        <h3 class={`text-2xl text-white bg-${cine.color} text-center font-extrabold pb-2 pt-2 rounded-lg mb-2 px-2 shadow`}>
+            {pelicula.nombre}
+        </h3>
+    </div>
+
+    <!-- Imagen y edad recomendada -->
+    <div class="flex flex-col items-center justify-center rounded-xl bg-gray-50 bg-opacity-80 p-2 md:col-span-1">
+        <img class={`w-full max-w-[180px] border-4 border-${cine.color} rounded-xl shadow-md`} src={`/img/peliculas/${pelicula.image}`} alt={`Imagen de la película: ${pelicula.nombre}`} loading="lazy" />
+        <p class={`text-center text-xs font-bold w-full text-white p-2 bg-${cine.color} mt-2 rounded-lg shadow`}>
             {pelicula.edadRedomendada}
         </p>
     </div>
-    <div class={`col-span-3 flex flex-col-reverse md:flex-row flex-grow align xs:text-xl md:text-base`}>
-        <div class={`flex flex-col justify-around items-center p-2`}>
-            <div class="flex flex-col align-left text-center">
-                <p class={`flex-1 text-${cine.color} font-bold underline mt-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
-                <ul class={`flex-2 text-${cine.color} list-none list-inside`}>
+    <!-- Contenido principal -->
+    <div class="justify-between md:col-span-2 items-center text-center">
+        <div class="gap-4 items-center justify-center w-full">
+            <div class="justify-center items-center">
+                <p class={`text-${cine.color} font-bold underline mb-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
+                <ul class={`text-${cine.color} list-none list-inside space-y-1`}>
                     {diasProyeccion.sort().map(dia => {
                         const proyeccionesDia = proyecciones.filter(proyeccion => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
                         const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
                         return (
-                                <li>
-                                    <span>{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
-                                    - {proyeccionesDia.map(proyeccion => `${proyeccion.hora}h ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}
-                                    {ultimaProyeccion && ` y ${ultimaProyeccion.hora}h ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}
+                                <li class="flex items-center gap-2 justify-center">
+                                    <span class="font-semibold">{DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} {proyeccionesDia[0].fecha.getDate()}</span>
+                                    <span>-</span>
+                                    <span>
+                                {proyeccionesDia.map(proyeccion => `${proyeccion.hora}h${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}
+                                        {ultimaProyeccion && ` y ${ultimaProyeccion.hora}h${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}
+                            </span>
                                 </li>
                         );
                     })}
                 </ul>
             </div>
-            { entradasLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs my-1`} aria-label={`Enlace a los tickets de ${cine.nombre} para la película ${pelicula.nombre}`} href={entradasLink} color={cine.color} target="_blank">
-                Comprar entradas
-            </Action>}
-            { entradasVoseLink && proyecciones[proyecciones.length-1].fecha >= new Date() && <Action as="a" class={`w-3/4 sm:text-xs`} aria-label={`Enlace a la cartelera de ${cine.nombre} para la película ${pelicula.nombre} en VOSE`} href={entradasVoseLink} color={cine.color} target="_blank">
-                Comprar entradas VOSE
-            </Action>}
-            <div class="relative flex h-2 w-full flex-col items-center m-4">
-                <div class="absolute w-full items-center justify-between">
-                    <div class="h-[2px] w-full rounded-l-[30%] border-t-0"
-                         style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)">
-                    </div>
+            <div class="flex flex-col justify-center items-center gap-2 min-w-[180px]">
+                { entradasLink && proyecciones[proyecciones.length-1].fecha >= new Date() && (
+                        <Action as="a" class={`w-full sm:text-xs my-1 bg-${cine.color} text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`} aria-label={`Enlace a los tickets de ${cine.nombre} para la película ${pelicula.nombre}`} href={entradasLink} color={cine.color} target="_blank">
+                            🎟️ Comprar entradas
+                        </Action>
+                )}
+                { entradasVoseLink && proyecciones[proyecciones.length-1].fecha >= new Date() && (
+                        <Action as="a" class={`w-full sm:text-xs bg-gray-800 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`} aria-label={`Enlace a la cartelera de ${cine.nombre} para la película ${pelicula.nombre} en VOSE`} href={entradasVoseLink} color={cine.color} target="_blank">
+                            🎟️ Entradas VOSE
+                        </Action>
+                )}
+            </div>
+        </div>
+        <div class="relative flex h-2 w-full flex-col items-center my-4">
+            <div class="absolute w-full items-center justify-between">
+                <div class="h-[2px] w-full rounded-l-[30%] border-t-0"
+                     style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)">
                 </div>
             </div>
-            <p class={`text-center text-${cine.color} line-clamp-4`}>{pelicula.descripcion}</p>
-            <a href={`https://www.veracines.es/peliculas/${pelicula.id}`} class={`text-right text-${cine.color} mt-4 mb-2 font-bold`}>Leer más</a>
         </div>
+        <!-- Descripción -->
+        <p class={`text-center text-gray-700 line-clamp-4 mb-2`}>{pelicula.descripcion}</p>
+        <!-- Botón Leer más -->
+        <Action as="a" href={`https://www.veracines.es/peliculas/${pelicula.id}`} class={`block w-full text-center text-base mt-2 mb-2 font-bold underline bg-${cine.color} text-white py-2 px-4 rounded-lg hover:bg-opacity-80 transition`} color={cine.color} target="_blank">
+            Leer más
+        </Action>
     </div>
 </div>
