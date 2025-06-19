@@ -1,7 +1,7 @@
 export const Metadata: Record<string, { title: string, description: string, canonical: string }> = {
     home: {
-        title: "Cines de Verano en Vera y Garrucha - Veracines",
-        description: "Cine de verano en Vera y Garrucha. Descubre las películas de estreno en Vera y Garrucha. Disvruta la experiencia del cine de verano en Veracines.",
+        title: "Cines de Verano en Vera, Garrucha y alrededores - Veracines",
+        description: "Cine de verano en Vera, antes también en Garrucha. Descubre las películas de estreno en Vera. Disvruta la experiencia del cine de verano en Veracines.",
         canonical: "https://www.veracines.es"
     },
 
