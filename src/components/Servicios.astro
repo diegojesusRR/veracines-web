@@ -6,6 +6,7 @@ import Parking from '../components/icons/parking.astro';
 import Projector from '../components/icons/projector.astro';
 import {CINES} from "../consts/cines";
 import Servicio from "./Servicio.astro";
+import Climatizacion from "./icons/climatizacion.astro";
 ---
 
 <section class="w-full text-center">
@@ -13,7 +14,7 @@ import Servicio from "./Servicio.astro";
         <p class="text-center text-lg text-primary">
             Además de una buena película al aire libre, disponemos de servicios como:
         </p>
-        <div class="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-10 mt-5 ">
+        <div class="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-12 mt-5 ">
             <Servicio label="Bocadillos y Hamburguesas" >
                 <Burguer class="h-12 w-12 text-primary"/>
             </Servicio>
@@ -23,11 +24,14 @@ import Servicio from "./Servicio.astro";
             <Servicio label="Helados">
                 <Icecream class="h-12 w-12 text-primary"/>
             </Servicio>
-            <Servicio label="Proyector 2K" clasesExtra="sm:col-start-2 lg:col-start-auto">
+            <Servicio label="Proyector 2K">
                 <Projector class="h-12 w-12 text-primary" />
             </Servicio>
-            <Servicio label="Parking Gratuito" aclaracion=`Solo disponible en ${CINES.find(x => x.url==='vera').nombre}` clasesExtra="col-start-2 sm:col-start-auto">
+            <Servicio label="Parking Gratuito" aclaracion=`Solo disponible en ${CINES.find(x => x.url==='vera').nombre}` >
                 <Parking class="h-12 w-12 text-primary" />
+            </Servicio>
+            <Servicio label="Climatización" aclaracion=`Solo disponible en ${CINES.find(x => x.url==='regio').nombre}` >
+                <Climatizacion class="h-12 w-12 text-primary" />
             </Servicio>
         </div>
 </section>

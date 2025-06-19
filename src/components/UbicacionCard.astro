@@ -2,27 +2,39 @@
 import Action from "./Action.astro";
 const { cine } = Astro.props;
 ---
-<div class=`flex flex-col sm:flex-row p-2 m-4 rounded-lg bg-white bg-opacity-70 border-2 align-middle flex-grow bg-white bg-opacity-80`>
-    <div class=`flex flex-col justify-around justify-center items-center p-5`>
-        <h4 class=`text-xl text-${cine.color} text-center font-bold underline mb-2`>{cine.nombre}</h4>
-        <p class=`text-center text-${cine.color}`>{cine.localizacion.descripcion}</p>
+<div class="flex flex-col sm:flex-row p-4 m-6 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-primary shadow-xl transition-transform hover:scale-105">
+    <div class="flex flex-col justify-center items-center p-6 sm:w-1/2">
+        <h4 class={`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`}>
+            {cine.nombre}
+        </h4>
+        <p class={`text-center text-${cine.color} mb-4 text-base font-medium`}>
+            {cine.localizacion.descripcion}
+        </p>
         <Action
-                class=`w-3/4 text-base md:text-xs`
-                as=`a`
-                aria-disabled=`false`
-                href=`/cartelera-${cine.url}/`
-                aria-label=`Enlace a la cartelera de ${cine.nombre}`
+                class="w-3/4 text-base md:text-xs bg-primary text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition"
+                as="a"
+                aria-disabled="false"
+                href={`/cartelera-${cine.url}/`}
+                aria-label={`Enlace a la cartelera de ${cine.nombre}`}
         >
-            Consultar cartelera
+            🎬 Consultar cartelera
         </Action>
-
     </div>
-    <div class=`flex flex-col md:mt-2`>
-        <div class=`border-4 border-primary rounded-lg m-auto`>
-            <iframe class=`align-middle w-auto rounded-lg` src=`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}` width=`400` height=`250` style=`border:0;` allowfullscreen=`` loading=`lazy` referrerpolicy=`no-referrer-when-downgrade`></iframe>
+    <div class="flex flex-col md:mt-2 sm:w-1/2 items-center justify-center">
+        <div class="border-4 border-primary rounded-xl overflow-hidden shadow-lg m-auto">
+            <iframe
+                    class="align-middle w-[350px] md:w-[400px] rounded-lg"
+                    src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
+                    width="400"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
         </div>
-        <p class=`text-center underline text-${cine.color} text-xs font-bold w-auto p-2`>{cine.localizacion.direccion}</p>
+        <p class={`text-center underline text-${cine.color} text-xs font-bold w-auto p-2 mt-2 bg-white bg-opacity-60 rounded`}>
+            📍 {cine.localizacion.direccion}
+        </p>
     </div>
-
-
 </div>
