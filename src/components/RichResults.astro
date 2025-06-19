@@ -20,39 +20,39 @@ const organizationSchema = {
 		"Conoce ",
 }
 
-const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter(grupopProyeccion => {
-    return grupopProyeccion.proyecciones.some(proyeccion => {
+const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter(grupoProyeccion => {
+    return grupoProyeccion.proyecciones.some(proyeccion => {
         const fecha = new Date(proyeccion.fecha)
         return fecha >= new Date()
     })
 })
 
-const eventsSchema = gruposProyeccionesProximas.map(grupopProyeccion => {
+const eventsSchema = gruposProyeccionesProximas.map(grupoProyeccion => {
 
-    return grupopProyeccion.proyecciones.map(proyeccion => ({
+    return grupoProyeccion.proyecciones.map(proyeccion => ({
         "@context": "https://schema.org",
         "@type": "ScreeningEvent",
-        "name": `${grupopProyeccion.pelicula.nombre} en ${grupopProyeccion.cine.nombre}`,
-        "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupopProyeccion.cine.horaFijaProyeccion??proyeccion.hora}`,
+        "name": `${grupoProyeccion.pelicula.nombre} en ${grupoProyeccion.cine.nombre}`,
+        "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupoProyeccion.cine.horaFijaProyeccion??proyeccion.hora}`,
         "location": {
             "@type": "Place",
-            "name": grupopProyeccion.cine.nombre,
+            "name": grupoProyeccion.cine.nombre,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": grupopProyeccion.cine.localizacion.direccion,
+                "streetAddress": grupoProyeccion.cine.localizacion.direccion,
                 "addressLocality": "Vera",
                 "postalCode": "04620",
                 "addressRegion": "Almería",
                 "addressCountry": "ES",
             },
         },
-        "image": [`https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`],
-        "description": grupopProyeccion.pelicula.descripcion,
+        "image": [`https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`],
+        "description": grupoProyeccion.pelicula.descripcion,
         "workPresented": {
             "@type": "Movie",
-            "name": grupopProyeccion.pelicula.nombre,
-            "image": `https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`,
-            "description": grupopProyeccion.pelicula.descripcion,
+            "name": grupoProyeccion.pelicula.nombre,
+            "image": `https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`,
+            "description": grupoProyeccion.pelicula.descripcion,
         },
     })).flat(1)
 })
