@@ -140,7 +140,8 @@ const CINES = [
       adressCounty: "ES"
     },
     servicios: [],
-    horaFijaProyeccion: "22:00"
+    horaFijaProyeccion: "22:00",
+    ventaOnline: false
   },
   // {
   //     url: "garrucha",
@@ -174,7 +175,8 @@ const CINES = [
       codigoPostal: "04620",
       adressCounty: "ES"
     },
-    servicios: []
+    servicios: [],
+    ventaOnline: true
   }
 ];
 
@@ -490,6 +492,46 @@ const PELICULAS = [
     descripcion: "Los miembros de una familia acuden a despedir al patriarca, recién fallecido. Pero lo que debería ser un sentido velatorio se convierte en una reunión enloquecida cuando uno de los asistentes saca a la luz el secreto mejor guardado del difunto.",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/mI2j6-PyB1E"
+  },
+  {
+    id: "padre-no-hay-mas-que-uno-5",
+    image: "padre-no-hay-mas-que-uno-5.jpg",
+    nombre: "Padre no hay más que uno 5: Nido repleto",
+    descripcion: "Algunos padres experimentan la angustia del “nido vacío” cuando los hijos empiezan a abandonar el hogar. Javier, en cambio, sufre el trauma del “nido repleto”: nadie se va de casa.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/Os5EVDLcTx8"
+  },
+  {
+    id: "jurassic-world-el-renacer",
+    image: "jurassic-world-el-renacer.jpg",
+    nombre: "Padre no hay más que uno 5: Nido repleto",
+    descripcion: "Cinco años después de los acontecimientos de Jurassic World Dominion, la ecología del planeta Tierra ha demostrado ser insoportable para los dinosaurios. Los pocos que quedan viven en ambientes aislados en las regiones ecuatoriales, donde el clima se parece al que conocieron antaño. Las tres criaturas más grandes dentro de esta biosfera tropical tienen en su ADN la clave para fabricar un medicamento que aportará beneficios milagrosos a la raza humana. Zora Bennett, una experta en operaciones encubiertas, es contratada para dirigir a un equipo de especialistas en una misión secreta cuyo objetivo es conseguir el material genético. Pero la operación liderada por Zora se cruzará con una familia cuyo barco volcó por culpa de unos dinosaurios acuáticos y todos acabarán en una isla prohibida donde se ubicó hace años un centro de investigación ultrasecreto del Parque Jurásico. Allí, en un lugar poblado por dinosaurios de numerosas especies, se enfrentarán a un descubrimiento tan sorprendente como siniestro que lleva décadas escondido.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/1R3LTANp7hw"
+  },
+  {
+    id: "como-entrenar-a-tu-dragon-la-pelicula",
+    image: "como-entrenar-a-tu-dragon-la-pelicula.jpg",
+    nombre: "Cómo entrenar a tu dragón",
+    descripcion: "En la escarpada Isla Mema, donde vikingos y dragones han mantenido una amarga enemistad durante generaciones, Hipo es un muchacho diferente a los demás. El ingenioso y subestimado hijo del jefe Estoico el Inmenso desafía siglos de tradición haciéndose amigo de Desdentao, un temido dragón Furia Nocturna. Su insospechado vínculo desvelará la verdadera naturaleza de los dragones, poniendo a prueba los cimientos de la sociedad vikinga. En compañía de la feroz y ambiciosa Astrid y Bocón, el estrafalario herrero del pueblo, Hipo planta cara a un mundo dividido por el miedo y la incomprensión. Pero cuando surge una ancestral amenaza que pone en peligro tanto a vikingos como a dragones, la amistad de Hipo con Desdentao se convertirá en la clave para forjar un nuevo futuro. Juntos, deberán recorrer la delicada senda hacia la paz, volando más allá de los límites de sus mundos y redefiniendo para siempre el significado de ser un héroe y un líder.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/Os5EVDLcTx8"
+  },
+  {
+    id: "lilo-y-stitch",
+    image: "lilo-y-stitch.jpg",
+    nombre: "Lilo y Stitch",
+    descripcion: 'Remake en imagen real de "Lilo & Stitch". Narra la historia de una niña hawaiana solitaria y un extraterrestre fugitivo que la ayuda a recomponer su rota familia.',
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/HeTE7j9dcGg"
+  },
+  {
+    id: "f1-la-pelicula",
+    image: "f1-la-pelicula.jpg",
+    nombre: "F1: La película",
+    descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
+    edadRedomendada: "No recomendada menores 13 años",
+    videoUrl: "https://www.youtube.com/embed/H4qYzIrxRds"
   }
 ];
 
@@ -508,351 +550,52 @@ function getProyecciones(fechaInicio, fechaFin, hora, vose) {
     };
   });
 }
-CINES.find((cine) => cine.url === "vera");
-const gruposProyeccionesVera = [];
+const cineVera = CINES.find((cine) => cine.url === "vera");
+const gruposProyeccionesVera = [
+  {
+    grupo: 1,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "22:00")
+    ]
+  },
+  {
+    grupo: 2,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-07"), "22:00")
+    ]
+  },
+  {
+    grupo: 3,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "como-entrenar-a-tu-dragon-la-pelicula"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-08"), /* @__PURE__ */ new Date("2025-07-10"), "22:00")
+    ]
+  }
+];
 const cineRegio = CINES.find((cine) => cine.url === "regio");
 const gruposProyeccionesRegio = [
   {
     grupo: 1,
     cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "gladiator-2"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "lilo-y-stitch"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "17:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-15"), /* @__PURE__ */ new Date("2024-11-17"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-21"), /* @__PURE__ */ new Date("2024-11-21"), "20:00", "en")
-    ],
-    entradas: {
-      espanol: "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1133&cine=REGIO",
-      vose: "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1134&cine=REGIO"
-    }
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "22:00")
+    ]
   },
   {
     grupo: 2,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "wicked"),
     cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-22"), /* @__PURE__ */ new Date("2024-11-22"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-23"), /* @__PURE__ */ new Date("2024-11-23"), "17:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-23"), /* @__PURE__ */ new Date("2024-11-23"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-24"), /* @__PURE__ */ new Date("2024-11-24"), "17:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-28"), /* @__PURE__ */ new Date("2024-11-28"), "20:00", "en")
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-04"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-04"), "22:00")
     ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 3,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "la-infiltrada"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-30"), /* @__PURE__ */ new Date("2024-12-01"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-11-30"), /* @__PURE__ */ new Date("2024-11-30"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 4,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "gladiator-2"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-06"), /* @__PURE__ */ new Date("2024-12-08"), "17:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-07"), /* @__PURE__ */ new Date("2024-12-07"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 4,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "vaiana-2"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-13"), /* @__PURE__ */ new Date("2024-12-13"), "19:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-14"), /* @__PURE__ */ new Date("2024-12-15"), "17:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-14"), /* @__PURE__ */ new Date("2024-12-14"), "19:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 5,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "mufasa"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-20"), /* @__PURE__ */ new Date("2024-12-23"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-20"), /* @__PURE__ */ new Date("2024-12-23"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-26"), /* @__PURE__ */ new Date("2024-12-26"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-26"), /* @__PURE__ */ new Date("2024-12-26"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 6,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "sonic-3"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-27"), /* @__PURE__ */ new Date("2024-12-30"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2024-12-27"), /* @__PURE__ */ new Date("2024-12-30"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 7,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "mufasa"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-02"), /* @__PURE__ */ new Date("2025-01-04"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-04"), /* @__PURE__ */ new Date("2025-01-04"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 7,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "un-lio-de-millones"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-11"), /* @__PURE__ */ new Date("2025-01-12"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-10"), /* @__PURE__ */ new Date("2025-01-11"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 8,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "conclave"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-17"), /* @__PURE__ */ new Date("2025-01-17"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-18"), /* @__PURE__ */ new Date("2025-01-19"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-18"), /* @__PURE__ */ new Date("2025-01-18"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-23"), /* @__PURE__ */ new Date("2025-01-23"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 9,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "al-otro-barrio"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-25"), /* @__PURE__ */ new Date("2025-01-26"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-24"), /* @__PURE__ */ new Date("2025-01-25"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 10,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "conclave"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-30"), /* @__PURE__ */ new Date("2025-01-30"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 11,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "the-brutalist"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-01-31"), /* @__PURE__ */ new Date("2025-01-31"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-01"), /* @__PURE__ */ new Date("2025-02-02"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-06"), /* @__PURE__ */ new Date("2025-02-06"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 13,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "mikaela"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-08"), /* @__PURE__ */ new Date("2025-02-09"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-07"), /* @__PURE__ */ new Date("2025-02-08"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 14,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "polican"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-14"), /* @__PURE__ */ new Date("2025-02-14"), "19:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-16"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-15"), /* @__PURE__ */ new Date("2025-02-15"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 14,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "bridget-jones"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-21"), /* @__PURE__ */ new Date("2025-02-21"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-23"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-22"), /* @__PURE__ */ new Date("2025-02-22"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-27"), /* @__PURE__ */ new Date("2025-02-27"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 15,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "capitan-america-un-mundo-nuevo"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-02"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-02-28"), /* @__PURE__ */ new Date("2025-03-01"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-06"), /* @__PURE__ */ new Date("2025-03-06"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 16,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "paddington-aventura-en-la-selva"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-09"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-08"), /* @__PURE__ */ new Date("2025-03-08"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 17,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "a-complete-unknown"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-14"), /* @__PURE__ */ new Date("2025-03-14"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-15"), /* @__PURE__ */ new Date("2025-03-16"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-15"), /* @__PURE__ */ new Date("2025-03-15"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-20"), /* @__PURE__ */ new Date("2025-03-20"), "20:00", "en")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 18,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "wolfgang"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-22"), /* @__PURE__ */ new Date("2025-03-23"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-21"), /* @__PURE__ */ new Date("2025-03-22"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 19,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "blancanieves"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-29"), /* @__PURE__ */ new Date("2025-03-30"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-03-28"), /* @__PURE__ */ new Date("2025-03-29"), "20:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 20,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "a-working-man"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-04"), /* @__PURE__ */ new Date("2025-04-04"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "18:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-05"), /* @__PURE__ */ new Date("2025-04-05"), "20:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-06"), /* @__PURE__ */ new Date("2025-04-06"), "18:00")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 21,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "tierra-de-nadie"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-12"), /* @__PURE__ */ new Date("2025-04-13"), "18:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-12"), /* @__PURE__ */ new Date("2025-04-12"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 22,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "una-pelicula-de-minecraft"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "18:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-19"), /* @__PURE__ */ new Date("2025-04-20"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
-  },
-  {
-    grupo: 23,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "un-funeral-de-locos"),
-    cine: cineRegio,
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-26"), /* @__PURE__ */ new Date("2025-04-27"), "18:30"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-04-25"), /* @__PURE__ */ new Date("2025-04-26"), "20:30")
-    ]
-    // entradas: {
-    //     espanol: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1135&cine=REGIO',
-    //     vose: 'https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1136&cine=REGIO'
-    // }
   }
 ];
 const GRUPOSPROYECCIONES = [
@@ -879,37 +622,37 @@ const $$RichResults = createComponent(($$result, $$props, $$slots) => {
     "alternateName": "Veracines - Salas al aire libre en Vera y Garrucha",
     "description": "Conoce "
   };
-  const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter((grupopProyeccion) => {
-    return grupopProyeccion.proyecciones.some((proyeccion) => {
+  const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter((grupoProyeccion) => {
+    return grupoProyeccion.proyecciones.some((proyeccion) => {
       const fecha = new Date(proyeccion.fecha);
       return fecha >= /* @__PURE__ */ new Date();
     });
   });
-  const eventsSchema = gruposProyeccionesProximas.map((grupopProyeccion) => {
-    return grupopProyeccion.proyecciones.map((proyeccion) => ({
+  const eventsSchema = gruposProyeccionesProximas.map((grupoProyeccion) => {
+    return grupoProyeccion.proyecciones.map((proyeccion) => ({
       "@context": "https://schema.org",
       "@type": "ScreeningEvent",
-      "name": `${grupopProyeccion.pelicula.nombre} en ${grupopProyeccion.cine.nombre}`,
-      "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupopProyeccion.cine.horaFijaProyeccion ?? proyeccion.hora}`,
+      "name": `${grupoProyeccion.pelicula.nombre} en ${grupoProyeccion.cine.nombre}`,
+      "startDate": `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}T${grupoProyeccion.cine.horaFijaProyeccion ?? proyeccion.hora}`,
       "location": {
         "@type": "Place",
-        "name": grupopProyeccion.cine.nombre,
+        "name": grupoProyeccion.cine.nombre,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": grupopProyeccion.cine.localizacion.direccion,
+          "streetAddress": grupoProyeccion.cine.localizacion.direccion,
           "addressLocality": "Vera",
           "postalCode": "04620",
           "addressRegion": "Almer\xEDa",
           "addressCountry": "ES"
         }
       },
-      "image": [`https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`],
-      "description": grupopProyeccion.pelicula.descripcion,
+      "image": [`https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`],
+      "description": grupoProyeccion.pelicula.descripcion,
       "workPresented": {
         "@type": "Movie",
-        "name": grupopProyeccion.pelicula.nombre,
-        "image": `https://www.veracines.es/img/peliculas/${grupopProyeccion.pelicula.image}`,
-        "description": grupopProyeccion.pelicula.descripcion
+        "name": grupoProyeccion.pelicula.nombre,
+        "image": `https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`,
+        "description": grupoProyeccion.pelicula.descripcion
       }
     })).flat(1);
   });

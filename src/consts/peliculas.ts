@@ -313,5 +313,46 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Los miembros de una familia acuden a despedir al patriarca, recién fallecido. Pero lo que debería ser un sentido velatorio se convierte en una reunión enloquecida cuando uno de los asistentes saca a la luz el secreto mejor guardado del difunto.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/mI2j6-PyB1E"
+    },
+
+    {
+        id: "padre-no-hay-mas-que-uno-5",
+        image: "padre-no-hay-mas-que-uno-5.jpg",
+        nombre: "Padre no hay más que uno 5: Nido repleto",
+        descripcion: "Algunos padres experimentan la angustia del “nido vacío” cuando los hijos empiezan a abandonar el hogar. Javier, en cambio, sufre el trauma del “nido repleto”: nadie se va de casa.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/Os5EVDLcTx8"
+    },
+    {
+        id: "jurassic-world-el-renacer",
+        image: "jurassic-world-el-renacer.jpg",
+        nombre: "Padre no hay más que uno 5: Nido repleto",
+        descripcion: "Cinco años después de los acontecimientos de Jurassic World Dominion, la ecología del planeta Tierra ha demostrado ser insoportable para los dinosaurios. Los pocos que quedan viven en ambientes aislados en las regiones ecuatoriales, donde el clima se parece al que conocieron antaño. Las tres criaturas más grandes dentro de esta biosfera tropical tienen en su ADN la clave para fabricar un medicamento que aportará beneficios milagrosos a la raza humana. Zora Bennett, una experta en operaciones encubiertas, es contratada para dirigir a un equipo de especialistas en una misión secreta cuyo objetivo es conseguir el material genético. Pero la operación liderada por Zora se cruzará con una familia cuyo barco volcó por culpa de unos dinosaurios acuáticos y todos acabarán en una isla prohibida donde se ubicó hace años un centro de investigación ultrasecreto del Parque Jurásico. Allí, en un lugar poblado por dinosaurios de numerosas especies, se enfrentarán a un descubrimiento tan sorprendente como siniestro que lleva décadas escondido.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/1R3LTANp7hw"
+    },
+    {
+        id: "como-entrenar-a-tu-dragon-la-pelicula",
+        image: "como-entrenar-a-tu-dragon-la-pelicula.jpg",
+        nombre: "Cómo entrenar a tu dragón",
+        descripcion: "En la escarpada Isla Mema, donde vikingos y dragones han mantenido una amarga enemistad durante generaciones, Hipo es un muchacho diferente a los demás. El ingenioso y subestimado hijo del jefe Estoico el Inmenso desafía siglos de tradición haciéndose amigo de Desdentao, un temido dragón Furia Nocturna. Su insospechado vínculo desvelará la verdadera naturaleza de los dragones, poniendo a prueba los cimientos de la sociedad vikinga. En compañía de la feroz y ambiciosa Astrid y Bocón, el estrafalario herrero del pueblo, Hipo planta cara a un mundo dividido por el miedo y la incomprensión. Pero cuando surge una ancestral amenaza que pone en peligro tanto a vikingos como a dragones, la amistad de Hipo con Desdentao se convertirá en la clave para forjar un nuevo futuro. Juntos, deberán recorrer la delicada senda hacia la paz, volando más allá de los límites de sus mundos y redefiniendo para siempre el significado de ser un héroe y un líder.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/Os5EVDLcTx8"
+    },
+    {
+        id: "lilo-y-stitch",
+        image: "lilo-y-stitch.jpg",
+        nombre: "Lilo y Stitch",
+        descripcion: "Remake en imagen real de \"Lilo & Stitch\". Narra la historia de una niña hawaiana solitaria y un extraterrestre fugitivo que la ayuda a recomponer su rota familia.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/HeTE7j9dcGg"
+    },
+    {
+        id: "f1-la-pelicula",
+        image: "f1-la-pelicula.jpg",
+        nombre: "F1: La película",
+        descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
+        edadRedomendada: "No recomendada menores 13 años",
+        videoUrl: "https://www.youtube.com/embed/H4qYzIrxRds"
     }
 ];

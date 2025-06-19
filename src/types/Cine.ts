@@ -16,5 +16,6 @@ export interface Cine {
         adressCounty: string,
     }
     servicios: Servicio[],
-    horaFijaProyeccion?: string
+    horaFijaProyeccion?: string,
+    ventaOnline: boolean
 }
