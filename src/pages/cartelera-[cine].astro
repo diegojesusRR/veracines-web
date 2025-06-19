@@ -16,7 +16,7 @@ if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 4
         title={Metadata[`cartelera-${cine.url}`]?.title}
         canonical={Metadata[`cartelera-${cine.url}`]?.canonical}
 >
-    <main class="max-w-3xl mx-auto px-4 py-8">
+    <main class="max-w-3xl mx-auto px-4">
         <section class="mb-8">
             <h1 class={`text-3xl sm:text-4xl font-extrabold text-center text-${cine.color} mb-2 drop-shadow`}>
                 Cartelera de {cine.nombre}
