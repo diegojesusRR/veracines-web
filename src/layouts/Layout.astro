@@ -32,18 +32,15 @@ const { title, description, preload, canonical, image } = Astro.props
 			preload={preload}
 			title={title}
 		/>
-		<meta name="google-site-verification" content="3QqH7HMijPqJNQaHv7WGx_DvIy0GylZLYbIHLd08tlM" />
 
 		<ViewTransitions />
 	</head>
 
 	<body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary">
 		<Header />
-		<div class="mx-auto min-h-screen max-w-5xl px-2 pt-4 selection:bg-primary md:pt-6 lg:px-6 id="main-content">
 			<slot />
 			<Footer />
 			<Toast />
-		</div>
 		<ButtonUp />
 		<style is:global>
 			:root {
