@@ -17,7 +17,8 @@ export const CINES: Cine[] = [
             adressCounty: "ES"
         },
         servicios: [],
-        horaFijaProyeccion: "22:00"
+        horaFijaProyeccion: "22:00",
+        ventaOnline: false,
     },
     // {
     //     url: "garrucha",
@@ -51,7 +52,8 @@ export const CINES: Cine[] = [
             codigoPostal: "04620",
             adressCounty: "ES"
         },
-        servicios: []
+        servicios: [],
+        ventaOnline: true
     },
 ];
 
