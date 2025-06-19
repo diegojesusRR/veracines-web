@@ -1,43 +1,17 @@
-<section class="flex flex-col place-items-center gap-4 lg:gap-3">
-	<h1 class="sr-only bg-black/30">Veracines - Cines de verano en Vera y Garrucha</h1>
-	<img src="/img/veracines-logo.png" alt="Veracines" class="w-48 lg:w-72" />
-	<h2 class=`text-center text-lg text-primary mb-5`>Disfruta de los mejores estrenos de cine durante todo el año en Veracines. Vive con nosotros la experiencia del cine de verano en nuestra terrazas de Vera, así como todo el año en Cine Regio de Vera. (Este año también en Verano)</h2>
+<section class="flex flex-col items-center gap-3 py-6">
+	<h1 class="text-3xl font-extrabold text-primary text-center mb-2 sr-only">
+		Veracines: Cines de verano en Vera y Garrucha
+	</h1>
+	<img
+		src="/img/veracines-logo.png"
+		alt="Logo de Veracines, cines de verano en Vera y Garrucha"
+		class="w-40 lg:w-56 mb-2"
+		width="224"
+		height="96"
+		loading="eager"
+		decoding="async"
+	/>
+	<p class="text-center text-base text-primary max-w-xxl mb-3">
+		Vive la magia del <strong>cine</strong> en Veracines, donde te ofrecemos los mejores <strong>estrenos</strong> y una cuidada selección de <strong>películas</strong> para todos los públicos. Disfruta de la experiencia única del <strong>cine de verano</strong> al <strong>aire libre</strong> en nuestras terrazas de Vera, con el mejor ambiente y todas las comodidades. Además, contamos con un completo <strong>servicio de bocatería</strong>, <strong>palomitas</strong> recién hechas y refrescos para que tu visita sea perfecta. Ven a Veracines y vive el cine como nunca, tanto en verano como durante todo el año en <strong>Cine Regio</strong>. ¡Te esperamos para compartir contigo la pasión por el cine!
+	</p>
 </section>
-<style>
-	a::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		bottom: -2px;
-		width: 100%;
-		height: 3px;
-		background-color: white;
-		transform-origin: right;
-		transform: scaleX(0);
-		transition: transform 0.2s ease-in-out;
-	}
-
-	a:hover::before {
-		transform: scaleX(1);
-		transform-origin: left;
-	}
-	@media (prefers-reduced-motion) {
-		a::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: -2px;
-			width: 100%;
-			height: 3px;
-			background-color: white;
-			transform-origin: right;
-			transform: scaleX(0);
-			transition: transform 0s;
-		}
-
-		a:hover::before {
-			transform: scaleX(1);
-			transform-origin: left;
-		}
-	}
-</style>

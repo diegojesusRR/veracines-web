@@ -2,8 +2,8 @@
 import Action from "./Action.astro";
 const { cine } = Astro.props;
 ---
-<div class="flex flex-col sm:flex-row p-4 m-6 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-primary shadow-xl transition-transform hover:scale-105">
-    <div class="flex flex-col justify-center items-center p-6 sm:w-1/2">
+<div class="flex flex-col sm:flex-row p-4 m-2 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-primary shadow-xl transition-transform hover:scale-105">
+    <div class="flex flex-col justify-center items-center p-6 sm:w-2/3">
         <h4 class={`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`}>
             {cine.nombre}
         </h4>
@@ -12,6 +12,7 @@ const { cine } = Astro.props;
         </p>
         <Action
                 class="w-3/4 text-base md:text-xs bg-primary text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition"
+                color="white"
                 as="a"
                 aria-disabled="false"
                 href={`/cartelera-${cine.url}/`}
@@ -20,10 +21,10 @@ const { cine } = Astro.props;
             🎬 Consultar cartelera
         </Action>
     </div>
-    <div class="flex flex-col md:mt-2 sm:w-1/2 items-center justify-center">
+    <div class="flex flex-col items-center justify-center">
         <div class="border-4 border-primary rounded-xl overflow-hidden shadow-lg m-auto">
             <iframe
-                    class="align-middle w-[350px] md:w-[400px] rounded-lg"
+                    class="align-middle w-full rounded-lg"
                     src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
                     width="400"
                     height="250"
