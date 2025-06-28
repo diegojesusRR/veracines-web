@@ -349,7 +349,7 @@ export const PELICULAS: Pelicula[] = [
     },
     {
         id: "f1-la-pelicula",
-        image: "f1-la-pelicula.jpg",
+        image: "f1-la-pelicula.jpeg",
         nombre: "F1: La película",
         descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
         edadRedomendada: "No recomendada menores 13 años",
