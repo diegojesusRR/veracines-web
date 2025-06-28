@@ -69,12 +69,19 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         cine: cineRegio,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'padre-no-hay-mas-que-uno-5')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-07-02'), new Date('2025-07-04'),  '20:00'),
+            ...getProyecciones(new Date('2025-07-02'), new Date('2025-07-03'),  '20:00'),
             ...getProyecciones(new Date('2025-07-02'), new Date('2025-07-04'),  '22:00'),
 
         ],
     },
-
+    {
+        grupo: 2,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'f1-la-pelicula')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-07-05'), new Date('2025-07-09'),  '21:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
