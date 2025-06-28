@@ -7,9 +7,9 @@ const { cine } = Astro.props;
         <h4 class={`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`}>
             {cine.nombre}
         </h4>
-        <span class="block text-xs text-yellow-800 bg-yellow-200 rounded px-2 py-1 mb-2 font-semibold shadow-md border border-yellow-400 animate-pulse">
+        { cine.url == 'regio' && <span class="block text-xs text-yellow-800 bg-yellow-200 rounded px-2 py-1 mb-2 font-semibold shadow-md border border-yellow-400 animate-pulse">
        ¡Ahora también en Verano!
-    </span>
+    </span>}
         <p class={`text-center text-${cine.color} mb-4 text-base font-medium`}>
             {cine.localizacion.descripcion}
         </p>
@@ -25,7 +25,7 @@ const { cine } = Astro.props;
         </Action>
     </div>
     <div class="flex flex-col items-center justify-center">
-        <div class="border-4 border-primary rounded-xl overflow-hidden shadow-lg m-auto">
+        <div class=`border-4 border-${cine.color} rounded-xl overflow-hidden shadow-lg m-auto`>
             <iframe
                     class="align-middle w-full rounded-lg"
                     src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
