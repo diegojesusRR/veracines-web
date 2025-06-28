@@ -41,17 +41,16 @@ const { title, description, preload, canonical, image } = Astro.props
 			<slot />
 			<Footer />
 			<Toast />
+		<div class="bg-primary border-primary text-primary" style="display: none"></div>
+		<div class="bg-secondary border-secondary text-secondary" style="display: none"></div>
+
 		<ButtonUp />
 		<style is:global>
 			:root {
-				--color-secondary: #fd7e14;
+				--color-secondary: #dc3545;
 				--color-primary: #2e4390;
-				--color-tertiary: #dc3545;
-				--color-accent: #fd7e14;
-				--color-primary-rgb: 10, 85, 205;
 
 				--color-azul: #2e4390;
-				--color-naranja: #fd7e14;
 				--color-rojo: #dc3545;
 
 				--background-color: repeating-linear-gradient(
