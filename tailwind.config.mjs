@@ -11,9 +11,10 @@ export default {
 			},
 			colors: {
 				azul: "var(--color-azul)",
+				rojo: "var(--color-rojo)",
 				naranja: "var(--color-naranja)",
 				primary: "var(--color-azul)",
-				secondary: "var(--color-naranja)",
+				secondary: "var(--color-rojo)",
 				accent: "var(--color-accent)",
 				twitch: "var(--color-twitch)",
 				ice: "var(--color-twitch-ice)",
