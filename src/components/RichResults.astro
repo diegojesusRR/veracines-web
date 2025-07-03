@@ -27,7 +27,11 @@ const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter(grupoProyeccion => 
     })
 })
 
+
 const eventsSchema = gruposProyeccionesProximas.map(grupoProyeccion => {
+
+    if(!grupoProyeccion.pelicula)
+        console.log(grupoProyeccion)
 
     return grupoProyeccion.proyecciones.map(proyeccion => ({
         "@context": "https://schema.org",
