@@ -354,5 +354,45 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
         edadRedomendada: "No recomendada menores 13 años",
         videoUrl: "https://www.youtube.com/embed/H4qYzIrxRds"
-    }
+    },
+    {
+        id: "elio",
+        image: "elio.jpg",
+        nombre: "Elio",
+        descripcion: "La historia de Elio, un niño de 11 años con una imaginación desbordante y una enorme obsesión por los extraterrestres, que lucha por encajar hasta que de repente es transportado al espacio y es identificado por error como el embajador galáctico de la Tierra.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/7CPDmA4nGo"
+    },
+    {
+        id: "superman-2025",
+        image: "superman-2025.jpg",
+        nombre: "Superman",
+        descripcion: "Nueva película de Superman, escrita por James Gunn, que \"no será una historia de origen\". Con su estilo característico, Gunn aborda al superhéroe original en el recién imaginado universo DC con una singular mezcla de acción épica, humor y corazón, ofreciendo un Superman impulsado por la compasión y una creencia inherente en la bondad de la humanidad.",
+        edadRedomendada: "No recomendada menores 13 años",
+        videoUrl: "https://www.youtube.com/embed/_EjMNSH9-p4"
+    },
+    {
+        id: "pitufos-2025",
+        image: "pitufos-2025.jpg",
+        nombre: "Pitufos",
+        descripcion: "Película musical de animación centrada en las icónicas creaciones de Peyo. Cuando Papá Pitufo es secuestrado de forma misteriosa por los malvados brujos Razamel y Gargamel, Pitufina lleva a los Pitufos a una misión al mundo real para salvarle. Con la ayuda de nuevos amigos, los Pitufos deberán descubrir qué define su destino para salvar el universo.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/jYtjerVhaSA"
+    },
+    {
+        id: "los-4-fantasticos-primeros-pasos",
+        image: "los-4-fantasticos-primeros-pasos.jpg",
+        nombre: "Los Cuatro Fantásticos: Primeros pasos",
+        descripcion: "Ambientada en el vibrante telón de fondo de un mundo retro-futurista inspirado en los años 60, presenta a la Primera Familia de Marvel mientras se enfrentan a su desafío más terrorífico hasta la fecha. Obligados a equilibrar sus roles como héroes con la fortaleza de su vínculo familiar, deben defender la Tierra de un dios espacial voraz llamado Galactus y su enigmático Heraldo, Silver Surfer. Y si el plan de Galactus de devorar todo el planeta y a todos en él no fuera lo suficientemente malo, de repente se vuelve muy personal. Estreno de \"Los 4 Fantásticos\" en el MCU.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/BV0pwHEkU_I"
+    },
+    {
+        id: "mision-imposible-sentencia-final",
+        image: "mision-imposible-sentencia-final.jpg",
+        nombre: "Misión imposible: Sentencia final",
+        descripcion: "El agente Ethan Hunt continúa su misión de impedir que Gabriel controle el tecnológicamente omnipotente programa de IA conocido como \"la Entidad\".",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/mHV67lQviME"
+    },
 ];
