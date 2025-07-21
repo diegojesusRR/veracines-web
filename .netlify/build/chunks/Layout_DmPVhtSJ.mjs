@@ -572,6 +572,30 @@ const PELICULAS = [
     descripcion: 'El agente Ethan Hunt continúa su misión de impedir que Gabriel controle el tecnológicamente omnipotente programa de IA conocido como "la Entidad".',
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/mHV67lQviME"
+  },
+  {
+    id: "los-tipos-malos-2",
+    image: "los-tipos-malos-2.jpg",
+    nombre: "Los tipos malos 2",
+    descripcion: "Un genial equipo de animales que no respetan la ley, los ahora muy reformados Tipos Malos, se esfuerzan (mucho, muchísimo) en ser buenos, pero se ven envueltos involuntariamente en un golpe de envergadura mundial planeado por un inesperado grupo de criminales: las Tipas Malas.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/PnUcgVUuYjs"
+  },
+  {
+    id: "karate-kid-leyendas",
+    image: "karate-kid-leyendas.jpg",
+    nombre: "Karate Kid: Leyendas",
+    descripcion: 'Tras una tragedia familiar, el prodigio del kung fu Li Fong se ve obligado a abandonar su hogar en Pekín y trasladarse a Nueva York con su madre. Li lucha por dejar atrás su pasado mientras intenta encajar con sus nuevos compañeros de clase y, aunque no quiere pelear, los problemas parecen encontrarle en todas partes. Cuando un nuevo amigo necesita su ayuda, Li se presenta a una competición de kárate, pero sus habilidades no son suficientes. El profesor de kung fu de Li, el Sr. Han, pide ayuda al Karate Kid original, Daniel LaRusso, y Li aprende una nueva forma de luchar, fusionando sus dos estilos en uno solo para el enfrentamiento definitivo de artes marciales. Nueva película de la saga "Karate Kid", conectada al universo de "Cobra Kai".',
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/rL0Ec_v4zVw"
+  },
+  {
+    id: "voy-a-pasarmelo-mejor",
+    image: "voy-a-pasarmelo-mejor.jpg",
+    nombre: "Voy a pasarmelo mejor",
+    descripcion: "Es 1991 y los Pitus, al llegar el verano, se van de campamento. Al ritmo de las canciones más exitosas del año, cada uno de ellos se enamorará con la ilusión que sólo se tiene a los catorce y quince años.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/NfhooptQD0E"
   }
 ];
 
@@ -655,6 +679,38 @@ const gruposProyeccionesVera = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-07-25"), /* @__PURE__ */ new Date("2025-07-28"), "22:00")
     ]
+  },
+  {
+    grupo: 9,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "f1-la-pelicula"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-29"), /* @__PURE__ */ new Date("2025-07-31"), "22:00")
+    ]
+  },
+  {
+    grupo: 10,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-01"), /* @__PURE__ */ new Date("2025-08-04"), "22:00")
+    ]
+  },
+  {
+    grupo: 11,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-05"), /* @__PURE__ */ new Date("2025-08-07"), "22:00")
+    ]
+  },
+  {
+    grupo: 12,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-08"), /* @__PURE__ */ new Date("2025-08-11"), "22:00")
+    ]
   }
 ];
 const cineRegio = CINES.find((cine) => cine.url === "regio");
@@ -717,6 +773,22 @@ const gruposProyeccionesRegio = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-07-22"), /* @__PURE__ */ new Date("2025-07-24"), "20:00"),
       ...getProyecciones(/* @__PURE__ */ new Date("2025-07-22"), /* @__PURE__ */ new Date("2025-07-24"), "22:00")
+    ]
+  },
+  {
+    grupo: 8,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "voy-a-pasarmelo-mejor"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-25"), /* @__PURE__ */ new Date("2025-07-28"), "21:00")
+    ]
+  },
+  {
+    grupo: 9,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-29"), /* @__PURE__ */ new Date("2025-07-31"), "21:00")
     ]
   }
 ];

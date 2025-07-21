@@ -395,4 +395,28 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/mHV67lQviME"
     },
+    {
+        id: "los-tipos-malos-2",
+        image: "los-tipos-malos-2.jpg",
+        nombre: "Los tipos malos 2",
+        descripcion: "Un genial equipo de animales que no respetan la ley, los ahora muy reformados Tipos Malos, se esfuerzan (mucho, muchísimo) en ser buenos, pero se ven envueltos involuntariamente en un golpe de envergadura mundial planeado por un inesperado grupo de criminales: las Tipas Malas.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/PnUcgVUuYjs"
+    },
+    {
+        id: "karate-kid-leyendas",
+        image: "karate-kid-leyendas.jpg",
+        nombre: "Karate Kid: Leyendas",
+        descripcion: "Tras una tragedia familiar, el prodigio del kung fu Li Fong se ve obligado a abandonar su hogar en Pekín y trasladarse a Nueva York con su madre. Li lucha por dejar atrás su pasado mientras intenta encajar con sus nuevos compañeros de clase y, aunque no quiere pelear, los problemas parecen encontrarle en todas partes. Cuando un nuevo amigo necesita su ayuda, Li se presenta a una competición de kárate, pero sus habilidades no son suficientes. El profesor de kung fu de Li, el Sr. Han, pide ayuda al Karate Kid original, Daniel LaRusso, y Li aprende una nueva forma de luchar, fusionando sus dos estilos en uno solo para el enfrentamiento definitivo de artes marciales. Nueva película de la saga \"Karate Kid\", conectada al universo de \"Cobra Kai\".",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/rL0Ec_v4zVw"
+    },
+    {
+        id: "voy-a-pasarmelo-mejor",
+        image: "voy-a-pasarmelo-mejor.jpg",
+        nombre: "Voy a pasarmelo mejor",
+        descripcion: "Es 1991 y los Pitus, al llegar el verano, se van de campamento. Al ritmo de las canciones más exitosas del año, cada uno de ellos se enamorará con la ilusión que sólo se tiene a los catorce y quince años.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/NfhooptQD0E"
+    },
 ];
