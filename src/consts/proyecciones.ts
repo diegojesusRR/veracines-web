@@ -204,6 +204,38 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-07-29'), new Date('2025-07-31'),  '21:00'),
         ],
     },
+    {
+        grupo: 10,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'se-lo-que-hicisteis-el-ultimo-verano')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-01'), new Date('2025-08-04'),  '21:00'),
+        ],
+    },
+    {
+        grupo: 11,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-tipos-malos-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-05'), new Date('2025-08-07'),  '21:00'),
+        ],
+    },
+    {
+        grupo: 12,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-futbolisimos-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-08'), new Date('2025-08-11'),  '21:00'),
+        ],
+    },
+    {
+        grupo: 13,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'karate-kid-leyendas')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-12'), new Date('2025-08-15'),  '21:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
