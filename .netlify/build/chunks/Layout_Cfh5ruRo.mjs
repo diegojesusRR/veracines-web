@@ -596,6 +596,22 @@ const PELICULAS = [
     descripcion: "Es 1991 y los Pitus, al llegar el verano, se van de campamento. Al ritmo de las canciones más exitosas del año, cada uno de ellos se enamorará con la ilusión que sólo se tiene a los catorce y quince años.",
     edadRedomendada: "No recomendada menores 7 años",
     videoUrl: "https://www.youtube.com/embed/NfhooptQD0E"
+  },
+  {
+    id: "se-lo-que-hicisteis-el-ultimo-verano",
+    image: "se-lo-que-hicisteis-el-ultimo-verano.jpg",
+    nombre: "Se lo que hicisteis el ultimo verano",
+    descripcion: "Cuando cinco amigos provocan sin querer un accidente de coche mortal, encubren su implicación y hacen un pacto para mantenerlo en secreto en lugar de afrontar las consecuencias. Un año después, su pasado vuelve para atormentarlos y se ven obligados a enfrentarse a una aterradora verdad: alguien sabe lo que hicieron el último verano... y está empeñado en vengarse. A medida que los amigos son acechados uno a uno por un asesino, descubren que esto ya ha sucedido antes, y recurren a dos supervivientes de la legendaria Masacre de Southport de 1997 en busca de ayuda.",
+    edadRedomendada: "No recomendada menores 16 años",
+    videoUrl: "https://www.youtube.com/embed/UMmsBLH1cxw"
+  },
+  {
+    id: "los-futbolisimos-2",
+    image: "los-futbolisimos-2.webp",
+    nombre: "Los futbolísimos 2. El misterio del tesoro pirata",
+    descripcion: "Pakete y sus compañeros del Soto Alto FC forman una pandilla inseparable, pero el pacto de Los Futbolísimos peligra: una estafa inmobiliaria les ha dejado sin campo donde jugar y a su pueblo sumido en la ruina. Para seguir en la liga intercentros tendrán que ganar al equipo de Los Justos, unos rivales especialmente complicados, con una capitana un tanto “pirata” que les meterá en más de un lío: Se verán involucrados en el robo a un banco y el padre de Pakete verá peligrar su trabajo de policía. Para superar todo esto, Los Futbolísimos tendrán que agudizar su ingenio y permanecer más unidos que nunca…",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/CAED02oRLjI"
   }
 ];
 
@@ -789,6 +805,38 @@ const gruposProyeccionesRegio = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-07-29"), /* @__PURE__ */ new Date("2025-07-31"), "21:00")
+    ]
+  },
+  {
+    grupo: 10,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "se-lo-que-hicisteis-el-ultimo-verano"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-01"), /* @__PURE__ */ new Date("2025-08-04"), "21:00")
+    ]
+  },
+  {
+    grupo: 11,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-05"), /* @__PURE__ */ new Date("2025-08-07"), "21:00")
+    ]
+  },
+  {
+    grupo: 12,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-futbolisimos-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-08"), /* @__PURE__ */ new Date("2025-08-11"), "21:00")
+    ]
+  },
+  {
+    grupo: 13,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-15"), "21:00")
     ]
   }
 ];
