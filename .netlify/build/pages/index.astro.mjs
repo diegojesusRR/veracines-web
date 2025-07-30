@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { a as createComponent, r as renderTemplate, m as maybeRenderHead, c as createAstro, b as addAttribute, d as renderComponent, s as spreadAttributes, e as renderSlot } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { C as CINES, a as $$Layout } from '../chunks/Layout_DmPVhtSJ.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_0C5NkPPo.mjs';
 import 'clsx';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_aNZtV9fz.mjs';
 export { renderers } from '../renderers.mjs';
