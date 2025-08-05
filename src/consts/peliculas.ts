@@ -435,4 +435,12 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/CAED02oRLjI"
     },
+    {
+        id: "materialistas",
+        image: "materialistas.jpg",
+        nombre: "Materialistas",
+        descripcion: "El lucrativo negocio de una casamentera se complica cuando cae en un tóxico triángulo amoroso que amenaza a sus clientes.",
+        edadRedomendada: "Pendiente de calificación",
+        videoUrl: "https://www.youtube.com/embed/NilkoW-qN3g"
+    },
 ];
