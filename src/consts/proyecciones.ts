@@ -122,6 +122,38 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-08-08'), new Date('2025-08-11'),  '22:00'),
         ],
     },
+    {
+        grupo: 13,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'padre-no-hay-mas-que-uno-5')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-11'), new Date('2025-08-12'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 14,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'materialistas')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-14'), new Date('2025-08-17'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 15,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-4-fantasticos-primeros-pasos')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-18'), new Date('2025-08-19'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 16,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-tipos-malos-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-20'), new Date('2025-08-21'),  '22:00'),
+        ],
+    },
 ]
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
@@ -233,7 +265,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         cine: cineRegio,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'karate-kid-leyendas')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-08-12'), new Date('2025-08-15'),  '21:00'),
+            ...getProyecciones(new Date('2025-08-12'), new Date('2025-08-14'),  '21:00'),
         ],
     },
 ]

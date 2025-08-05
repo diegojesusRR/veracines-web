@@ -612,6 +612,14 @@ const PELICULAS = [
     descripcion: "Pakete y sus compañeros del Soto Alto FC forman una pandilla inseparable, pero el pacto de Los Futbolísimos peligra: una estafa inmobiliaria les ha dejado sin campo donde jugar y a su pueblo sumido en la ruina. Para seguir en la liga intercentros tendrán que ganar al equipo de Los Justos, unos rivales especialmente complicados, con una capitana un tanto “pirata” que les meterá en más de un lío: Se verán involucrados en el robo a un banco y el padre de Pakete verá peligrar su trabajo de policía. Para superar todo esto, Los Futbolísimos tendrán que agudizar su ingenio y permanecer más unidos que nunca…",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/CAED02oRLjI"
+  },
+  {
+    id: "materialistas",
+    image: "materialistas.jpg",
+    nombre: "Materialistas",
+    descripcion: "El lucrativo negocio de una casamentera se complica cuando cae en un tóxico triángulo amoroso que amenaza a sus clientes.",
+    edadRedomendada: "Pendiente de calificación",
+    videoUrl: "https://www.youtube.com/embed/NilkoW-qN3g"
   }
 ];
 
@@ -727,6 +735,38 @@ const gruposProyeccionesVera = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-08-08"), /* @__PURE__ */ new Date("2025-08-11"), "22:00")
     ]
+  },
+  {
+    grupo: 13,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-11"), /* @__PURE__ */ new Date("2025-08-12"), "22:00")
+    ]
+  },
+  {
+    grupo: 14,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "materialistas"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-14"), /* @__PURE__ */ new Date("2025-08-17"), "22:00")
+    ]
+  },
+  {
+    grupo: 15,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-18"), /* @__PURE__ */ new Date("2025-08-19"), "22:00")
+    ]
+  },
+  {
+    grupo: 16,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-20"), /* @__PURE__ */ new Date("2025-08-21"), "22:00")
+    ]
   }
 ];
 const cineRegio = CINES.find((cine) => cine.url === "regio");
@@ -836,7 +876,7 @@ const gruposProyeccionesRegio = [
     cine: cineRegio,
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-15"), "21:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-14"), "21:00")
     ]
   }
 ];
