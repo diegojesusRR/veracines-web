@@ -354,5 +354,101 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
         edadRedomendada: "No recomendada menores 13 años",
         videoUrl: "https://www.youtube.com/embed/H4qYzIrxRds"
-    }
+    },
+    {
+        id: "elio",
+        image: "elio.jpg",
+        nombre: "Elio",
+        descripcion: "La historia de Elio, un niño de 11 años con una imaginación desbordante y una enorme obsesión por los extraterrestres, que lucha por encajar hasta que de repente es transportado al espacio y es identificado por error como el embajador galáctico de la Tierra.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/7CPDmA4nGo"
+    },
+    {
+        id: "superman-2025",
+        image: "superman-2025.jpg",
+        nombre: "Superman",
+        descripcion: "Nueva película de Superman, escrita por James Gunn, que \"no será una historia de origen\". Con su estilo característico, Gunn aborda al superhéroe original en el recién imaginado universo DC con una singular mezcla de acción épica, humor y corazón, ofreciendo un Superman impulsado por la compasión y una creencia inherente en la bondad de la humanidad.",
+        edadRedomendada: "No recomendada menores 13 años",
+        videoUrl: "https://www.youtube.com/embed/_EjMNSH9-p4"
+    },
+    {
+        id: "pitufos-2025",
+        image: "pitufos-2025.jpg",
+        nombre: "Pitufos",
+        descripcion: "Película musical de animación centrada en las icónicas creaciones de Peyo. Cuando Papá Pitufo es secuestrado de forma misteriosa por los malvados brujos Razamel y Gargamel, Pitufina lleva a los Pitufos a una misión al mundo real para salvarle. Con la ayuda de nuevos amigos, los Pitufos deberán descubrir qué define su destino para salvar el universo.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/jYtjerVhaSA"
+    },
+    {
+        id: "los-4-fantasticos-primeros-pasos",
+        image: "los-4-fantasticos-primeros-pasos.jpg",
+        nombre: "Los Cuatro Fantásticos: Primeros pasos",
+        descripcion: "Ambientada en el vibrante telón de fondo de un mundo retro-futurista inspirado en los años 60, presenta a la Primera Familia de Marvel mientras se enfrentan a su desafío más terrorífico hasta la fecha. Obligados a equilibrar sus roles como héroes con la fortaleza de su vínculo familiar, deben defender la Tierra de un dios espacial voraz llamado Galactus y su enigmático Heraldo, Silver Surfer. Y si el plan de Galactus de devorar todo el planeta y a todos en él no fuera lo suficientemente malo, de repente se vuelve muy personal. Estreno de \"Los 4 Fantásticos\" en el MCU.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/BV0pwHEkU_I"
+    },
+    {
+        id: "mision-imposible-sentencia-final",
+        image: "mision-imposible-sentencia-final.jpg",
+        nombre: "Misión imposible: Sentencia final",
+        descripcion: "El agente Ethan Hunt continúa su misión de impedir que Gabriel controle el tecnológicamente omnipotente programa de IA conocido como \"la Entidad\".",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/mHV67lQviME"
+    },
+    {
+        id: "los-tipos-malos-2",
+        image: "los-tipos-malos-2.jpg",
+        nombre: "Los tipos malos 2",
+        descripcion: "Un genial equipo de animales que no respetan la ley, los ahora muy reformados Tipos Malos, se esfuerzan (mucho, muchísimo) en ser buenos, pero se ven envueltos involuntariamente en un golpe de envergadura mundial planeado por un inesperado grupo de criminales: las Tipas Malas.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/PnUcgVUuYjs"
+    },
+    {
+        id: "karate-kid-leyendas",
+        image: "karate-kid-leyendas.jpg",
+        nombre: "Karate Kid: Leyendas",
+        descripcion: "Tras una tragedia familiar, el prodigio del kung fu Li Fong se ve obligado a abandonar su hogar en Pekín y trasladarse a Nueva York con su madre. Li lucha por dejar atrás su pasado mientras intenta encajar con sus nuevos compañeros de clase y, aunque no quiere pelear, los problemas parecen encontrarle en todas partes. Cuando un nuevo amigo necesita su ayuda, Li se presenta a una competición de kárate, pero sus habilidades no son suficientes. El profesor de kung fu de Li, el Sr. Han, pide ayuda al Karate Kid original, Daniel LaRusso, y Li aprende una nueva forma de luchar, fusionando sus dos estilos en uno solo para el enfrentamiento definitivo de artes marciales. Nueva película de la saga \"Karate Kid\", conectada al universo de \"Cobra Kai\".",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/rL0Ec_v4zVw"
+    },
+    {
+        id: "voy-a-pasarmelo-mejor",
+        image: "voy-a-pasarmelo-mejor.jpg",
+        nombre: "Voy a pasarmelo mejor",
+        descripcion: "Es 1991 y los Pitus, al llegar el verano, se van de campamento. Al ritmo de las canciones más exitosas del año, cada uno de ellos se enamorará con la ilusión que sólo se tiene a los catorce y quince años.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/NfhooptQD0E"
+    },
+    {
+        id: "se-lo-que-hicisteis-el-ultimo-verano",
+        image: "se-lo-que-hicisteis-el-ultimo-verano.jpg",
+        nombre: "Se lo que hicisteis el ultimo verano",
+        descripcion: "Cuando cinco amigos provocan sin querer un accidente de coche mortal, encubren su implicación y hacen un pacto para mantenerlo en secreto en lugar de afrontar las consecuencias. Un año después, su pasado vuelve para atormentarlos y se ven obligados a enfrentarse a una aterradora verdad: alguien sabe lo que hicieron el último verano... y está empeñado en vengarse. A medida que los amigos son acechados uno a uno por un asesino, descubren que esto ya ha sucedido antes, y recurren a dos supervivientes de la legendaria Masacre de Southport de 1997 en busca de ayuda.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/UMmsBLH1cxw"
+    },
+    {
+        id: "los-futbolisimos-2",
+        image: "los-futbolisimos-2.webp",
+        nombre: "Los futbolísimos 2. El misterio del tesoro pirata",
+        descripcion: "Pakete y sus compañeros del Soto Alto FC forman una pandilla inseparable, pero el pacto de Los Futbolísimos peligra: una estafa inmobiliaria les ha dejado sin campo donde jugar y a su pueblo sumido en la ruina. Para seguir en la liga intercentros tendrán que ganar al equipo de Los Justos, unos rivales especialmente complicados, con una capitana un tanto “pirata” que les meterá en más de un lío: Se verán involucrados en el robo a un banco y el padre de Pakete verá peligrar su trabajo de policía. Para superar todo esto, Los Futbolísimos tendrán que agudizar su ingenio y permanecer más unidos que nunca…",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/CAED02oRLjI"
+    },
+    {
+        id: "materialistas",
+        image: "materialistas.jpg",
+        nombre: "Materialistas",
+        descripcion: "El lucrativo negocio de una casamentera se complica cuando cae en un tóxico triángulo amoroso que amenaza a sus clientes.",
+        edadRedomendada: "Pendiente de calificación",
+        videoUrl: "https://www.youtube.com/embed/NilkoW-qN3g"
+    },
+    {
+        id: "freaker-friday",
+        image: "freaker-friday.jpeg",
+        nombre: "Ponte en mi lugar de nuevo",
+        descripcion: "Secuela de \"Ponte en mi lugar\" (2003). La historia se desarrolla años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora una hija propia y una futura hijastra. Mientras se enfrentan a los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que la venganza puede ser dulce.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/thctDWzwjY0"
+    },
 ];
