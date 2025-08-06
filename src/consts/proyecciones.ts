@@ -127,7 +127,7 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
         cine: cineVera,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'padre-no-hay-mas-que-uno-5')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-08-11'), new Date('2025-08-12'),  '22:00'),
+            ...getProyecciones(new Date('2025-08-12'), new Date('2025-08-13'),  '22:00'),
         ],
     },
     {
