@@ -268,6 +268,22 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-08-12'), new Date('2025-08-14'),  '21:00'),
         ],
     },
+    {
+        grupo: 14,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'freaker-friday')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-15'), new Date('2025-08-18'),  '21:00'),
+        ],
+    },
+    {
+        grupo: 15,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'materialistas')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-19'), new Date('2025-08-21'),  '21:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [

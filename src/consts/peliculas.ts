@@ -443,4 +443,12 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "Pendiente de calificación",
         videoUrl: "https://www.youtube.com/embed/NilkoW-qN3g"
     },
+    {
+        id: "freaker-friday",
+        image: "freaker-friday.jpeg",
+        nombre: "Ponte en mi lugar de nuevo",
+        descripcion: "Secuela de \"Ponte en mi lugar\" (2003). La historia se desarrolla años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora una hija propia y una futura hijastra. Mientras se enfrentan a los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que la venganza puede ser dulce.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/thctDWzwjY0"
+    },
 ];
