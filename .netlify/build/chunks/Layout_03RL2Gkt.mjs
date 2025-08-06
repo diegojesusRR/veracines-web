@@ -620,6 +620,14 @@ const PELICULAS = [
     descripcion: "El lucrativo negocio de una casamentera se complica cuando cae en un tóxico triángulo amoroso que amenaza a sus clientes.",
     edadRedomendada: "Pendiente de calificación",
     videoUrl: "https://www.youtube.com/embed/NilkoW-qN3g"
+  },
+  {
+    id: "freaker-friday",
+    image: "freaker-friday.jpeg",
+    nombre: "Ponte en mi lugar de nuevo",
+    descripcion: 'Secuela de "Ponte en mi lugar" (2003). La historia se desarrolla años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora una hija propia y una futura hijastra. Mientras se enfrentan a los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que la venganza puede ser dulce.',
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/thctDWzwjY0"
   }
 ];
 
@@ -877,6 +885,22 @@ const gruposProyeccionesRegio = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-14"), "21:00")
+    ]
+  },
+  {
+    grupo: 14,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "freaker-friday"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-15"), /* @__PURE__ */ new Date("2025-08-18"), "21:00")
+    ]
+  },
+  {
+    grupo: 15,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "materialistas"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-19"), /* @__PURE__ */ new Date("2025-08-21"), "21:00")
     ]
   }
 ];
