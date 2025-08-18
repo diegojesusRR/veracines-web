@@ -451,4 +451,28 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/thctDWzwjY0"
     },
+    {
+        id: "nadie-2",
+        image: "nadie-2.jpg",
+        nombre: "Nadie 2",
+        descripcion: "Cuatro años después de enfrentarse involuntariamente a la mafia rusa, Hutch sigue manteniendo con la organización criminal una deuda de 30 millones de dólares que trata de saldar poco a poco con una serie interminable de golpes contra matones internacionales. Pese a disfrutar como siempre de la faceta más trepidante y física de su «trabajo», Hutch y su esposa Becca se sienten agotados y distanciados. Para intentar remediarlo, deciden llevarse a sus hijos de escapada al mismo lugar al que Hutch iba de vacaciones con su hermano Harry cuando eran pequeños.",
+        edadRedomendada: "No recomendada menores 18 años",
+        videoUrl: "https://www.youtube.com/embed/Qe_0NUZTST0"
+    },
+    {
+        id: "weapons",
+        image: "weapons.jpg",
+        nombre: "Weapons",
+        descripcion: "Cuando todos los alumnos de una misma clase, salvo uno, desaparecen misteriosamente la misma noche y exactamente a la misma hora, la pequeña ciudad donde viven se pregunta quién o qué está detrás de su desaparición.",
+        edadRedomendada: "No recomendada menores 18 años",
+        videoUrl: "https://www.youtube.com/embed/7slpWWzuE3s"
+    },
+    {
+        id: "sin-cobertura",
+        image: "sin-cobertura.jpg",
+        nombre: "Sin cobertura",
+        descripcion: "Rita es la menor de la familia y está harta de que sus padres y hermanos estén siempre mirando el móvil y no le hagan caso. En un viaje al pueblo de su abuela conoce a una pitonisa que le concede un deseo: que desaparezcan los móviles. A la salida del pueblo una intensa niebla rodea el coche y se quedan sin cobertura. El deseo de Rita se ha hecho realidad, pero no exactamente como ella había imaginado... y es que acaban de viajar en el tiempo y están en plena Edad Media. La familia tendrá que usar su ingenio y buscar la forma de volver al presente mientras tratan de sobrevivir en un pueblo feudal en plena Reconquista.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/oxymkDDPgCc"
+    },
 ];
