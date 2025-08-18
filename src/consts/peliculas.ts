@@ -453,7 +453,7 @@ export const PELICULAS: Pelicula[] = [
     },
     {
         id: "nadie-2",
-        image: "nadie-2.jpeg",
+        image: "nadie-2.jpg",
         nombre: "Nadie 2",
         descripcion: "Cuatro años después de enfrentarse involuntariamente a la mafia rusa, Hutch sigue manteniendo con la organización criminal una deuda de 30 millones de dólares que trata de saldar poco a poco con una serie interminable de golpes contra matones internacionales. Pese a disfrutar como siempre de la faceta más trepidante y física de su «trabajo», Hutch y su esposa Becca se sienten agotados y distanciados. Para intentar remediarlo, deciden llevarse a sus hijos de escapada al mismo lugar al que Hutch iba de vacaciones con su hermano Harry cuando eran pequeños.",
         edadRedomendada: "No recomendada menores 18 años",
