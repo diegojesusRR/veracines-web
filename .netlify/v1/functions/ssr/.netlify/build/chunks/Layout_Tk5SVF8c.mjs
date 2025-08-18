@@ -628,6 +628,30 @@ const PELICULAS = [
     descripcion: 'Secuela de "Ponte en mi lugar" (2003). La historia se desarrolla años después de que Tess (Curtis) y Anna (Lohan) sufrieran una crisis de identidad. Anna tiene ahora una hija propia y una futura hijastra. Mientras se enfrentan a los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que la venganza puede ser dulce.',
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/thctDWzwjY0"
+  },
+  {
+    id: "nadie-2",
+    image: "nadie-2.jpg",
+    nombre: "Nadie 2",
+    descripcion: "Cuatro años después de enfrentarse involuntariamente a la mafia rusa, Hutch sigue manteniendo con la organización criminal una deuda de 30 millones de dólares que trata de saldar poco a poco con una serie interminable de golpes contra matones internacionales. Pese a disfrutar como siempre de la faceta más trepidante y física de su «trabajo», Hutch y su esposa Becca se sienten agotados y distanciados. Para intentar remediarlo, deciden llevarse a sus hijos de escapada al mismo lugar al que Hutch iba de vacaciones con su hermano Harry cuando eran pequeños.",
+    edadRedomendada: "No recomendada menores 18 años",
+    videoUrl: "https://www.youtube.com/embed/Qe_0NUZTST0"
+  },
+  {
+    id: "weapons",
+    image: "weapons.jpg",
+    nombre: "Weapons",
+    descripcion: "Cuando todos los alumnos de una misma clase, salvo uno, desaparecen misteriosamente la misma noche y exactamente a la misma hora, la pequeña ciudad donde viven se pregunta quién o qué está detrás de su desaparición.",
+    edadRedomendada: "No recomendada menores 18 años",
+    videoUrl: "https://www.youtube.com/embed/7slpWWzuE3s"
+  },
+  {
+    id: "sin-cobertura",
+    image: "sin-cobertura.jpg",
+    nombre: "Sin cobertura",
+    descripcion: "Rita es la menor de la familia y está harta de que sus padres y hermanos estén siempre mirando el móvil y no le hagan caso. En un viaje al pueblo de su abuela conoce a una pitonisa que le concede un deseo: que desaparezcan los móviles. A la salida del pueblo una intensa niebla rodea el coche y se quedan sin cobertura. El deseo de Rita se ha hecho realidad, pero no exactamente como ella había imaginado... y es que acaban de viajar en el tiempo y están en plena Edad Media. La familia tendrá que usar su ingenio y buscar la forma de volver al presente mientras tratan de sobrevivir en un pueblo feudal en plena Reconquista.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/oxymkDDPgCc"
   }
 ];
 
@@ -775,6 +799,38 @@ const gruposProyeccionesVera = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-08-20"), /* @__PURE__ */ new Date("2025-08-21"), "22:00")
     ]
+  },
+  {
+    grupo: 17,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-22"), /* @__PURE__ */ new Date("2025-08-23"), "22:00")
+    ]
+  },
+  {
+    grupo: 18,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "f1-la-pelicula"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-24"), /* @__PURE__ */ new Date("2025-08-25"), "22:00")
+    ]
+  },
+  {
+    grupo: 19,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "weapons"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-26"), /* @__PURE__ */ new Date("2025-08-28"), "22:00")
+    ]
+  },
+  {
+    grupo: 19,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "sin-cobertura"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-29"), /* @__PURE__ */ new Date("2025-09-01"), "22:00")
+    ]
   }
 ];
 const cineRegio = CINES.find((cine) => cine.url === "regio");
@@ -901,6 +957,14 @@ const gruposProyeccionesRegio = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "materialistas"),
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2025-08-19"), /* @__PURE__ */ new Date("2025-08-21"), "21:00")
+    ]
+  },
+  {
+    grupo: 16,
+    cine: cineRegio,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "nadie-2"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-22"), /* @__PURE__ */ new Date("2025-08-25"), "21:00")
     ]
   }
 ];
