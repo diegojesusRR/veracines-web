@@ -154,6 +154,38 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-08-20'), new Date('2025-08-21'),  '22:00'),
         ],
     },
+    {
+        grupo: 17,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'jurassic-world-el-renacer')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-22'), new Date('2025-08-23'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 18,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'f1-la-pelicula')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-24'), new Date('2025-08-25'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 19,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'weapons')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-26'), new Date('2025-08-28'),  '22:00'),
+        ],
+    },
+    {
+        grupo: 19,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'sin-cobertura')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-29'), new Date('2025-09-01'),  '22:00'),
+        ],
+    },
 ]
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
@@ -282,6 +314,14 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'materialistas')!,
         proyecciones: [
             ...getProyecciones(new Date('2025-08-19'), new Date('2025-08-21'),  '21:00'),
+        ],
+    },
+    {
+        grupo: 16,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'nadie-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-08-22'), new Date('2025-08-25'),  '21:00'),
         ],
     },
 ]
