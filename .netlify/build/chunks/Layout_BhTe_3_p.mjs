@@ -652,6 +652,14 @@ const PELICULAS = [
     descripcion: "Rita es la menor de la familia y está harta de que sus padres y hermanos estén siempre mirando el móvil y no le hagan caso. En un viaje al pueblo de su abuela conoce a una pitonisa que le concede un deseo: que desaparezcan los móviles. A la salida del pueblo una intensa niebla rodea el coche y se quedan sin cobertura. El deseo de Rita se ha hecho realidad, pero no exactamente como ella había imaginado... y es que acaban de viajar en el tiempo y están en plena Edad Media. La familia tendrá que usar su ingenio y buscar la forma de volver al presente mientras tratan de sobrevivir en un pueblo feudal en plena Reconquista.",
     edadRedomendada: "Todos los públicos",
     videoUrl: "https://www.youtube.com/embed/oxymkDDPgCc"
+  },
+  {
+    id: "el-cautivo",
+    image: "el-cautivo.jpg",
+    nombre: "El Cautivo",
+    descripcion: "Año 1575. El joven soldado Miguel de Cervantes es capturado en alta mar por corsarios árabes y llevado a Argel como rehén. Consciente de que allí le espera una cruel muerte si su familia no paga pronto su rescate, Miguel encontrará refugio en su pasión por contar historias. Sus fascinantes relatos devuelven la esperanza a sus compañeros de prisión y acaban por llamar la atención de Hasán, el misterioso y temido Bajá de Argel, con el que comienza a desarrollar una extraña afinidad. Mientras los conflictos crecen entre sus compañeros, Miguel, llevado por su inquebrantable optimismo, comenzará a idear un arriesgado plan de fuga.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/Zy4GBAoS7l4"
   }
 ];
 
@@ -838,133 +846,11 @@ const gruposProyeccionesRegio = [
   {
     grupo: 1,
     cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "lilo-y-stitch"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "el-cautivo"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "22:00")
-    ]
-  },
-  {
-    grupo: 2,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-03"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-04"), "22:00")
-    ]
-  },
-  {
-    grupo: 3,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "f1-la-pelicula"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-05"), /* @__PURE__ */ new Date("2025-07-09"), "21:00")
-    ]
-  },
-  {
-    grupo: 4,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "superman-2025"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-11"), /* @__PURE__ */ new Date("2025-07-14"), "21:00")
-    ]
-  },
-  {
-    grupo: 5,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "elio"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-15"), /* @__PURE__ */ new Date("2025-07-17"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-15"), /* @__PURE__ */ new Date("2025-07-17"), "22:00")
-    ]
-  },
-  {
-    grupo: 6,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "mision-imposible-sentencia-final"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-18"), /* @__PURE__ */ new Date("2025-07-21"), "21:00")
-    ]
-  },
-  {
-    grupo: 7,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "pitufos-2025"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-22"), /* @__PURE__ */ new Date("2025-07-24"), "20:00"),
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-22"), /* @__PURE__ */ new Date("2025-07-24"), "22:00")
-    ]
-  },
-  {
-    grupo: 8,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "voy-a-pasarmelo-mejor"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-25"), /* @__PURE__ */ new Date("2025-07-28"), "21:00")
-    ]
-  },
-  {
-    grupo: 9,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-29"), /* @__PURE__ */ new Date("2025-07-31"), "21:00")
-    ]
-  },
-  {
-    grupo: 10,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "se-lo-que-hicisteis-el-ultimo-verano"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-01"), /* @__PURE__ */ new Date("2025-08-04"), "21:00")
-    ]
-  },
-  {
-    grupo: 11,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-05"), /* @__PURE__ */ new Date("2025-08-07"), "21:00")
-    ]
-  },
-  {
-    grupo: 12,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-futbolisimos-2"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-08"), /* @__PURE__ */ new Date("2025-08-11"), "21:00")
-    ]
-  },
-  {
-    grupo: 13,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-14"), "21:00")
-    ]
-  },
-  {
-    grupo: 14,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "freaker-friday"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-15"), /* @__PURE__ */ new Date("2025-08-18"), "21:00")
-    ]
-  },
-  {
-    grupo: 15,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "materialistas"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-19"), /* @__PURE__ */ new Date("2025-08-21"), "21:00")
-    ]
-  },
-  {
-    grupo: 16,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "nadie-2"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-22"), /* @__PURE__ */ new Date("2025-08-25"), "21:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-10-22"), /* @__PURE__ */ new Date("2025-10-22"), "20:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-10-23"), /* @__PURE__ */ new Date("2025-10-24"), "18:00"),
+      ...getProyecciones(/* @__PURE__ */ new Date("2025-10-23"), /* @__PURE__ */ new Date("2025-10-23"), "20:30")
     ]
   }
 ];
