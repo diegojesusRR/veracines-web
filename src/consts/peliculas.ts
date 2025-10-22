@@ -475,4 +475,12 @@ export const PELICULAS: Pelicula[] = [
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/oxymkDDPgCc"
     },
+    {
+        id: "el-cautivo",
+        image: "el-cautivo.jpg",
+        nombre: "El Cautivo",
+        descripcion: "Año 1575. El joven soldado Miguel de Cervantes es capturado en alta mar por corsarios árabes y llevado a Argel como rehén. Consciente de que allí le espera una cruel muerte si su familia no paga pronto su rescate, Miguel encontrará refugio en su pasión por contar historias. Sus fascinantes relatos devuelven la esperanza a sus compañeros de prisión y acaban por llamar la atención de Hasán, el misterioso y temido Bajá de Argel, con el que comienza a desarrollar una extraña afinidad. Mientras los conflictos crecen entre sus compañeros, Miguel, llevado por su inquebrantable optimismo, comenzará a idear un arriesgado plan de fuga.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/Zy4GBAoS7l4"
+    }
 ];

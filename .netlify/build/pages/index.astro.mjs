@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { a as createComponent, r as renderTemplate, m as maybeRenderHead, c as createAstro, b as addAttribute, d as renderComponent, s as spreadAttributes, e as renderSlot } from '../chunks/astro/server_DJGT4-uI.mjs';
 import 'kleur/colors';
-import { C as CINES, a as $$Layout } from '../chunks/Layout_Tk5SVF8c.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_BhTe_3_p.mjs';
 import 'clsx';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_aNZtV9fz.mjs';
 export { renderers } from '../renderers.mjs';
@@ -19,9 +19,7 @@ const $$UbicacionCard = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$UbicacionCard;
   const { cine } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col sm:flex-row p-4 m-2 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-${cine.color} shadow-xl transition-transform md:hover:scale-105`, "class")}> <div class="flex flex-col justify-center items-center p-6 sm:w-2/3"> <h4${addAttribute(`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`, "class")}> ${cine.nombre} </h4> ${cine.url == "regio" && renderTemplate`<span class="block text-xs text-yellow-800 bg-yellow-200 rounded px-2 py-1 mb-2 font-semibold shadow-md border border-yellow-400 animate-pulse">
-¡Ahora también en Verano!
-</span>`} <p${addAttribute(`text-center text-${cine.color} mb-4 text-base font-medium`, "class")}> ${cine.localizacion.descripcion} </p> ${renderComponent($$result, "Action", $$Action, { "class": `w-full md:w-3/4 text-base md:text-xs bg-${cine.color} text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`, "color": "white", "as": "a", "aria-disabled": "false", "href": `/cartelera-${cine.url}/`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col sm:flex-row p-4 m-2 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-${cine.color} shadow-xl transition-transform md:hover:scale-105`, "class")}> <div class="flex flex-col justify-center items-center p-6 sm:w-2/3"> <h4${addAttribute(`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`, "class")}> ${cine.nombre} </h4>  <p${addAttribute(`text-center text-${cine.color} mb-4 text-base font-medium`, "class")}> ${cine.localizacion.descripcion} </p> ${renderComponent($$result, "Action", $$Action, { "class": `w-full md:w-3/4 text-base md:text-xs bg-${cine.color} text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`, "color": "white", "as": "a", "aria-disabled": "false", "href": `/cartelera-${cine.url}/`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
 🎬 Consultar cartelera
 ` })} </div> <div class="flex flex-col items-center justify-center"> <div${addAttribute(`border-4 border-${cine.color} rounded-xl overflow-hidden shadow-lg m-auto`, "class")}> <iframe class="align-middle w-full rounded-lg"${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")} width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> <p${addAttribute(`text-center underline text-${cine.color} text-xs font-bold w-auto p-2 mt-2 bg-white bg-opacity-60 rounded`, "class")}>
 📍 ${cine.localizacion.direccion} </p> </div> </div>`;
@@ -30,9 +28,8 @@ const $$UbicacionCard = createComponent(($$result, $$props, $$slots) => {
 const $$Ubicaciones = createComponent(($$result, $$props, $$slots) => {
   const regio = CINES.find((cine) => cine.url === "regio");
   const vera = CINES.find((cine) => cine.url === "vera");
-  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
-        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}
-
+  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}
+        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
         <p class="text-center text-orange-700 font-extrabold text-lg bg-orange-100 border border-orange-400 rounded px-4 py-2 mt-4 shadow-md">
 ⚠️ Cine sala Tenis de Garrucha ya no se encuentra disponible.<br> <span class="block text-base font-semibold">Sentimos las molestias.</span> </p>`} </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/ubicaciones.astro", void 0);
