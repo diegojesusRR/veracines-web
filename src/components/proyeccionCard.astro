@@ -5,7 +5,14 @@ const { proyecciones, pelicula, cine, entradas } = Astro.props;
 const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 const MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-const diasProyeccion = [...new Set(proyecciones.map(proyeccion => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}`))];
+const diasProyeccion = [...new Set(proyecciones.map(proyeccion => {
+
+    const anio = proyeccion.fecha.getFullYear();
+    const mes = proyeccion.fecha.getMonth();
+    const dia = proyeccion.fecha.getDate();
+    return + `${anio}${mes.toString().padStart(2, '0')}${dia.toString().padStart(2, '0')}`
+}))];
+
 const mesesProyeccion = [...new Set(proyecciones.map(proyeccion => proyeccion.fecha.getMonth()))];
 
 const entradasLink = entradas?.espanol ?? '';
@@ -33,8 +40,16 @@ const entradasVoseLink = entradas?.vose ?? '';
             <div class="justify-center items-center">
                 <p class={`text-${cine.color} font-bold underline mb-2`}>Proyecciones - {mesesProyeccion.map(x => MESES[x]).join(' y ')}</p>
                 <ul class={`text-${cine.color} list-none list-inside space-y-1`}>
-                    {diasProyeccion.sort().map(dia => {
-                        const proyeccionesDia = proyecciones.filter(proyeccion => +`${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
+                    {diasProyeccion.sort().map(diaProyeccion => {
+                        const proyeccionesDia = proyecciones.filter(proyeccion => {
+
+                            const anio = proyeccion.fecha.getFullYear();
+                            const mes = proyeccion.fecha.getMonth();
+                            const dia = proyeccion.fecha.getDate();
+
+                            return +`${anio}${mes.toString().padStart(2, '0')}${dia.toString().padStart(2, '0')}` == diaProyeccion;
+
+                        });
                         const ultimaProyeccion = proyeccionesDia.length > 1 && proyeccionesDia.pop();
                         return (
                                 <li class="flex items-center gap-2 justify-center">
