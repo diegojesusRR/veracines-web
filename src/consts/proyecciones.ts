@@ -195,9 +195,9 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         cine: cineRegio,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-cautivo')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-10-22'), new Date('2025-10-22'),  '20:00'),
-            ...getProyecciones(new Date('2025-10-23'), new Date('2025-10-24'),  '18:00'),
-            ...getProyecciones(new Date('2025-10-23'), new Date('2025-10-23'),  '20:30'),
+            ...getProyecciones(new Date('2025-10-31'), new Date('2025-10-31'),  '20:00'),
+            ...getProyecciones(new Date('2025-11-01'), new Date('2025-11-02'),  '18:00'),
+            ...getProyecciones(new Date('2025-11-01'), new Date('2025-11-01'),  '20:30'),
         ],
     },
 ]
