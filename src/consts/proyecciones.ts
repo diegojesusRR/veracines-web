@@ -203,7 +203,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
     {
         grupo: 2,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-cautivo')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-cena')!,
         proyecciones: [
             ...getProyecciones(new Date('2025-11-06'), new Date('2025-11-07'),  '20:00'),
             ...getProyecciones(new Date('2025-11-07'), new Date('2025-11-08'),  '18:00'),
