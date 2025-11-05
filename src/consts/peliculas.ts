@@ -482,5 +482,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Año 1575. El joven soldado Miguel de Cervantes es capturado en alta mar por corsarios árabes y llevado a Argel como rehén. Consciente de que allí le espera una cruel muerte si su familia no paga pronto su rescate, Miguel encontrará refugio en su pasión por contar historias. Sus fascinantes relatos devuelven la esperanza a sus compañeros de prisión y acaban por llamar la atención de Hasán, el misterioso y temido Bajá de Argel, con el que comienza a desarrollar una extraña afinidad. Mientras los conflictos crecen entre sus compañeros, Miguel, llevado por su inquebrantable optimismo, comenzará a idear un arriesgado plan de fuga.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/Zy4GBAoS7l4"
+    },
+    {
+        id: "la-cena",
+        image: "la-cena.jpg",
+        nombre: "La Cena",
+        descripcion: "Dos semanas después de acabar la Guerra Civil, Franco solicita una cena de celebración en el Hotel Palace. Un joven teniente, un maître meticuloso y un grupo de prisioneros republicanos expertos en cocina, deben preparar un banquete impecable en tiempo récord. Todo parece ir sobre ruedas, pero en la cocina se trama algo más que un menú. Adaptación de la obra de José Luis Alonso de Santos.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/x_rRg-TB2f4"
     }
 ];
