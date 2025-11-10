@@ -209,6 +209,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-11-08'), new Date('2025-11-09'),  '18:00'),
         ],
     },
+    {
+        grupo: 2,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-domingos')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-11-14'), new Date('2025-11-14'),  '20:00'),
+            ...getProyecciones(new Date('2025-11-15'), new Date('2025-11-16'),  '18:00'),
+            ...getProyecciones(new Date('2025-11-15'), new Date('2025-11-15'),  '20:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
