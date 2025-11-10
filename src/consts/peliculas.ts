@@ -490,5 +490,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Dos semanas después de acabar la Guerra Civil, Franco solicita una cena de celebración en el Hotel Palace. Un joven teniente, un maître meticuloso y un grupo de prisioneros republicanos expertos en cocina, deben preparar un banquete impecable en tiempo récord. Todo parece ir sobre ruedas, pero en la cocina se trama algo más que un menú. Adaptación de la obra de José Luis Alonso de Santos.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/x_rRg-TB2f4"
+    },
+    {
+        id: "los-domingos",
+        image: "los-domingos.jpg",
+        nombre: "Los Domingos",
+        descripcion: "Ainara (Blanca Soroa), una joven idealista y brillante de 17 años, ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la chica manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia, provocando un abismo y una prueba de fuego para todos.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/fSRrZVzDTVA"
     }
 ];
