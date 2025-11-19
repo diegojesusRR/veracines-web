@@ -219,6 +219,17 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-11-15'), new Date('2025-11-15'),  '20:30'),
         ],
     },
+    {
+        grupo: 2,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'downton-abbey-el-gran-final')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-11-21'), new Date('2025-11-21'),  '20:00'),
+            ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-23'),  '18:00'),
+            ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-22'),  '20:30'),
+            ...getProyecciones(new Date('2025-11-27'), new Date('2025-11-27'),  '20:00', 'VOSE'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
