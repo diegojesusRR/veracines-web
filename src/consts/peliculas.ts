@@ -498,5 +498,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Ainara (Blanca Soroa), una joven idealista y brillante de 17 años, ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la chica manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia, provocando un abismo y una prueba de fuego para todos.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/fSRrZVzDTVA"
+    },
+    {
+        id: "downton-abbey-el-gran-final",
+        image: "downton-abbey-el-gran-final.jpg",
+        nombre: "Downton Abbey: El gran final",
+        descripcion: "Secuela de 'Downton Abbey: Una nueva era'. Sigue a la familia Crawley y a su personal a medida que se adentran en la década de 1930. Mientras deciden cómo conducir Downton Abbey hacia el futuro, todos deben aceptar el cambio y dar la bienvenida a un nuevo capítulo.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/SN9ntBjM2Vo"
     }
 ];
