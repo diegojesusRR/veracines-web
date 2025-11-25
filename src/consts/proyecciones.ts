@@ -210,7 +210,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         ],
     },
     {
-        grupo: 2,
+        grupo: 3,
         cine: cineRegio,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-domingos')!,
         proyecciones: [
@@ -220,7 +220,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         ],
     },
     {
-        grupo: 2,
+        grupo: 4,
         cine: cineRegio,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'downton-abbey-el-gran-final')!,
         proyecciones: [
@@ -228,6 +228,28 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-23'),  '18:00'),
             ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-22'),  '20:30'),
             ...getProyecciones(new Date('2025-11-27'), new Date('2025-11-27'),  '20:00', 'VOSE'),
+        ],
+    },
+    {
+        grupo: 5,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'ahora-me-ves-3')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-11-28'), new Date('2025-11-28'),  '20:00'),
+            ...getProyecciones(new Date('2025-11-29'), new Date('2025-11-30'),  '18:00'),
+            ...getProyecciones(new Date('2025-11-29'), new Date('2025-11-29'),  '20:30'),
+            ...getProyecciones(new Date('2025-12-04'), new Date('2025-12-04'),  '20:00', 'VOSE'),
+        ],
+    },
+    {
+        grupo: 5,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-12-05'), new Date('2025-12-05'),  '20:00'),
+            ...getProyecciones(new Date('2025-12-06'), new Date('2025-12-08'),  '18:00'),
+            ...getProyecciones(new Date('2025-12-06'), new Date('2025-12-06'),  '20:30'),
+            ...getProyecciones(new Date('2025-12-11'), new Date('2025-12-11'),  '20:00', 'VOSE'),
         ],
     },
 ]

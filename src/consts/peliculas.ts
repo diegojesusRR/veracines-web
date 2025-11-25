@@ -506,5 +506,21 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Secuela de 'Downton Abbey: Una nueva era'. Sigue a la familia Crawley y a su personal a medida que se adentran en la década de 1930. Mientras deciden cómo conducir Downton Abbey hacia el futuro, todos deben aceptar el cambio y dar la bienvenida a un nuevo capítulo.",
         edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/SN9ntBjM2Vo"
+    },
+    {
+        id: "ahora-me-ves-3",
+        image: "ahora-me-ves-3.jpg",
+        nombre: "Ahora me ves 3",
+        descripcion: "Tercera entrega de la franquicia \"Ahora me ves\". Los Cuatro Jinetes regresan junto a una nueva generación de ilusionistas en una extraordinaria aventura que contiene giros asombrosos, sorpresas alucinantes y trucos de magia nunca vistos en la gran pantalla. AHORA ME VES 3 vuelve a reunir el elenco original de la saga mientras incorpora nuevos rostros jóvenes y una villana de altos vuelos, Veronika Vanderberg, interpretada por la nominada al Oscar® Rosamund Pike.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/yKEpr38-YHY"
+    },
+    {
+        id: "wicked-2",
+        image: "wicked-2.jpg",
+        nombre: "Wicked: Parte II",
+        descripcion: "Segunda parte de la adaptación cinematográfica del musical de Broadway. El capítulo final de la historia jamás contada de las brujas de Oz comienza con Elphaba y Glinda distanciadas y viviendo las consecuencias de sus respectivas decisiones. Mientras la multitud alza su clamor contra la Bruja Malvada, ambas deberán unirse una vez más. Con su singular amistad convertida en el punto de inflexión de su futuro, tendrán que mirarse a los ojos con honestidad y compasión para afrontar su transformación personal y cambiar el destino de todo Oz.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/wweDnEbMvtY"
     }
 ];
