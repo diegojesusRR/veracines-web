@@ -252,6 +252,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-12-11'), new Date('2025-12-11'),  '20:00', 'VOSE'),
         ],
     },
+    {
+        grupo: 6,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'todos-los-lados-de-la-cama')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-12-12'), new Date('2025-12-12'),  '20:00'),
+            ...getProyecciones(new Date('2025-12-13'), new Date('2025-12-14'),  '18:00'),
+            ...getProyecciones(new Date('2025-12-13'), new Date('2025-12-13'),  '20:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [

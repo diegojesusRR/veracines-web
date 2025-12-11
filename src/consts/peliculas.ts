@@ -522,5 +522,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Segunda parte de la adaptación cinematográfica del musical de Broadway. El capítulo final de la historia jamás contada de las brujas de Oz comienza con Elphaba y Glinda distanciadas y viviendo las consecuencias de sus respectivas decisiones. Mientras la multitud alza su clamor contra la Bruja Malvada, ambas deberán unirse una vez más. Con su singular amistad convertida en el punto de inflexión de su futuro, tendrán que mirarse a los ojos con honestidad y compasión para afrontar su transformación personal y cambiar el destino de todo Oz.",
         edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/wweDnEbMvtY"
+    },
+    {
+        id: "todos-los-lados-de-la-cama",
+        image: "todos-los-lados-de-la-cama.jpg",
+        nombre: "Todos los lados de la cama",
+        descripcion: "Tras décadas sin verse, Javier (Ernesto Alterio) y Carlota (Pilar Castro) montan en cólera cuando descubren que sus hijos Óscar (Jan Buxaderas) y Julia (Lucía Caraballo) planean casarse. ¿Quién a su edad tiene una relación heteronormativa y exclusiva en 2025 con todo lo que les queda por experimentar? ¿Es que no les han enseñado nada como padres? Ni Paula (Natalia Verbeke), madre de Óscar; ni Rafa (Alberto San Juan), convertido en gurú contra las relaciones tóxicas; ni Pilar (María Esteve), wedding planner; ni su amigo Carlos (Secun de la Rosa), sirven de mucha ayuda a Javier y Carlota en su firme propósito de impedir la boda. Y aunque Julia y Óscar pertenecen a una generación en la que el amor, el sexo y las relaciones son más libres y respetuosas que las de sus padres, las tretas ruines de Javier y Carlota ponen todo patas arriba a medida que la fecha de la boda se acerca. Porque por mucho que todos ellos hayan explorado Todos los lados de la cama, en el amor y el sexo la única certeza es que nadie sabe nada.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/Cdjtuio0a28"
     }
 ];
