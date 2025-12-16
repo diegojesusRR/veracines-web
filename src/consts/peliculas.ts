@@ -538,5 +538,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Tras el fin de la II Guerra Mundial, con ocasión de los cruciales juicios de Nuremberg de los Aliados contra el derrotado régimen nazi, el psiquiatra estadounidense Douglas Kelley (Malek), encargado de determinar si los prisioneros oficiales nazis son aptos para ser juzgados por sus crímenes de guerra, se ve inmerso en una compleja batalla de ingenio con Hermann Göring (Crowe), mano derecha de Hitler. Basada en el libro \"El nazi y el psiquiatra\" de Jack El-Hai.",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/n3Ht0sBjv4g"
+    },
+    {
+        id: "zootropolis-2",
+        image: "zootropolis-2.jpg",
+        nombre: "Zootrópolis 2",
+        descripcion: "Judy y Nick se encuentran tras la retorcida pista de un misterioso reptil que llega a Zootopia y pone patas arriba la metrópolis de los mamíferos. Para resolver el caso, Judy y Nick deben ir de incógnito a nuevas partes inesperadas de la ciudad, donde su creciente asociación se pone a prueba como nunca antes.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/io6VfjLpgaU"
     }
 ];
