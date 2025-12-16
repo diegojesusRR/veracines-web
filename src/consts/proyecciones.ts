@@ -272,6 +272,15 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-12-20'), new Date('2025-12-20'),  '20:30'),
         ],
     },
+    {
+        grupo: 8,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'zootropolis-2')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-12-26'), new Date('2025-12-30'),  '18:00'),
+            ...getProyecciones(new Date('2025-12-27'), new Date('2025-12-27'),  '20:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
