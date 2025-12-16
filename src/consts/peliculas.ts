@@ -530,5 +530,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Tras décadas sin verse, Javier (Ernesto Alterio) y Carlota (Pilar Castro) montan en cólera cuando descubren que sus hijos Óscar (Jan Buxaderas) y Julia (Lucía Caraballo) planean casarse. ¿Quién a su edad tiene una relación heteronormativa y exclusiva en 2025 con todo lo que les queda por experimentar? ¿Es que no les han enseñado nada como padres? Ni Paula (Natalia Verbeke), madre de Óscar; ni Rafa (Alberto San Juan), convertido en gurú contra las relaciones tóxicas; ni Pilar (María Esteve), wedding planner; ni su amigo Carlos (Secun de la Rosa), sirven de mucha ayuda a Javier y Carlota en su firme propósito de impedir la boda. Y aunque Julia y Óscar pertenecen a una generación en la que el amor, el sexo y las relaciones son más libres y respetuosas que las de sus padres, las tretas ruines de Javier y Carlota ponen todo patas arriba a medida que la fecha de la boda se acerca. Porque por mucho que todos ellos hayan explorado Todos los lados de la cama, en el amor y el sexo la única certeza es que nadie sabe nada.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/Cdjtuio0a28"
+    },
+    {
+        id: "nuremberg",
+        image: "nuremberg.jpg",
+        nombre: "Nuremberg",
+        descripcion: "Tras el fin de la II Guerra Mundial, con ocasión de los cruciales juicios de Nuremberg de los Aliados contra el derrotado régimen nazi, el psiquiatra estadounidense Douglas Kelley (Malek), encargado de determinar si los prisioneros oficiales nazis son aptos para ser juzgados por sus crímenes de guerra, se ve inmerso en una compleja batalla de ingenio con Hermann Göring (Crowe), mano derecha de Hitler. Basada en el libro \"El nazi y el psiquiatra\" de Jack El-Hai.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/n3Ht0sBjv4g"
     }
 ];
