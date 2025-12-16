@@ -262,6 +262,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-12-13'), new Date('2025-12-13'),  '20:30'),
         ],
     },
+    {
+        grupo: 7,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'nuremberg')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2025-12-19'), new Date('2025-12-19'),  '20:00'),
+            ...getProyecciones(new Date('2025-12-20'), new Date('2025-12-21'),  '18:00'),
+            ...getProyecciones(new Date('2025-12-20'), new Date('2025-12-20'),  '20:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
