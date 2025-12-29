@@ -546,5 +546,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Judy y Nick se encuentran tras la retorcida pista de un misterioso reptil que llega a Zootopia y pone patas arriba la metrópolis de los mamíferos. Para resolver el caso, Judy y Nick deben ir de incógnito a nuevas partes inesperadas de la ciudad, donde su creciente asociación se pone a prueba como nunca antes.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/io6VfjLpgaU"
+    },
+    {
+        id: "avatar-3",
+        image: "avatar-3.jpg",
+        nombre: "Avatar: Fuego y ceniza",
+        descripcion: "Tercera entrega de la saga \"Avatar\". Presenta al Pueblo de las Cenizas, un clan Na'vi no tan pacífico que utilizará la violencia si lo necesita para conseguir sus objetivos, aunque sea contra otros clanes.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/bf38f_JINyw"
     }
 ];
