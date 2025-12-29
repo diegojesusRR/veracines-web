@@ -281,6 +281,14 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2025-12-27'), new Date('2025-12-27'),  '20:00'),
         ],
     },
+    {
+        grupo: 9,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'avatar-3')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-01-01'), new Date('2026-01-05'),  '18:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
