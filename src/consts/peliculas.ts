@@ -554,5 +554,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Tercera entrega de la saga \"Avatar\". Presenta al Pueblo de las Cenizas, un clan Na'vi no tan pacífico que utilizará la violencia si lo necesita para conseguir sus objetivos, aunque sea contra otros clanes.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/bf38f_JINyw"
+    },
+    {
+        id: "la-asistenta",
+        image: "la-asistenta.webp",
+        nombre: "La asistenta",
+        descripcion: "Una joven (Sydney Sweeney), con un pasado complicado comienza a trabajar como asistenta en la lujosa casa de los Winchester. A medida que se adentra en la vida de la familia, descubrirá secretos oscuros que pondrán en peligro su seguridad, pero quizá ya sea demasiado tarde... Adaptación de la novela de Freida McFadden.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/IMrebLqjVVQ"
     }
 ];
