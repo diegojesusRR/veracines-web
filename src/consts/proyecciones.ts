@@ -297,6 +297,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-01-09'), new Date('2026-01-09'),  '20:00'),
             ...getProyecciones(new Date('2026-01-10'), new Date('2026-01-11'),  '18:00'),
             ...getProyecciones(new Date('2026-01-10'), new Date('2026-01-10'),  '20:30'),
+            ...getProyecciones(new Date('2026-01-15'), new Date('2026-01-15'),  '20:00', 'VOSE'),
+        ],
+    },
+    {
+        grupo: 11,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'abuela-tremenda')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-01-16'), new Date('2026-01-17'),  '20:00'),
+            ...getProyecciones(new Date('2026-01-17'), new Date('2026-01-18'),  '18:00'),
         ],
     },
 ]
