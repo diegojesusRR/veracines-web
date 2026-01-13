@@ -562,5 +562,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Una joven (Sydney Sweeney), con un pasado complicado comienza a trabajar como asistenta en la lujosa casa de los Winchester. A medida que se adentra en la vida de la familia, descubrirá secretos oscuros que pondrán en peligro su seguridad, pero quizá ya sea demasiado tarde... Adaptación de la novela de Freida McFadden.",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/IMrebLqjVVQ"
+    },
+    {
+        id: "abuela-tremenda",
+        image: "abuela-tremenda.jpg",
+        nombre: "Abuela tremenda",
+        descripcion: "Toñi no es una abuela cualquiera. Es un torbellino, un alma libre que se mete siempre en líos. A su hija Daniela la trae un poco de cabeza, pero su nieta Alexia la adora. Por eso, cuando Daniela se lleva a Alexia a un retiro rural de su empresa, Toñi no duda en presentarse allí con su caravana para pasar tiempo con su nieta y animar el cotarro a toda costa. Toñi pondrá patas arriba el retiro y el trabajo de Daniela y, sin querer, también pondrá algunas cosas en su sitio.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/Hg7odkhWUtc"
     }
 ];
