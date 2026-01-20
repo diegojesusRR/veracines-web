@@ -309,6 +309,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-01-17'), new Date('2026-01-18'),  '18:00'),
         ],
     },
+    {
+        grupo: 12,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-asistenta')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-01-23'), new Date('2026-01-23'),  '20:00'),
+            ...getProyecciones(new Date('2026-01-24'), new Date('2026-01-25'),  '18:00'),
+            ...getProyecciones(new Date('2026-01-24'), new Date('2026-01-24'),  '20:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
