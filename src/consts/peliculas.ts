@@ -570,5 +570,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Toñi no es una abuela cualquiera. Es un torbellino, un alma libre que se mete siempre en líos. A su hija Daniela la trae un poco de cabeza, pero su nieta Alexia la adora. Por eso, cuando Daniela se lleva a Alexia a un retiro rural de su empresa, Toñi no duda en presentarse allí con su caravana para pasar tiempo con su nieta y animar el cotarro a toda costa. Toñi pondrá patas arriba el retiro y el trabajo de Daniela y, sin querer, también pondrá algunas cosas en su sitio.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/Hg7odkhWUtc"
+    },
+    {
+        id: "idolos",
+        image: "idolos.jpg",
+        nombre: "Ídolos",
+        descripcion: "Edu es un joven piloto de motos muy agresivo en quien ningún equipo confía. Eli, jefe del equipo de Aspar Team en Moto2, le ofrece una oportunidad con la condición de que sea su padre, Antonio Belardi, quien le entrene. Edu lleva muchos años sin ver a su padre, un expiloto que se retiró de las pistas tras provocar la muerte de otro piloto durante una carrera. Aunque Edu odia a su padre por haberle abandonado, sabe que sólo con él puede llegar a alcanzar su sueño. Edu se someterá al estricto control de preparación que le exige Antonio, el cual incluye dejar a un lado el amor… Hasta que conoce a Luna, una joven artista que acaba de abrir un salón de tatuajes justo debajo de su casa.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/SyB6LKFvjro"
     }
 ];
