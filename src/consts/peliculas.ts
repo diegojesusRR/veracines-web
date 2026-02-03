@@ -578,5 +578,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Edu es un joven piloto de motos muy agresivo en quien ningún equipo confía. Eli, jefe del equipo de Aspar Team en Moto2, le ofrece una oportunidad con la condición de que sea su padre, Antonio Belardi, quien le entrene. Edu lleva muchos años sin ver a su padre, un expiloto que se retiró de las pistas tras provocar la muerte de otro piloto durante una carrera. Aunque Edu odia a su padre por haberle abandonado, sabe que sólo con él puede llegar a alcanzar su sueño. Edu se someterá al estricto control de preparación que le exige Antonio, el cual incluye dejar a un lado el amor… Hasta que conoce a Luna, una joven artista que acaba de abrir un salón de tatuajes justo debajo de su casa.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/SyB6LKFvjro"
+    },
+    {
+        id: "hamnet",
+        image: "hamnet.jpg",
+        nombre: "Hamnet",
+        descripcion: "La historia de Agnes, la esposa de William Shakespeare, en su lucha por superar la tragedia familiar que irrumpe en su vida. Una historia con el telón de fondo de la creación de una de las más conocidas e importantes obras de Shakespeare, 'Hamlet'.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/Ith7z6FzLe0"
     }
 ];
