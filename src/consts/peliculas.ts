@@ -586,5 +586,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "La historia de Agnes, la esposa de William Shakespeare, en su lucha por superar la tragedia familiar que irrumpe en su vida. Una historia con el telón de fondo de la creación de una de las más conocidas e importantes obras de Shakespeare, 'Hamlet'.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/Ith7z6FzLe0"
+    },
+    {
+        id: "aida-y-vuelta",
+        image: "aida-y-vuelta.jpg",
+        nombre: "Aida y vuelta",
+        descripcion: "'Aída y vuelta' aborda el rodaje de un capítulo de la serie con tramas que transcurren tanto dentro de la ficción, con los personajes de 'Aída', como fuera de ella con los propios actores y sus relaciones, que dan pie a reflexionar sobre temas como los límites del humor, el trabajo del cómico o la fama.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/O82ibLC4bmM"
     }
 ];
