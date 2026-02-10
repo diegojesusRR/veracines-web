@@ -343,7 +343,7 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
     {
         grupo: 15,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'hamnet')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'aida-y-vuelta')!,
         proyecciones: [
             ...getProyecciones(new Date('2026-02-13'), new Date('2026-02-14'),  '20:00'),
             ...getProyecciones(new Date('2026-02-14'), new Date('2026-02-15'),  '18:00'),
