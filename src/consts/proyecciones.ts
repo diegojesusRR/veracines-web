@@ -349,6 +349,18 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-02-14'), new Date('2026-02-15'),  '18:00'),
         ],
     },
+    {
+        grupo: 16,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'cumbres-borrascosas')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-02-20'), new Date('2026-02-20'),  '20:00'),
+            ...getProyecciones(new Date('2026-02-21'), new Date('2026-02-22'),  '18:00'),
+            ...getProyecciones(new Date('2026-02-21'), new Date('2026-02-21'),  '20:30'),
+            ...getProyecciones(new Date('2026-02-26'), new Date('2026-02-26'),  '20:00', 'vose'),
+
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
