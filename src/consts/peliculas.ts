@@ -594,5 +594,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "'Aída y vuelta' aborda el rodaje de un capítulo de la serie con tramas que transcurren tanto dentro de la ficción, con los personajes de 'Aída', como fuera de ella con los propios actores y sus relaciones, que dan pie a reflexionar sobre temas como los límites del humor, el trabajo del cómico o la fama.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/O82ibLC4bmM"
+    },
+    {
+        id: "cumbres-borrascosas",
+        image: "cumbres-borrascosas.jpeg",
+        nombre: "Cumbres borrascosas",
+        descripcion: "Narra la intensa y romántica relación entre Heathcliff y Catherine Earnshaw en los páramos del condado inglés de Yorkshire. Tras ser criados juntos, su romance se ve pronto frustrado por las barreras sociales, y su pasión prohibida se transforma de romántica a intoxicante en una épica historia de lujuria, amor y locura.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/RNynG8dMp5w"
     }
 ];
