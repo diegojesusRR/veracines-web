@@ -602,5 +602,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Narra la intensa y romántica relación entre Heathcliff y Catherine Earnshaw en los páramos del condado inglés de Yorkshire. Tras ser criados juntos, su romance se ve pronto frustrado por las barreras sociales, y su pasión prohibida se transforma de romántica a intoxicante en una épica historia de lujuria, amor y locura.",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/RNynG8dMp5w"
+    },
+    {
+        id: "como-cabras",
+        image: "como-cabras.jpg",
+        nombre: "Como cabras",
+        descripcion: "Will es una pequeña cabra con grandes sueños que recibe una oportunidad única en la vida para unirse a los profesionales y jugar al rugebol, un deporte de alta intensidad, mixto y de contacto total dominado por los animales más rápidos y feroces del mundo. A los nuevos compañeros de equipo de Will no les entusiasma tener a una cabrita en su plantilla, pero Will está decidido a revolucionar el deporte y demostrar de una vez por todas que '¡los pequeños saben jugar!'.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/q56pw-zFDP8"
     }
 ];
