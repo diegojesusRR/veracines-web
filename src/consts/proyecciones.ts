@@ -371,6 +371,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
 
         ],
     },
+    {
+        grupo: 18,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'como-cabras')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-03-06'), new Date('2026-03-07'),  '20:00'),
+            ...getProyecciones(new Date('2026-03-07'), new Date('2026-03-08'),  '18:00'),
+
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
