@@ -610,5 +610,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Will es una pequeña cabra con grandes sueños que recibe una oportunidad única en la vida para unirse a los profesionales y jugar al rugebol, un deporte de alta intensidad, mixto y de contacto total dominado por los animales más rápidos y feroces del mundo. A los nuevos compañeros de equipo de Will no les entusiasma tener a una cabrita en su plantilla, pero Will está decidido a revolucionar el deporte y demostrar de una vez por todas que '¡los pequeños saben jugar!'.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/q56pw-zFDP8"
+    },
+    {
+        id: "torrente-presidente",
+        image: "torrente-presidente.jpg",
+        nombre: "Torrente Presidente",
+        descripcion: "*Nota informativa: la película no tendrá ni tráiler ni cartel ni se mostrará en pases de prensa previos a su estreno en cines, en una estrategia de marketing de Santiago Segura y la distribuidora, con el fin -según han declarado- de preservar las sorpresas y cameos hasta que los fans la puedan ver el día de su estreno en cines en España (13 de marzo). Tampoco hay información oficial sobre el reparto ni detalles de la trama. Cuando contemos con esa información actualizaremos y completaremos la ficha.",
+        edadRedomendada: "No recomendada menores 16 años",
+        videoUrl: "https://www.youtube.com/embed/ju0iKNvSlog"
     }
 ];
