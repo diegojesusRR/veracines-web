@@ -398,6 +398,15 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
         proyecciones: [
             ...getProyecciones(new Date('2026-03-20'), new Date('2026-03-21'),  '20:00'),
             ...getProyecciones(new Date('2026-03-21'), new Date('2026-03-22'),  '18:00'),
+        ],
+    },
+    {
+        grupo: 21,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-03-27'), new Date('2026-03-28'),  '18:00'),
+            ...getProyecciones(new Date('2026-03-27'), new Date('2026-03-28'),  '20:00'),
 
         ],
     },
