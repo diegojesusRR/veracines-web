@@ -618,5 +618,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "*Nota informativa: la película no tendrá ni tráiler ni cartel ni se mostrará en pases de prensa previos a su estreno en cines, en una estrategia de marketing de Santiago Segura y la distribuidora, con el fin -según han declarado- de preservar las sorpresas y cameos hasta que los fans la puedan ver el día de su estreno en cines en España (13 de marzo). Tampoco hay información oficial sobre el reparto ni detalles de la trama. Cuando contemos con esa información actualizaremos y completaremos la ficha.",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/ju0iKNvSlog"
+    },
+    {
+        id: "amarga-navidad",
+        image: "amarga-navidad.jpg",
+        nombre: "Amarga Navidad",
+        descripcion: "Elsa es una directora de publicidad cuya madre muere durante un largo puente del mes de diciembre. Encuentra refugio en el trabajo, aunque es más bien una huida hacia adelante. Trabaja sin parar y, sin darse cuenta, no se concede el tiempo necesario para guardar el duelo por la ausencia materna. Hasta que una crisis de pánico la obliga a detenerse e imponerse un descanso. Su pareja, Bonifacio, es su tabla de salvación en esos momentos de crisis. Elsa decide viajar a la isla de Lanzarote acompañada por su amiga Patricia, que también necesita alejarse de Madrid, mientras que Bonifacio se queda en la ciudad.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/SNbVMk-nLu4"
     }
 ];
