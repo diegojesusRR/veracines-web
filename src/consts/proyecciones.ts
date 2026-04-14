@@ -413,10 +413,10 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
     {
         grupo: 22,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'amarga-navidad')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'super-mario-galaxy')!,
         proyecciones: [
-            ...getProyecciones(new Date('2026-04-10'), new Date('2026-04-11'),  '20:00'),
-            ...getProyecciones(new Date('2026-04-11'), new Date('2026-04-12'),  '18:00'),
+            ...getProyecciones(new Date('2026-04-17'), new Date('2026-04-18'),  '20:00'),
+            ...getProyecciones(new Date('2026-04-18'), new Date('2026-04-19'),  '18:00'),
 
         ],
     },

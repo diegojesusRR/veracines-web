@@ -626,5 +626,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Elsa es una directora de publicidad cuya madre muere durante un largo puente del mes de diciembre. Encuentra refugio en el trabajo, aunque es más bien una huida hacia adelante. Trabaja sin parar y, sin darse cuenta, no se concede el tiempo necesario para guardar el duelo por la ausencia materna. Hasta que una crisis de pánico la obliga a detenerse e imponerse un descanso. Su pareja, Bonifacio, es su tabla de salvación en esos momentos de crisis. Elsa decide viajar a la isla de Lanzarote acompañada por su amiga Patricia, que también necesita alejarse de Madrid, mientras que Bonifacio se queda en la ciudad.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/SNbVMk-nLu4"
+    },
+    {
+        id: "super-mario-galaxy",
+        image: "super-mario-galaxy.jpg",
+        nombre: "Super Mario Galaxy: La película",
+        descripcion: "Secuela de 'Super Mario Bros: La película', basada en la saga 'Mario Galaxy'. Los hermanos Mario y Luigi y la princesa Peach emprenden una aventura hasta los confines del espacio y a través de la galaxia.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/VaGc3NrsfBI"
     }
 ];
