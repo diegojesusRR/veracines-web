@@ -634,5 +634,13 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Secuela de 'Super Mario Bros: La película', basada en la saga 'Mario Galaxy'. Los hermanos Mario y Luigi y la princesa Peach emprenden una aventura hasta los confines del espacio y a través de la galaxia.",
         edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/VaGc3NrsfBI"
+    },
+    {
+        id: "proyecto-salvacion",
+        image: "proyecto-salvacion.jpg",
+        nombre: "Proyecto Salvación",
+        descripcion: "El profesor de ciencias Ryland Grace (Ryan Gosling) se despierta en una nave espacial a años luz de casa sin recordar quién es ni cómo ha llegado hasta allí. A medida que recupera la memoria, empieza a descubrir su misión: resolver el enigma de la misteriosa sustancia que provoca la extinción del sol. Deberá recurrir a sus conocimientos científicos y a sus ideas poco ortodoxas para salvar todo lo que hay en la Tierra de la extinción... pero una amistad inesperada significa que quizá no tenga que hacerlo solo.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/in-lUuKi0eE"
     }
 ];
