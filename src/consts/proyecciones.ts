@@ -432,6 +432,14 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
 
         ],
     },
+    {
+        grupo: 23,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-padrino')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-05-30'), new Date('2026-05-30'),  '18:00'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
