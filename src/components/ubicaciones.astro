@@ -18,8 +18,10 @@ const vera   = CINES.find(cine => cine.url === 'vera');
         </p>
     </div>
 
-    <UbicacionCard cine={vera} />
-    <UbicacionCard cine={regio} />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <UbicacionCard cine={vera} />
+        <UbicacionCard cine={regio} />
+    </div>
 
     {/*
     <aside class="flex items-start gap-3 rounded-xl border border-orange-300 bg-orange-50 px-4 py-3 text-sm text-orange-800 shadow-sm" role="note" aria-label="Aviso sobre el Cine Tenis de Garrucha">

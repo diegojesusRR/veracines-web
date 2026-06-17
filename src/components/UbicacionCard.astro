@@ -13,17 +13,17 @@ const { cine } = Astro.props;
     <div class="flex flex-col lg:flex-row">
 
         <!-- Info -->
-        <div class="flex flex-col gap-4 p-6 lg:w-1/2">
+        <div class="flex flex-col gap-4 p-6">
 
-            <!-- Título + botón en la misma fila en lg -->
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <!-- Título + botón debajo -->
+            <div class="flex flex-col gap-3">
                 <div>
                     <h4 class="ubicacion-title text-xl font-extrabold leading-tight mb-1">
                         {cine.nombre}
                     </h4>
                 </div>
                 <Action
-                    class="shrink-0"
+                    class="w-full sm:w-fit"
                     color={cine.color}
                     as="a"
                     href={`/cartelera-${cine.url}/`}
@@ -38,7 +38,7 @@ const { cine } = Astro.props;
             </p>
 
             <!-- Mapa -->
-            <div class="lg:w-1/2 min-h-[220px] overflow-hidden">
+            <div class="min-h-[220px] overflow-hidden">
                 <iframe
                         class="w-full h-full min-h-[220px]"
                         src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
