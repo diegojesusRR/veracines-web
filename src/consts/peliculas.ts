@@ -1,4 +1,3 @@
-import type {Cine} from "@/types/Cine.ts";
 import type {Pelicula} from "@/types/Pelicula.ts";
 
 
@@ -103,7 +102,7 @@ export const PELICULAS: Pelicula[] = [
         id: "buffalo-kids",
         image: "buffalo-kids.jpg",
         nombre: "Buffalo Kids",
-        descripcion:"Tom y Mary, dos hermanos huérfanos, desembarcan en Nueva York a finales del siglo XIX. Para reunirse con su tío, se aventuran como polizones en un tren por el Salvaje Oeste donde conocerán a Nick, un nuevo y extraordinario amigo que cambiará sus vidas para siempre. Juntos se embarcarán en un peligroso viaje, enfrentándose a malvados villanos, haciendo inesperados amigos y viviendo situaciones únicas.",
+        descripcion: "Tom y Mary, dos hermanos huérfanos, desembarcan en Nueva York a finales del siglo XIX. Para reunirse con su tío, se aventuran como polizones en un tren por el Salvaje Oeste donde conocerán a Nick, un nuevo y extraordinario amigo que cambiará sus vidas para siempre. Juntos se embarcarán en un peligroso viaje, enfrentándose a malvados villanos, haciendo inesperados amigos y viviendo situaciones únicas.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/JyEU5-a4G44"
     },
@@ -122,7 +121,7 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Alonso (barrendero; Roberto Álamo) y Marisa (tarotista; Malena Alterio), Torres y Fátima (propietarios de una charcutería; Jordi Sánchez y María Botto) y Calatrava (cirujano estético; Julián López) y Vicky (influencer; Kira Miró) han reservado una casa aislada en Canarias para pasar las mejores vacaciones de su vida con sus respectivas familias. Lo que no saben es que, por un error de la agencia, han alquilado la misma casa. Ninguno está dispuesto a renunciar a ella y tampoco hay muchas alternativas, por lo que se ven obligados a compartir habitáculo durante todas sus vacaciones. Las patentes diferencias entre cada uno de sus miembros convierten esos días en un caótico cúmulo de divertidas y desmadradas situaciones. A pesar de ello, tienen que aprender a convivir y comprender a toda esa gente tan distinta... Y a ellos mismos.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/eNkDXNfmzzs"
-    },{
+    }, {
         id: "romper-el-circulo",
         image: "romper-el-circulo.jpg",
         nombre: "Romper el círculo",
@@ -650,5 +649,62 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "América, años 40. Don Vito Corleone (Marlon Brando) es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York. Tiene cuatro hijos: Connie (Talia Shire), el impulsivo Sonny (James Caan), el pusilánime Fredo (John Cazale) y Michael (Al Pacino), que no quiere saber nada de los negocios de su padre. Cuando Corleone, en contra de los consejos de 'Il consigliere' Tom Hagen (Robert Duvall), se niega a participar en el negocio de las drogas, el jefe de otra banda ordena su asesinato. Empieza entonces una violenta y cruenta guerra entre las familias mafiosas.",
         edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/gCVj1LeYnsc"
+    },
+    {
+        id: "incontrolable",
+        image: "incontrolable.webp",
+        nombre: "Incontrolable",
+        descripcion: "La historia real de John Davidson. Diagnosticado con el síndrome de Tourette a los 15 años, señalado como loco por sus compañeros -dos de sus principales síntomas son sus espasmos y su incontinencia con los insultos-, John luchó con una condición que pocos conocían. Ya adulto, hizo campaña en favor de las personas con síndrome de Tourette.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/DCFhVU8UIRg"
+    },
+    {
+        id: "minions-and-monsters",
+        image: "minions-y-monsters.jpg",
+        nombre: "Minions & Monsters",
+        descripcion: "La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine, lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar al planeta del caos que acababan de crear.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/-_Ajqzp5iIQ"
+    },
+    {
+        id: "el-dia-de-la-revelacion",
+        image: "el-dia-de-la-revelacion.webp",
+        nombre: "El día de la Revelación",
+        descripcion: "Si descubrieras secretos que han permanecido deliberadamente ocultos durante décadas, y alguien te abriera los ojos y te lo demostrase, ¿qué harías?, ¿y te asustarías? Este verano, la verdad será revelada a más de ocho mil millones de personas. Llega... el día de la revelación.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/XXZgYygh40"
+    },
+    {
+        id: "haciendo-amigos",
+        image: "haciendo-amigos.jpg",
+        nombre: "Haciendo Amigos",
+        descripcion: "Antonio y Félix son una pareja de atracadores de poca monta que, huyendo de la policía tras atracar una joyería, se cruzan con Eva, monitora de un grupo de teatro formado por personas con discapacidad, que confunde a Félix con Ángel, un nuevo miembro del grupo al cual no conoce y al que están esperando. Aprovechando la confusión, Félix y Antonio consiguen escabullirse sin saber que les espera un retiro creativo de una semana con el entrañable grupo.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/SNl1zrF3AG8"
+    },
+    {
+        id: "toy-story-5",
+        image: "toy-story-5.jpeg",
+        nombre: "Toy Story 5",
+        descripcion: "Los juguetes están de vuelta. Esta vez, Buzz Lightyear, Woody, Jessie y el resto de la pandilla se enfrentan a un nuevo reto cuando conocen a Lilypad, una nueva tablet que llega con sus propias ideas disruptivas sobre lo que es mejor para Bonnie. ¿Volverá a ser lo mismo la hora de jugar?",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/w56cHtfyGT8"
+    },
+    {
+        id: "la-odisea",
+        image: "la-odisea.jpg",
+        nombre: "La odisea",
+        descripcion: "Epopeya mitológica que sigue la historia de Odiseo y su largo viaje a casa, de 10 años de duración, tras la guerra de Troya.",
+        edadRedomendada: "No recomendada menores 7 años",
+        videoUrl: "https://www.youtube.com/embed/WgDj3heU4YI"
+    },
+    {
+        id: "michael",
+        image: "michael.jpg",
+        nombre: "Michael",
+        descripcion: "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/o1HQSh6zZ8s"
     }
+
 ];
