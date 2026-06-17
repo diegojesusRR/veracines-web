@@ -1,0 +1,56 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import Hero from "@/sections/Hero.astro"
+
+import {Metadata} from "../consts/metadata";
+import Ubicaciones from "../components/ubicaciones.astro";
+import Contacto from "../components/contacto.astro";
+import Servicios from "../components/Servicios.astro";
+import {CINES} from "../consts/cines";
+
+const schemaOrg = CINES.map(cine => ({
+    "@type": "MovieTheater",
+    "name": cine.nombre,
+    "url": `https://www.veracines.es/cartelera-${cine.url}`,
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": cine.localizacion.direccion,
+        "addressLocality": cine.localizacion.ciudad,
+        "addressRegion": cine.localizacion.provincia,
+        "postalCode": cine.localizacion.codigoPostal,
+        "addressCountry": cine.localizacion.adressCounty,
+    },
+    "openingHoursSpecification": cine.horaFijaProyeccion ? [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": cine.horaFijaProyeccion,
+        "closes": "23:59"
+    }] : undefined
+}));
+
+export const prerender = false
+---
+
+<Layout
+        description={Metadata.home.description}
+        title={Metadata.home.title}
+        canonical={Metadata.home.canonical}
+>
+    <Fragment slot="head">
+        <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": schemaOrg
+        })} />
+    </Fragment>
+
+    <main class="max-w-3xl mx-auto px-4">
+        <div class="grid gap-14">
+            <Hero/>
+
+            <Ubicaciones/>
+            <Servicios/>
+            <Contacto/>
+        </div>
+    </main>
+</Layout>
