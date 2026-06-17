@@ -6,185 +6,168 @@ import SocialButtons from "@/components/SocialButtons.astro"
 import { MOBILE_MENU_CONTENT_ID } from "@/consts/mobile-menu"
 
 const pages = [
-	{ name: "Página Principal", href: "/" },
-	{ name: "Terraza de verano de Vera", href: "/cartelera-vera"},
-	//{ name: "Cine Tenis de Garrucha", href: "/cartelera-garrucha" },
+	{ name: "Inicio", href: "/" },
+	{ name: "Terraza de Vera", href: "/cartelera-vera"},
 	{ name: "Cine Regio", href: "/cartelera-regio"},
 ].map((page) => ({
 	...page,
-	active: Astro.url.pathname === page.href,
+	active: Astro.url.pathname === page.href || Astro.url.pathname === page.href + '/',
 }))
 ---
 
-<header class="mb-10 h-16 max-w-[100vw] lg:h-24">
-	<nav class="group flex h-full w-full items-center justify-between px-10 lg:justify-center">
+<header class="sticky top-0 z-50 h-16 max-w-[100vw] lg:h-20 bg-white border-b border-gray-100 shadow-sm">
+	<nav class="group flex h-full w-full items-center justify-between px-6 lg:justify-center lg:gap-1 max-w-5xl mx-auto">
+
+		<!-- Logo desktop -->
+		<a href="/" class="hidden lg:flex items-center mr-8 shrink-0" aria-label="Veracines – Página principal">
+			<img src="/img/veracines-logo.png" alt="Veracines" class="h-10 w-auto" width="120" height="43" loading="eager" decoding="async" />
+		</a>
+
 		{
 			pages.map(({ disabled, name, href, active, soonDate }, key) => (
-				<>
-					<a
-						href={href}
-						class:list={[
-							"nav-item relative hidden h-full select-none flex-col items-center justify-center gap-1 text-center text-xl uppercase  lg:flex lg:px-7 xl:px-10 text-nowrap",
-							{ "pointer-events-none": disabled },
-							{ "current-page text-primary": active },
-							{ "text-primary": !active },
-						]}
-						id={`nav-link-${key}`}
-					>
-						<span class="z-10">{name}</span>
-						{disabled ? (
-							<span class="absolute mt-10 -skew-x-6 text-xs text-primary">{soonDate}</span>
-						) : (
-							<div class="background absolute -z-10 h-full w-full" />
-						)}
-					</a>
-				</>
+				<a
+					href={href}
+					class:list={[
+						"nav-item relative hidden h-full select-none items-center justify-center px-5 xl:px-6 text-sm font-semibold uppercase tracking-wide lg:flex text-nowrap transition-colors duration-200",
+						{ "pointer-events-none opacity-50": disabled },
+						{ "text-primary": active },
+						{ "text-gray-500 hover:text-primary": !active },
+					]}
+					id={`nav-link-${key}`}
+					aria-current={active ? "page" : undefined}
+				>
+					<span class="relative z-10">{name}</span>
+					{active && <span class="nav-active-pill" aria-hidden="true"></span>}
+					{disabled && <span class="absolute mt-8 text-xs text-primary">{soonDate}</span>}
+				</a>
 			))
 		}
-		<a href="/" class="block lg:hidden"><DrawnXLogo class:list={"w-10"} /></a>
+
+		<!-- Logo móvil -->
+		<a href="/" class="block lg:hidden" aria-label="Veracines – Página principal">
+			<DrawnXLogo class:list={"w-9"} />
+		</a>
+
 		<HamburgerButton class:list={"block lg:hidden"} id="menuButton" />
+
+		<!-- Menú móvil: panel deslizante desde la derecha -->
 		<div
-			class="fixed inset-0 z-[888] flex w-screen flex-col items-center overflow-x-auto bg-white px-10 lg:hidden"
+			class="fixed inset-0 z-[888] lg:hidden"
 			id={MOBILE_MENU_CONTENT_ID}
 		>
-			<aside class="flex min-h-16 w-full items-center justify-between">
-				<span class="text-xl font-semibold uppercase text-primary">Menú</span>
-				<HamburgerButton id="innerMenuButton" />
-			</aside>
-			<div class="flex min-h-2 w-full items-center">
-				<hr
-					class="h-[2px] w-full border-t-0"
-					style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
-				/>
-			</div>
-			<nav class="flex w-full flex-col items-center gap-5">
-				<hr
-					class="h-[2px] w-full border-t-0"
-					style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
-				/>
-				{
-					pages.map(({ disabled, name, href, active, soonDate }, key) => (
-						<>
+			<!-- Backdrop oscuro -->
+			<div class="menu-backdrop absolute inset-0 bg-black/40" id="menuBackdrop"></div>
+
+			<!-- Panel -->
+			<div class="menu-panel absolute right-0 top-0 bottom-0 w-[80vw] max-w-xs bg-white flex flex-col shadow-2xl">
+
+				<!-- Cabecera -->
+				<div class="flex h-16 items-center justify-between px-5 border-b border-gray-100">
+					<img src="/img/veracines-logo.png" alt="Veracines" class="h-8 w-auto" width="100" height="36" loading="lazy" />
+					<HamburgerButton id="innerMenuButton" />
+				</div>
+
+				<!-- Links con stagger -->
+				<nav class="flex flex-col flex-1 overflow-y-auto py-4 px-3 gap-1" aria-label="Menú principal">
+					{
+						pages.map(({ disabled, name, href, active }, key) => (
 							<a
 								href={href}
 								class:list={[
-									"relative flex flex-col items-center justify-center gap-2 text-xl capitalize",
-									{ "pointer-events-none": disabled },
-									{ "current-page-mob": active },
+									"menu-link flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-semibold transition-colors duration-150",
+									`menu-link-${key}`,
+									{ "pointer-events-none opacity-40": disabled },
+									{ "bg-primary text-white shadow-sm": active },
+									{ "text-gray-600 hover:bg-gray-50 hover:text-primary": !active },
 								]}
+								style={`--delay: ${key * 60}ms`}
 								id={`navmob-link-${key}`}
+								aria-current={active ? "page" : undefined}
 							>
-								<span class="z-10 uppercase text-primary">{name}</span>
-								{disabled && <span class="text-primary">{soonDate}</span>}
+								{name}
+								{active && (
+									<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+									</svg>
+								)}
 							</a>
-							<hr
-								class="h-[2px] w-full border-t-0"
-								style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
-							/>
-						</>
-					))
-				}
-				<nav class="my-4 flex flex-col gap-10">
-					<FooterContent />
-					<SocialButtons class="flex items-center justify-center" />
+						))
+					}
 				</nav>
-			</nav>
+
+				<!-- Footer del panel -->
+				<div class="border-t border-gray-100 p-5 flex flex-col gap-4">
+					<SocialButtons class="flex items-center gap-3" />
+					<FooterContent />
+				</div>
+			</div>
 		</div>
 	</nav>
-	<div class="relative flex h-2 w-full flex-col items-center">
-		<div class=" absolute w-full items-center justify-between">
-			<div
-				class="h-[2px] w-full rounded-l-[30%] border-t-0"
-				style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)"
-			>
-		</div>
+
+	<!-- Línea decorativa -->
+	<div class="absolute bottom-0 left-0 right-0 h-[2px]"
+		style="background:linear-gradient(to right, transparent 2%, var(--color-primary) 15%, var(--color-primary) 83%, transparent 98%)">
 	</div>
 </header>
 
 <style>
-	.nav-item .background {
+	/* Desktop: pill activa */
+	.nav-active-pill {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
+		inset-x: 12px;
+		bottom: 0;
+		height: 3px;
+		background: var(--color-primary);
+		border-radius: 3px 3px 0 0;
+		view-transition-name: nav-underline;
+	}
+
+	.nav-item:not([aria-current])::after {
+		content: '';
+		position: absolute;
+		inset: 8px 6px;
+		border-radius: 8px;
+		background: color-mix(in srgb, var(--color-primary) 8%, transparent);
 		opacity: 0;
-		background: linear-gradient(to bottom, rgba(221, 221, 221, 20%) 0%, transparent 100%);
-		transition: opacity 0.3s;
+		transition: opacity 0.18s ease;
 	}
+	.nav-item:not([aria-current]):hover::after { opacity: 1; }
 
-	.nav-item:hover .background,
-	.nav-item:focus .background {
-		opacity: 1;
-	}
-
-	.focus-within-ring {
-		@apply focus-within:ring-1 focus-within:ring-white focus-within:ring-offset-1;
-	}
-
+	/* Menú móvil: backdrop + panel */
 	#menuMobileContent {
 		opacity: 0;
 		pointer-events: none;
-		transition: opacity 0.3s;
-		scrollbar-gutter: stable;
+		transition: opacity 0.25s ease;
 	}
-
 	#menuMobileContent.open {
-		opacity: 1 !important;
+		opacity: 1;
 		pointer-events: all;
 	}
 
-	.primary-drop-shadow {
-		filter: drop-shadow(0px 0px 25px rgba(var(--color-primary-rgb), 0.25));
+	.menu-panel {
+		transform: translateX(100%);
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	#menuMobileContent.open .menu-panel {
+		transform: translateX(0);
 	}
 
-	.current-page {
+	/* Stagger de los links al abrir */
+	.menu-link {
+		opacity: 0;
+		transform: translateX(16px);
+		transition: opacity 0.25s ease var(--delay, 0ms),
+		            transform 0.25s ease var(--delay, 0ms),
+		            background-color 0.15s ease,
+		            color 0.15s ease;
 	}
-	.current-page:before {
-		view-transition-name: nav-item;
-		background: var(--color-primary);
-		width: 100%;
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 8px;
-	}
-
-	.current-page-mob:before {
-		background: var(--color-primary);
-		width: 10px;
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: -20px;
-		height: 10px;
-		border-radius: 100%;
-		transform: translateY(-50%);
+	#menuMobileContent.open .menu-link {
+		opacity: 1;
+		transform: translateX(0);
 	}
 
-	.gridBottomBarContainer {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 4px;
-	}
-
-	@media (min-width: 1024px) {
-		.gridBottomBarContainer {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
 	@media (prefers-reduced-motion) {
-		.nav-item .background {
-			transition: opacity 0s;
-		}
-
-		.nav-item:hover .background,
-		.nav-item:focus .background {
-			opacity: 1;
-		}
-
-		#menuMobileContent {
-			transition: opacity 0s;
-		}
+		#menuMobileContent, .menu-panel, .menu-link { transition: none; }
 	}
 </style>
 
@@ -195,7 +178,6 @@ const pages = [
 		menuMobileContent?.classList.toggle("open")
 		nav?.classList.toggle("open")
 		document.body.classList.toggle("overflow-hidden")
-		document.body.classList.toggle("lg:overflow-auto")
 	}
 
 	document.addEventListener("astro:page-load", () => {
@@ -203,14 +185,14 @@ const pages = [
 		const menuButton = $("#menuButton")
 		const innerMenuButton = $("#innerMenuButton")
 		const menuMobileContext = $("#menuMobileContent")
+		const backdrop = $("#menuBackdrop")
 
 		menuButton?.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
-		innerMenuButton?.addEventListener("hamburgerButtonClicked", () =>
-			toggleMenu(nav, menuMobileContext)
-		)
+		innerMenuButton?.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
+		backdrop?.addEventListener("click", () => {
+			if (menuMobileContext?.classList.contains("open")) toggleMenu(nav, menuMobileContext)
+		})
 
-		if (menuMobileContext?.classList.contains("open")) {
-			toggleMenu(nav, menuMobileContext)
-		}
+		if (menuMobileContext?.classList.contains("open")) toggleMenu(nav, menuMobileContext)
 	})
 </script>

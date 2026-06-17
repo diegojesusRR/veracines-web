@@ -1,23 +1,66 @@
 ---
 import type { HTMLTag, Polymorphic } from "astro/types"
 
-type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag, color: string }>
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag, color?: string }>
 
-const { as: Tag, class: className , color: color, ...props } = Astro.props
+const { as: Tag, class: className, color = 'primary', ...props } = Astro.props
 ---
 
 <Tag
-	class:list={[
-		`inline-block rounded-lg skew-x-[-21deg] cursor-pointer border-2 border-${color??'primary'} text-center`,
-		`font-semibold uppercase text-${color??'primary'}`,
-		`px-5 py-2.5`,
-		`before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-${color??'primary'}`,
-		`hover:scale-110 hover:before:scale-x-100`,
-		`aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111]`,
-		`ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out`,
-		className,
-	]}
-	{...props}
+    class:list={[
+        'action-btn',
+        'aria-disabled:pointer-events-none aria-disabled:opacity-40',
+        className,
+    ]}
+    style={`--btn-color: var(--color-${color})`}
+    {...props}
 >
-	<span class=`inline-block skew-x-[21deg] text-xs`><slot /></span>
+    <span class="action-btn__label"><slot /></span>
 </Tag>
+
+<style>
+    .action-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 9999px;
+        border: 1.5px solid var(--btn-color);
+        color: var(--btn-color);
+        padding: 0.5rem 1.5rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+        background: transparent;
+        text-decoration: none;
+    }
+
+    .action-btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--btn-color);
+        transform: translateX(-101%);
+        transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 0;
+    }
+
+    .action-btn:hover {
+        color: white !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px color-mix(in srgb, var(--btn-color) 35%, transparent);
+    }
+
+    .action-btn:hover::before {
+        transform: translateX(0);
+    }
+
+    .action-btn__label {
+        position: relative;
+        z-index: 1;
+    }
+</style>

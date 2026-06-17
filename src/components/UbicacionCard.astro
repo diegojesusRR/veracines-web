@@ -1,47 +1,85 @@
 ---
 import Action from "./Action.astro";
-const {cine} = Astro.props;
+const { cine } = Astro.props;
 ---
-<div class=`flex flex-col sm:flex-row p-4 m-2 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-${cine.color} shadow-xl transition-transform md:hover:scale-105`>
-    <div class="flex flex-col justify-center items-center p-6 sm:w-2/3">
-        <h4 class={`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`}>
-            {cine.nombre}
-        </h4>
-        {/*
-            cine.url == 'regio' &&
-                <span class="block text-xs text-yellow-800 bg-yellow-200 rounded px-2 py-1 mb-2 font-semibold shadow-md border border-yellow-400 animate-pulse">
-                    ¡Ahora también en Verano!
-                </span>
-        */}
-        <p class={`text-center text-${cine.color} mb-4 text-base font-medium`}>
-            {cine.localizacion.descripcion}
-        </p>
-        <Action
-                class=`w-full md:w-3/4 text-base md:text-xs bg-${cine.color} text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`
-                color="white"
-                as="a"
-                aria-disabled="false"
-                href={`/cartelera-${cine.url}/`}
-                aria-label={`Enlace a la cartelera de ${cine.nombre}`}
-        >
-            🎬 Consultar cartelera
-        </Action>
-    </div>
-    <div class="flex flex-col items-center justify-center">
-        <div class=`border-4 border-${cine.color} rounded-xl overflow-hidden shadow-lg m-auto`>
-            <iframe
-                    class="align-middle w-full rounded-lg"
-                    src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
-                    width="400"
-                    height="250"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+<div
+    class="ubicacion-card rounded-2xl overflow-hidden shadow-lg bg-white transition-shadow hover:shadow-2xl"
+    style={`--cine-color: var(--color-${cine.color})`}
+>
+    <!-- Franja superior de color -->
+    <div class="ubicacion-header h-2 w-full"></div>
+
+    <div class="flex flex-col lg:flex-row">
+
+        <!-- Info -->
+        <div class="flex flex-col gap-4 p-6 lg:w-1/2">
+
+            <!-- Título + botón en la misma fila en lg -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                    <h4 class="ubicacion-title text-xl font-extrabold leading-tight mb-1">
+                        {cine.nombre}
+                    </h4>
+                </div>
+                <Action
+                    class="shrink-0"
+                    color={cine.color}
+                    as="a"
+                    href={`/cartelera-${cine.url}/`}
+                    aria-label={`Enlace a la cartelera de ${cine.nombre}`}
+                >
+                    🎬 Ver cartelera
+                </Action>
+            </div>
+
+            <p class="text-gray-600 text-sm leading-relaxed">
+                {cine.localizacion.descripcion}
+            </p>
+
+            <!-- Mapa -->
+            <div class="lg:w-1/2 min-h-[220px] overflow-hidden">
+                <iframe
+                        class="w-full h-full min-h-[220px]"
+                        src={`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`}
+                        width="600"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title={`Mapa de ${cine.nombre}`}
+                ></iframe>
+            </div>
+
+            <!-- Detalles rápidos -->
+            <ul class="flex flex-col gap-2 text-sm mt-auto">
+                <li class="flex items-start gap-2 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    <span>{cine.localizacion.direccion}</span>
+                </li>
+                {cine.horaFijaProyeccion && (
+                    <li class="flex items-center gap-2 text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Proyecciones a las <strong>{cine.horaFijaProyeccion}h</strong></span>
+                    </li>
+                )}
+                <li class="flex items-center gap-2 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                    </svg>
+                    <span>Venta online: <strong>{cine.ventaOnline ? 'Disponible' : 'No disponible'}</strong></span>
+                </li>
+            </ul>
         </div>
-        <p class={`text-center underline text-${cine.color} text-xs font-bold w-auto p-2 mt-2 bg-white bg-opacity-60 rounded`}>
-            📍 {cine.localizacion.direccion}
-        </p>
     </div>
 </div>
+
+<style>
+    .ubicacion-header { background-color: var(--cine-color); }
+    .ubicacion-title  { color: var(--cine-color); }
+</style>

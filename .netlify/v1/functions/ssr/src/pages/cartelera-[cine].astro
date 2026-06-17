@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import { CINES } from "../consts/cines";
+import { Metadata } from "../consts/metadata";
+import ProyeccionesCine from "../components/proyeccionesCine.astro";
+import Action from "/src/components/Action.astro";
+
+const cine = CINES.find(cine => cine.url === Astro.params.cine);
+
+if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 404 });
+---
+
+<Layout
+        description={Metadata[`cartelera-${cine.url}`]?.description}
+        title={Metadata[`cartelera-${cine.url}`]?.title}
+        canonical={Metadata[`cartelera-${cine.url}`]?.canonical}
+>
+    <main class="max-w-4xl mx-auto px-4 py-6" style={`--cine-color: var(--color-${cine.color})`}>
+
+        <!-- Miga de pan -->
+        <nav class="mb-5" aria-label="Miga de pan">
+            <a href="/" class="inline-flex items-center gap-1 text-sm text-primary hover:underline font-semibold transition-opacity hover:opacity-75">
+                ← Inicio
+            </a>
+            <span class="text-gray-400 mx-2">/</span>
+            <span class="text-sm text-gray-500 truncate max-w-[200px] inline-block align-middle">{cine.nombre}</span>
+        </nav>
+
+        <section class="mb-8">
+            <h1 class="cartelera-title text-3xl sm:text-4xl font-extrabold text-center mb-2 drop-shadow">
+                Cartelera de {cine.nombre}
+            </h1>
+            <h2 class="cartelera-subtitle text-center text-lg sm:text-xl mb-4">
+                Próximas películas en {cine.nombre}. Consulta nuestra programación.
+            </h2>
+
+            {cine.ventaOnline ? (
+                    <Action
+                            as="a"
+                            class="block w-full mx-auto text-center my-2"
+                            aria-label={`Enlace a todos los tickets disponibles de ${cine.nombre}`}
+                            color={cine.color}
+                            href="https://kinetike.com:83/views/init.aspx?cine=REGIO"
+                    >
+                        🎟️ Comprar entradas online
+                    </Action>
+            ) : (
+                    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded mb-4 text-center">
+                        <p class="font-semibold">Entradas solo en taquilla</p>
+                        <p class="text-sm">
+                            {cine.nombre} cuenta con asientos no numerados, por lo que no es posible realizar venta online.<br />
+                            La venta de entradas se realizará exclusivamente en taquilla, el mismo día de la proyección, hasta completar aforo.<br />
+                            <span class="font-bold">¡Te recomendamos venir con antelación para asegurarte tu plaza!</span>
+                        </p>
+                    </div>
+            )}
+
+            {cine.horaFijaProyeccion && (
+                    <div class="flex items-center justify-center mb-4">
+                        <span class="hora-badge inline-block text-white text-base sm:text-lg rounded-lg px-5 py-3 shadow">
+                            🕒 Todas las funciones de hoy empiezan a las <b>{cine.horaFijaProyeccion}</b>. La taquilla abre 45 minutos antes de la primera proyección.
+                        </span>
+                    </div>
+            )}
+        </section>
+
+        <section>
+            <ProyeccionesCine cine={cine} />
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .cartelera-title    { color: var(--cine-color); }
+    .cartelera-subtitle { color: var(--cine-color); }
+    .hora-badge         { background-color: var(--cine-color); }
+</style>

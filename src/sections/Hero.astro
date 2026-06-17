@@ -1,17 +1,70 @@
-<section class="flex flex-col items-center gap-3">
-	<h1 class="text-3xl font-extrabold text-primary text-center mb-2 sr-only">
-		Veracines: Cines de verano en Vera y Garrucha
-	</h1>
-	<img
-		src="/img/veracines-logo.png"
-		alt="Logo de Veracines, cines de verano en Vera y Garrucha"
-		class="w-40 lg:w-56 mb-2"
-		width="224"
-		height="96"
-		loading="eager"
-		decoding="async"
-	/>
-	<p class="text-center text-lg text-primary max-w-2xl mb-3">
-		Vive la magia del <strong>cine</strong> en Veracines, donde te ofrecemos los mejores <strong>estrenos</strong> y una cuidada selección de <strong>películas</strong> para todos los públicos. Disfruta de la experiencia única del <strong>cine de verano</strong> al <strong>aire libre</strong> en nuestras terrazas de Vera, con el mejor ambiente y todas las comodidades. Además, contamos con un completo <strong>servicio de bocatería</strong>, <strong>palomitas</strong> recién hechas y refrescos para que tu visita sea perfecta. Ven a Veracines y vive el cine como nunca, tanto en verano como durante todo el año en <strong>Cine Regio</strong>. ¡Te esperamos para compartir contigo la pasión por el cine!
-	</p>
+---
+import Action from "@/components/Action.astro";
+---
+
+<section class="flex flex-col items-center gap-6 py-4 text-center">
+
+    <img
+        src="/img/veracines-logo.png"
+        alt="Logo de Veracines"
+        class="w-36 lg:w-48"
+        width="192"
+        height="82"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+    />
+
+    <div class="space-y-3 max-w-xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-primary leading-tight">
+            Cine de verano en<br/>
+            <span class="text-secondary">Vera, Almería</span>
+        </h1>
+        <p class="text-gray-600 text-base leading-relaxed">
+            Dos salas, una pasión. Vive el mejor cine al <strong>aire libre</strong> en el
+            <strong>Cine Terraza de Vera</strong> cada verano, o disfruta de la cartelera
+            durante todo el año en el <strong>Cine Regio</strong>.
+            Estrenos, películas para toda la familia y el mejor ambiente en plena
+            provincia de Almería.
+        </p>
+    </div>
+
+    <!-- Pills de características -->
+    <ul class="flex flex-wrap justify-center gap-2 text-md font-semibold" aria-label="Características">
+        <li class="flex items-center gap-1.5 bg-primary/8 text-primary rounded-full px-3 py-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13l-.87.5M4.21 17.5l-.87.5M20.66 17.5l-.87-.5M4.21 6.5l-.87-.5M21 12h-1M4 12H3"/>
+            </svg>
+            Cine al aire libre
+        </li>
+        <li class="flex items-center gap-1.5 bg-secondary/8 text-secondary rounded-full px-3 py-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            Todo el año
+        </li>
+        <li class="flex items-center gap-1.5 bg-primary/8 text-primary rounded-full px-3 py-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+            </svg>
+            Para toda la familia
+        </li>
+        <li class="flex items-center gap-1.5 bg-secondary/8 text-secondary rounded-full px-3 py-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+            </svg>
+            Últimos estrenos
+        </li>
+    </ul>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row gap-3 mt-1">
+        <Action as="a" href="/cartelera-vera/" color="primary">
+            🌙 Cartelera Terraza Vera
+        </Action>
+        <Action as="a" href="/cartelera-regio/" color="secondary">
+            🎬 Cartelera Cine Regio
+        </Action>
+    </div>
+
 </section>

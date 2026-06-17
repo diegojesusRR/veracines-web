@@ -1,43 +1,77 @@
 ---
-
 import {CONTACTO} from "../consts/contacto";
 import Phone from "./icons/phone.astro";
 import Whatsapp from "./icons/whatsapp.astro";
 import Email from "./icons/email.astro";
+
+const tel = `+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}`;
+const wa  = `https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}`;
 ---
 
-<section>
-    <h3 class="text-xl text-primary text-center font-bold">Contacta con nosotros</h3>
-    <p class=`text-center text-lg text-primary mt-5`>Si necesitas mas información,  estaremos encantados de contestarte. Puedes ponerte en contacto con nosotros a través de nuestro teléfono <a href=`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` class="font-bold" target="_blank">{CONTACTO.telefono.numero}</a>, nuestro <a class="font-bold" href=`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank">WhatsApp</a> o a través de nuestro email en <a href=`mailto:${CONTACTO.email}` class="font-bold" target="_blank">{CONTACTO.email}</a>.</p>
+<section aria-labelledby="contacto-titulo">
+    <div class="text-center mb-6 space-y-2">
+        <h2 id="contacto-titulo" class="text-2xl font-extrabold text-primary">
+            ¿Tienes alguna pregunta?
+        </h2>
+        <p class="text-gray-500 text-sm max-w-sm mx-auto">
+            Estamos encantados de ayudarte. Elige el canal que prefieras.
+        </p>
+    </div>
 
-    <div class="grid grid-cols-6 gap-6 mt-5 ">
-        <div class="flex flex-col items-center gap-4 text-center col-span-2">
-            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100">
-                <Phone class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Teléfono</h3>
-                </div>
-                <a class="absolute w-full h-full" href=`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank"></a>
-            </div>
-        </div>
-        <div class="flex flex-col items-center gap-4 text-center col-span-2">
-            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100">
-                <Whatsapp class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Whatsapp</h3>
-                </div>
-                <a class="absolute w-full h-full" href=`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(' ', '')}` target="_blank"></a>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
+        <a
+            href={`tel:${tel}`}
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"
+            aria-label={`Llamar al ${CONTACTO.telefono.numero}`}
+        >
+            <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110">
+                <Phone class="w-8 h-8" />
             </div>
-        </div>
-        <div class="flex flex-col items-center gap-4 text-center col-span-2">
-            <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100">
-                <Email class="h-12 w-12 text-primary" />
-                <div class="grid gap-2">
-                    <h3 class="text-xl text-primary font-semibold">Email</h3>
-                </div>
-                <a class="absolute w-full h-full" href=`mailto:${CONTACTO.email}` target="_blank"></a>
+            <div class="min-w-0">
+                <p class="text-sm font-bold text-gray-700">Teléfono</p>
+                <p class="text-xs text-gray-400 truncate">{CONTACTO.telefono.numero}</p>
             </div>
-        </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
+
+        <a
+            href={wa}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-green-300"
+            aria-label="Contactar por WhatsApp"
+        >
+            <div class="contact-icon text-[#25D366] shrink-0 transition-transform duration-200 group-hover:scale-110">
+                <Whatsapp class="w-8 h-8" />
+            </div>
+            <div class="min-w-0">
+                <p class="text-sm font-bold text-gray-700">WhatsApp</p>
+                <p class="text-xs text-gray-400">{CONTACTO.telefono.numero}</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-green-400 ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
+
+        <a
+            href={`mailto:${CONTACTO.email}`}
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"
+            aria-label={`Enviar email a ${CONTACTO.email}`}
+        >
+            <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110">
+                <Email class="w-8 h-8" />
+            </div>
+            <div class="min-w-0">
+                <p class="text-sm font-bold text-gray-700">Email</p>
+                <p class="text-xs text-gray-400 truncate">{CONTACTO.email}</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
+
     </div>
 </section>
