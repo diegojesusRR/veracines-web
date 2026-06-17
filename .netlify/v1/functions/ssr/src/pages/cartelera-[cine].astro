@@ -1,0 +1,95 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import { CINES } from "../consts/cines";
+import { Metadata } from "../consts/metadata";
+import ProyeccionesCine from "../components/proyeccionesCine.astro";
+import Action from "/src/components/Action.astro";
+
+const cine = CINES.find(cine => cine.url === Astro.params.cine);
+
+if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 404 });
+---
+
+<Layout
+        description={Metadata[`cartelera-${cine.url}`]?.description}
+        title={Metadata[`cartelera-${cine.url}`]?.title}
+        canonical={Metadata[`cartelera-${cine.url}`]?.canonical}
+>
+    <main class="max-w-4xl mx-auto px-4 py-6" style={`--cine-color: var(--color-${cine.color})`}>
+
+        <!-- Miga de pan -->
+        <nav class="mb-5" aria-label="Miga de pan">
+            <a href="/" class="inline-flex items-center gap-1 text-sm text-primary hover:underline font-semibold transition-opacity hover:opacity-75">
+                ← Inicio
+            </a>
+            <span class="text-gray-400 mx-2">/</span>
+            <span class="text-sm text-gray-500 truncate max-w-[200px] inline-block align-middle">{cine.nombre}</span>
+        </nav>
+
+        <section class="mb-8">
+            <h1 class="cartelera-title text-3xl sm:text-4xl font-extrabold text-center mb-2 drop-shadow">
+                Cartelera de {cine.nombre}
+            </h1>
+            <h2 class="cartelera-subtitle text-center text-lg sm:text-xl mb-4">
+                Próximas películas en {cine.nombre}. Consulta nuestra programación.
+            </h2>
+
+            {cine.ventaOnline ? (
+                <div class="flex flex-col sm:flex-row items-center gap-3 rounded-2xl border border-green-200 bg-green-50 px-5 py-4 mb-4">
+                    <div class="flex items-center gap-3 flex-1">
+                        <span class="text-2xl">🎟️</span>
+                        <div>
+                            <p class="font-bold text-green-800 text-lg">Venta de entradas online disponible</p>
+                            <p class="text-green-700 text-md">Compra tu entrada con antelación y asegura tu plaza.</p>
+                        </div>
+                    </div>
+                    <Action
+                        as="a"
+                        class="shrink-0 w-full sm:w-auto text-center"
+                        aria-label={`Comprar entradas online para ${cine.nombre}`}
+                        color={cine.color}
+                        href="https://kinetike.com:83/views/init.aspx?cine=REGIO"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Comprar entradas
+                    </Action>
+                </div>
+            ) : (
+                <div class="flex items-start gap-3 rounded-2xl border border-yellow-200 bg-yellow-50 px-5 py-4 mb-4">
+                    <span class="text-xl mt-0.5">🎫</span>
+                    <div>
+                        <p class="font-bold text-yellow-800 text-lg mb-1">Venta exclusiva en taquilla</p>
+                        <p class="text-yellow-700 text-md leading-relaxed">
+                            {cine.nombre} dispone de asientos no numerados y no dispone de venta online. La taquilla abre el mismo día de la proyección.
+                            <strong class="block mt-1">¡Te recomendamos llegar con antelación para asegurar tu plaza!</strong>
+                        </p>
+                    </div>
+                </div>
+            )}
+
+            {cine.horaFijaProyeccion && (
+                <div class="flex items-center gap-3 rounded-2xl hora-badge px-5 py-4 mb-4">
+                    <span class="text-2xl">🕒</span>
+                    <div>
+                        <p class="text-white font-bold text-lg">Hora de proyección fija</p>
+                        <p class="text-white/90 text-md">
+                            Todas las funciones empiezan a las <strong>{cine.horaFijaProyeccion}h</strong>. La taquilla abre 45 minutos antes.
+                        </p>
+                    </div>
+                </div>
+            )}
+        </section>
+
+        <section>
+            <ProyeccionesCine cine={cine} />
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .cartelera-title    { color: var(--cine-color); }
+    .cartelera-subtitle { color: var(--cine-color); }
+    .hora-badge         { background-color: var(--cine-color); }
+</style>
