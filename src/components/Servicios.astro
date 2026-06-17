@@ -7,31 +7,46 @@ import Projector from '../components/icons/projector.astro';
 import {CINES} from "../consts/cines";
 import Servicio from "./Servicio.astro";
 import Climatizacion from "./icons/climatizacion.astro";
+
+const vera  = CINES.find(x => x.url === 'vera');
+const regio = CINES.find(x => x.url === 'regio');
 ---
 
-<section class="w-full text-center">
-    <h3 class="text-2xl text-primary text-center font-extrabold mb-2">Nuestros servicios</h3>
-    <p class="text-center text-lg text-primary mb-6">
-        Además de una buena película al aire libre, disponemos de servicios como:
-    </p>
-    <div class="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-6 mt-5 ">
-        <Servicio label="Bocadillos y Hamburguesas" >
-            <Burguer class="h-12 w-12 text-primary"/>
+<section class="w-full" aria-labelledby="servicios-titulo">
+    <div class="text-center mb-6 space-y-2">
+        <h2 id="servicios-titulo" class="text-2xl font-extrabold text-primary">
+            Todo lo que necesitas
+        </h2>
+        <p class="text-gray-500 text-sm max-w-md mx-auto">
+            Más que una película — bocatería, palomitas, helados y todo el confort
+            para que solo te preocupes de disfrutar.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+        <Servicio label="Proyector 2K">
+            <Projector />
         </Servicio>
-        <Servicio label="Palomitas" >
-            <Popcorn class="h-12 w-12 text-primary"/>
+        <Servicio label="Palomitas">
+            <Popcorn />
         </Servicio>
         <Servicio label="Helados">
-            <Icecream class="h-12 w-12 text-primary"/>
+            <Icecream />
         </Servicio>
-        <Servicio label="Proyector 2K">
-            <Projector class="h-12 w-12 text-primary" />
+        <Servicio label="Bocadillos y Hamburguesas" aclaracion={`Solo en ${vera?.nombre}`}>
+            <Burguer />
         </Servicio>
-        <Servicio label="Parking Gratuito" aclaracion=`Solo disponible en ${CINES.find(x => x.url==='vera').nombre}` >
-            <Parking class="h-12 w-12 text-primary" />
+        <Servicio
+            label="Parking Gratuito"
+            aclaracion={`Solo en ${vera?.nombre}`}
+        >
+            <Parking />
         </Servicio>
-        <Servicio label="Climatización" aclaracion=`Solo disponible en ${CINES.find(x => x.url==='regio').nombre}` >
-            <Climatizacion class="h-12 w-12 text-primary" />
+        <Servicio
+            label="Climatización"
+            aclaracion={`Solo en ${regio?.nombre}`}
+        >
+            <Climatizacion />
         </Servicio>
     </div>
 </section>

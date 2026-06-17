@@ -1,31 +1,74 @@
 ---
 import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
-import {GrupoProyeccion} from "../types/Proyeccion";
+import type {GrupoProyeccion} from "../types/Proyeccion";
 
 const { pelicula, cine } = Astro.props;
 
-const DIASSEMANA = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+const DIASSEMANA = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
 
-const grupoProyeccion: GrupoProyeccion[] = GRUPOSPROYECCIONES.filter(grupo => grupo.cine.url == cine.url && pelicula.id === grupo.pelicula.id && grupo.proyecciones[0].fecha >= new Date());
-const proyecciones = grupoProyeccion[0]?.proyecciones;
-const diasProyeccion = [...new Set(proyecciones?.map(proyeccion => `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}`))].sort();
+const grupoProyeccion: GrupoProyeccion[] = GRUPOSPROYECCIONES.filter(
+    grupo => grupo.cine.url == cine.url &&
+             pelicula.id === grupo.pelicula.id &&
+             grupo.proyecciones[0].fecha >= new Date()
+);
 
+const proyecciones = grupoProyeccion[0]?.proyecciones ?? [];
+const diasProyeccion = [...new Set(proyecciones.map(p =>
+    `${p.fecha.getFullYear()}${p.fecha.getMonth().toString().padStart(2,'0')}${p.fecha.getDate().toString().padStart(2,'0')}`
+))].sort();
 ---
 
-{
-    proyecciones && proyecciones.length > 0 && <div class="flex flex-col align-left text-center mb-5 justify-center">
-        <h3 class=`flex-1 text-${cine.color} font-bold underline`>Proyecciones {cine.corto}</h3>
-        <ul class=`flex-2 text-${cine.color} list-none list-inside`>
-            {diasProyeccion.sort().map(dia => {
-                const proyeccionesDia = proyecciones.filter(proyeccion => `${proyeccion.fecha.getFullYear()}${proyeccion.fecha.getMonth()}${proyeccion.fecha.getDate()}` === dia);
-
-                const ultimaProyeccion = proyeccionesDia.length>1 && proyeccionesDia.pop();
-                const diaText = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
-                return (<li>
-                    <span>{diaText}</span>
-                    <span> - {proyeccionesDia.map(proyeccion => `${proyeccion.hora}h ${proyeccion.vose ? ' (VOSE)' : ''}`).join(', ')}{ultimaProyeccion && ` y ${ultimaProyeccion.hora}h ${ultimaProyeccion.vose ? ' (VOSE)' : ''}`}</span>
-                </li>)
-            })}
-        </ul>
+<div class="rounded-2xl border-2 bg-white bg-opacity-90 shadow-lg overflow-hidden cine-card" style={`--cine-color: var(--color-${cine.color})`}>
+    <div class="cine-card__header px-4 py-2.5 flex items-center justify-between gap-2">
+        <h3 class="text-white text-sm font-extrabold truncate">{cine.nombre}</h3>
+        <a
+            href={`/cartelera-${cine.url}`}
+            class="text-white/90 text-[11px] font-semibold whitespace-nowrap flex items-center gap-1 hover:text-white transition-colors"
+        >
+            Ver cartelera
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
     </div>
+
+    {
+        proyecciones.length === 0 ? (
+            <div class="p-4 text-center">
+                <p class="text-sm text-gray-600">Sin proyecciones disponibles en este cine.</p>
+            </div>
+        ) : (
+            <div class="p-3 grid grid-cols-2 gap-2">
+                {diasProyeccion.map(dia => {
+                    const proyeccionesDia = proyecciones.filter(p =>
+                        `${p.fecha.getFullYear()}${p.fecha.getMonth().toString().padStart(2,'0')}${p.fecha.getDate().toString().padStart(2,'0')}` === dia
+                    );
+                    const diaLabel = `${DIASSEMANA[proyeccionesDia[0].fecha.getDay()]} ${proyeccionesDia[0].fecha.getDate()}`;
+                    const horas = proyeccionesDia
+                        .map(p => `${p.hora}h${p.vose ? ' (VOSE)' : ''}`)
+                        .join(', ');
+
+                    return (
+                        <div class="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-center">
+                            <p class="cine-card__day text-xs font-extrabold">{diaLabel}</p>
+                            <p class="text-xs text-gray-700 mt-0.5 leading-relaxed">{horas}</p>
+                        </div>
+                    );
+                })}
+            </div>
+        )
     }
+</div>
+
+<style>
+    .cine-card {
+        border-color: var(--cine-color);
+    }
+    .cine-card__header {
+        background-color: var(--cine-color);
+    }
+    .cine-card__day {
+        color: var(--cine-color);
+    }
+</style>
+

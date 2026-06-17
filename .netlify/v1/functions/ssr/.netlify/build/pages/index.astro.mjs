@@ -1,17 +1,33 @@
 /* empty css                                       */
-import { g as createComponent, m as maybeRenderHead, r as renderTemplate, f as createAstro, i as addAttribute, j as renderComponent, s as spreadAttributes, k as renderSlot } from '../chunks/astro/server_DfvI8eY9.mjs';
+import { g as createComponent, m as maybeRenderHead, j as renderComponent, r as renderTemplate, f as createAstro, i as addAttribute, s as spreadAttributes, k as renderSlot, l as Fragment, u as unescapeHTML } from '../chunks/astro/server_DfvI8eY9.mjs';
 import 'kleur/colors';
-import { C as CINES, a as $$Layout } from '../chunks/Layout_DTZWNCO8.mjs';
+import { C as CINES, a as $$Layout } from '../chunks/Layout_4_2uclTh.mjs';
+import { $ as $$Action, M as Metadata } from '../chunks/metadata_Dz0VPo5a.mjs';
+/* empty css                                 */
 import 'clsx';
-import { $ as $$Action, M as Metadata } from '../chunks/metadata_B8p0RLx8.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col items-center gap-3"> <h1 class="text-3xl font-extrabold text-primary text-center mb-2 sr-only">
-Veracines: Cines de verano en Vera y Garrucha
-</h1> <img src="/img/veracines-logo.png" alt="Logo de Veracines, cines de verano en Vera y Garrucha" class="w-40 lg:w-56 mb-2" width="224" height="96" loading="eager" decoding="async"> <p class="text-center text-lg text-primary max-w-2xl mb-3">
-Vive la magia del <strong>cine</strong> en Veracines, donde te ofrecemos los mejores <strong>estrenos</strong> y una cuidada selección de <strong>películas</strong> para todos los públicos. Disfruta de la experiencia única del <strong>cine de verano</strong> al <strong>aire libre</strong> en nuestras terrazas de Vera, con el mejor ambiente y todas las comodidades. Además, contamos con un completo <strong>servicio de bocatería</strong>, <strong>palomitas</strong> recién hechas y refrescos para que tu visita sea perfecta. Ven a Veracines y vive el cine como nunca, tanto en verano como durante todo el año en <strong>Cine Regio</strong>. ¡Te esperamos para compartir contigo la pasión por el cine!
-</p> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col items-center gap-6 py-4 text-center"> <img src="/img/veracines-logo.png" alt="Logo de Veracines" class="w-36 lg:w-48" width="192" height="82" loading="eager" decoding="async" fetchpriority="high"> <div class="space-y-3 max-w-xl"> <h1 class="text-3xl sm:text-4xl font-extrabold text-primary leading-tight">
+Cine de verano en<br> <span class="text-secondary">Vera, Almería</span> </h1> <p class="text-gray-600 text-base leading-relaxed">
+Dos salas, una pasión. Vive el mejor cine al <strong>aire libre</strong> en el
+<strong>Cine Terraza de Vera</strong> cada verano, o disfruta de la cartelera
+            durante todo el año en el <strong>Cine Regio</strong>.
+            Estrenos, películas para toda la familia y el mejor ambiente en plena
+            provincia de Almería.
+</p> </div> <!-- Pills de características --> <ul class="flex flex-wrap justify-center gap-2 text-md font-semibold" aria-label="Características"> <li class="flex items-center gap-1.5 bg-primary/8 text-primary rounded-full px-3 py-1.5"> <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13l-.87.5M4.21 17.5l-.87.5M20.66 17.5l-.87-.5M4.21 6.5l-.87-.5M21 12h-1M4 12H3"></path> </svg>
+Cine al aire libre
+</li> <li class="flex items-center gap-1.5 bg-secondary/8 text-secondary rounded-full px-3 py-1.5"> <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path> </svg>
+Todo el año
+</li> <li class="flex items-center gap-1.5 bg-primary/8 text-primary rounded-full px-3 py-1.5"> <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"></path> </svg>
+Para toda la familia
+</li> <li class="flex items-center gap-1.5 bg-secondary/8 text-secondary rounded-full px-3 py-1.5"> <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path> </svg>
+Últimos estrenos
+</li> </ul> <!-- CTAs --> <div class="flex flex-col sm:flex-row gap-3 mt-1"> ${renderComponent($$result, "Action", $$Action, { "as": "a", "href": "/cartelera-vera/", "color": "primary" }, { "default": ($$result2) => renderTemplate`
+🌙 Cartelera Terraza Vera
+` })} ${renderComponent($$result, "Action", $$Action, { "as": "a", "href": "/cartelera-regio/", "color": "secondary" }, { "default": ($$result2) => renderTemplate`
+🎬 Cartelera Cine Regio
+` })} </div> </section>`;
 }, "/Users/diego.ramos/veracines-web/src/sections/Hero.astro", void 0);
 
 const $$Astro$a = createAstro("https://www.veracines.es");
@@ -19,19 +35,20 @@ const $$UbicacionCard = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$UbicacionCard;
   const { cine } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col sm:flex-row p-4 m-2 rounded-2xl bg-gradient-to-br from-white via-gray-100 to-gray-200 border-2 border-${cine.color} shadow-xl transition-transform md:hover:scale-105`, "class")}> <div class="flex flex-col justify-center items-center p-6 sm:w-2/3"> <h4${addAttribute(`text-2xl text-${cine.color} text-center font-extrabold underline mb-3 drop-shadow-md`, "class")}> ${cine.nombre} </h4>  <p${addAttribute(`text-center text-${cine.color} mb-4 text-base font-medium`, "class")}> ${cine.localizacion.descripcion} </p> ${renderComponent($$result, "Action", $$Action, { "class": `w-full md:w-3/4 text-base md:text-xs bg-${cine.color} text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition`, "color": "white", "as": "a", "aria-disabled": "false", "href": `/cartelera-${cine.url}/`, "aria-label": `Enlace a la cartelera de ${cine.nombre}` }, { "default": ($$result2) => renderTemplate`
-🎬 Consultar cartelera
-` })} </div> <div class="flex flex-col items-center justify-center"> <div${addAttribute(`border-4 border-${cine.color} rounded-xl overflow-hidden shadow-lg m-auto`, "class")}> <iframe class="align-middle w-full rounded-lg"${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")} width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> <p${addAttribute(`text-center underline text-${cine.color} text-xs font-bold w-auto p-2 mt-2 bg-white bg-opacity-60 rounded`, "class")}>
-📍 ${cine.localizacion.direccion} </p> </div> </div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="ubicacion-card rounded-2xl overflow-hidden shadow-lg bg-white transition-shadow hover:shadow-2xl"${addAttribute(`--cine-color: var(--color-${cine.color})`, "style")} data-astro-cid-ntj7ie3s> <!-- Franja superior de color --> <div class="ubicacion-header h-2 w-full" data-astro-cid-ntj7ie3s></div> <div class="flex flex-col lg:flex-row" data-astro-cid-ntj7ie3s> <!-- Info --> <div class="flex flex-col gap-4 p-6 lg:w-1/2" data-astro-cid-ntj7ie3s> <!-- Título + botón en la misma fila en lg --> <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3" data-astro-cid-ntj7ie3s> <div data-astro-cid-ntj7ie3s> <h4 class="ubicacion-title text-xl font-extrabold leading-tight mb-1" data-astro-cid-ntj7ie3s> ${cine.nombre} </h4> </div> ${renderComponent($$result, "Action", $$Action, { "class": "shrink-0", "color": cine.color, "as": "a", "href": `/cartelera-${cine.url}/`, "aria-label": `Enlace a la cartelera de ${cine.nombre}`, "data-astro-cid-ntj7ie3s": true }, { "default": ($$result2) => renderTemplate`
+🎬 Ver cartelera
+` })} </div> <p class="text-gray-600 text-sm leading-relaxed" data-astro-cid-ntj7ie3s> ${cine.localizacion.descripcion} </p> <!-- Detalles rápidos --> <ul class="flex flex-col gap-2 text-sm mt-auto" data-astro-cid-ntj7ie3s> <li class="flex items-start gap-2 text-gray-500" data-astro-cid-ntj7ie3s> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" data-astro-cid-ntj7ie3s> <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" data-astro-cid-ntj7ie3s></path> </svg> <span data-astro-cid-ntj7ie3s>${cine.localizacion.direccion}</span> </li> ${cine.horaFijaProyeccion && renderTemplate`<li class="flex items-center gap-2 text-gray-500" data-astro-cid-ntj7ie3s> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" data-astro-cid-ntj7ie3s> <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" data-astro-cid-ntj7ie3s></path> </svg> <span data-astro-cid-ntj7ie3s>Proyecciones a las <strong data-astro-cid-ntj7ie3s>${cine.horaFijaProyeccion}h</strong></span> </li>`} <li class="flex items-center gap-2 text-gray-500" data-astro-cid-ntj7ie3s> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" data-astro-cid-ntj7ie3s> <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" data-astro-cid-ntj7ie3s></path> </svg> <span data-astro-cid-ntj7ie3s>Venta online: <strong data-astro-cid-ntj7ie3s>${cine.ventaOnline ? "Disponible" : "No disponible"}</strong></span> </li> </ul> </div> <!-- Mapa --> <div class="lg:w-1/2 min-h-[220px] overflow-hidden" data-astro-cid-ntj7ie3s> <iframe class="w-full h-full min-h-[220px]"${addAttribute(`https://www.google.com/maps/embed?pb=${cine.localizacion.ubicacionKey}`, "src")} width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"${addAttribute(`Mapa de ${cine.nombre}`, "title")} data-astro-cid-ntj7ie3s></iframe> </div> </div> </div> `;
 }, "/Users/diego.ramos/veracines-web/src/components/UbicacionCard.astro", void 0);
 
 const $$Ubicaciones = createComponent(($$result, $$props, $$slots) => {
   const regio = CINES.find((cine) => cine.url === "regio");
   const vera = CINES.find((cine) => cine.url === "vera");
-  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3> ${renderTemplate`${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}
-        ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })}
-        <p class="text-center text-orange-700 font-extrabold text-lg bg-orange-100 border border-orange-400 rounded px-4 py-2 mt-4 shadow-md">
-⚠️ Cine sala Tenis de Garrucha ya no se encuentra disponible.<br> <span class="block text-base font-semibold">Sentimos las molestias.</span> </p>`} </section>`;
+  return renderTemplate`${maybeRenderHead()}<section id="ubicaciones" aria-labelledby="ubicaciones-titulo" class="flex flex-col gap-6"> <div class="text-center space-y-2"> <h2 id="ubicaciones-titulo" class="text-2xl font-extrabold text-primary">
+Cines en Vera, Almería
+</h2> <p class="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">
+Disfruta del mejor cine en Vera. Dos salas únicas con la mejor cartelera de películas
+            para toda la familia en plena provincia de Almería.
+</p> </div> ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": vera })} ${renderComponent($$result, "UbicacionCard", $$UbicacionCard, { "cine": regio })}  </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/ubicaciones.astro", void 0);
 
 const CONTACTO = {
@@ -67,7 +84,13 @@ const $$Email = createComponent(($$result, $$props, $$slots) => {
 }, "/Users/diego.ramos/veracines-web/src/components/icons/email.astro", void 0);
 
 const $$Contacto = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<section> <h3 class="text-xl text-primary text-center font-bold">Contacta con nosotros</h3> <p${addAttribute(`text-center text-lg text-primary mt-5`, "class")}>Si necesitas mas información,  estaremos encantados de contestarte. Puedes ponerte en contacto con nosotros a través de nuestro teléfono <a${addAttribute(`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`, "href")} class="font-bold" target="_blank">${CONTACTO.telefono.numero}</a>, nuestro <a class="font-bold"${addAttribute(`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`, "href")} target="_blank">WhatsApp</a> o a través de nuestro email en <a${addAttribute(`mailto:${CONTACTO.email}`, "href")} class="font-bold" target="_blank">${CONTACTO.email}</a>.</p> <div class="grid grid-cols-6 gap-6 mt-5 "> <div class="flex flex-col items-center gap-4 text-center col-span-2"> <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "Phone", $$Phone, { "class": "h-12 w-12 text-primary" })} <div class="grid gap-2"> <h3 class="text-xl text-primary font-semibold">Teléfono</h3> </div> <a class="absolute w-full h-full"${addAttribute(`tel:+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`, "href")} target="_blank"></a> </div> </div> <div class="flex flex-col items-center gap-4 text-center col-span-2"> <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "Whatsapp", $$Whatsapp, { "class": "h-12 w-12 text-primary" })} <div class="grid gap-2"> <h3 class="text-xl text-primary font-semibold">Whatsapp</h3> </div> <a class="absolute w-full h-full"${addAttribute(`https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`, "href")} target="_blank"></a> </div> </div> <div class="flex flex-col items-center gap-4 text-center col-span-2"> <div class="relative rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-32 w-full any-hover:scale-110 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderComponent($$result, "Email", $$Email, { "class": "h-12 w-12 text-primary" })} <div class="grid gap-2"> <h3 class="text-xl text-primary font-semibold">Email</h3> </div> <a class="absolute w-full h-full"${addAttribute(`mailto:${CONTACTO.email}`, "href")} target="_blank"></a> </div> </div> </div> </section>`;
+  const tel = `+${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`;
+  const wa = `https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numero.replaceAll(" ", "")}`;
+  return renderTemplate`${maybeRenderHead()}<section aria-labelledby="contacto-titulo"> <div class="text-center mb-6 space-y-2"> <h2 id="contacto-titulo" class="text-2xl font-extrabold text-primary">
+¿Tienes alguna pregunta?
+</h2> <p class="text-gray-500 text-sm max-w-sm mx-auto">
+Estamos encantados de ayudarte. Elige el canal que prefieras.
+</p> </div> <div class="grid grid-cols-1 sm:grid-cols-3 gap-3"> <a${addAttribute(`tel:${tel}`, "href")} class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"${addAttribute(`Llamar al ${CONTACTO.telefono.numero}`, "aria-label")}> <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110"> ${renderComponent($$result, "Phone", $$Phone, { "class": "w-8 h-8" })} </div> <div class="min-w-0"> <p class="text-sm font-bold text-gray-700">Teléfono</p> <p class="text-xs text-gray-400 truncate">${CONTACTO.telefono.numero}</p> </div> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path> </svg> </a> <a${addAttribute(wa, "href")} target="_blank" rel="noopener noreferrer" class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-green-300" aria-label="Contactar por WhatsApp"> <div class="contact-icon text-[#25D366] shrink-0 transition-transform duration-200 group-hover:scale-110"> ${renderComponent($$result, "Whatsapp", $$Whatsapp, { "class": "w-8 h-8" })} </div> <div class="min-w-0"> <p class="text-sm font-bold text-gray-700">WhatsApp</p> <p class="text-xs text-gray-400">${CONTACTO.telefono.numero}</p> </div> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-green-400 ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path> </svg> </a> <a${addAttribute(`mailto:${CONTACTO.email}`, "href")} class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"${addAttribute(`Enviar email a ${CONTACTO.email}`, "aria-label")}> <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110"> ${renderComponent($$result, "Email", $$Email, { "class": "w-8 h-8" })} </div> <div class="min-w-0"> <p class="text-sm font-bold text-gray-700">Email</p> <p class="text-xs text-gray-400 truncate">${CONTACTO.email}</p> </div> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path> </svg> </a> </div> </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/contacto.astro", void 0);
 
 const $$Astro$6 = createAstro("https://www.veracines.es");
@@ -114,8 +137,10 @@ const $$Astro$1 = createAstro("https://www.veracines.es");
 const $$Servicio = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Servicio;
-  const { aclaracion, clasesExtra, label } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div${addAttribute(`flex flex-col items-center gap-4 text-center col-span-2 ${clasesExtra}`, "class")}> <div class="rounded-lg bg-white bg-opacity-70 border-2 text-center p-6 flex flex-col items-center min-h-40 w-full any-hover:scale-125 any-hover:opacity-70 motion-safe:transition motion-reduce:any-hover:scale-100"> ${renderSlot($$result, $$slots["default"])} <div class="grid gap-2"> <h3 class="text-xl text-primary font-semibold">${label}</h3> <!--<p class="text-gray-500">Disponemos de un amplio parking para facilitar tu llegada. (Solo disponible en {CINES.find(x => x.url==='vera').nombre})</p>--> </div> </div> ${aclaracion && renderTemplate`<p class="text-gray-500 text-xs">${aclaracion}</p>`} </div>`;
+  const { aclaracion, label } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div class="servicio-card flex flex-col items-center gap-2 text-center" data-astro-cid-y3dd2xj4> <div class="servicio-inner w-full rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-5
+                flex flex-row items-center gap-4 sm:flex-col sm:gap-3
+                transition-all duration-200 hover:shadow-md hover:-translate-y-1 cursor-default" data-astro-cid-y3dd2xj4> <div class="servicio-icon text-primary shrink-0" data-astro-cid-y3dd2xj4> ${renderSlot($$result, $$slots["default"])} </div> <div class="flex flex-col gap-0.5 sm:items-center" data-astro-cid-y3dd2xj4> <p class="text-sm font-bold text-primary leading-tight sm:text-center text-left" data-astro-cid-y3dd2xj4>${label}</p> ${aclaracion && renderTemplate`<p class="text-gray-400 text-[11px] leading-snug text-left sm:text-center" data-astro-cid-y3dd2xj4>${aclaracion}</p>`} </div> </div> </div> `;
 }, "/Users/diego.ramos/veracines-web/src/components/Servicio.astro", void 0);
 
 const $$Astro = createAstro("https://www.veracines.es");
@@ -127,25 +152,56 @@ const $$Climatizacion = createComponent(($$result, $$props, $$slots) => {
 }, "/Users/diego.ramos/veracines-web/src/components/icons/climatizacion.astro", void 0);
 
 const $$Servicios = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<section class="w-full text-center"> <h3 class="text-2xl text-primary text-center font-extrabold mb-2">Nuestros servicios</h3> <p class="text-center text-lg text-primary mb-6">
-Además de una buena película al aire libre, disponemos de servicios como:
-</p> <div class="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-6 mt-5 "> ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Bocadillos y Hamburguesas" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Burguer", $$Burguer, { "class": "h-12 w-12 text-primary" })} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Palomitas" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Popcorn", $$Popcorn, { "class": "h-12 w-12 text-primary" })} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Helados" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Icecream", $$Icecream, { "class": "h-12 w-12 text-primary" })} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Proyector 2K" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Projector", $$Projector, { "class": "h-12 w-12 text-primary" })} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Parking Gratuito", "aclaracion": `Solo disponible en ${CINES.find((x) => x.url === "vera").nombre}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Parking", $$Parking, { "class": "h-12 w-12 text-primary" })} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Climatizaci\xF3n", "aclaracion": `Solo disponible en ${CINES.find((x) => x.url === "regio").nombre}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Climatizacion", $$Climatizacion, { "class": "h-12 w-12 text-primary" })} ` })} </div> </section>`;
+  const vera = CINES.find((x) => x.url === "vera");
+  const regio = CINES.find((x) => x.url === "regio");
+  return renderTemplate`${maybeRenderHead()}<section class="w-full" aria-labelledby="servicios-titulo"> <div class="text-center mb-6 space-y-2"> <h2 id="servicios-titulo" class="text-2xl font-extrabold text-primary">
+Todo lo que necesitas
+</h2> <p class="text-gray-500 text-sm max-w-md mx-auto">
+Más que una película — bocatería, palomitas, helados y todo el confort
+            para que solo te preocupes de disfrutar.
+</p> </div> <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"> ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Proyector 2K" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Projector", $$Projector, {})} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Palomitas" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Popcorn", $$Popcorn, {})} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Helados" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Icecream", $$Icecream, {})} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Bocadillos y Hamburguesas", "aclaracion": `Solo en ${vera?.nombre}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Burguer", $$Burguer, {})} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Parking Gratuito", "aclaracion": `Solo en ${vera?.nombre}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Parking", $$Parking, {})} ` })} ${renderComponent($$result, "Servicio", $$Servicio, { "label": "Climatizaci\xF3n", "aclaracion": `Solo en ${regio?.nombre}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Climatizacion", $$Climatizacion, {})} ` })} </div> </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/Servicios.astro", void 0);
 
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
+var _a;
 const prerender = false;
 const $$Index = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata.home.description, "title": Metadata.home.title, "canonical": Metadata.home.canonical }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main class="max-w-3xl mx-auto px-4"> <div class="grid gap-14"> ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Ubicaciones", $$Ubicaciones, {})} ${renderComponent($$result2, "Servicios", $$Servicios, {})} ${renderComponent($$result2, "Contacto", $$Contacto, {})} </div> </main> ` })}`;
+  const schemaOrg = CINES.map((cine) => ({
+    "@type": "MovieTheater",
+    "name": cine.nombre,
+    "url": `https://www.veracines.es/cartelera-${cine.url}`,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": cine.localizacion.direccion,
+      "addressLocality": cine.localizacion.ciudad,
+      "addressRegion": cine.localizacion.provincia,
+      "postalCode": cine.localizacion.codigoPostal,
+      "addressCountry": cine.localizacion.adressCounty
+    },
+    "openingHoursSpecification": cine.horaFijaProyeccion ? [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": cine.horaFijaProyeccion,
+      "closes": "23:59"
+    }] : void 0
+  }));
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "description": Metadata.home.description, "title": Metadata.home.title, "canonical": Metadata.home.canonical }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<main class="max-w-3xl mx-auto px-4"> <div class="grid gap-14"> ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Ubicaciones", $$Ubicaciones, {})} ${renderComponent($$result2, "Servicios", $$Servicios, {})} ${renderComponent($$result2, "Contacto", $$Contacto, {})} </div> </main> `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": schemaOrg
+  }))) })}` })}`;
 }, "/Users/diego.ramos/veracines-web/src/pages/index.astro", void 0);
 
 const $$file = "/Users/diego.ramos/veracines-web/src/pages/index.astro";
 const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	default: $$Index,
-	file: $$file,
-	prerender,
-	url: $$url
+    __proto__: null,
+    default: $$Index,
+    file: $$file,
+    prerender,
+    url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;

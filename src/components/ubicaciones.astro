@@ -3,18 +3,34 @@ import UbicacionCard from "./UbicacionCard.astro";
 import {CINES} from "../consts/cines";
 
 const regio = CINES.find(cine => cine.url === 'regio');
-const vera = CINES.find(cine => cine.url === 'vera');
-
+const vera   = CINES.find(cine => cine.url === 'vera');
 ---
 
-<section>
-    <h3 class="text-xl text-primary text-center font-bold">Puedes encontrarnos en:</h3>
-    {
-        <UbicacionCard cine={regio}/>
-        <UbicacionCard cine={vera}/>
-        <p class="text-center text-orange-700 font-extrabold text-lg bg-orange-100 border border-orange-400 rounded px-4 py-2 mt-4 shadow-md">
-            ⚠️ Cine sala Tenis de Garrucha ya no se encuentra disponible.<br />
-            <span class="block text-base font-semibold">Sentimos las molestias.</span>
+<section id="ubicaciones" aria-labelledby="ubicaciones-titulo" class="flex flex-col gap-6">
+
+    <div class="text-center space-y-2">
+        <h2 id="ubicaciones-titulo" class="text-2xl font-extrabold text-primary">
+            Cines en Vera, Almería
+        </h2>
+        <p class="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">
+            Disfruta del mejor cine en Vera. Dos salas únicas con la mejor cartelera de películas
+            para toda la familia en plena provincia de Almería.
         </p>
-    }
+    </div>
+
+    <UbicacionCard cine={vera} />
+    <UbicacionCard cine={regio} />
+
+    {/*
+    <aside class="flex items-start gap-3 rounded-xl border border-orange-300 bg-orange-50 px-4 py-3 text-sm text-orange-800 shadow-sm" role="note" aria-label="Aviso sobre el Cine Tenis de Garrucha">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 mt-0.5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        </svg>
+        <div>
+            <strong class="font-bold block mb-0.5">Cine Tenis de Garrucha</strong>
+            Este cine ya no se encuentra en servicio. Sentimos las molestias.
+        </div>
+    </aside>
+    */}
+
 </section>
