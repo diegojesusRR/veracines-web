@@ -823,11 +823,67 @@ const PELICULAS = [
   },
   {
     id: "el-padrino",
-    image: "el-padrino.jpg",
+    image: "el-padrino.webp",
     nombre: "El Padrino",
     descripcion: "América, años 40. Don Vito Corleone (Marlon Brando) es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York. Tiene cuatro hijos: Connie (Talia Shire), el impulsivo Sonny (James Caan), el pusilánime Fredo (John Cazale) y Michael (Al Pacino), que no quiere saber nada de los negocios de su padre. Cuando Corleone, en contra de los consejos de 'Il consigliere' Tom Hagen (Robert Duvall), se niega a participar en el negocio de las drogas, el jefe de otra banda ordena su asesinato. Empieza entonces una violenta y cruenta guerra entre las familias mafiosas.",
     edadRedomendada: "No recomendada menores 16 años",
     videoUrl: "https://www.youtube.com/embed/gCVj1LeYnsc"
+  },
+  {
+    id: "incontrolable",
+    image: "incontrolable.webp",
+    nombre: "Incontrolable",
+    descripcion: "La historia real de John Davidson. Diagnosticado con el síndrome de Tourette a los 15 años, señalado como loco por sus compañeros -dos de sus principales síntomas son sus espasmos y su incontinencia con los insultos-, John luchó con una condición que pocos conocían. Ya adulto, hizo campaña en favor de las personas con síndrome de Tourette.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/DCFhVU8UIRg"
+  },
+  {
+    id: "minions-and-monsters",
+    image: "minions-y-monsters.jpg",
+    nombre: "Minions & Monsters",
+    descripcion: "La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine, lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar al planeta del caos que acababan de crear.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/-_Ajqzp5iIQ"
+  },
+  {
+    id: "el-dia-de-la-revelacion",
+    image: "el-dia-de-la-revelacion.webp",
+    nombre: "El día de la Revelación",
+    descripcion: "Si descubrieras secretos que han permanecido deliberadamente ocultos durante décadas, y alguien te abriera los ojos y te lo demostrase, ¿qué harías?, ¿y te asustarías? Este verano, la verdad será revelada a más de ocho mil millones de personas. Llega... el día de la revelación.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/XXZgYygh40"
+  },
+  {
+    id: "haciendo-amigos",
+    image: "haciendo-amigos.jpg",
+    nombre: "Haciendo Amigos",
+    descripcion: "Antonio y Félix son una pareja de atracadores de poca monta que, huyendo de la policía tras atracar una joyería, se cruzan con Eva, monitora de un grupo de teatro formado por personas con discapacidad, que confunde a Félix con Ángel, un nuevo miembro del grupo al cual no conoce y al que están esperando. Aprovechando la confusión, Félix y Antonio consiguen escabullirse sin saber que les espera un retiro creativo de una semana con el entrañable grupo.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/SNl1zrF3AG8"
+  },
+  {
+    id: "toy-story-5",
+    image: "toy-story-5.jpeg",
+    nombre: "Toy Story 5",
+    descripcion: "Los juguetes están de vuelta. Esta vez, Buzz Lightyear, Woody, Jessie y el resto de la pandilla se enfrentan a un nuevo reto cuando conocen a Lilypad, una nueva tablet que llega con sus propias ideas disruptivas sobre lo que es mejor para Bonnie. ¿Volverá a ser lo mismo la hora de jugar?",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/w56cHtfyGT8"
+  },
+  {
+    id: "la-odisea",
+    image: "la-odisea.jpg",
+    nombre: "La odisea",
+    descripcion: "Epopeya mitológica que sigue la historia de Odiseo y su largo viaje a casa, de 10 años de duración, tras la guerra de Troya.",
+    edadRedomendada: "No recomendada menores 7 años",
+    videoUrl: "https://www.youtube.com/embed/WgDj3heU4YI"
+  },
+  {
+    id: "michael",
+    image: "michael.jpg",
+    nombre: "Michael",
+    descripcion: "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
+    edadRedomendada: "No recomendada menores 12 años",
+    videoUrl: "https://www.youtube.com/embed/o1HQSh6zZ8s"
   }
 ];
 
@@ -851,161 +907,65 @@ const gruposProyeccionesVera = [
   {
     grupo: 1,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "michael"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-06-27"), /* @__PURE__ */ new Date("2025-07-01"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-26"), /* @__PURE__ */ new Date("2026-06-27"), "22:00")
     ]
   },
   {
     grupo: 2,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "torrente-presidente"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-02"), /* @__PURE__ */ new Date("2025-07-07"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-28"), /* @__PURE__ */ new Date("2026-06-29"), "22:00")
     ]
   },
   {
     grupo: 3,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "como-entrenar-a-tu-dragon-la-pelicula"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "incontrolable"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-08"), /* @__PURE__ */ new Date("2025-07-10"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-30"), /* @__PURE__ */ new Date("2026-06-30"), "22:00")
     ]
   },
   {
     grupo: 4,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "elio"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "minions-and-monsters"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-11"), /* @__PURE__ */ new Date("2025-07-14"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-07-01"), /* @__PURE__ */ new Date("2026-07-06"), "22:00")
     ]
   },
   {
     grupo: 5,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "superman-2025"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "el-dia-de-la-revelacion"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-15"), /* @__PURE__ */ new Date("2025-07-17"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-07-07"), /* @__PURE__ */ new Date("2026-07-09"), "22:00")
     ]
   },
   {
     grupo: 6,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "pitufos-2025"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "haciendo-amigos"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-18"), /* @__PURE__ */ new Date("2025-07-21"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-07-10"), /* @__PURE__ */ new Date("2026-07-13"), "22:00")
     ]
   },
   {
     grupo: 7,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "toy-story-5"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-22"), /* @__PURE__ */ new Date("2025-07-24"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-07-14"), /* @__PURE__ */ new Date("2026-07-16"), "22:00")
     ]
   },
   {
     grupo: 8,
     cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "la-odisea"),
     proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-25"), /* @__PURE__ */ new Date("2025-07-28"), "22:00")
-    ]
-  },
-  {
-    grupo: 9,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "f1-la-pelicula"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-07-29"), /* @__PURE__ */ new Date("2025-07-31"), "22:00")
-    ]
-  },
-  {
-    grupo: 10,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-01"), /* @__PURE__ */ new Date("2025-08-04"), "22:00")
-    ]
-  },
-  {
-    grupo: 11,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-05"), /* @__PURE__ */ new Date("2025-08-07"), "22:00")
-    ]
-  },
-  {
-    grupo: 12,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "karate-kid-leyendas"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-08"), /* @__PURE__ */ new Date("2025-08-11"), "22:00")
-    ]
-  },
-  {
-    grupo: 13,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "padre-no-hay-mas-que-uno-5"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-12"), /* @__PURE__ */ new Date("2025-08-13"), "22:00")
-    ]
-  },
-  {
-    grupo: 14,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "materialistas"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-14"), /* @__PURE__ */ new Date("2025-08-17"), "22:00")
-    ]
-  },
-  {
-    grupo: 15,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-4-fantasticos-primeros-pasos"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-18"), /* @__PURE__ */ new Date("2025-08-19"), "22:00")
-    ]
-  },
-  {
-    grupo: 16,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "los-tipos-malos-2"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-20"), /* @__PURE__ */ new Date("2025-08-21"), "22:00")
-    ]
-  },
-  {
-    grupo: 17,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "jurassic-world-el-renacer"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-22"), /* @__PURE__ */ new Date("2025-08-23"), "22:00")
-    ]
-  },
-  {
-    grupo: 18,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "f1-la-pelicula"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-24"), /* @__PURE__ */ new Date("2025-08-25"), "22:00")
-    ]
-  },
-  {
-    grupo: 19,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "weapons"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-26"), /* @__PURE__ */ new Date("2025-08-28"), "22:00")
-    ]
-  },
-  {
-    grupo: 19,
-    cine: cineVera,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "sin-cobertura"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2025-08-29"), /* @__PURE__ */ new Date("2025-09-01"), "22:00")
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-07-17"), /* @__PURE__ */ new Date("2026-07-20"), "22:00")
     ]
   }
 ];
