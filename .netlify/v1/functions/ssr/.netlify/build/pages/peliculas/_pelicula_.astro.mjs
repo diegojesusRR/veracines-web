@@ -1,7 +1,7 @@
 /* empty css                                          */
 import { f as createAstro, g as createComponent, m as maybeRenderHead, i as addAttribute, r as renderTemplate, j as renderComponent } from '../../chunks/astro/server_DfvI8eY9.mjs';
 import 'kleur/colors';
-import { G as GRUPOSPROYECCIONES, C as CINES, P as PELICULAS, a as $$Layout } from '../../chunks/Layout_tgm-K7qw.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, P as PELICULAS, a as $$Layout } from '../../chunks/Layout_D0uIgF-u.mjs';
 import 'clsx';
 /* empty css                                         */
 export { renderers } from '../../renderers.mjs';
@@ -15,7 +15,7 @@ const $$ProyeccionesPelicula = createComponent(($$result, $$props, $$slots) => {
   const grupoProyeccion = GRUPOSPROYECCIONES.filter(
     (grupo) => grupo.cine.url == cine.url && pelicula.id === grupo.pelicula.id && grupo.proyecciones[0].fecha >= /* @__PURE__ */ new Date()
   );
-  const proyecciones = grupoProyeccion[0]?.proyecciones ?? [];
+  const proyecciones = grupoProyeccion?.map((x) => x.proyecciones).flat() ?? [];
   const diasProyeccion = [...new Set(proyecciones.map(
     (p) => `${p.fecha.getFullYear()}${p.fecha.getMonth().toString().padStart(2, "0")}${p.fecha.getDate().toString().padStart(2, "0")}`
   ))].sort();

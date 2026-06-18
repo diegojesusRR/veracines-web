@@ -25,6 +25,16 @@ const { title, description, preload, canonical, image } = Astro.props
 <!doctype html>
 <html lang="es">
 	<head>
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c4820152-a570-4c39-b715-fbc8a232cbf9" data-blockingmode="auto" type="text/javascript"></script>
+		<script>
+			// Notificar a Cookiebot tras cada navegación con ViewTransitions
+			document.addEventListener("astro:after-swap", () => {
+				const w = window as Window & { Cookiebot?: { runScripts: () => void } }
+				if (typeof w.Cookiebot !== "undefined") {
+					w.Cookiebot.runScripts()
+				}
+			})
+		</script>
 		<SEO
 			canonical={canonical}
 			description={description}
