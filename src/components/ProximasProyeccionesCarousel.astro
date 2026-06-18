@@ -179,13 +179,17 @@ const grupos = GRUPOSPROYECCIONES
 </style>
 
 <script>
-document.addEventListener('astro:page-load', () => {
+function setupCarousel() {
     const viewport = document.getElementById('carousel-viewport');
     const track    = document.getElementById('carousel-track') as HTMLElement | null;
     const prevBtn  = document.getElementById('carousel-prev') as HTMLButtonElement | null;
     const nextBtn  = document.getElementById('carousel-next') as HTMLButtonElement | null;
     const dotsEl   = document.getElementById('carousel-dots');
     if (!viewport || !track || !prevBtn || !nextBtn || !dotsEl) return;
+
+    // Guard: evita reinicializar el mismo carrusel
+    if (viewport.dataset.carouselSetup === '1') return;
+    viewport.dataset.carouselSetup = '1';
 
     const slides = Array.from(track.querySelectorAll<HTMLElement>('.carousel-slide'));
     const total  = slides.length;
@@ -310,5 +314,9 @@ document.addEventListener('astro:page-load', () => {
     dotsEl.querySelectorAll<HTMLButtonElement>('button').forEach(btn =>
         btn.addEventListener('click', resetAutoplay)
     );
-});
+}
+
+// Intento inmediato para cubrir el race condition en la primera carga
+setupCarousel();
+document.addEventListener('astro:page-load', setupCarousel);
 </script>
