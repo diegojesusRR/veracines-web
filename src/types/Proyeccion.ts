@@ -7,6 +7,12 @@ export interface Proyeccion {
     vose?: string
 }
 
+export interface Colaboracion {
+    nombre: string
+    /** Ruta relativa a /public, ej: /img/colaboraciones/aspordalba.webp */
+    logo?: string
+}
+
 export interface GrupoProyeccion {
     grupo: number
     cine: Cine
@@ -16,4 +22,5 @@ export interface GrupoProyeccion {
         espanol?: string,
         vose?: string
     }
+    colaboracion?: Colaboracion
 }

@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { f as createAstro, g as createComponent, m as maybeRenderHead, i as addAttribute, r as renderTemplate, j as renderComponent } from '../chunks/astro/server_DfvI8eY9.mjs';
 import 'kleur/colors';
-import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_xvXErjI_.mjs';
+import { G as GRUPOSPROYECCIONES, C as CINES, a as $$Layout } from '../chunks/Layout_DtnLKnu_.mjs';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_D1D8wbIe.mjs';
 /* empty css                                            */
 export { renderers } from '../renderers.mjs';
@@ -10,7 +10,7 @@ const $$Astro$2 = createAstro("https://www.veracines.es");
 const $$ProyeccionCard = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$ProyeccionCard;
-  const { proyecciones, pelicula, cine, entradas } = Astro2.props;
+  const { proyecciones, pelicula, cine, entradas, colaboracion } = Astro2.props;
   const DIASSEMANA = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
   const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
   const proyeccionesFuturas = proyecciones.filter((p) => p.fecha >= /* @__PURE__ */ new Date());
@@ -26,7 +26,9 @@ const $$ProyeccionCard = createComponent(($$result, $$props, $$slots) => {
   const tieneProyecciones = proyeccionesFuturas.length > 0;
   return renderTemplate`${maybeRenderHead()}<article class="m-4 rounded-2xl overflow-hidden shadow-xl bg-white/90 dark:bg-gray-900/90 backdrop-blur space-y-4"${addAttribute(`--cine-color: var(--color-${cine.color})`, "style")} data-astro-cid-3vwqciy3> <a${addAttribute(`/peliculas/${pelicula.id}`, "href")} class="relative min-h-[240px] overflow-hidden block group cursor-pointer" data-astro-cid-3vwqciy3> <img${addAttribute(`/img/peliculas/${pelicula.image}`, "src")} alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="675" class="absolute inset-0 w-full h-full object-cover scale-110 blur-md brightness-[0.3] group-hover:brightness-[0.4] transition-[filter] duration-200" data-astro-cid-3vwqciy3> <div class="relative z-10 min-h-[240px] p-4 sm:p-5 grid grid-cols-[1fr_144px] gap-3 sm:gap-4 items-stretch" data-astro-cid-3vwqciy3> <div class="min-w-0 flex flex-col justify-between" data-astro-cid-3vwqciy3> <span class="inline-flex items-center text-[11px] font-bold bg-white/15 backdrop-blur-sm text-white border border-white/20 rounded-full px-3 py-1 w-fit text-center leading-snug" data-astro-cid-3vwqciy3> ${pelicula.edadRedomendada} </span> <div class="flex flex-col gap-0.5" data-astro-cid-3vwqciy3> <h3 class="text-white text-xl sm:text-3xl font-extrabold leading-tight drop-shadow" data-astro-cid-3vwqciy3> ${pelicula.nombre} </h3> <span class="inline-flex items-center gap-1 text-white/70 group-hover:text-white text-xs font-medium transition-colors" data-astro-cid-3vwqciy3>
 Ir a la película
-<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" data-astro-cid-3vwqciy3> <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" data-astro-cid-3vwqciy3></path> </svg> </span> </div> </div> <div class="self-stretch" data-astro-cid-3vwqciy3> <img class="h-full w-full rounded-xl border-4 border-white/30 shadow-2xl object-cover"${addAttribute(`/img/peliculas/${pelicula.image}`, "src")}${addAttribute(`Cartel de ${pelicula.nombre}`, "alt")} loading="lazy" decoding="async" width="300" height="450"${addAttribute(`view-transition-name: poster-${pelicula.id}`, "style")} data-astro-cid-3vwqciy3> </div> </div> </a> <section class="px-4 sm:px-5" data-astro-cid-3vwqciy3> <h4 class="proyeccion-title font-bold mb-2" data-astro-cid-3vwqciy3>
+<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" data-astro-cid-3vwqciy3> <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" data-astro-cid-3vwqciy3></path> </svg> </span> ${colaboracion && renderTemplate`<div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center gap-2.5" data-astro-cid-3vwqciy3> <span class="text-[9px] font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 shrink-0" data-astro-cid-3vwqciy3>
+Colabora con:
+</span> ${colaboracion.logo ? renderTemplate`<img${addAttribute(colaboracion.logo, "src")}${addAttribute(colaboracion.nombre, "alt")} class="h-6 w-auto object-contain dark:brightness-150" loading="lazy" decoding="async" data-astro-cid-3vwqciy3>` : renderTemplate`<span class="text-xs font-bold text-gray-200" data-astro-cid-3vwqciy3>${colaboracion.nombre}</span>`} </div>`} </div> </div> <div class="self-stretch" data-astro-cid-3vwqciy3> <img class="h-full w-full rounded-xl border-4 border-white/30 shadow-2xl object-cover"${addAttribute(`/img/peliculas/${pelicula.image}`, "src")}${addAttribute(`Cartel de ${pelicula.nombre}`, "alt")} loading="lazy" decoding="async" width="300" height="450"${addAttribute(`view-transition-name: poster-${pelicula.id}`, "style")} data-astro-cid-3vwqciy3> </div> </div> </a> <section class="px-4 sm:px-5" data-astro-cid-3vwqciy3> <h4 class="proyeccion-title font-bold mb-2" data-astro-cid-3vwqciy3>
 Proyecciones ${mesesProyeccion.length > 0 ? `- ${mesesProyeccion.map((x) => MESES[x]).join(" y ")}` : ""} </h4> ${!tieneProyecciones ? renderTemplate`<div class="sin-proyecciones p-3 rounded-lg" data-astro-cid-3vwqciy3> <p class="font-semibold" data-astro-cid-3vwqciy3>Actualmente no hay proyecciones disponibles.</p> </div>` : renderTemplate`<div class="grid grid-cols-2 lg:grid-cols-4 gap-2" data-astro-cid-3vwqciy3> ${diasProyeccion.sort().map((diaProyeccion) => {
     const proyeccionesDia = proyeccionesFuturas.filter((p) => {
       const anio = p.fecha.getFullYear();
@@ -43,7 +45,9 @@ Sinopsis
 Entradas
 ` })}`} ${entradasVoseLink && tieneProyecciones && renderTemplate`${renderComponent($$result, "Action", $$Action, { "as": "a", "class": "flex-1 justify-center", "aria-label": `Enlace a la cartelera de ${cine.nombre} para la pelicula ${pelicula.nombre} en VOSE`, "href": entradasVoseLink, "color": "secondary", "target": "_blank", "data-astro-cid-3vwqciy3": true }, { "default": ($$result2) => renderTemplate`
 VOSE
-` })}`} </div> </section> </article> `;
+` })}`} </div> ${colaboracion && renderTemplate`<div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-800" data-astro-cid-3vwqciy3> <p class="text-[9px] font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-1" data-astro-cid-3vwqciy3>
+Colabora con:
+</p> ${colaboracion.logo ? renderTemplate`<img${addAttribute(colaboracion.logo, "src")}${addAttribute(colaboracion.nombre, "alt")} class="h-6 w-auto object-contain dark:brightness-150" loading="lazy" decoding="async" data-astro-cid-3vwqciy3>` : renderTemplate`<p class="text-sm font-bold colaboracion-nombre" data-astro-cid-3vwqciy3>${colaboracion.nombre}</p>`} </div>`} </section> </article> `;
 }, "/Users/diego.ramos/veracines-web/src/components/proyeccionCard.astro", void 0);
 
 const $$Astro$1 = createAstro("https://www.veracines.es");
@@ -54,7 +58,7 @@ const $$ProyeccionesCine = createComponent(($$result, $$props, $$slots) => {
   const proximasProyecciones = GRUPOSPROYECCIONES.filter((grupo) => {
     return grupo.cine.url === cine.url && grupo.proyecciones.reduce((a, b) => a.fecha > b.fecha ? a : b).fecha >= /* @__PURE__ */ new Date();
   });
-  return renderTemplate`${maybeRenderHead()}<section${addAttribute(`proyecciones-${cine.url}`, "id")}> ${proximasProyecciones.length === 0 ? renderTemplate`<div${addAttribute(`p-2 m-4 align-middle text-${cine.color}`, "class")}> <p>Actualmente no hay proyecciones disponibles.</p> </div>` : renderTemplate`<div> ${proximasProyecciones.filter((x) => x.cine.url === cine.url).map((grupo) => renderTemplate`${renderComponent($$result, "ProyeccionCard", $$ProyeccionCard, { "cine": cine, "entradas": grupo.entradas, "proyecciones": grupo.proyecciones, "pelicula": grupo.pelicula })}`)} </div>`} </section>`;
+  return renderTemplate`${maybeRenderHead()}<section${addAttribute(`proyecciones-${cine.url}`, "id")}> ${proximasProyecciones.length === 0 ? renderTemplate`<div${addAttribute(`p-2 m-4 align-middle text-${cine.color}`, "class")}> <p>Actualmente no hay proyecciones disponibles.</p> </div>` : renderTemplate`<div> ${proximasProyecciones.filter((x) => x.cine.url === cine.url).map((grupo) => renderTemplate`${renderComponent($$result, "ProyeccionCard", $$ProyeccionCard, { "cine": cine, "entradas": grupo.entradas, "proyecciones": grupo.proyecciones, "pelicula": grupo.pelicula, "colaboracion": grupo.colaboracion })}`)} </div>`} </section>`;
 }, "/Users/diego.ramos/veracines-web/src/components/proyeccionesCine.astro", void 0);
 
 const $$Astro = createAstro("https://www.veracines.es");
