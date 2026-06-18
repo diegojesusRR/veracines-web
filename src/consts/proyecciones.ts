@@ -49,6 +49,9 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
         proyecciones: [
             ...getProyecciones(new Date('2026-06-30'), new Date('2026-06-30'), '22:00'),
         ],
+        colaboracion: {
+            nombre: "Asprodalba",
+        }
     },
     {
         grupo: 4,
