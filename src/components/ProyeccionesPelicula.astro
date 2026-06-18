@@ -12,7 +12,7 @@ const grupoProyeccion: GrupoProyeccion[] = GRUPOSPROYECCIONES.filter(
              grupo.proyecciones[0].fecha >= new Date()
 );
 
-const proyecciones = grupoProyeccion[0]?.proyecciones ?? [];
+const proyecciones = grupoProyeccion?.map(x => x.proyecciones).flat() ?? [];
 const diasProyeccion = [...new Set(proyecciones.map(p =>
     `${p.fecha.getFullYear()}${p.fecha.getMonth().toString().padStart(2,'0')}${p.fecha.getDate().toString().padStart(2,'0')}`
 ))].sort();
