@@ -19,7 +19,7 @@ const proximasProyecciones = GRUPOSPROYECCIONES.filter(grupo => {
                 <div>
                     {proximasProyecciones.filter(x => x.cine.url === cine.url).map(grupo =>
                             <ProyeccionCard cine={cine} entradas={grupo.entradas} proyecciones={grupo.proyecciones}
-                                            pelicula={grupo.pelicula}/>)}
+                                            pelicula={grupo.pelicula} colaboracion={grupo.colaboracion}/>)}
                 </div>
     }
 </section>

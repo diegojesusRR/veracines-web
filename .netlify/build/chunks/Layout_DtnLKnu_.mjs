@@ -934,7 +934,10 @@ const gruposProyeccionesVera = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "incontrolable"),
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2026-06-30"), /* @__PURE__ */ new Date("2026-06-30"), "22:00")
-    ]
+    ],
+    colaboracion: {
+      nombre: "Asprodalba"
+    }
   },
   {
     grupo: 4,
