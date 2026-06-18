@@ -970,43 +970,18 @@ const gruposProyeccionesVera = [
     ]
   }
 ];
-const cineRegio = CINES.find((cine) => cine.url === "regio");
-const gruposProyeccionesRegio = [
-  {
-    grupo: 1,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "michael"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-26"), /* @__PURE__ */ new Date("2026-06-27"), "22:00")
-    ]
-  },
-  {
-    grupo: 2,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "torrente-presidente"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-28"), /* @__PURE__ */ new Date("2026-06-29"), "22:00")
-    ]
-  },
-  {
-    grupo: 3,
-    cine: cineRegio,
-    pelicula: PELICULAS.find((pelicula) => pelicula.id === "incontrolable"),
-    proyecciones: [
-      ...getProyecciones(/* @__PURE__ */ new Date("2026-06-30"), /* @__PURE__ */ new Date("2026-06-30"), "22:00")
-    ]
-  }
-];
+CINES.find((cine) => cine.url === "regio");
+const gruposProyeccionesRegio = [];
 const GRUPOSPROYECCIONES = [
   ...gruposProyeccionesVera,
   //...gruposProyeccionesGarrucha,
   ...gruposProyeccionesRegio
 ];
 
-var __freeze$1 = Object.freeze;
-var __defProp$1 = Object.defineProperty;
-var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
-var _a$1, _b;
+var __freeze$2 = Object.freeze;
+var __defProp$2 = Object.defineProperty;
+var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(cooked.slice()) }));
+var _a$2, _b;
 const $$RichResults = createComponent(($$result, $$props, $$slots) => {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -1089,20 +1064,20 @@ const $$RichResults = createComponent(($$result, $$props, $$slots) => {
       }))
     ]
   };
-  return renderTemplate(_b || (_b = __template$1(['<script type="application/ld+json">', "<\/script> ", '<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(organizationSchema)), eventsSchema && eventsSchema.length > 0 && renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(eventsSchema))), unescapeHTML(JSON.stringify(FAQSchema)));
+  return renderTemplate(_b || (_b = __template$2(['<script type="application/ld+json">', "<\/script> ", '<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(organizationSchema)), eventsSchema && eventsSchema.length > 0 && renderTemplate(_a$2 || (_a$2 = __template$2(['<script type="application/ld+json">', "<\/script>"])), unescapeHTML(JSON.stringify(eventsSchema))), unescapeHTML(JSON.stringify(FAQSchema)));
 }, "/Users/diego.ramos/veracines-web/src/components/RichResults.astro", void 0);
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
-var _a;
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
+var _a$1;
 const $$Astro$1 = createAstro("https://www.veracines.es");
 const $$SEO = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$SEO;
   const { title, description, preload, canonical, image = "/img/logo.jpg" } = Astro2.props;
   const canonicalURL = canonical ? `https://${canonical}` : `https://${Astro2.url.pathname}`;
-  return renderTemplate(_a || (_a = __template(["<title>", '</title><meta charset="UTF-8"><meta name="description"', '><link rel="preload"', ' as="font" type="font/woff2" crossorigin><link rel="preload"', ' as="font" type="font/woff2" crossorigin>', '<link rel="canonical"', '><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#d5ff00"><meta name="keywords" content="cine de verano, estreno, cine, peliculas, verano, vera, garrucha, almer\xEDa"><meta name="og:image"', '><meta name="og:title"', '><meta name="og:description"', '><meta name="og:url"', '><meta name="og:site_name" content="Veracines"><meta name="og:type" content="website"><meta name="og:locale" content="es_ES"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><link rel="icon" type="image/png" href="/img/logo.png"><meta name="msapplication-config" content="/browserconfig.xml"><script src="/registerSW.js"><\/script><link rel="manifest" href="/manifest.webmanifest">', ""])), title, addAttribute(description, "content"), addAttribute(atomic, "href"), addAttribute(jost, "href"), preload?.map(({ href, as, type, rel = "preload", crossorigin }) => renderTemplate`<link${addAttribute(rel, "rel")}${addAttribute(href, "href")}${addAttribute(as, "as")}${addAttribute(type, "type")}${addAttribute(crossorigin, "crossorigin")}>`), addAttribute(canonicalURL, "href"), addAttribute(new URL(image, Astro2.url), "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(Astro2.url, "content"), renderComponent($$result, "RichResults", $$RichResults, {}));
+  return renderTemplate(_a$1 || (_a$1 = __template$1(["<title>", '</title><meta charset="UTF-8"><meta name="description"', '><link rel="preload"', ' as="font" type="font/woff2" crossorigin><link rel="preload"', ' as="font" type="font/woff2" crossorigin>', '<link rel="canonical"', '><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#d5ff00"><meta name="keywords" content="cine de verano, estreno, cine, peliculas, verano, vera, garrucha, almer\xEDa"><meta name="og:image"', '><meta name="og:title"', '><meta name="og:description"', '><meta name="og:url"', '><meta name="og:site_name" content="Veracines"><meta name="og:type" content="website"><meta name="og:locale" content="es_ES"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><link rel="icon" type="image/png" href="/img/logo.png"><meta name="msapplication-config" content="/browserconfig.xml"><script src="/registerSW.js"><\/script><link rel="manifest" href="/manifest.webmanifest">', ""])), title, addAttribute(description, "content"), addAttribute(atomic, "href"), addAttribute(jost, "href"), preload?.map(({ href, as, type, rel = "preload", crossorigin }) => renderTemplate`<link${addAttribute(rel, "rel")}${addAttribute(href, "href")}${addAttribute(as, "as")}${addAttribute(type, "type")}${addAttribute(crossorigin, "crossorigin")}>`), addAttribute(canonicalURL, "href"), addAttribute(new URL(image, Astro2.url), "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(Astro2.url, "content"), renderComponent($$result, "RichResults", $$RichResults, {}));
 }, "/Users/diego.ramos/veracines-web/src/components/SEO.astro", void 0);
 
 const $$Toast = createComponent(($$result, $$props, $$slots) => {
@@ -1113,12 +1088,16 @@ const $$Footer = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<footer class="relative mt-20 flex w-full flex-col place-items-center pb-20 pt-14 md:flex-row md:justify-between md:pt-16"> <hr class="absolute top-0 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"> ${renderComponent($$result, "FooterContent", $$FooterContent, {})} <hr aria-hidden="true" class="my-12 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:hidden"> ${renderComponent($$result, "SocialButtons", $$SocialButtons, {})} </footer>`;
 }, "/Users/diego.ramos/veracines-web/src/sections/Footer.astro", void 0);
 
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
+var _a;
 const $$Astro = createAstro("https://www.veracines.es");
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title, description, preload, canonical, image } = Astro2.props;
-  return renderTemplate`<html lang="es"> <head>${renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title })}${renderComponent($$result, "ViewTransitions", $$ViewTransitions, {})}${renderSlot($$result, $$slots["head"])}${renderHead()}</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ${renderComponent($$result, "Header", $$Header, {})} ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "Toast", $$Toast, {})} <div class="bg-primary border-primary text-primary" style="display: none"></div> <div class="bg-secondary border-secondary text-secondary" style="display: none"></div> ${renderComponent($$result, "ButtonUp", $$ButtonUp, {})}  </body> </html>`;
+  return renderTemplate(_a || (_a = __template(['<html lang="es"> <head><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c4820152-a570-4c39-b715-fbc8a232cbf9" data-blockingmode="auto" type="text/javascript"><\/script>', "", "", "", '</head> <body class="overflow-x-hidden selection:bg-primary [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"> ', " ", " ", " ", ' <div class="bg-primary border-primary text-primary" style="display: none"></div> <div class="bg-secondary border-secondary text-secondary" style="display: none"></div> ', "  </body> </html>"])), renderComponent($$result, "SEO", $$SEO, { "canonical": canonical, "description": description, "image": image, "preload": preload, "title": title }), renderComponent($$result, "ViewTransitions", $$ViewTransitions, {}), renderSlot($$result, $$slots["head"]), renderHead(), renderComponent($$result, "Header", $$Header, {}), renderSlot($$result, $$slots["default"]), renderComponent($$result, "Footer", $$Footer, {}), renderComponent($$result, "Toast", $$Toast, {}), renderComponent($$result, "ButtonUp", $$ButtonUp, {}));
 }, "/Users/diego.ramos/veracines-web/src/layouts/Layout.astro", void 0);
 
 export { $$Typography as $, CINES as C, GRUPOSPROYECCIONES as G, PELICULAS as P, $$Layout as a };
