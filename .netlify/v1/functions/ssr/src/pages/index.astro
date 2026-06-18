@@ -8,6 +8,7 @@ import Ubicaciones from "../components/ubicaciones.astro";
 import Contacto from "../components/contacto.astro";
 import Servicios from "../components/Servicios.astro";
 import {CINES} from "../consts/cines";
+import ProximasProyeccionesCarousel from "../components/ProximasProyeccionesCarousel.astro";
 
 const schemaOrg = CINES.map(cine => ({
     "@type": "MovieTheater",
@@ -48,6 +49,7 @@ export const prerender = false
         <div class="grid gap-14">
             <Hero/>
 
+            <ProximasProyeccionesCarousel/>
             <Ubicaciones/>
             <Servicios/>
             <Contacto/>
