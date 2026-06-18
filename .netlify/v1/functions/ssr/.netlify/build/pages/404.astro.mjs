@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { f as createAstro, g as createComponent, m as maybeRenderHead, j as renderComponent, r as renderTemplate } from '../chunks/astro/server_DfvI8eY9.mjs';
 import 'kleur/colors';
-import { $ as $$Typography, a as $$Layout } from '../chunks/Layout_ClVLnx26.mjs';
+import { $ as $$Typography, a as $$Layout } from '../chunks/Layout_tgm-K7qw.mjs';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_Dz0VPo5a.mjs';
 export { renderers } from '../renderers.mjs';
 

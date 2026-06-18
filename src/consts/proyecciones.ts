@@ -94,30 +94,6 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
 const gruposProyeccionesRegio: GrupoProyeccion[] = [
-    {
-        grupo: 1,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'michael')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-06-26'), new Date('2026-06-27'), '22:00'),
-        ],
-    },
-    {
-        grupo: 2,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-06-28'), new Date('2026-06-29'), '22:00'),
-        ],
-    },
-    {
-        grupo: 3,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'incontrolable')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-06-30'), new Date('2026-06-30'), '22:00'),
-        ],
-    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
