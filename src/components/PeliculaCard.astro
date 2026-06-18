@@ -72,15 +72,15 @@ const { pelicula } = Astro.props;
     </dialog>
 
     <!-- Sinopsis -->
-    <section class="bg-white/85 backdrop-blur rounded-2xl shadow p-5 sm:p-6">
+    <section class="bg-white/85 dark:bg-gray-900/85 backdrop-blur rounded-2xl shadow p-5 sm:p-6">
         <h2 class="text-primary font-bold text-lg mb-3 flex items-center gap-2">
             📖 Sinopsis
         </h2>
-        <p class="text-gray-700 leading-relaxed text-justify">{pelicula.descripcion}</p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">{pelicula.descripcion}</p>
     </section>
 
     <!-- Próximas proyecciones -->
-    <section class="bg-white/85 backdrop-blur rounded-2xl shadow p-5 sm:p-6">
+    <section class="bg-white/85 dark:bg-gray-900/85 backdrop-blur rounded-2xl shadow p-5 sm:p-6">
         <h2 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
             🎬 Próximas proyecciones
         </h2>

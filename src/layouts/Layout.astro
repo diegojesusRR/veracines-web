@@ -25,6 +25,27 @@ const { title, description, preload, canonical, image } = Astro.props
 <!doctype html>
 <html lang="es">
 	<head>
+		<!-- Anti-flash dark mode: aplica la clase antes del primer paint -->
+		<script is:inline>
+			;(function () {
+				const stored = localStorage.getItem("theme")
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+				if (stored === "dark" || (!stored && prefersDark)) {
+					document.documentElement.classList.add("dark")
+				}
+			})()
+		</script>
+		<!-- Persistir tema en navegaciones con View Transitions -->
+		<script is:inline>
+			document.addEventListener("astro:before-swap", function (e) {
+				const isDark = document.documentElement.classList.contains("dark")
+				if (isDark) {
+					e.newDocument.documentElement.classList.add("dark")
+				} else {
+					e.newDocument.documentElement.classList.remove("dark")
+				}
+			})
+		</script>
 		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c4820152-a570-4c39-b715-fbc8a232cbf9" data-blockingmode="auto" type="text/javascript"></script>
 		<script>
 			// Notificar a Cookiebot tras cada navegación con ViewTransitions
@@ -73,6 +94,57 @@ const { title, description, preload, canonical, image } = Astro.props
 				);
 
 				--background-color-white: #ffffff;
+				--card-bg: rgba(255, 255, 255, 0.9);
+				--card-bg-blur: rgba(255, 255, 255, 0.85);
+				--text-muted: #4b5563;
+				--border-subtle: #f3f4f6;
+				--surface: #f9fafb;
+			}
+
+			html.dark {
+				/* Los colores de fondo (bg-primary, bg-secondary, border-primary…)
+				   conservan los valores originales para mantener la identidad visual.
+				   Solo se aclaran cuando se usan como color de texto. */
+
+				--background-color: repeating-linear-gradient(
+					135deg,
+					#0d0d0d,
+					#101010 25%,
+					#121212 25%,
+					#111111 25%
+				);
+
+				--background-color-white: #111827;
+				--card-bg: rgba(17, 24, 39, 0.92);
+				--card-bg-blur: rgba(17, 24, 39, 0.88);
+				--text-muted: #9ca3af;
+				--border-subtle: #1f2937;
+				--surface: #1f2937;
+			}
+
+			/* En dark mode, solo los colores de TEXTO se aclaran para garantizar
+			   contraste sobre fondos oscuros. Los fondos y bordes conservan
+			   el color de marca original. */
+
+			/* Clases Tailwind */
+			html.dark .text-primary,
+			html.dark .hover\:text-primary:hover {
+				color: #7b9ef0; /* azul claro – ratio WCAG AA sobre #111827 */
+			}
+			html.dark .text-secondary,
+			html.dark .hover\:text-secondary:hover {
+				color: #f97086; /* coral claro – ratio WCAG AA sobre #111827 */
+			}
+
+			/* Clases CSS de componentes que usan color: var(--cine-color) como texto */
+			html.dark .proyeccion-title,
+			html.dark .dia-label,
+			html.dark .sin-proyecciones,
+			html.dark .cine-card__day,
+			html.dark .ubicacion-title,
+			html.dark .cartelera-title,
+			html.dark .cartelera-subtitle {
+				color: color-mix(in srgb, var(--cine-color) 55%, white);
 			}
 
 			@font-face {
@@ -85,6 +157,19 @@ const { title, description, preload, canonical, image } = Astro.props
 				font-family: "Jost Variable", system-ui, sans-serif;
 				background: var(--background-color);
 				scrollbar-gutter: stable;
+				color-scheme: light;
+			}
+
+			html.dark {
+				color-scheme: dark;
+			}
+
+			body {
+				color: #1a1a1a;
+			}
+
+			html.dark body {
+				color: #e5e7eb;
 			}
 
 			main {
@@ -148,6 +233,16 @@ const { title, description, preload, canonical, image } = Astro.props
 
 			.anchor-main-content:focus {
 				pointer-events: all;
+			}
+
+			/* Dark mode toast override */
+			html.dark .butteruptoast {
+				background-color: #1f2937;
+				border-color: #374151;
+				color: #e5e7eb;
+			}
+			html.dark .butteruptoast .icon svg {
+				fill: #e5e7eb;
 			}
 		</style>
 	</body>
