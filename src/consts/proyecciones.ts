@@ -97,251 +97,25 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
     {
         grupo: 1,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-cautivo')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'michael')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-10-31'), new Date('2025-10-31'),  '20:00'),
-            ...getProyecciones(new Date('2025-11-01'), new Date('2025-11-02'),  '18:00'),
-            ...getProyecciones(new Date('2025-11-01'), new Date('2025-11-01'),  '20:30'),
+            ...getProyecciones(new Date('2026-06-26'), new Date('2026-06-27'), '22:00'),
         ],
     },
     {
         grupo: 2,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-cena')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-11-07'), new Date('2025-11-08'),  '20:00'),
-            ...getProyecciones(new Date('2025-11-08'), new Date('2025-11-09'),  '18:00'),
+            ...getProyecciones(new Date('2026-06-28'), new Date('2026-06-29'), '22:00'),
         ],
     },
     {
         grupo: 3,
         cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'los-domingos')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'incontrolable')!,
         proyecciones: [
-            ...getProyecciones(new Date('2025-11-14'), new Date('2025-11-14'),  '20:00'),
-            ...getProyecciones(new Date('2025-11-15'), new Date('2025-11-16'),  '18:00'),
-            ...getProyecciones(new Date('2025-11-15'), new Date('2025-11-15'),  '20:30'),
-        ],
-    },
-    {
-        grupo: 4,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'downton-abbey-el-gran-final')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-11-21'), new Date('2025-11-21'),  '20:00'),
-            ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-23'),  '18:00'),
-            ...getProyecciones(new Date('2025-11-22'), new Date('2025-11-22'),  '20:30'),
-            ...getProyecciones(new Date('2025-11-27'), new Date('2025-11-27'),  '20:00', 'VOSE'),
-        ],
-    },
-    {
-        grupo: 5,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'ahora-me-ves-3')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-11-28'), new Date('2025-11-28'),  '20:00'),
-            ...getProyecciones(new Date('2025-11-29'), new Date('2025-11-30'),  '18:00'),
-            ...getProyecciones(new Date('2025-11-29'), new Date('2025-11-29'),  '20:30'),
-            ...getProyecciones(new Date('2025-12-04'), new Date('2025-12-04'),  '20:00', 'VOSE'),
-        ],
-    },
-    {
-        grupo: 5,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'wicked-2')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-12-05'), new Date('2025-12-05'),  '20:00'),
-            ...getProyecciones(new Date('2025-12-06'), new Date('2025-12-08'),  '18:00'),
-            ...getProyecciones(new Date('2025-12-06'), new Date('2025-12-06'),  '20:30'),
-            ...getProyecciones(new Date('2025-12-11'), new Date('2025-12-11'),  '20:00', 'VOSE'),
-        ],
-    },
-    {
-        grupo: 6,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'todos-los-lados-de-la-cama')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-12-12'), new Date('2025-12-12'),  '20:00'),
-            ...getProyecciones(new Date('2025-12-13'), new Date('2025-12-14'),  '18:00'),
-            ...getProyecciones(new Date('2025-12-13'), new Date('2025-12-13'),  '20:30'),
-        ],
-    },
-    {
-        grupo: 7,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'nuremberg')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-12-19'), new Date('2025-12-19'),  '20:00'),
-            ...getProyecciones(new Date('2025-12-20'), new Date('2025-12-21'),  '18:00'),
-            ...getProyecciones(new Date('2025-12-20'), new Date('2025-12-20'),  '20:30'),
-        ],
-    },
-    {
-        grupo: 8,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'zootropolis-2')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2025-12-26'), new Date('2025-12-30'),  '18:00'),
-            ...getProyecciones(new Date('2025-12-27'), new Date('2025-12-27'),  '20:00'),
-        ],
-    },
-    {
-        grupo: 9,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'avatar-3')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-01-01'), new Date('2026-01-05'),  '18:00'),
-        ],
-    },
-    {
-        grupo: 10,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-asistenta')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-01-09'), new Date('2026-01-09'),  '20:00'),
-            ...getProyecciones(new Date('2026-01-10'), new Date('2026-01-11'),  '18:00'),
-            ...getProyecciones(new Date('2026-01-10'), new Date('2026-01-10'),  '20:30'),
-            ...getProyecciones(new Date('2026-01-15'), new Date('2026-01-15'),  '20:00', 'VOSE'),
-        ],
-    },
-    {
-        grupo: 11,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'abuela-tremenda')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-01-16'), new Date('2026-01-17'),  '20:00'),
-            ...getProyecciones(new Date('2026-01-17'), new Date('2026-01-18'),  '18:00'),
-        ],
-    },
-    {
-        grupo: 12,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-asistenta')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-01-23'), new Date('2026-01-23'),  '20:00'),
-            ...getProyecciones(new Date('2026-01-24'), new Date('2026-01-25'),  '18:00'),
-            ...getProyecciones(new Date('2026-01-24'), new Date('2026-01-24'),  '20:30'),
-        ],
-    },
-    {
-        grupo: 13,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'idolos')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-01-30'), new Date('2026-01-30'),  '20:00'),
-            ...getProyecciones(new Date('2026-01-31'), new Date('2026-02-01'),  '18:00'),
-            ...getProyecciones(new Date('2026-01-31'), new Date('2026-01-31'),  '20:30'),
-        ],
-    },
-    {
-        grupo: 14,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'hamnet')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-02-06'), new Date('2026-02-06'),  '20:00'),
-            ...getProyecciones(new Date('2026-02-07'), new Date('2026-02-08'),  '18:00'),
-            ...getProyecciones(new Date('2026-02-07'), new Date('2026-02-07'),  '20:30'),
-            ...getProyecciones(new Date('2026-02-12'), new Date('2026-02-12'),  '20:00', 'vose'),
-        ],
-    },
-    {
-        grupo: 15,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'aida-y-vuelta')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-02-13'), new Date('2026-02-14'),  '20:00'),
-            ...getProyecciones(new Date('2026-02-14'), new Date('2026-02-15'),  '18:00'),
-        ],
-    },
-    {
-        grupo: 16,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'cumbres-borrascosas')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-02-20'), new Date('2026-02-20'),  '20:00'),
-            ...getProyecciones(new Date('2026-02-21'), new Date('2026-02-22'),  '18:00'),
-            ...getProyecciones(new Date('2026-02-21'), new Date('2026-02-21'),  '20:30'),
-            ...getProyecciones(new Date('2026-02-26'), new Date('2026-02-26'),  '20:00', 'vose'),
-
-        ],
-    },
-    {
-        grupo: 17,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'como-cabras')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-02-27'), new Date('2026-02-28'),  '20:00'),
-            ...getProyecciones(new Date('2026-02-28'), new Date('2026-03-01'),  '18:00'),
-
-        ],
-    },
-    {
-        grupo: 18,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'como-cabras')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-03-06'), new Date('2026-03-07'),  '20:00'),
-            ...getProyecciones(new Date('2026-03-07'), new Date('2026-03-08'),  '18:00'),
-
-        ],
-    },
-    {
-        grupo: 19,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-03-13'), new Date('2026-03-15'),  '18:00'),
-            ...getProyecciones(new Date('2026-03-13'), new Date('2026-03-15'),  '20:00'),
-
-        ],
-    },
-    {
-        grupo: 20,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-03-20'), new Date('2026-03-21'),  '20:00'),
-            ...getProyecciones(new Date('2026-03-21'), new Date('2026-03-22'),  '18:00'),
-        ],
-    },
-    {
-        grupo: 21,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'torrente-presidente')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-03-28'), new Date('2026-03-29'),  '18:00'),
-            ...getProyecciones(new Date('2026-03-28'), new Date('2026-03-29'),  '20:00'),
-
-        ],
-    },
-    {
-        grupo: 22,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'super-mario-galaxy')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-04-17'), new Date('2026-04-18'),  '20:00'),
-            ...getProyecciones(new Date('2026-04-18'), new Date('2026-04-19'),  '18:00'),
-
-        ],
-    },
-    {
-        grupo: 22,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'proyecto-salvacion')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-04-24'), new Date('2026-04-24'),  '20:00'),
-            ...getProyecciones(new Date('2026-04-25'), new Date('2026-04-26'),  '18:00'),
-            ...getProyecciones(new Date('2026-04-25'), new Date('2026-04-25'),  '20:00'),
-
-
-        ],
-    },
-    {
-        grupo: 23,
-        cine: cineRegio,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-padrino')!,
-        proyecciones: [
-            ...getProyecciones(new Date('2026-05-30'), new Date('2026-05-30'),  '18:00'),
+            ...getProyecciones(new Date('2026-06-30'), new Date('2026-06-30'), '22:00'),
         ],
     },
 ]
