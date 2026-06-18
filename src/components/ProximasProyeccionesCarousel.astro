@@ -170,6 +170,9 @@ const grupos = GRUPOSPROYECCIONES
         cursor: pointer;
         transition: background 0.2s, color 0.2s;
     }
+    :global(html.dark) .carousel-btn {
+        background: #111827;
+    }
     .carousel-btn:hover    { background: var(--color-primary); color: white; }
     .carousel-btn:disabled { opacity: 0.3; cursor: default; }
     .cine-badge { background-color: var(--cine-color); }

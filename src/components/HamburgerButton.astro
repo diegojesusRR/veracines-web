@@ -37,10 +37,12 @@ const genericHamburgerLine = `h-[2px] ${width} bg-gray-300 transition ease trans
 		hamburgerButtonClicked: "hamburgerButtonClicked",
 	} as const
 
-	document.addEventListener("astro:page-load", () => {
+	function setupHamburger() {
 		const hamburgerButton = $(DISPLAY.hamburgerMenuClass)
 
 		$$(DISPLAY.hamburgerMenuClass).forEach((button) => {
+			if (button.dataset.hamburgerSetup === "1") return
+			button.dataset.hamburgerSetup = "1"
 			button.addEventListener("click", () => {
 				const hamburgerButton = $(DISPLAY.hamburgerMenuClass)
 				hamburgerButton.classList.toggle(DISPLAY.open)
@@ -56,5 +58,9 @@ const genericHamburgerLine = `h-[2px] ${width} bg-gray-300 transition ease trans
 		})
 		if (hamburgerButton?.classList?.contains(DISPLAY.open))
 			hamburgerButton?.classList?.remove(DISPLAY.open)
-	})
+	}
+
+	// Intento inmediato para cubrir el race condition en la primera carga
+	setupHamburger()
+	document.addEventListener("astro:page-load", setupHamburger)
 </script>
