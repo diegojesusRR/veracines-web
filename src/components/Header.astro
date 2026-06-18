@@ -3,6 +3,7 @@ import DrawnXLogo from "@/components/DrawnXLogo.astro"
 import FooterContent from "@/components/FooterContent.astro"
 import HamburgerButton from "@/components/HamburgerButton.astro"
 import SocialButtons from "@/components/SocialButtons.astro"
+import ThemeToggle from "@/components/ThemeToggle.astro"
 import { MOBILE_MENU_CONTENT_ID } from "@/consts/mobile-menu"
 
 const pages = [
@@ -15,7 +16,7 @@ const pages = [
 }))
 ---
 
-<header class="sticky top-0 z-50 h-16 max-w-[100vw] lg:h-20 bg-white border-b border-gray-100 shadow-sm">
+<header class="sticky top-0 z-50 h-16 max-w-[100vw] lg:h-20 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-gray-900/50">
 	<nav class="group flex h-full w-full items-center justify-between px-6 lg:justify-center lg:gap-1 max-w-5xl mx-auto">
 
 		<!-- Logo desktop -->
@@ -31,7 +32,7 @@ const pages = [
 						"nav-item relative hidden h-full select-none items-center justify-center px-5 xl:px-6 text-sm font-semibold uppercase tracking-wide lg:flex text-nowrap transition-colors duration-200",
 						{ "pointer-events-none opacity-50": disabled },
 						{ "text-primary": active },
-						{ "text-gray-500 hover:text-primary": !active },
+						{ "text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white": !active },
 					]}
 					id={`nav-link-${key}`}
 					aria-current={active ? "page" : undefined}
@@ -48,7 +49,10 @@ const pages = [
 			<DrawnXLogo class:list={"w-9"} />
 		</a>
 
-		<HamburgerButton class:list={"block lg:hidden"} id="menuButton" />
+		<div class="flex items-center gap-1 ml-auto lg:ml-4">
+			<ThemeToggle />
+			<HamburgerButton class:list={"block lg:hidden"} id="menuButton" />
+		</div>
 
 		<!-- Menú móvil: panel deslizante desde la derecha -->
 		<div
@@ -59,10 +63,10 @@ const pages = [
 			<div class="menu-backdrop absolute inset-0 bg-black/40" id="menuBackdrop"></div>
 
 			<!-- Panel -->
-			<div class="menu-panel absolute right-0 top-0 bottom-0 w-[80vw] max-w-xs bg-white flex flex-col shadow-2xl">
+			<div class="menu-panel absolute right-0 top-0 bottom-0 w-[80vw] max-w-xs bg-white dark:bg-gray-900 flex flex-col shadow-2xl">
 
 				<!-- Cabecera -->
-				<div class="flex h-16 items-center justify-between px-5 border-b border-gray-100">
+				<div class="flex h-16 items-center justify-between px-5 border-b border-gray-100 dark:border-gray-800">
 					<img src="/img/veracines-logo.png" alt="Veracines" class="h-8 w-auto" width="100" height="36" loading="lazy" />
 					<HamburgerButton id="innerMenuButton" />
 				</div>
@@ -78,7 +82,7 @@ const pages = [
 									`menu-link-${key}`,
 									{ "pointer-events-none opacity-40": disabled },
 									{ "bg-primary text-white shadow-sm": active },
-									{ "text-gray-600 hover:bg-gray-50 hover:text-primary": !active },
+									{ "text-gray-600 hover:bg-gray-50 hover:text-primary dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white": !active },
 								]}
 								style={`--delay: ${key * 60}ms`}
 								id={`navmob-link-${key}`}
@@ -96,7 +100,7 @@ const pages = [
 				</nav>
 
 				<!-- Footer del panel -->
-				<div class="border-t border-gray-100 p-5 flex flex-col gap-4">
+				<div class="border-t border-gray-100 dark:border-gray-800 p-5 flex flex-col gap-4">
 					<SocialButtons class="flex items-center gap-3" />
 					<FooterContent />
 				</div>
@@ -180,19 +184,32 @@ const pages = [
 		document.body.classList.toggle("overflow-hidden")
 	}
 
-	document.addEventListener("astro:page-load", () => {
+	function setupMenu() {
 		const nav = $("nav")
 		const menuButton = $("#menuButton")
 		const innerMenuButton = $("#innerMenuButton")
 		const menuMobileContext = $("#menuMobileContent")
 		const backdrop = $("#menuBackdrop")
 
-		menuButton?.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
-		innerMenuButton?.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
-		backdrop?.addEventListener("click", () => {
-			if (menuMobileContext?.classList.contains("open")) toggleMenu(nav, menuMobileContext)
-		})
+		if (menuButton && !menuButton.dataset.menuSetup) {
+			menuButton.dataset.menuSetup = "1"
+			menuButton.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
+		}
+		if (innerMenuButton && !innerMenuButton.dataset.menuSetup) {
+			innerMenuButton.dataset.menuSetup = "1"
+			innerMenuButton.addEventListener("hamburgerButtonClicked", () => toggleMenu(nav, menuMobileContext))
+		}
+		if (backdrop && !backdrop.dataset.menuSetup) {
+			backdrop.dataset.menuSetup = "1"
+			backdrop.addEventListener("click", () => {
+				if (menuMobileContext?.classList.contains("open")) toggleMenu(nav, menuMobileContext)
+			})
+		}
 
 		if (menuMobileContext?.classList.contains("open")) toggleMenu(nav, menuMobileContext)
-	})
+	}
+
+	// Intento inmediato para cubrir el race condition en la primera carga
+	setupMenu()
+	document.addEventListener("astro:page-load", setupMenu)
 </script>

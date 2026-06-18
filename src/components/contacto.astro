@@ -13,7 +13,7 @@ const wa  = `https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numer
         <h2 id="contacto-titulo" class="text-2xl font-extrabold text-primary">
             ¿Tienes alguna pregunta?
         </h2>
-        <p class="text-gray-500 text-sm max-w-sm mx-auto">
+        <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm mx-auto">
             Estamos encantados de ayudarte. Elige el canal que prefieras.
         </p>
     </div>
@@ -22,17 +22,17 @@ const wa  = `https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numer
 
         <a
             href={`tel:${tel}`}
-            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30 dark:hover:border-primary/40"
             aria-label={`Llamar al ${CONTACTO.telefono.numero}`}
         >
             <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Phone class="w-8 h-8" />
             </div>
             <div class="min-w-0">
-                <p class="text-sm font-bold text-gray-700">Teléfono</p>
-                <p class="text-xs text-gray-400 truncate">{CONTACTO.telefono.numero}</p>
+                <p class="text-sm font-bold text-gray-700 dark:text-gray-200">Teléfono</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{CONTACTO.telefono.numero}</p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
             </svg>
         </a>
@@ -41,34 +41,34 @@ const wa  = `https://wa.me/${CONTACTO.telefono.prefijo}${CONTACTO.telefono.numer
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-green-300"
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-green-300 dark:hover:border-green-700"
             aria-label="Contactar por WhatsApp"
         >
             <div class="contact-icon text-[#25D366] shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Whatsapp class="w-8 h-8" />
             </div>
             <div class="min-w-0">
-                <p class="text-sm font-bold text-gray-700">WhatsApp</p>
-                <p class="text-xs text-gray-400">{CONTACTO.telefono.numero}</p>
+                <p class="text-sm font-bold text-gray-700 dark:text-gray-200">WhatsApp</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500">{CONTACTO.telefono.numero}</p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-green-400 ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-green-400 ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
             </svg>
         </a>
 
         <a
             href={`mailto:${CONTACTO.email}`}
-            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30"
+            class="contact-card group flex sm:flex-col items-center gap-4 sm:gap-3 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm p-4 sm:p-6 sm:text-center transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-primary/30 dark:hover:border-primary/40"
             aria-label={`Enviar email a ${CONTACTO.email}`}
         >
             <div class="contact-icon text-primary shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Email class="w-8 h-8" />
             </div>
             <div class="min-w-0">
-                <p class="text-sm font-bold text-gray-700">Email</p>
-                <p class="text-xs text-gray-400 truncate">{CONTACTO.email}</p>
+                <p class="text-sm font-bold text-gray-700 dark:text-gray-200">Email</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{CONTACTO.email}</p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-primary ml-auto sm:hidden transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
             </svg>
         </a>

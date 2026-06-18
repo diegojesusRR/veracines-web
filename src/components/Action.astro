@@ -59,6 +59,16 @@ const { as: Tag, class: className, color = 'primary', ...props } = Astro.props
         transform: translateX(0);
     }
 
+    /* Dark mode: fondo siempre relleno, igual que el estado hover */
+    :global(html.dark) .action-btn {
+        color: white;
+        box-shadow: 0 4px 16px color-mix(in srgb, var(--btn-color) 35%, transparent);
+    }
+
+    :global(html.dark) .action-btn::before {
+        transform: translateX(0);
+    }
+
     .action-btn__label {
         position: relative;
         z-index: 1;

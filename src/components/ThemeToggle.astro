@@ -1,0 +1,56 @@
+---
+---
+<button
+	id="theme-toggle"
+	type="button"
+	aria-label="Cambiar tema oscuro/claro"
+	class="relative flex items-center justify-center w-9 h-9 rounded-full transition-colors duration-200
+		   text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white
+		   hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:ring-2 focus-visible:ring-primary"
+>
+	<!-- Sol: visible en modo oscuro (para volver a claro) -->
+	<svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+		 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+		<path stroke-linecap="round" stroke-linejoin="round"
+			  d="M12 3v1m0 16v1m8.66-13l-.87.5M4.21 17.5l-.87.5M20.66 17.5l-.87-.5M4.21 6.5l-.87-.5M21 12h-1M4 12H3m15.07-5.07l-.71.71M6.34 17.66l-.71.71M17.66 17.66l.71.71M6.34 6.34l.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z" />
+	</svg>
+	<!-- Luna: visible en modo claro (para pasar a oscuro) -->
+	<svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+		 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+		<path stroke-linecap="round" stroke-linejoin="round"
+			  d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+	</svg>
+</button>
+
+<!-- CSS global: los iconos se muestran/ocultan según html.dark,
+     que ya está establecida antes del render por el script anti-flash. -->
+<style is:global>
+	/* Modo claro: mostrar luna, ocultar sol */
+	#theme-icon-light { display: none; }
+	#theme-icon-dark  { display: block; }
+
+	/* Modo oscuro: mostrar sol, ocultar luna */
+	html.dark #theme-icon-light { display: block; }
+	html.dark #theme-icon-dark  { display: none; }
+</style>
+
+<script>
+	function setupToggle() {
+		const btn = document.getElementById("theme-toggle")
+		// Guard: evita registrar el handler más de una vez en el mismo botón
+		if (!btn || btn.dataset.themeSetup === "1") return
+		btn.dataset.themeSetup = "1"
+		btn.addEventListener("click", () => {
+			const isDark = document.documentElement.classList.contains("dark")
+			localStorage.setItem("theme", isDark ? "light" : "dark")
+			document.documentElement.classList.toggle("dark", !isDark)
+		})
+	}
+
+	// Intento inmediato: cubre el caso en que astro:page-load
+	// ya se disparó antes de que este módulo se ejecutara
+	setupToggle()
+
+	// Para cada navegación con View Transitions
+	document.addEventListener("astro:page-load", setupToggle)
+</script>
