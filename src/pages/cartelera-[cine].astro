@@ -4,7 +4,8 @@ import Layout from "@/layouts/Layout.astro"
 import { CINES } from "../consts/cines";
 import { Metadata } from "../consts/metadata";
 import ProyeccionesCine from "../components/proyeccionesCine.astro";
-import Action from "/src/components/Action.astro";
+import CartelleraSEO from "../components/SEO/cartelera.astro";
+import Action from "@/components/Action.astro";
 
 const cine = CINES.find(cine => cine.url === Astro.params.cine);
 
@@ -16,6 +17,9 @@ if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 4
         title={Metadata[`cartelera-${cine.url}`]?.title}
         canonical={Metadata[`cartelera-${cine.url}`]?.canonical}
 >
+    <Fragment slot="head">
+        <CartelleraSEO cine={cine} />
+    </Fragment>
     <main class="max-w-4xl mx-auto px-4 py-6" style={`--cine-color: var(--color-${cine.color})`}>
 
         <!-- Miga de pan -->
