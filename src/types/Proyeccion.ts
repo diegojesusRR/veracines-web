@@ -21,6 +21,7 @@ export interface GrupoProyeccion {
     entradas?: {
         espanol?: string,
         vose?: string
-    }
+    },
+    dateCreated?: string,
     colaboracion?: Colaboracion
 }

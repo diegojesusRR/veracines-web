@@ -31,6 +31,9 @@ const movieEvents = gruposCine.map(g => {
         "location": {
             "@type": "MovieTheater",
             "name": cine.nombre,
+            "telephone": cine.telefono,
+            "priceRange": "5.00€ - 7.00€",
+            "image": cine.image,
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": cine.localizacion.direccion,
@@ -59,6 +62,7 @@ const schema = {
             "url": `${BASE_URL}/cartelera-${cine.url}`,
             "telephone": cine.telefono,
             "priceRange": "5.00€ - 7.00€",
+            "image": cine.image,
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": cine.localizacion.direccion,
