@@ -1,0 +1,53 @@
+---
+import {CINES} from "@/consts/cines";
+
+// TODO: Falta foto del cine
+const schemaOrg = CINES.map(cine => ({
+    "@type": "MovieTheater",
+    "@id": `https://www.veracines.es/#${cine.url}`,
+    "telephone": cine.telefono,
+    "priceRange": "5.00€ - 7.00€",
+    "name": cine.nombre,
+    "image": cine.image,
+    "url": `https://www.veracines.es/cartelera-${cine.url}`,
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": cine.localizacion.direccion,
+        "addressLocality": cine.localizacion.ciudad,
+        "addressRegion": cine.localizacion.provincia,
+        "postalCode": cine.localizacion.codigoPostal,
+        "addressCountry": cine.localizacion.adressCounty,
+    },
+    "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "validFrom": cine.horario.fechaInicio,
+        "validThrough": cine.horario.fechaFin,
+        "dayOfWeek": cine.horario.diasSemana,
+        "opens": cine.horario.horarioApertura,
+        "closes": cine.horario.horarioCierre
+    }]
+}));
+
+const organizationGraph = [{
+    "@type": "Organization",
+    "@id": "https://veracines.es/#organizacion",
+    "name": "Veracines",
+    "url": "https://veracines.es/",
+    "logo": "https://veracines.es/img/veracines-logo.png",
+    "sameAs": [
+        "https://www.facebook.com/veracines.es",
+        "https://www.instagram.com/veracines.sl"
+    ],
+    "subOrganization": [
+        { "@id": "https://veracines.es/#vera" },
+        { "@id": "https://veracines.es/#regio" }
+    ]
+}]
+
+const graph = [...organizationGraph, ...schemaOrg];
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": graph
+})} />

@@ -1,0 +1,107 @@
+---
+import type { Cine } from "@/types/Cine.ts";
+import { GRUPOSPROYECCIONES } from "@/consts/proyecciones";
+
+interface Props {
+    cine: Cine;
+}
+
+const { cine } = Astro.props;
+
+const now = new Date();
+const BASE_URL = "https://www.veracines.es";
+
+// Películas actualmente en cartelera para este cine
+const gruposCine = GRUPOSPROYECCIONES
+    .filter(g => g.cine.url === cine.url)
+    .filter(g => g.proyecciones.some(p => p.fecha >= now));
+
+const movieEvents = gruposCine.map(g => {
+    const proximas = g.proyecciones
+        .filter(p => p.fecha >= now)
+        .sort((a, b) => a.fecha.getTime() - b.fecha.getTime());
+
+    return {
+        "@type": "ScreeningEvent",
+        "name": g.pelicula.nombre,
+        "url": `${BASE_URL}/peliculas/${g.pelicula.id}`,
+        "image": `${BASE_URL}/img/peliculas/${g.pelicula.image}`,
+        "startDate": proximas[0]?.fecha.toISOString(),
+        "endDate": proximas[proximas.length - 1]?.fecha.toISOString(),
+        "location": {
+            "@type": "MovieTheater",
+            "name": cine.nombre,
+            "telephone": cine.telefono,
+            "priceRange": "5.00€ - 7.00€",
+            "image": cine.image,
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": cine.localizacion.direccion,
+                "addressLocality": cine.localizacion.ciudad,
+                "addressRegion": cine.localizacion.provincia,
+                "postalCode": cine.localizacion.codigoPostal,
+                "addressCountry": cine.localizacion.adressCounty,
+            }
+        },
+        "workPresented": {
+            "@type": "Movie",
+            "name": g.pelicula.nombre,
+            "url": `${BASE_URL}/peliculas/${g.pelicula.id}`,
+            "image": `${BASE_URL}/img/peliculas/${g.pelicula.image}`,
+        }
+    };
+});
+
+const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MovieTheater",
+            "@id": `${BASE_URL}/cartelera-${cine.url}`,
+            "name": cine.nombre,
+            "url": `${BASE_URL}/cartelera-${cine.url}`,
+            "telephone": cine.telefono,
+            "priceRange": "5.00€ - 7.00€",
+            "image": cine.image,
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": cine.localizacion.direccion,
+                "addressLocality": cine.localizacion.ciudad,
+                "addressRegion": cine.localizacion.provincia,
+                "postalCode": cine.localizacion.codigoPostal,
+                "addressCountry": cine.localizacion.adressCounty,
+            },
+            "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "validFrom": cine.horario.fechaInicio,
+                "validThrough": cine.horario.fechaFin,
+                "dayOfWeek": cine.horario.diasSemana,
+                "opens": cine.horario.horarioApertura,
+                "closes": cine.horario.horarioCierre,
+            }],
+            ...(cine.images ? { "image": cine.images } : {})
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": BASE_URL
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": `Cartelera de ${cine.nombre}`,
+                    "item": `${BASE_URL}/cartelera-${cine.url}`
+                }
+            ]
+        },
+        ...movieEvents
+    ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
