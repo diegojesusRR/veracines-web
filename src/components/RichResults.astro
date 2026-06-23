@@ -1,8 +1,6 @@
 ---
-import { BOXERS } from "@/consts/boxers"
 import {CINES} from "../consts/cines";
 import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
-import {PELICULAS} from "../consts/peliculas";
 
 /** https://developers.google.com/search/docs/appearance/structured-data/organization */
 const organizationSchema = {
@@ -31,7 +29,6 @@ const gruposProyeccionesProximas = GRUPOSPROYECCIONES.filter(grupoProyeccion => 
 const eventsSchema = gruposProyeccionesProximas.map(grupoProyeccion => {
 
     if(!grupoProyeccion.pelicula)
-        console.log(grupoProyeccion)
 
     return grupoProyeccion.proyecciones.map(proyeccion => ({
         "@context": "https://schema.org",

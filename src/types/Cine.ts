@@ -6,6 +6,7 @@ export interface Cine {
     nombre: string
     corto: string
     color: string
+    image: string
     localizacion: {
         ubicacionKey: string,
         direccion: string,
@@ -16,6 +17,20 @@ export interface Cine {
         adressCounty: string,
     }
     servicios: Servicio[],
+    telefono: string,
     horaFijaProyeccion?: string,
     ventaOnline: boolean
+    horario: {
+        fechaInicio: string,
+        fechaFin: string,
+        diasSemana: string[],
+        horarioApertura: string,
+        horarioCierre: string,
+    },
+    images?: {
+        url: string,
+        caption: string,
+        width: string,
+        height: string,
+    }[]
 }
