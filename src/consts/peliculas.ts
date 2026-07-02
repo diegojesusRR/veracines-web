@@ -705,6 +705,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/o1HQSh6zZ8s"
+    },
+    {
+        id: "vaiana",
+        image: "vaiana.jpeg",
+        nombre: "Vaiana",
+        descripcion: "Vaiana (Catherine Lagaʻaia) responde a la llamada del océano y, por primera vez, viaja más allá del arrecife de su isla de Motunui con el semidiós Maui (Dwayne Johnson) en un viaje inolvidable para devolver la prosperidad a su pueblo.",
+        edadRedomendada: "No recomendada menores 3 años",
+        videoUrl: "https://www.youtube.com/embed/oqS3Lpu1ZqI"
     }
 
 ];
