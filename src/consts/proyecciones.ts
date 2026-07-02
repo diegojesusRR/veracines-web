@@ -88,9 +88,17 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
     {
         grupo: 8,
         cine: cineVera,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-odisea')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'vaiana')!,
         proyecciones: [
             ...getProyecciones(new Date('2026-07-17'), new Date('2026-07-20'), '22:00'),
+        ],
+    },
+    {
+        grupo: 9,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-odisea')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-07-24'), new Date('2026-07-27'), '22:00'),
         ],
     },
 ]
