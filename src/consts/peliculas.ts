@@ -713,6 +713,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Vaiana (Catherine Lagaʻaia) responde a la llamada del océano y, por primera vez, viaja más allá del arrecife de su isla de Motunui con el semidiós Maui (Dwayne Johnson) en un viaje inolvidable para devolver la prosperidad a su pueblo.",
         edadRedomendada: "No recomendada menores 3 años",
         videoUrl: "https://www.youtube.com/embed/oqS3Lpu1ZqI"
+    },
+    {
+        id: "spiderman-new-day",
+        image: "spiderman-new-day.jpeg",
+        nombre: "Spider-Man: Brand New Day",
+        descripcion: "Han pasado cuatro años desde los acontecimientos de No Way Home, y Peter Parker ahora es un adulto que vive completamente solo, ha desaparecido voluntariamente de las vidas y recuerdos de quienes ama. Combatiendo el crimen en una Nueva York que ya no conoce su nombre, se ha dedicado por completo a proteger su ciudad—un Spider-Man a tiempo completo—, pero a medida que aumentan las exigencias sobre él, la presión desencadena una evolución física que amenaza su existencia, al mismo tiempo que un extraño nuevo patrón de crímenes da lugar a una de las amenazas más poderosas a las que se ha enfrentado.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/owfWVJoxXR4"
     }
 
 ];

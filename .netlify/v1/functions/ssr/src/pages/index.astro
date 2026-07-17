@@ -1,0 +1,32 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import Hero from "@/sections/Hero.astro"
+import {Metadata} from "../consts/metadata";
+import Ubicaciones from "../components/ubicaciones.astro";
+import Contacto from "../components/contacto.astro";
+import Servicios from "../components/Servicios.astro";
+import ProximasProyeccionesCarousel from "../components/ProximasProyeccionesCarousel.astro";
+import HomeSEO from "../components/SEO/home.astro";
+
+export const prerender = false
+---
+
+<Layout
+        description={Metadata.home.description}
+        title={Metadata.home.title}
+        canonical={Metadata.home.canonical}
+>
+    <Fragment slot="head">
+        <HomeSEO />
+    </Fragment>
+
+    <main class="max-w-3xl mx-auto px-4">
+        <div class="grid gap-14">
+            <Hero/>
+            <ProximasProyeccionesCarousel/>
+            <Ubicaciones/>
+            <Servicios/>
+            <Contacto/>
+        </div>
+    </main>
+</Layout>
