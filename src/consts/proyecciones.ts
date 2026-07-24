@@ -122,7 +122,7 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
         cine: cineVera,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'spiderman-new-day')!,
         proyecciones: [
-            ...getProyecciones(new Date('2026-07-31'), new Date('2026-08-04'), '22:00'),
+            ...getProyecciones(new Date('2026-07-31'), new Date('2026-08-03'), '22:00'),
         ],
     },
 ]
