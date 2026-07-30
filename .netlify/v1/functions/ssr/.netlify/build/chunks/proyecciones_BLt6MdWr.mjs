@@ -718,6 +718,14 @@ const PELICULAS = [
     descripcion: "Han pasado cuatro años desde los acontecimientos de No Way Home, y Peter Parker ahora es un adulto que vive completamente solo, ha desaparecido voluntariamente de las vidas y recuerdos de quienes ama. Combatiendo el crimen en una Nueva York que ya no conoce su nombre, se ha dedicado por completo a proteger su ciudad—un Spider-Man a tiempo completo—, pero a medida que aumentan las exigencias sobre él, la presión desencadena una evolución física que amenaza su existencia, al mismo tiempo que un extraño nuevo patrón de crímenes da lugar a una de las amenazas más poderosas a las que se ha enfrentado.",
     edadRedomendada: "No recomendada menores 12 años",
     videoUrl: "https://www.youtube.com/embed/owfWVJoxXR4"
+  },
+  {
+    id: "patrulla-canina-dino-pelicula",
+    image: "patrulla-canina-dino-pelicula.jpg",
+    nombre: "La Patrulla Canina: La dino película",
+    descripcion: "Después de que su barco quede atrapado en una misteriosa tormenta, los cachorros de la Patrulla Canina naufragan en una isla tropical inexplorada repleta de dinosaurios. Allí conocen a Rex, un cachorro que lleva años varado en la isla y que se ha convertido en un auténtico experto en todo lo relacionado con los dinos. Cuando el archienemigo de la Patrulla Canina, el alcalde Humdinger, comienza a explotar la isla de forma imprudente con la intención de aprovechar sus recursos naturales, provoca accidentalmente la erupción de un enorme volcán inactivo. Los cachorros de la Patrulla Canina se enfrentan a sus rescates más importantes hasta ahora y deben detener a Humdinger antes de que la isla desaparezca.",
+    edadRedomendada: "Todos los públicos",
+    videoUrl: "https://www.youtube.com/embed/N-jJORZ3TF4"
   }
 ];
 
@@ -891,6 +899,38 @@ const gruposProyeccionesVera = [
     pelicula: PELICULAS.find((pelicula) => pelicula.id === "spiderman-new-day"),
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2026-07-31"), /* @__PURE__ */ new Date("2026-08-04"), "22:00")
+    ]
+  },
+  {
+    grupo: 13,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "el-dia-de-la-revelacion"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-05"), /* @__PURE__ */ new Date("2026-08-06"), "22:00")
+    ]
+  },
+  {
+    grupo: 14,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "patrulla-canina-dino-pelicula"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-07"), /* @__PURE__ */ new Date("2026-08-09"), "22:00")
+    ]
+  },
+  {
+    grupo: 15,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "la-odisea"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-10"), /* @__PURE__ */ new Date("2026-08-13"), "22:00")
+    ]
+  },
+  {
+    grupo: 16,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "minions-and-monsters"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-14"), /* @__PURE__ */ new Date("2026-08-15"), "22:00")
     ]
   }
 ];
