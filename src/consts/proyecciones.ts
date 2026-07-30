@@ -122,7 +122,39 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
         cine: cineVera,
         pelicula: PELICULAS.find(pelicula => pelicula.id === 'spiderman-new-day')!,
         proyecciones: [
-            ...getProyecciones(new Date('2026-07-31'), new Date('2026-08-03'), '22:00'),
+            ...getProyecciones(new Date('2026-07-31'), new Date('2026-08-04'), '22:00'),
+        ],
+    },
+    {
+        grupo: 13,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-dia-de-la-revelacion')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-05'), new Date('2026-08-06'), '22:00'),
+        ],
+    },
+    {
+        grupo: 14,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'patrulla-canina-dino-pelicula')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-07'), new Date('2026-08-09'), '22:00'),
+        ],
+    },
+    {
+        grupo: 15,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-odisea')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-10'), new Date('2026-08-13'), '22:00'),
+        ],
+    },
+    {
+        grupo: 16,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'minions-and-monsters')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-14'), new Date('2026-08-15'), '22:00'),
         ],
     },
 ]

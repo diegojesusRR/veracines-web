@@ -721,6 +721,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Han pasado cuatro años desde los acontecimientos de No Way Home, y Peter Parker ahora es un adulto que vive completamente solo, ha desaparecido voluntariamente de las vidas y recuerdos de quienes ama. Combatiendo el crimen en una Nueva York que ya no conoce su nombre, se ha dedicado por completo a proteger su ciudad—un Spider-Man a tiempo completo—, pero a medida que aumentan las exigencias sobre él, la presión desencadena una evolución física que amenaza su existencia, al mismo tiempo que un extraño nuevo patrón de crímenes da lugar a una de las amenazas más poderosas a las que se ha enfrentado.",
         edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/owfWVJoxXR4"
+    },
+    {
+        id: "patrulla-canina-dino-pelicula",
+        image: "patrulla-canina-dino-pelicula.jpg",
+        nombre: "La Patrulla Canina: La dino película",
+        descripcion: "Después de que su barco quede atrapado en una misteriosa tormenta, los cachorros de la Patrulla Canina naufragan en una isla tropical inexplorada repleta de dinosaurios. Allí conocen a Rex, un cachorro que lleva años varado en la isla y que se ha convertido en un auténtico experto en todo lo relacionado con los dinos. Cuando el archienemigo de la Patrulla Canina, el alcalde Humdinger, comienza a explotar la isla de forma imprudente con la intención de aprovechar sus recursos naturales, provoca accidentalmente la erupción de un enorme volcán inactivo. Los cachorros de la Patrulla Canina se enfrentan a sus rescates más importantes hasta ahora y deben detener a Humdinger antes de que la isla desaparezca.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/N-jJORZ3TF4"
     }
 
 ];
