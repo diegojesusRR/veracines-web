@@ -4,7 +4,7 @@ import 'kleur/colors';
 import { a as $$Layout } from '../chunks/Layout_DgNdm22p.mjs';
 import { $ as $$Action, M as Metadata } from '../chunks/metadata_CwD_cYt4.mjs';
 /* empty css                                 */
-import { C as CINES, G as GRUPOSPROYECCIONES } from '../chunks/proyecciones_BLt6MdWr.mjs';
+import { C as CINES, G as GRUPOSPROYECCIONES } from '../chunks/proyecciones_BcPbmD8H.mjs';
 import 'clsx';
 export { renderers } from '../renderers.mjs';
 

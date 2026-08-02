@@ -157,6 +157,22 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-08-14'), new Date('2026-08-15'), '22:00'),
         ],
     },
+    {
+        grupo: 17,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'spiderman-new-day')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-16'), new Date('2026-08-18'), '22:00'),
+        ],
+    },
+    {
+        grupo: 18,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'toy-story-5')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-19'), new Date('2026-08-20'), '22:00'),
+        ],
+    },
 ]
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
