@@ -932,6 +932,22 @@ const gruposProyeccionesVera = [
     proyecciones: [
       ...getProyecciones(/* @__PURE__ */ new Date("2026-08-14"), /* @__PURE__ */ new Date("2026-08-15"), "22:00")
     ]
+  },
+  {
+    grupo: 17,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "spiderman-new-day"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-16"), /* @__PURE__ */ new Date("2026-08-18"), "22:00")
+    ]
+  },
+  {
+    grupo: 18,
+    cine: cineVera,
+    pelicula: PELICULAS.find((pelicula) => pelicula.id === "toy-story-5"),
+    proyecciones: [
+      ...getProyecciones(/* @__PURE__ */ new Date("2026-08-19"), /* @__PURE__ */ new Date("2026-08-20"), "22:00")
+    ]
   }
 ];
 CINES.find((cine) => cine.url === "regio");
