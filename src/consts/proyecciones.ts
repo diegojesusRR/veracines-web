@@ -168,11 +168,36 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
     {
         grupo: 18,
         cine: cineVera,
-        pelicula: PELICULAS.find(pelicula => pelicula.id === 'toy-story-5')!,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'obsession')!,
         proyecciones: [
             ...getProyecciones(new Date('2026-08-19'), new Date('2026-08-20'), '22:00'),
         ],
     },
+    {
+        grupo: 19,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'toy-story-5')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-21'), new Date('2026-08-22'), '22:00'),
+        ],
+    },
+    {
+        grupo: 20,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-final-de-oak-street')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-23'), new Date('2026-08-25'), '22:00'),
+        ],
+    },
+    {
+        grupo: 21,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'tadeo-jones-y-la-lampara-maravillosa')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-08-26'), new Date('2026-08-30'), '22:00'),
+        ],
+    },
+
 ]
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
