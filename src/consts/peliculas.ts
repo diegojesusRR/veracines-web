@@ -729,6 +729,30 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Después de que su barco quede atrapado en una misteriosa tormenta, los cachorros de la Patrulla Canina naufragan en una isla tropical inexplorada repleta de dinosaurios. Allí conocen a Rex, un cachorro que lleva años varado en la isla y que se ha convertido en un auténtico experto en todo lo relacionado con los dinos. Cuando el archienemigo de la Patrulla Canina, el alcalde Humdinger, comienza a explotar la isla de forma imprudente con la intención de aprovechar sus recursos naturales, provoca accidentalmente la erupción de un enorme volcán inactivo. Los cachorros de la Patrulla Canina se enfrentan a sus rescates más importantes hasta ahora y deben detener a Humdinger antes de que la isla desaparezca.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/N-jJORZ3TF4"
+    },
+    {
+        id: "obsession",
+        image: "obsession.jpg",
+        nombre: "Obsession",
+        descripcion: "El anhelo romántico desesperado de un chico por su amor platónico de toda la vida desencadena un siniestro hechizo: Niki se vuelve irracionalmente obsesiva hasta convertirse en la sombra de Bear. Una fantasía aparentemente inofensiva que se convertirá en una perturbadora pesadilla.",
+        edadRedomendada: "No recomendada menores 18 años",
+        videoUrl: "https://www.youtube.com/embed/KjoR2pVaEvY"
+    },
+    {
+        id: "el-final-de-oak-street",
+        image: "el-final-de-oak-street.jpg",
+        nombre: "El final de Oak Street",
+        descripcion: "Después de que un misterioso fenómeno cósmico arranque Oak Street de su entorno suburbano y transporte a sus habitantes a un lugar desconocido, la familia Platt pronto descubre que su propia supervivencia depende de que permanezcan unidos mientras se orientan en un entorno que ya no reconocen.",
+        edadRedomendada: "No recomendada menores 13 años",
+        videoUrl: "https://www.youtube.com/embed/pKtm-_iOivI"
+    },
+    {
+        id: "tadeo-jones-y-la-lampara-maravillosa",
+        image: "tadeo-jones-y-la-lampara-maravillosa.jpeg",
+        nombre: "Tadeo Jones y la lámpara maravillosa",
+        descripcion: "Cuarta entrega de la saga 'Tadeo Jones'. Tadeo y Sara son ahora padres de Olimpia (Oli), una adorable e intrépida niña de dos años. Y Momia no lleva nada bien haber dejado de ser el centro de atención. Mientras están de vacaciones en Londres, Sara sigue la pista hacia un objeto único: la lámpara maravillosa de Las mil y una noches. Y Momia, presa de los celos, pide un deseo: viajar en el tiempo hasta el momento en que era joven y todos le querían. Tadeo y Sara tienen que unir fuerzas para evitar que Momia cambie el curso de la historia y traer al grupo (Jeff, Belzoni y Ramona incluidos) de vuelta a casa, a su época. Esta nueva aventura los llevará a cruzar el Océano Atlántico desde Perú hasta Grecia, y de allí a lo más profundo de Oriente Medio, hasta la misma cueva de Ali Babá y los cuarenta ladrones.",
+        edadRedomendada: "Todos los públicos",
+        videoUrl: "https://www.youtube.com/embed/pKtm-_iOivI"
     }
 
 ];
