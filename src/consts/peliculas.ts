@@ -753,6 +753,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Cuarta entrega de la saga 'Tadeo Jones'. Tadeo y Sara son ahora padres de Olimpia (Oli), una adorable e intrépida niña de dos años. Y Momia no lleva nada bien haber dejado de ser el centro de atención. Mientras están de vacaciones en Londres, Sara sigue la pista hacia un objeto único: la lámpara maravillosa de Las mil y una noches. Y Momia, presa de los celos, pide un deseo: viajar en el tiempo hasta el momento en que era joven y todos le querían. Tadeo y Sara tienen que unir fuerzas para evitar que Momia cambie el curso de la historia y traer al grupo (Jeff, Belzoni y Ramona incluidos) de vuelta a casa, a su época. Esta nueva aventura los llevará a cruzar el Océano Atlántico desde Perú hasta Grecia, y de allí a lo más profundo de Oriente Medio, hasta la misma cueva de Ali Babá y los cuarenta ladrones.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/pKtm-_iOivI"
+    },
+    {
+        id: "heart-of-the-beast",
+        image: "heart-of-the-beast.jpg",
+        nombre: "En el corazón de la bestia",
+        descripcion: "Un ex soldado de las Fuerzas Especiales del Ejército y su perro de combate retirado intentan volver a la civilización tras sufrir un catastrófico accidente en las profundidades de los parajes salvajes de Alaska.",
+        edadRedomendada: "No recomendada menores 12 años",
+        videoUrl: "https://www.youtube.com/embed/eIorYm1Kqfs"
     }
 
 ];
