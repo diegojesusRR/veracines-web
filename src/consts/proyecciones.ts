@@ -197,6 +197,14 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-08-26'), new Date('2026-08-30'), '22:00'),
         ],
     },
+    {
+        grupo: 22,
+        cine: cineVera,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'heart-of-the-beast')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-09-01'), new Date('2026-09-03'), '22:00'),
+        ],
+    },
 
 ]
 
