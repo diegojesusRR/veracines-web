@@ -197,7 +197,6 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-08-26'), new Date('2026-08-30'), '22:00'),
         ],
     },
-
 ]
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
