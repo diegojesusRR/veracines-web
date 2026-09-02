@@ -1,7 +1,6 @@
 ---
 import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
 import ProyeccionCard from "./proyeccionCard.astro";
-import Action from "./Action.astro";
 const {cine} = Astro.props;
 
 const proximasProyecciones = GRUPOSPROYECCIONES.filter(grupo => {
@@ -12,14 +11,29 @@ const proximasProyecciones = GRUPOSPROYECCIONES.filter(grupo => {
 
 <section id=`proyecciones-${cine.url}`>
     {
-        proximasProyecciones.length === 0 ?
+        cine.url === 'vera' && proximasProyecciones.length === 0 && ![6, 7].includes(new Date().getMonth()) ? (
+                <div class="relative overflow-hidden rounded-[10px] border border-[#dfe7ff]/60 bg-gradient-to-br from-[#1f2e6a] via-[#2e4390] to-[#9f1d2a] p-6 text-center shadow-[0_18px_40px_rgba(17,24,39,0.28)] ring-1 ring-white/20">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.14),_transparent_42%)]"></div>
+                    <div class="relative">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-2xl shadow-sm backdrop-blur-sm">🎬</div>
+                        <h2 class="text-3xl font-black tracking-tight text-white">Fin de temporada</h2>
+                        <h3 class="text-2xl font-black tracking-tight text-white">¡Muchas gracias por este verano!</h3>
+                        <div class="mx-auto mt-3 h-1 w-20 rounded-full bg-white/80"></div>
+                        <p class="mt-4 text-sm leading-relaxed text-white/90 sm:text-base">
+                            La temporada de verano {new Date().getFullYear()} ha llegado a su fin, desde Veracines queremos expresar que ha sido un placer compartir con vosotros noches de cine bajo el cielo de Vera. Gracias por acudir, disfrutar y acompañarnos este verano. ¡Esperamos volver a veros el próximo año con más proyecciones y buenas noches de cine!
+                        </p>
+                    </div>
+                </div>
+        ) : proximasProyecciones.length === 0 ? (
                 <div class=`p-2 m-4 align-middle text-${cine.color}`>
                     <p>Actualmente no hay proyecciones disponibles.</p>
-                </div> :
+                </div>
+        ) : (
                 <div>
                     {proximasProyecciones.filter(x => x.cine.url === cine.url).map(grupo =>
                             <ProyeccionCard cine={cine} entradas={grupo.entradas} proyecciones={grupo.proyecciones}
                                             pelicula={grupo.pelicula} colaboracion={grupo.colaboracion}/>)}
                 </div>
+        )
     }
 </section>
