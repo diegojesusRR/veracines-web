@@ -753,6 +753,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Cuarta entrega de la saga 'Tadeo Jones'. Tadeo y Sara son ahora padres de Olimpia (Oli), una adorable e intrépida niña de dos años. Y Momia no lleva nada bien haber dejado de ser el centro de atención. Mientras están de vacaciones en Londres, Sara sigue la pista hacia un objeto único: la lámpara maravillosa de Las mil y una noches. Y Momia, presa de los celos, pide un deseo: viajar en el tiempo hasta el momento en que era joven y todos le querían. Tadeo y Sara tienen que unir fuerzas para evitar que Momia cambie el curso de la historia y traer al grupo (Jeff, Belzoni y Ramona incluidos) de vuelta a casa, a su época. Esta nueva aventura los llevará a cruzar el Océano Atlántico desde Perú hasta Grecia, y de allí a lo más profundo de Oriente Medio, hasta la misma cueva de Ali Babá y los cuarenta ladrones.",
         edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/pKtm-_iOivI"
+    },
+    {
+        id: "el-padrino-ii",
+        image: "el-padrino-ii.jpg",
+        nombre: "El padrino. Parte II",
+        descripcion: "Segunda entrega de la saga de los Corleone, contada a través de dos historias que avanzan en paralelo. Por un lado, Michael Corleone ya está al frente de los negocios de la familia y trata de consolidar y ampliar su poder mientras sospecha que alguien de su entorno lo ha traicionado. Por otro, se narran los orígenes de su padre, Vito Corleone, desde su infancia en Sicilia hasta su llegada a Estados Unidos, donde, partiendo de la nada, acaba convirtiéndose en uno de los jefes mafiosos más poderosos de Nueva York.",
+        edadRedomendada: "No recomendada para menores de 18 años",
+        videoUrl: "https://www.youtube.com/embed/Ts1lHOyWNSE"
     }
 
 ];

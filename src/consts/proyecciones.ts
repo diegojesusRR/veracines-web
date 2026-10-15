@@ -201,6 +201,14 @@ const gruposProyeccionesVera: GrupoProyeccion[] = [
 
 const cineRegio = CINES.find(cine => cine.url === 'regio')!;
 const gruposProyeccionesRegio: GrupoProyeccion[] = [
+    {
+        grupo: 1,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'el-padrino-ii')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-10-24'), new Date('2026-10-24'), '18:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
