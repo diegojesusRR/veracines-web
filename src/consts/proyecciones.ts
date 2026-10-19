@@ -209,6 +209,16 @@ const gruposProyeccionesRegio: GrupoProyeccion[] = [
             ...getProyecciones(new Date('2026-10-24'), new Date('2026-10-24'), '18:30'),
         ],
     },
+    {
+        grupo: 2,
+        cine: cineRegio,
+        pelicula: PELICULAS.find(pelicula => pelicula.id === 'la-bola-negra')!,
+        proyecciones: [
+            ...getProyecciones(new Date('2026-10-30'), new Date('2026-10-30'), '20:00'),
+            ...getProyecciones(new Date('2026-10-31'), new Date('2026-11-01'), '17:30'),
+            ...getProyecciones(new Date('2026-10-31'), new Date('2026-11-01'), '20:30'),
+        ],
+    },
 ]
 
 export const GRUPOSPROYECCIONES: GrupoProyeccion[] = [
