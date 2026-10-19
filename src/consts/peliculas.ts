@@ -761,6 +761,14 @@ export const PELICULAS: Pelicula[] = [
         descripcion: "Segunda entrega de la saga de los Corleone, contada a través de dos historias que avanzan en paralelo. Por un lado, Michael Corleone ya está al frente de los negocios de la familia y trata de consolidar y ampliar su poder mientras sospecha que alguien de su entorno lo ha traicionado. Por otro, se narran los orígenes de su padre, Vito Corleone, desde su infancia en Sicilia hasta su llegada a Estados Unidos, donde, partiendo de la nada, acaba convirtiéndose en uno de los jefes mafiosos más poderosos de Nueva York.",
         edadRedomendada: "No recomendada para menores de 18 años",
         videoUrl: "https://www.youtube.com/embed/Ts1lHOyWNSE"
+    },
+    {
+        id: "la-bola-negra",
+        image: "la-bola-negra.jpg",
+        nombre: "La bola negra",
+        descripcion: "Las vidas interconectadas de tres hombres en tres épocas distintas. Tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia, y por una de las últimas obras, inacabada, de Federico García Lorca.",
+        edadRedomendada: "No recomendada para menores de 12 años",
+        videoUrl: "https://www.youtube.com/embed/9NNU-vSeOB0"
     }
 
 ];
