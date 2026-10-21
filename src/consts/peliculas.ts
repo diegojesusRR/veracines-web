@@ -767,7 +767,7 @@ export const PELICULAS: Pelicula[] = [
         image: "la-bola-negra.jpg",
         nombre: "La bola negra",
         descripcion: "Las vidas interconectadas de tres hombres en tres épocas distintas. Tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia, y por una de las últimas obras, inacabada, de Federico García Lorca.",
-        edadRedomendada: "No recomendada para menores de 12 años",
+        edadRedomendada: "No recomendada para menores de 16 años",
         videoUrl: "https://www.youtube.com/embed/9NNU-vSeOB0"
     }
 
