@@ -50,7 +50,8 @@ La web queda en `http://localhost:4321`.
 | `yarn check` | `astro check` + `tsc --noEmit` |
 | `yarn lint` / `yarn lint:fix` | ESLint sobre `.astro`, `.ts`, `.js` y `.tsx` |
 | `yarn format` / `yarn format:check` | Prettier sobre `src/` |
-| `yarn db:seed` | Copia `src/consts/` a Supabase (necesita la service role key) |
+| `yarn db:seed` | Copia `src/consts/` a Supabase por API (necesita la service role key) |
+| `yarn db:seed:sql` | Genera `supabase/seed.sql` desde `src/consts/`, para ejecutarlo sin claves |
 
 ### Variables de entorno
 
@@ -156,13 +157,18 @@ La temporada de cada cine se guarda sin año (`'MM-DD'`). Si el fin es anterior 
 
 1. En el panel de Supabase, abre **SQL Editor** y ejecuta la migración. También puedes usar `supabase db push` con la CLI.
 2. Copia `.env.example` a `.env` y rellena `SUPABASE_URL`, `SUPABASE_ANON_KEY` y `SUPABASE_SERVICE_ROLE_KEY` (Project Settings → API).
-3. Carga los datos actuales:
+3. Carga los datos actuales. Hay dos formas:
+   - **Sin claves:** genera `supabase/seed.sql` y ejecútalo en DataGrip o en el SQL Editor. Si `programaciones` ya tiene datos, aborta la transacción entera.
 
-   ```bash
-   yarn db:seed
-   ```
+     ```bash
+     yarn db:seed:sql
+     ```
 
-   Cines y películas se cargan con upsert, así que el script se puede repetir. Las programaciones solo se insertan si la tabla está vacía.
+   - **Por API:** con la service role key en `.env`. Cines y películas se cargan con upsert, así que el script se puede repetir. Las programaciones solo se insertan si la tabla está vacía.
+
+     ```bash
+     yarn db:seed
+     ```
 4. En Netlify, añade solo `SUPABASE_URL` y `SUPABASE_ANON_KEY` y despliega.
 
 ### Cómo se lee

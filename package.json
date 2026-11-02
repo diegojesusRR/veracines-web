@@ -14,7 +14,8 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "prepare": "husky",
-    "db:seed": "tsx --env-file=.env scripts/seed-supabase.ts"
+    "db:seed": "tsx --env-file=.env scripts/seed-supabase.ts",
+    "db:seed:sql": "tsx scripts/generate-seed-sql.ts"
   },
   "dependencies": {
     "@astrojs/netlify": "^5.5.4",

@@ -58,7 +58,7 @@ GrupoProyeccion (types/Proyeccion.ts)
 | Fichero | Exporta | Contenido actual |
 | --- | --- | --- |
 | `consts/cines.ts` | `CINES: Cine[]` | `vera` (verano, del 23 de junio al 10 de septiembre, todos los días, 22:00, sin venta online) y `regio` (del 1 de octubre al 1 de mayo, de viernes a domingo, venta online). Las fechas del horario usan el año en curso (`new Date().getFullYear()`) |
-| `consts/peliculas.ts` | `PELICULAS: Pelicula[]` | Unas 97 películas, de 2024 hasta hoy. No se borran: son el catálogo de `/peliculas/:id` |
+| `consts/peliculas.ts` | `PELICULAS: Pelicula[]` | 96 películas, de 2024 hasta hoy. No se borran: son el catálogo de `/peliculas/:id` |
 | `consts/proyecciones.ts` | `GRUPOSPROYECCIONES` | `gruposProyeccionesVera` (temporada 2026: 21 grupos, del 26 de junio al 30 de agosto) + `gruposProyeccionesRegio`. Garrucha está comentado |
 | `consts/metadata.ts` | `Metadata` | `title`, `description` y `canonical` de `home`, `cartelera-vera` y `cartelera-regio`. **Es la que usan las páginas** |
 | `utils/seoConfig.ts` | `seoConfig`, `manifest` | Otra copia de `Metadata` (privada) para la URL base, el SEO por defecto y el manifest PWA |
