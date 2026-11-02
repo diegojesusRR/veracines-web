@@ -15,7 +15,7 @@ export const PELICULAS: Pelicula[] = [
         image: "un-lugar-tranquilo-dia-1.jpeg",
         nombre: "Un Lugar Tranquilo: Dia 1",
         descripcion: "Una mujer llamada Sam trata de sobrevivir a una invasión en la ciudad de Nueva York por criaturas alienígenas sedientas de sangre con oídos ultrasónicos. Tercera entrega de la saga.",
-        edadRedomendada: "Pendiente de Calificación",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/G0HL9dFjm5E"
     },
     {
@@ -31,7 +31,7 @@ export const PELICULAS: Pelicula[] = [
         image: "bad-boys-ride-or-die.jpeg",
         nombre: "Bad Boys: Ride or Die",
         descripcion: "Los policías más famosos del mundo regresan con su icónica mezcla de acción al límite y comedia escandalosa, pero esta vez con un giro inesperado: ¡Los mejores de Miami se dan a la fuga! Cuarta entrega de la saga 'Dos policías rebeldes'.",
-        edadRedomendada: "No recomendada menores 16 años",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/LOZqqEXURzg"
     },
     {
@@ -79,7 +79,7 @@ export const PELICULAS: Pelicula[] = [
         image: "deadpool-y-lobezno.jpeg",
         nombre: "Deadpool y Lobezno",
         descripcion: "Tercera entrega de la saga \"Deadpool\", ahora integrada en el Universo Cinematográfico de Marvel (MCU) pero manteniendo su enfoque para adultos, con calificación R. En septiembre de 2022 se confirmó la aparición de Hugh Jackman como Lobezno, por primera vez desde \"Logan\".",
-        edadRedomendada: "No recomendada menores 16 años",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/tTM5weeCFvQ"
     },
     {
@@ -87,7 +87,7 @@ export const PELICULAS: Pelicula[] = [
         image: "cuerpo-escombro.jpg",
         nombre: "Cuerpo Escombro",
         descripcion: "Ante los problemas para encontrar trabajo y liado por su hermano Fermín, Javi se hace pasar por discapacitado para conseguir un puesto que necesita desesperadamente. Pero fingir parálisis cerebral es más complicado de lo que parece, sobre todo cuando se enamora de su jefa.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/l-W4M9QrhS8"
     },
     {
@@ -111,7 +111,7 @@ export const PELICULAS: Pelicula[] = [
         image: "parpadea-dos-veces.jpg",
         nombre: "Parpadea dos veces",
         descripcion: "Cuando el magnate de la tecnología Slater King (Channing Tatum) conoce a la camarera Frida (Naomi Ackie) en su gala de recaudación de fondos, saltan chispas. Él la invita a acompañarle a él y a sus amigos a unas vacaciones de ensueño en su isla privada. Un auténtico paraíso. Las noches salvajes se mezclan con mañanas bañadas por el sol y todo el mundo se lo pasa en grande. Nadie quiere que el viaje termine, pero cuando empiezan a suceder cosas extrañas, Frida intuye que algo anda mal en ese lugar. Tendrá que descubrir la verdad si quiere salir viva de la fiesta.",
-        edadRedomendada: "Pendiente de calificación",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/5yZOzi5h54U"
     },
     {
@@ -134,7 +134,7 @@ export const PELICULAS: Pelicula[] = [
         image: "alien-romulus.jpg",
         nombre: "Alien: Romulus",
         descripcion: "Mientras rebuscan en las profundidades de una estación espacial abandonada, un grupo de jóvenes colonizadores del espacio se encuentra cara a cara con la forma de vida más aterradora del universo.",
-        edadRedomendada: "No recomendada menores 16 años",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/HCjuv9STNps"
     },
     {
@@ -142,7 +142,7 @@ export const PELICULAS: Pelicula[] = [
         image: "gladiator-2.jpg",
         nombre: "Gladiator II",
         descripcion: "Años después de presenciar la muerte del admirado héroe Máximo a manos de su tío, Lucio (Paul Mescal) se ve forzado a entrar en el Coliseo tras ser testigo de la conquista de su hogar por parte de los tiránicos emperadores que dirigen Roma con puño de hierro. Con un corazón desbordante de furia y el futuro del imperio en juego, Lucio debe rememorar su pasado en busca de la fuerza y el honor que devuelvan al pueblo la gloria perdida de Roma.",
-        edadRedomendada: "No recomendada menores 12 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/HCjuv9STNps"
     },
     {
@@ -150,7 +150,7 @@ export const PELICULAS: Pelicula[] = [
         image: "wicked.jpg",
         nombre: "Wicked",
         descripcion: "La historia de cómo una mujer de piel verde esmeralda se convierte en la Malvada Bruja del Oeste; largometraje basado en el musical de Broadway.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/UNHQgy3jawI"
     },
     {
@@ -182,7 +182,7 @@ export const PELICULAS: Pelicula[] = [
         image: "sonic-3.jpg",
         nombre: "Sonic 3: La Película",
         descripcion: "Sonic, Knuckles y Tails se reúnen para enfrentarse a un nuevo y poderoso adversario, Shadow, un misterioso villano cuyos poderes no se parecen a nada de lo que nuestros héroes han conocido hasta ahora. Con sus facultades superadas en todos los sentidos, el Equipo Sonic tendrá que establecer una insólita alianza con la esperanza de detener a Shadow y proteger el planeta.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/2YJXP8CKrNE"
     },
     {
@@ -198,7 +198,7 @@ export const PELICULAS: Pelicula[] = [
         image: "conclave.jpg",
         nombre: "Conclave",
         descripcion: "Tras la inesperada muerte del Sumo Pontífice, el cardenal Lawrence es designado como responsable para liderar uno de los rituales más secretos y antiguos del mundo: la elección de un nuevo Papa. Cuando los líderes más poderosos de la Iglesia Católica se reúnen en los salones del Vaticano, Lawrence se ve atrapado dentro de una compleja conspiración a la vez que descubre un secreto que podría sacudir los cimientos de la Iglesia.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/aMiOsqSkcYg"
     },
     {
@@ -206,7 +206,7 @@ export const PELICULAS: Pelicula[] = [
         image: "al-otro-barrio.jpg",
         nombre: "Al otro barrio",
         descripcion: "Intentar engañar a Hacienda ha sido una opción demasiado tentadora para Andrés (Quim Gutiérrez), pero no contaba con que le acabaran pillando. Y eso es exactamente lo que le ha sucedido. Además de la multa millonaria que le ha caído encima, ahora debe trasladar sus oficinas al barrio de Los Caños, en el extrarradio más marginal de la capital, o eso le parece a él. Pero es que Andrés estaba aprovechándose de una jugosa subvención por tener allí su sede, sin que hubiese puesto jamás los pies en el barrio. A regañadientes, él y sus empleados se trasladan a Los Caños y aquello no es tan malo como esperaban... Es peor.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/1Sp7NbEf4HQ"
     },
     {
@@ -222,7 +222,7 @@ export const PELICULAS: Pelicula[] = [
         image: "mikaela.jpg",
         nombre: "Mikaela",
         descripcion: "En la víspera del día de Reyes una tormenta de nieve sin precedentes asola España. En medio del caos de una autopista colapsada, un grupo de atracadores aprovecha la oportunidad para asaltar un furgón blindado. A escasos metros se encuentra Leo (Antonio Resines), un policía en las últimas que no tiene nada que perder. Con la ayuda inesperada de una joven (Natalia Azahara) tratarán de evitar que la banda huya con el botín en una persecución a contrarreloj en medio de la tempestad.",
-        edadRedomendada: "No recomendada menores 12 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/iAJcJqPY4zI"
     },
     {
@@ -262,7 +262,7 @@ export const PELICULAS: Pelicula[] = [
         image: "a-complete-unknown.jpg",
         nombre: "A Complete Unknown",
         descripcion: "Ambientada en la influyente escena musical de Nueva York de principios de los años 60, 'A Complete Unknown' cuenta la historia del meteórico ascenso del músico de Minnesota Bob Dylan, un cantante de folk de 19 años, hasta las salas de conciertos y lo más alto de las listas de éxitos. Las canciones y la mística de Dylan, de nombre Robert Allen Zimmerman, se convirtieron en un fenómeno mundial que culminó en 1965 con su transgresora actuación de rock eléctrico en el Newport Folk Festival.",
-        edadRedomendada: "No recomendada menores 12 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/5WGNuAR__NM"
     },
     {
@@ -278,7 +278,7 @@ export const PELICULAS: Pelicula[] = [
         image: "blancanieves.avif",
         nombre: "Blancanieves",
         descripcion: "Una adaptación en acción real del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/Iqhf2jglRdc"
     },
     {
@@ -302,7 +302,7 @@ export const PELICULAS: Pelicula[] = [
         image: "una-pelicula-de-minecraft.jpg",
         nombre: "Una película de Minecraft",
         descripcion: "Bienvenido al mundo de Minecraft, donde la creatividad no sólo ayuda a crear, sino que es esencial para la supervivencia. Cuatro inadaptados -Garrett \"El Basurero\" Garrison (Momoa), Henry (Hansen), Natalie (Myers) y Dawn (Brooks)- se encuentran luchando con problemas ordinarios cuando de repente se ven arrastrados a través de un misterioso portal al Mundo Exterior: un extraño país de las maravillas cúbico que se nutre de la imaginación. Para volver a casa, tendrán que dominar este mundo (y protegerlo de cosas malvadas como Piglins y Zombies, también) mientras se embarcan en una búsqueda mágica con un inesperado experto artesano, Steve (Black). Juntos, su aventura desafiará a los cinco a ser audaces y a volver a conectar con las cualidades que hacen que cada uno de ellos sea único y creativo... las mismas habilidades que necesitan para prosperar en el mundo real.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/yxrjSE8XddA"
     },
     {
@@ -351,7 +351,7 @@ export const PELICULAS: Pelicula[] = [
         image: "f1-la-pelicula.jpeg",
         nombre: "F1: La película",
         descripcion: "Apodado “el más grande de todos los tiempos”, Sonny Hayes fue el fenómeno más prometedor de la Fórmula 1 en la década de 1990 hasta que un accidente en la pista casi acaba con su carrera. Treinta años después, es un piloto nómada a sueldo al que contacta su antiguo compañero de equipo Rubén Cervantes, propietario de un equipo de Fórmula 1 en apuros que está al borde de la quiebra. Rubén convence a Sonny para volver a la Fórmula 1 y tener una última oportunidad para salvar al equipo y ser el mejor del mundo. Su compañero será el novato Joshua Pearce, el piloto estrella del equipo que está decidido a imponer su propio ritmo.",
-        edadRedomendada: "No recomendada menores 13 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/H4qYzIrxRds"
     },
     {
@@ -367,7 +367,7 @@ export const PELICULAS: Pelicula[] = [
         image: "superman-2025.jpg",
         nombre: "Superman",
         descripcion: "Nueva película de Superman, escrita por James Gunn, que \"no será una historia de origen\". Con su estilo característico, Gunn aborda al superhéroe original en el recién imaginado universo DC con una singular mezcla de acción épica, humor y corazón, ofreciendo un Superman impulsado por la compasión y una creencia inherente en la bondad de la humanidad.",
-        edadRedomendada: "No recomendada menores 13 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/_EjMNSH9-p4"
     },
     {
@@ -399,7 +399,7 @@ export const PELICULAS: Pelicula[] = [
         image: "los-tipos-malos-2.jpg",
         nombre: "Los tipos malos 2",
         descripcion: "Un genial equipo de animales que no respetan la ley, los ahora muy reformados Tipos Malos, se esfuerzan (mucho, muchísimo) en ser buenos, pero se ven envueltos involuntariamente en un golpe de envergadura mundial planeado por un inesperado grupo de criminales: las Tipas Malas.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/PnUcgVUuYjs"
     },
     {
@@ -407,7 +407,7 @@ export const PELICULAS: Pelicula[] = [
         image: "karate-kid-leyendas.jpg",
         nombre: "Karate Kid: Leyendas",
         descripcion: "Tras una tragedia familiar, el prodigio del kung fu Li Fong se ve obligado a abandonar su hogar en Pekín y trasladarse a Nueva York con su madre. Li lucha por dejar atrás su pasado mientras intenta encajar con sus nuevos compañeros de clase y, aunque no quiere pelear, los problemas parecen encontrarle en todas partes. Cuando un nuevo amigo necesita su ayuda, Li se presenta a una competición de kárate, pero sus habilidades no son suficientes. El profesor de kung fu de Li, el Sr. Han, pide ayuda al Karate Kid original, Daniel LaRusso, y Li aprende una nueva forma de luchar, fusionando sus dos estilos en uno solo para el enfrentamiento definitivo de artes marciales. Nueva película de la saga \"Karate Kid\", conectada al universo de \"Cobra Kai\".",
-        edadRedomendada: "No recomendada menores 12 años",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/rL0Ec_v4zVw"
     },
     {
@@ -415,7 +415,7 @@ export const PELICULAS: Pelicula[] = [
         image: "voy-a-pasarmelo-mejor.jpg",
         nombre: "Voy a pasarmelo mejor",
         descripcion: "Es 1991 y los Pitus, al llegar el verano, se van de campamento. Al ritmo de las canciones más exitosas del año, cada uno de ellos se enamorará con la ilusión que sólo se tiene a los catorce y quince años.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/NfhooptQD0E"
     },
     {
@@ -455,7 +455,7 @@ export const PELICULAS: Pelicula[] = [
         image: "nadie-2.jpg",
         nombre: "Nadie 2",
         descripcion: "Cuatro años después de enfrentarse involuntariamente a la mafia rusa, Hutch sigue manteniendo con la organización criminal una deuda de 30 millones de dólares que trata de saldar poco a poco con una serie interminable de golpes contra matones internacionales. Pese a disfrutar como siempre de la faceta más trepidante y física de su «trabajo», Hutch y su esposa Becca se sienten agotados y distanciados. Para intentar remediarlo, deciden llevarse a sus hijos de escapada al mismo lugar al que Hutch iba de vacaciones con su hermano Harry cuando eran pequeños.",
-        edadRedomendada: "No recomendada menores 18 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/Qe_0NUZTST0"
     },
     {
@@ -479,7 +479,7 @@ export const PELICULAS: Pelicula[] = [
         image: "el-cautivo.jpg",
         nombre: "El Cautivo",
         descripcion: "Año 1575. El joven soldado Miguel de Cervantes es capturado en alta mar por corsarios árabes y llevado a Argel como rehén. Consciente de que allí le espera una cruel muerte si su familia no paga pronto su rescate, Miguel encontrará refugio en su pasión por contar historias. Sus fascinantes relatos devuelven la esperanza a sus compañeros de prisión y acaban por llamar la atención de Hasán, el misterioso y temido Bajá de Argel, con el que comienza a desarrollar una extraña afinidad. Mientras los conflictos crecen entre sus compañeros, Miguel, llevado por su inquebrantable optimismo, comenzará a idear un arriesgado plan de fuga.",
-        edadRedomendada: "No recomendada menores 12 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/Zy4GBAoS7l4"
     },
     {
@@ -543,7 +543,7 @@ export const PELICULAS: Pelicula[] = [
         image: "zootropolis-2.jpg",
         nombre: "Zootrópolis 2",
         descripcion: "Judy y Nick se encuentran tras la retorcida pista de un misterioso reptil que llega a Zootopia y pone patas arriba la metrópolis de los mamíferos. Para resolver el caso, Judy y Nick deben ir de incógnito a nuevas partes inesperadas de la ciudad, donde su creciente asociación se pone a prueba como nunca antes.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/io6VfjLpgaU"
     },
     {
@@ -559,7 +559,7 @@ export const PELICULAS: Pelicula[] = [
         image: "la-asistenta.webp",
         nombre: "La asistenta",
         descripcion: "Una joven (Sydney Sweeney), con un pasado complicado comienza a trabajar como asistenta en la lujosa casa de los Winchester. A medida que se adentra en la vida de la familia, descubrirá secretos oscuros que pondrán en peligro su seguridad, pero quizá ya sea demasiado tarde... Adaptación de la novela de Freida McFadden.",
-        edadRedomendada: "No recomendada menores 16 años",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/IMrebLqjVVQ"
     },
     {
@@ -631,7 +631,7 @@ export const PELICULAS: Pelicula[] = [
         image: "super-mario-galaxy.jpg",
         nombre: "Super Mario Galaxy: La película",
         descripcion: "Secuela de 'Super Mario Bros: La película', basada en la saga 'Mario Galaxy'. Los hermanos Mario y Luigi y la princesa Peach emprenden una aventura hasta los confines del espacio y a través de la galaxia.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "Todos los públicos",
         videoUrl: "https://www.youtube.com/embed/VaGc3NrsfBI"
     },
     {
@@ -639,7 +639,7 @@ export const PELICULAS: Pelicula[] = [
         image: "proyecto-salvacion.jpg",
         nombre: "Proyecto Salvación",
         descripcion: "El profesor de ciencias Ryland Grace (Ryan Gosling) se despierta en una nave espacial a años luz de casa sin recordar quién es ni cómo ha llegado hasta allí. A medida que recupera la memoria, empieza a descubrir su misión: resolver el enigma de la misteriosa sustancia que provoca la extinción del sol. Deberá recurrir a sus conocimientos científicos y a sus ideas poco ortodoxas para salvar todo lo que hay en la Tierra de la extinción... pero una amistad inesperada significa que quizá no tenga que hacerlo solo.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/in-lUuKi0eE"
     },
     {
@@ -663,7 +663,7 @@ export const PELICULAS: Pelicula[] = [
         image: "minions-y-monsters.jpg",
         nombre: "Minions & Monsters",
         descripcion: "La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine, lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar al planeta del caos que acababan de crear.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/-_Ajqzp5iIQ"
     },
     {
@@ -679,7 +679,7 @@ export const PELICULAS: Pelicula[] = [
         image: "haciendo-amigos.jpg",
         nombre: "Haciendo Amigos",
         descripcion: "Antonio y Félix son una pareja de atracadores de poca monta que, huyendo de la policía tras atracar una joyería, se cruzan con Eva, monitora de un grupo de teatro formado por personas con discapacidad, que confunde a Félix con Ángel, un nuevo miembro del grupo al cual no conoce y al que están esperando. Aprovechando la confusión, Félix y Antonio consiguen escabullirse sin saber que les espera un retiro creativo de una semana con el entrañable grupo.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/SNl1zrF3AG8"
     },
     {
@@ -695,7 +695,7 @@ export const PELICULAS: Pelicula[] = [
         image: "la-odisea.jpg",
         nombre: "La odisea",
         descripcion: "Epopeya mitológica que sigue la historia de Odiseo y su largo viaje a casa, de 10 años de duración, tras la guerra de Troya.",
-        edadRedomendada: "No recomendada menores 7 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/WgDj3heU4YI"
     },
     {
@@ -711,7 +711,7 @@ export const PELICULAS: Pelicula[] = [
         image: "vaiana.jpeg",
         nombre: "Vaiana",
         descripcion: "Vaiana (Catherine Lagaʻaia) responde a la llamada del océano y, por primera vez, viaja más allá del arrecife de su isla de Motunui con el semidiós Maui (Dwayne Johnson) en un viaje inolvidable para devolver la prosperidad a su pueblo.",
-        edadRedomendada: "No recomendada menores 3 años",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/oqS3Lpu1ZqI"
     },
     {
@@ -727,7 +727,7 @@ export const PELICULAS: Pelicula[] = [
         image: "patrulla-canina-dino-pelicula.jpg",
         nombre: "La Patrulla Canina: La dino película",
         descripcion: "Después de que su barco quede atrapado en una misteriosa tormenta, los cachorros de la Patrulla Canina naufragan en una isla tropical inexplorada repleta de dinosaurios. Allí conocen a Rex, un cachorro que lleva años varado en la isla y que se ha convertido en un auténtico experto en todo lo relacionado con los dinos. Cuando el archienemigo de la Patrulla Canina, el alcalde Humdinger, comienza a explotar la isla de forma imprudente con la intención de aprovechar sus recursos naturales, provoca accidentalmente la erupción de un enorme volcán inactivo. Los cachorros de la Patrulla Canina se enfrentan a sus rescates más importantes hasta ahora y deben detener a Humdinger antes de que la isla desaparezca.",
-        edadRedomendada: "Todos los públicos",
+        edadRedomendada: "No recomendada menores 7 años",
         videoUrl: "https://www.youtube.com/embed/N-jJORZ3TF4"
     },
     {
@@ -743,7 +743,7 @@ export const PELICULAS: Pelicula[] = [
         image: "el-final-de-oak-street.jpg",
         nombre: "El final de Oak Street",
         descripcion: "Después de que un misterioso fenómeno cósmico arranque Oak Street de su entorno suburbano y transporte a sus habitantes a un lugar desconocido, la familia Platt pronto descubre que su propia supervivencia depende de que permanezcan unidos mientras se orientan en un entorno que ya no reconocen.",
-        edadRedomendada: "No recomendada menores 13 años",
+        edadRedomendada: "No recomendada menores 12 años",
         videoUrl: "https://www.youtube.com/embed/pKtm-_iOivI"
     },
     {
@@ -759,7 +759,7 @@ export const PELICULAS: Pelicula[] = [
         image: "el-padrino-ii.jpg",
         nombre: "El padrino. Parte II",
         descripcion: "Segunda entrega de la saga de los Corleone, contada a través de dos historias que avanzan en paralelo. Por un lado, Michael Corleone ya está al frente de los negocios de la familia y trata de consolidar y ampliar su poder mientras sospecha que alguien de su entorno lo ha traicionado. Por otro, se narran los orígenes de su padre, Vito Corleone, desde su infancia en Sicilia hasta su llegada a Estados Unidos, donde, partiendo de la nada, acaba convirtiéndose en uno de los jefes mafiosos más poderosos de Nueva York.",
-        edadRedomendada: "No recomendada para menores de 18 años",
+        edadRedomendada: "No recomendada menores 18 años",
         videoUrl: "https://www.youtube.com/embed/Ts1lHOyWNSE"
     },
     {
@@ -767,7 +767,7 @@ export const PELICULAS: Pelicula[] = [
         image: "la-bola-negra.jpg",
         nombre: "La bola negra",
         descripcion: "Las vidas interconectadas de tres hombres en tres épocas distintas. Tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia, y por una de las últimas obras, inacabada, de Federico García Lorca.",
-        edadRedomendada: "No recomendada para menores de 16 años",
+        edadRedomendada: "No recomendada menores 16 años",
         videoUrl: "https://www.youtube.com/embed/9NNU-vSeOB0"
     }
 
