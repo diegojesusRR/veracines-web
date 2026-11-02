@@ -192,8 +192,10 @@ Los carteles y logos se guardan en el bucket público `Veracines Storage` (nombr
 
 `src/lib/imagenes.ts` (`posterUrl` y `logoUrl`) construye las URLs:
 - Si el valor ya es una URL `http(s)`, la usa tal cual.
-- Si Supabase está configurado, apunta a Storage.
+- Si Supabase está configurado, apunta a `/imagenes/<carpeta>/<fichero>` en el propio dominio (p. ej. `https://veracines.es/imagenes/peliculas/godzilla-minus-zero.jpg`).
 - Si no, apunta a `public/img/`.
+
+`src/pages/imagenes/[...ruta].ts` sirve esas URLs: pide la imagen al bucket y la devuelve con caché de 1 hora en el navegador y de 1 día en la CDN de Netlify. Si reemplazas un cartel sin cambiarle el nombre, el cambio puede tardar hasta un día en verse; con un nombre nuevo se ve al momento. Solo acepta ficheros de imagen de las carpetas `peliculas/` y `colaboraciones/`. No se puede hacer con una regla de proxy en `_redirects`, porque la función SSR de Netlify (`path: '/*'`) va por delante de esas reglas.
 
 Los ficheros de `public/img/peliculas` se mantienen como reserva para cuando no hay Supabase.
 
