@@ -1,6 +1,30 @@
 # Modelo de datos
 
-Los datos son módulos TypeScript estáticos. Cambiar la cartelera = editar `src/consts/` y volver a desplegar.
+Los componentes piden los datos a `src/data/cartelera.ts`, que lee de una de estas dos fuentes:
+
+| Fuente | Cuándo | Cambiar la cartelera |
+| --- | --- | --- |
+| Supabase | `SUPABASE_URL` y `SUPABASE_ANON_KEY` definidas | Editar las tablas. No hace falta desplegar (caché de 60 s) |
+| `src/consts/` | Sin esas variables | Editar los `.ts` y desplegar |
+
+## Tablas de Supabase
+
+Ver `supabase/migrations/20261102000000_init.sql`.
+
+```
+cines (id = slug) ◄──┐
+                     ├── programaciones (id) ◄── sesiones (programacion_id, fecha, hora, vose)
+peliculas (id = slug) ◄┘
+```
+
+| Tabla → tipo | Diferencias de mapeo (`src/data/cartelera.ts`) |
+| --- | --- |
+| `cines` → `Cine` | `id` → `url`. `temporada_inicio` y `temporada_fin` (`MM-DD`) → `horario.fechaInicio` y `fechaFin` con el año en curso; si fin < inicio, el fin va al año siguiente. `maps_embed_key` → `localizacion.ubicacionKey`. `servicios` siempre `[]` |
+| `peliculas` → `Pelicula` | `imagen` → `image`, `edad_recomendada` → `edadRedomendada` |
+| `programaciones` → `GrupoProyeccion` | `id` → `grupo`. Columnas `entradas_*` → `entradas`, `colaboracion_*` → `colaboracion` |
+| `sesiones` → `Proyeccion` | `fecha` → `Date` local a las 23:59:59.999 (igual que `getProyecciones`). `vose: true` → `"VOSE"` |
+
+Con Supabase solo se traen sesiones desde hoy (`sesiones!inner` + `gte`). Por eso el problema de `ProyeccionesPelicula` descrito abajo solo ocurre con `src/consts`.
 
 ## Entidades
 
@@ -60,7 +84,7 @@ getProyecciones(fechaInicio, fechaFin, hora, vose?)
 | `proyeccionesCine` | **Última** sesión `>= now` y mismo cine | `proyeccionCard` vuelve a filtrar `>= now` |
 | `ProyeccionesPelicula` | **Primera** sesión `>= now`, mismo cine y misma película | Todas las del grupo |
 | `SEO/cartelera` | Alguna sesión `>= now` y mismo cine | `startDate` y `endDate` = primera y última futuras |
-| `RichResults` | (todas) | Un `ScreeningEvent` por grupo |
+| `RichResults` (sin uso) | (todas) | Un `ScreeningEvent` por grupo |
 
 ⚠️ El criterio de `ProyeccionesPelicula` no coincide con el resto. Un grupo que empezó ayer y acaba mañana sale en la cartelera y en el carrusel, pero **no** en la ficha de la película.
 

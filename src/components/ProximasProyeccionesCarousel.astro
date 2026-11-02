@@ -1,5 +1,6 @@
 ---
-import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
+import { getGruposProyeccion } from "@/data/cartelera"
+const GRUPOSPROYECCIONES = await getGruposProyeccion()
 
 const MESES = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 const DIASSEMANA = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];

@@ -1,6 +1,6 @@
 # Componentes
 
-Leyenda: 📜 = tiene `<script>` de cliente · 📦 = lee `src/consts` · ⚠️ = huérfano o roto
+Leyenda: 📜 = tiene `<script>` de cliente · 📦 = lee datos de `src/data/cartelera` · ⚠️ = huérfano o roto
 
 ## Shell (`layouts/` + `sections/`)
 
@@ -44,8 +44,8 @@ Leyenda: 📜 = tiene `<script>` de cliente · 📦 = lee `src/consts` · ⚠️
 
 | Componente | Dónde | Emite |
 | --- | --- | --- |
-| `SEO.astro` 📜 | `Layout` | Meta, Open Graph y Twitter; preload de las fuentes Jost y Atomic; incluye `RichResults` |
-| `RichResults.astro` 📜 📦 | `SEO` (todas las páginas) | JSON-LD con la `Organization` y un `ScreeningEvent` por grupo de proyecciones |
+| `SEO.astro` 📜 | `Layout` | Meta, Open Graph y Twitter; preload de las fuentes Jost y Atomic. `<RichResults />` está comentado |
+| `RichResults.astro` 📜 📦 ⚠️ | Nadie (comentado en `SEO`) | JSON-LD con la `Organization` y un `ScreeningEvent` por grupo de proyecciones |
 | `SEO/home.astro` 📜 📦 | Slot `head` de `index` | `MovieTheater` por cine (con `OpeningHoursSpecification`) + `Organization` |
 | `SEO/cartelera.astro` 📜 📦 | Slot `head` de `cartelera-[cine]` | `@graph` con el `MovieTheater` y sus `ScreeningEvent` futuros (`priceRange` fijo: 5–7 €) |
 

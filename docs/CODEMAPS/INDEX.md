@@ -12,19 +12,18 @@ Mapas del código de `veracines-web`, al día a 2026-11-02 (rama `feature/Djramo
 ## Resumen en 30 segundos
 
 - Astro 4 en **SSR** (`output: "server"`) sobre **Netlify**.
-- **Sin base de datos ni CMS**: cines, películas y sesiones son arrays TypeScript en `src/consts/`.
-- En cada request, los componentes filtran `GRUPOSPROYECCIONES` con `new Date()` para mostrar solo lo que queda por venir.
+- **Datos**: los componentes leen de `src/data/cartelera.ts`. Usa Supabase si está configurado y, si no, los arrays de `src/consts/`.
+- En cada request, los componentes filtran los grupos de proyección con `new Date()` para mostrar solo lo que queda por venir.
 - Hay 3 vistas de contenido: la home (carrusel de próximas), la cartelera de cada cine y la ficha de cada película.
-- El SEO se hace con JSON-LD en `components/SEO/*` y `RichResults.astro`, más el sitemap.
+- El SEO se hace con JSON-LD en `components/SEO/*`, más el sitemap. `RichResults.astro` existe pero está comentado en `SEO.astro`.
 
 ```
-            ┌──────────────── src/consts ────────────────┐
-            │  cines.ts ──► proyecciones.ts ◄── peliculas.ts
-            │                   │ GRUPOSPROYECCIONES      │
-            └───────────────────┼─────────────────────────┘
-                                ▼
+   Supabase (cines, peliculas, programaciones, sesiones)   src/consts (fallback)
+                         └──────────────┬──────────────────────┘
+                                        ▼
+                 src/data/cartelera.ts: getCines · getCine · getPelicula · getGruposProyeccion
+                                        ▼
  pages/index ──► ProximasProyeccionesCarousel, ubicaciones, Servicios, SEO/home
  pages/cartelera-[cine] ──► proyeccionesCine ──► proyeccionCard, SEO/cartelera
  pages/peliculas/[pelicula] ──► PeliculaCard ──► ProyeccionesPelicula (por cine)
- layouts/Layout ──► SEO ──► RichResults (JSON-LD de todas las sesiones)
 ```

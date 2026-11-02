@@ -50,11 +50,14 @@ La web queda en `http://localhost:4321`.
 | `yarn check` | `astro check` + `tsc --noEmit` |
 | `yarn lint` / `yarn lint:fix` | ESLint sobre `.astro`, `.ts`, `.js` y `.tsx` |
 | `yarn format` / `yarn format:check` | Prettier sobre `src/` |
+| `yarn db:seed` | Copia `src/consts/` a Supabase (necesita la service role key) |
 
 ### Variables de entorno
 
 | Variable | Uso |
 | --- | --- |
+| `SUPABASE_URL`, `SUPABASE_ANON_KEY` | Lectura de la base de datos. Sin ellas, la web usa `src/consts/` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Solo para `yarn db:seed`. No la pongas en Netlify |
 | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` | Las lee `auth.config.js`. No se usan en ninguna página |
 
 ## Estructura
@@ -65,9 +68,10 @@ src/
 ├── layouts/      Layout.astro: <head>, SEO, tema claro/oscuro, Cookiebot, Header y Footer
 ├── sections/     Bloques de página grandes: Hero, Footer, Error
 ├── components/   Componentes de UI, SEO (JSON-LD), iconos y toasts
-├── consts/       Los "datos" de la web: cines, películas, proyecciones, metadatos SEO
+├── data/         cartelera.ts: única puerta de acceso a cines, películas y sesiones
+├── consts/       Datos estáticos (fallback sin Supabase) y metadatos SEO
 ├── types/        Interfaces TypeScript (Cine, Pelicula, Proyeccion…)
-├── lib/          Utilidades de DOM ($, $$) y countdown
+├── lib/          Cliente de Supabase, utilidades de DOM ($, $$) y countdown
 ├── function/     Toasts (butterup) y restos de easter eggs
 └── utils/        seoConfig: URL base, SEO por defecto y manifest PWA
 public/
@@ -78,7 +82,12 @@ El mapa detallado de módulos, rutas y flujo de datos está en [`docs/CODEMAPS/`
 
 ## Cómo se gestiona la cartelera
 
-No hay CMS ni base de datos. **Toda la programación vive en TypeScript**, dentro de `src/consts/`, y cada cambio de cartelera es un commit y un despliegue.
+Los componentes leen los datos a través de `src/data/cartelera.ts`, que tiene dos fuentes:
+
+- **Supabase**, si están definidas `SUPABASE_URL` y `SUPABASE_ANON_KEY`. Ver [Base de datos (Supabase)](#base-de-datos-supabase).
+- **`src/consts/`**, si no lo están. Así funcionaba la web hasta ahora: cada cambio de cartelera es un commit y un despliegue.
+
+Los pasos de abajo describen la gestión con `src/consts/`. Con Supabase, lo mismo se hace en las tablas `peliculas`, `programaciones` y `sesiones` (el cartel sigue en `public/img/peliculas`).
 
 ### Añadir una película nueva
 
@@ -127,6 +136,41 @@ En `src/consts/proyecciones.ts`, añade un `GrupoProyeccion` al array del cine q
 2. Añade sus metadatos SEO en `src/consts/metadata.ts` con la clave `cartelera-<url>`.
 3. Añade su grupo de proyecciones en `proyecciones.ts` y mételo en `GRUPOSPROYECCIONES`.
 4. Añade el enlace en `Header.astro` (`pages`) y, si quieres, en `Hero.astro`.
+
+## Base de datos (Supabase)
+
+### Esquema
+
+`supabase/migrations/20261102000000_init.sql` crea cuatro tablas, con lectura pública por RLS y escritura solo con la service role:
+
+| Tabla | Equivale a | Clave |
+| --- | --- | --- |
+| `cines` | `Cine` | `id` = slug de URL (`vera`, `regio`) |
+| `peliculas` | `Pelicula` | `id` = slug de `/peliculas/<id>` |
+| `programaciones` | `GrupoProyeccion` | Película en un cine, con enlaces de entradas y colaboración |
+| `sesiones` | `Proyeccion` | `fecha` (`date`), `hora` (`'HH:MM'`) y `vose` |
+
+La temporada de cada cine se guarda sin año (`'MM-DD'`). Si el fin es anterior al inicio, cruza de año, como el Regio.
+
+### Puesta en marcha
+
+1. En el panel de Supabase, abre **SQL Editor** y ejecuta la migración. También puedes usar `supabase db push` con la CLI.
+2. Copia `.env.example` a `.env` y rellena `SUPABASE_URL`, `SUPABASE_ANON_KEY` y `SUPABASE_SERVICE_ROLE_KEY` (Project Settings → API).
+3. Carga los datos actuales:
+
+   ```bash
+   yarn db:seed
+   ```
+
+   Cines y películas se cargan con upsert, así que el script se puede repetir. Las programaciones solo se insertan si la tabla está vacía.
+4. En Netlify, añade solo `SUPABASE_URL` y `SUPABASE_ANON_KEY` y despliega.
+
+### Cómo se lee
+
+- `src/data/cartelera.ts` expone `getCines`, `getCine`, `getPelicula` y `getGruposProyeccion`, y devuelve los mismos tipos que `src/consts`.
+- Las sesiones se piden desde hoy en adelante.
+- Los resultados se cachean 60 s por instancia de la función SSR, porque varios componentes piden lo mismo en una página.
+- Si Supabase devuelve un error, la página falla: no vuelve a `src/consts`, para no enseñar una cartelera vieja.
 
 ## Despliegue
 

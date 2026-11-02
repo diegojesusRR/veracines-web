@@ -1,6 +1,7 @@
 ---
 import UbicacionCard from "./UbicacionCard.astro";
-import {CINES} from "../consts/cines";
+import { getCines } from "@/data/cartelera"
+const CINES = await getCines()
 
 const regio = CINES.find(cine => cine.url === 'regio');
 const vera   = CINES.find(cine => cine.url === 'vera');

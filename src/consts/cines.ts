@@ -47,6 +47,7 @@ export const CINES: Cine[] = [
         servicios: [],
         telefono: "+34660391365",
         ventaOnline: true,
+        urlVentaOnline: "https://kinetike.com:83/views/init.aspx?cine=REGIO",
         horario: {
             fechaInicio: `${new Date().getFullYear()}-10-01`,
             fechaFin: `${new Date().getFullYear()+1}-05-01`,

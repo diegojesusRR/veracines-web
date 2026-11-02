@@ -1,5 +1,6 @@
 ---
-import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
+import { getGruposProyeccion } from "@/data/cartelera"
+const GRUPOSPROYECCIONES = await getGruposProyeccion()
 import ProyeccionCard from "./proyeccionCard.astro";
 const {cine} = Astro.props;
 

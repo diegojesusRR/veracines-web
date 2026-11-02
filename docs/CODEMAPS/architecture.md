@@ -9,7 +9,8 @@
 │      ├─ pages/          rutas (file-based routing)          │
 │      ├─ layouts/Layout  shell HTML común                    │
 │      ├─ sections/ + components/   UI (.astro, sin framework)│
-│      └─ consts/         "base de datos" estática en TS      │
+│      ├─ data/cartelera  acceso a datos (Supabase o consts)  │
+│      └─ consts/         datos estáticos (fallback)          │
 ├─────────────────────────────────────────────────────────────┤
 │ Cliente: View Transitions, scripts <script> por componente, │
 │ tema dark (localStorage), Cookiebot, Service Worker (PWA)   │
@@ -21,9 +22,9 @@ No hay islas de React, Vue ni otro framework: todo son componentes `.astro`, y l
 ## Ciclo de una request
 
 1. Netlify recibe la request y la función SSR de Astro resuelve la ruta en `src/pages/`.
-2. La página lee `src/consts/*` (módulos ES ya evaluados; `GRUPOSPROYECCIONES` se calcula una vez por instancia de la función).
+2. La página y sus componentes piden los datos a `src/data/cartelera.ts` con `await`. Con Supabase, la primera petición consulta la base de datos y el resultado se cachea 60 s por instancia. Sin Supabase, devuelve los arrays de `src/consts/`.
 3. Los componentes filtran las sesiones con `new Date()` del servidor. **Toda la lógica de "próximas" depende de la hora del servidor**: los `Date` se crean en la zona horaria del runtime, no necesariamente en Europe/Madrid.
-4. `Layout.astro` monta `<head>` (`SEO.astro`, `RichResults.astro`, el slot `head` con JSON-LD propio de la página), `Header`, el contenido, `Footer`, `Toast` y `ButtonUp`.
+4. `Layout.astro` monta `<head>` (`SEO.astro`, el slot `head` con JSON-LD propio de la página), `Header`, el contenido, `Footer`, `Toast` y `ButtonUp`.
 5. En el cliente:
    - Un script inline aplica la clase `dark` antes del primer paint (`localStorage.theme` o `prefers-color-scheme`).
    - `astro:before-swap` conserva el tema entre navegaciones de View Transitions.
