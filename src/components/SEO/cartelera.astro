@@ -1,4 +1,5 @@
 ---
+import { posterUrl } from "@/lib/imagenes"
 import type { Cine } from "@/types/Cine.ts";
 import { getGruposProyeccion } from "@/data/cartelera"
 const GRUPOSPROYECCIONES = await getGruposProyeccion()
@@ -26,7 +27,7 @@ const movieEvents = gruposCine.map(g => {
         "@type": "ScreeningEvent",
         "name": g.pelicula.nombre,
         "url": `${BASE_URL}/peliculas/${g.pelicula.id}`,
-        "image": `${BASE_URL}/img/peliculas/${g.pelicula.image}`,
+        "image": posterUrl(g.pelicula.image, { absolute: true }),
         "startDate": proximas[0]?.fecha.toISOString(),
         "endDate": proximas[proximas.length - 1]?.fecha.toISOString(),
         "location": {
@@ -48,7 +49,7 @@ const movieEvents = gruposCine.map(g => {
             "@type": "Movie",
             "name": g.pelicula.nombre,
             "url": `${BASE_URL}/peliculas/${g.pelicula.id}`,
-            "image": `${BASE_URL}/img/peliculas/${g.pelicula.image}`,
+            "image": posterUrl(g.pelicula.image, { absolute: true }),
         }
     };
 });

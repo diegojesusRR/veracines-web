@@ -52,6 +52,7 @@ La web queda en `http://localhost:4321`.
 | `yarn format` / `yarn format:check` | Prettier sobre `src/` |
 | `yarn db:seed` | Copia `src/consts/` a Supabase por API (necesita la service role key) |
 | `yarn db:seed:sql` | Genera `supabase/seed.sql` desde `src/consts/`, para ejecutarlo sin claves |
+| `yarn storage:upload` | Sube `public/img/peliculas` y `public/img/colaboraciones` al bucket `Veracines Storage` (necesita la service role key) |
 
 ### Variables de entorno
 
@@ -177,6 +178,24 @@ La temporada de cada cine se guarda sin año (`'MM-DD'`). Si el fin es anterior 
 - Las sesiones se piden desde hoy en adelante.
 - Los resultados se cachean 60 s por instancia de la función SSR, porque varios componentes piden lo mismo en una página.
 - Si Supabase devuelve un error, la página falla: no vuelve a `src/consts`, para no enseñar una cartelera vieja.
+
+### Imágenes (Supabase Storage)
+
+Los carteles y logos se guardan en el bucket público `Veracines Storage` (nombre en `src/consts/storage.ts`; equivale a `supabase/migrations/20261102010000_storage.sql`). Admite JPEG, PNG, WebP y AVIF, de hasta 10 MB.
+
+| Carpeta del bucket | Columna | Valor |
+| --- | --- | --- |
+| `peliculas/` | `peliculas.imagen` | Nombre del fichero, p. ej. `mi-pelicula.jpg` |
+| `colaboraciones/` | `programaciones.colaboracion_logo` | Nombre del fichero, p. ej. `asprodalba.webp` |
+
+**Para añadir un cartel sin desplegar:** en Supabase, abre **Storage → Veracines Storage → peliculas** y sube el fichero. Después pon ese mismo nombre en `peliculas.imagen`.
+
+`src/lib/imagenes.ts` (`posterUrl` y `logoUrl`) construye las URLs:
+- Si el valor ya es una URL `http(s)`, la usa tal cual.
+- Si Supabase está configurado, apunta a Storage.
+- Si no, apunta a `public/img/`.
+
+Los ficheros de `public/img/peliculas` se mantienen como reserva para cuando no hay Supabase.
 
 ## Despliegue
 
