@@ -4,7 +4,8 @@ import Popcorn from '../components/icons/popcorn.astro';
 import Icecream from '../components/icons/icecream.astro';
 import Parking from '../components/icons/parking.astro';
 import Projector from '../components/icons/projector.astro';
-import {CINES} from "../consts/cines";
+import { getCines } from "@/data/cartelera"
+const CINES = await getCines()
 import Servicio from "./Servicio.astro";
 import Climatizacion from "./icons/climatizacion.astro";
 

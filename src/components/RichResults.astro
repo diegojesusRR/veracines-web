@@ -1,6 +1,8 @@
 ---
-import {CINES} from "../consts/cines";
-import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
+import { getCines } from "@/data/cartelera"
+const CINES = await getCines()
+import { getGruposProyeccion } from "@/data/cartelera"
+const GRUPOSPROYECCIONES = await getGruposProyeccion()
 
 /** https://developers.google.com/search/docs/appearance/structured-data/organization */
 const organizationSchema = {

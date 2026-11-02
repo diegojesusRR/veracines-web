@@ -1,10 +1,10 @@
 ---
 
 import Layout from "@/layouts/Layout.astro"
-import {PELICULAS} from "@/consts/peliculas";
+import {getPelicula} from "@/data/cartelera";
 import PeliculaCard from "../../components/PeliculaCard.astro";
 
-const pelicula = PELICULAS.find(pelicula => pelicula.id === Astro.params.pelicula);
+const pelicula = await getPelicula(Astro.params.pelicula ?? "");
 
 if (!pelicula) {
     return new Response(JSON.stringify("Pelicula Not found"), { status: 404 })

@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+
+# Build y salida generada
+dist/
+.astro/
+.netlify/
+.vercel/
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editores y SO
+.idea/
+.vscode/
+.DS_Store

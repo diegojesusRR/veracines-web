@@ -1,6 +1,7 @@
 ---
 import type { Cine } from "@/types/Cine.ts";
-import { GRUPOSPROYECCIONES } from "@/consts/proyecciones";
+import { getGruposProyeccion } from "@/data/cartelera"
+const GRUPOSPROYECCIONES = await getGruposProyeccion()
 
 interface Props {
     cine: Cine;
