@@ -1,5 +1,6 @@
 ---
-import {GRUPOSPROYECCIONES} from "../consts/proyecciones";
+import { getGruposProyeccion } from "@/data/cartelera"
+const GRUPOSPROYECCIONES = await getGruposProyeccion()
 import type {GrupoProyeccion} from "../types/Proyeccion";
 
 const { pelicula, cine } = Astro.props;

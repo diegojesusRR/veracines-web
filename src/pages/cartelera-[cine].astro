@@ -1,13 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 
-import { CINES } from "../consts/cines";
+import { getCine } from "@/data/cartelera";
 import { Metadata } from "../consts/metadata";
 import ProyeccionesCine from "../components/proyeccionesCine.astro";
 import CartelleraSEO from "../components/SEO/cartelera.astro";
 import Action from "@/components/Action.astro";
 
-const cine = CINES.find(cine => cine.url === Astro.params.cine);
+const cine = await getCine(Astro.params.cine ?? "");
 
 if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 404 });
 ---
@@ -39,7 +39,7 @@ if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 4
                 Próximas películas en {cine.nombre}. Consulta nuestra programación.
             </h2>
 
-            {cine.ventaOnline ? (
+            {cine.ventaOnline && cine.urlVentaOnline ? (
                 <div class="flex flex-col sm:flex-row items-center gap-3 rounded-2xl border border-green-200 bg-green-50 px-5 py-4 mb-4">
                     <div class="flex items-center gap-3 flex-1">
                         <span class="text-2xl">🎟️</span>
@@ -53,7 +53,7 @@ if (!cine) return new Response(JSON.stringify("Cine no encontrado"), { status: 4
                         class="shrink-0 w-full sm:w-auto text-center"
                         aria-label={`Comprar entradas online para ${cine.nombre}`}
                         color={cine.color}
-                        href="https://kinetike.com:83/views/init.aspx?cine=REGIO"
+                        href={cine.urlVentaOnline}
                         target="_blank"
                         rel="noopener noreferrer"
                     >

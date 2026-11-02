@@ -20,6 +20,7 @@ export interface Cine {
     telefono: string,
     horaFijaProyeccion?: string,
     ventaOnline: boolean
+    urlVentaOnline?: string
     horario: {
         fechaInicio: string,
         fechaFin: string,

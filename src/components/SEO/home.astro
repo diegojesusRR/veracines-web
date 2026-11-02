@@ -1,5 +1,6 @@
 ---
-import {CINES} from "@/consts/cines";
+import { getCines } from "@/data/cartelera"
+const CINES = await getCines()
 
 // TODO: Falta foto del cine
 const schemaOrg = CINES.map(cine => ({
