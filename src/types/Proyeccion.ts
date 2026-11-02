@@ -9,7 +9,7 @@ export interface Proyeccion {
 
 export interface Colaboracion {
     nombre: string
-    /** Ruta relativa a /public, ej: /img/colaboraciones/aspordalba.webp */
+    /** Fichero en Storage (imagenes/colaboraciones), ej: asprodalba.webp. Si empieza por "/", ruta en /public */
     logo?: string
 }
 

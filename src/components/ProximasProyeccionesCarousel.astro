@@ -1,4 +1,5 @@
 ---
+import { posterUrl, logoUrl } from "@/lib/imagenes"
 import { getGruposProyeccion } from "@/data/cartelera"
 const GRUPOSPROYECCIONES = await getGruposProyeccion()
 
@@ -75,7 +76,7 @@ const grupos = GRUPOSPROYECCIONES
                             <!-- MOBILE: imagen de fondo + info superpuesta -->
                             <div class="relative sm:hidden aspect-[2/3]">
                                 <img
-                                        src={`/img/peliculas/${pelicula.image}`}
+                                        src={posterUrl(pelicula.image)}
                                         alt={`Cartel de ${pelicula.nombre}`}
                                         class="absolute inset-0 w-full h-full object-cover object-top"
                                         loading={i === 0 ? 'eager' : 'lazy'}
@@ -94,7 +95,7 @@ const grupos = GRUPOSPROYECCIONES
                                     <div class="flex flex-col leading-tight">
                                         <span class="text-[9px] text-white/70 font-semibold uppercase tracking-wider">Colabora con:</span>
                                         {colaboracion.logo ? (
-                                            <img src={colaboracion.logo} alt={colaboracion.nombre} class="h-3.5 w-auto object-contain brightness-150 mt-0.5" loading="lazy" decoding="async" />
+                                            <img src={logoUrl(colaboracion.logo)} alt={colaboracion.nombre} class="h-3.5 w-auto object-contain brightness-150 mt-0.5" loading="lazy" decoding="async" />
                                         ) : (
                                             <span class="text-white text-[11px] font-bold">{colaboracion.nombre}</span>
                                         )}
@@ -119,7 +120,7 @@ const grupos = GRUPOSPROYECCIONES
                             <!-- DESKTOP: info izquierda + póster derecha -->
                             <div class="hidden sm:flex relative h-[320px] overflow-hidden w-full max-w-full rounded-2xl">
                                 <img
-                                        src={`/img/peliculas/${pelicula.image}`}
+                                        src={posterUrl(pelicula.image)}
                                         alt="" aria-hidden="true"
                                         class="absolute inset-0 w-full h-full object-cover scale-110 blur-lg brightness-[0.25]"
                                         loading={i === 0 ? 'eager' : 'lazy'}
@@ -138,7 +139,7 @@ const grupos = GRUPOSPROYECCIONES
                                                     <div class="flex flex-col leading-tight">
                                                         <p class="text-[9px] font-semibold uppercase tracking-widest text-white/40">Colabora con:</p>
                                                         {colaboracion.logo ? (
-                                                            <img src={colaboracion.logo} alt={colaboracion.nombre} class="h-4 w-auto object-contain brightness-150 mt-0.5" loading="lazy" decoding="async" />
+                                                            <img src={logoUrl(colaboracion.logo)} alt={colaboracion.nombre} class="h-4 w-auto object-contain brightness-150 mt-0.5" loading="lazy" decoding="async" />
                                                         ) : (
                                                             <p class="text-xs font-bold text-white/80">{colaboracion.nombre}</p>
                                                         )}
@@ -164,7 +165,7 @@ const grupos = GRUPOSPROYECCIONES
                                     <!-- Póster derecha -->
                                     <div class="shrink-0 w-44">
                                         <img
-                                                src={`/img/peliculas/${pelicula.image}`}
+                                                src={posterUrl(pelicula.image)}
                                                 alt={`Cartel de ${pelicula.nombre}`}
                                                 class="w-full rounded-xl border-4 border-white/30 shadow-2xl object-cover"
                                                 loading={i === 0 ? 'eager' : 'lazy'}
