@@ -20,7 +20,7 @@ La web muestra las próximas proyecciones, la ficha de cada película con su tr�
 | Cookies | Cookiebot (cargado en `Layout.astro`) |
 | Calidad | ESLint (`@antfu/eslint-config` y `eslint-plugin-astro`), Prettier y Husky |
 
-Hay dependencias configuradas que hoy no se usan: `auth-astro` con el proveedor Twitch, `@astrojs/db` y `@astrojs/vercel`. Ver [Deuda técnica](#deuda-técnica).
+Hay dependencias configuradas que hoy no se usan: `auth-astro` con el proveedor Twitch y `@astrojs/vercel`. Ver [Deuda técnica](#deuda-técnica).
 
 ## Puesta en marcha
 
@@ -45,7 +45,7 @@ La web queda en `http://localhost:4321`.
 | Script | Qué hace |
 | --- | --- |
 | `yarn dev` / `yarn start` | Servidor de desarrollo |
-| `yarn build` | `astro build --remote` (el flag `--remote` viene de Astro DB) |
+| `yarn build` | `astro build` |
 | `yarn preview` | Sirve el build local |
 | `yarn check` | `astro check` + `tsc --noEmit` |
 | `yarn lint` / `yarn lint:fix` | ESLint sobre `.astro`, `.ts`, `.js` y `.tsx` |
@@ -55,7 +55,6 @@ La web queda en `http://localhost:4321`.
 
 | Variable | Uso |
 | --- | --- |
-| `ASTRO_DB_APP_TOKEN` | Token de Astro DB (lo exige `build --remote`) |
 | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` | Las lee `auth.config.js`. No se usan en ninguna página |
 
 ## Estructura
@@ -137,11 +136,10 @@ El adaptador activo es **Netlify** (`astro.config.ts`), con salida SSR y edge mi
 
 Lo detectado al analizar el proyecto (noviembre de 2026):
 
-- **`.env` está versionado** y contiene `ASTRO_DB_APP_TOKEN`. Rota el token, añade un `.gitignore` y saca `.env` del repo.
-- **Falta `.gitignore`**: están versionados `node_modules/` (unos 40k ficheros), `dist/`, `.vercel/`, `.astro/`, `.netlify/`, `.idea/` y `.DS_Store`.
+- **Token antiguo en el historial de git**: commits anteriores incluyen un `.env` con `ASTRO_DB_APP_TOKEN` (de Astro Studio). El proyecto ya no usa Astro DB y `.env` ya no se versiona, pero ese valor sigue en el historial.
 - **`sections/Error.astro` importa `@/components/HeroLogo.astro`, que no existe**, y la usa `pages/404.astro`. `sections/Info.astro` importa `TwitchLogo.astro`, que tampoco existe, aunque `Info` no se usa.
 - **Restos del proyecto base** ([la-velada-web-oficial](https://github.com/midudev/la-velada-web-oficial)): los tipos `Boxer`, `Combat`, `Forecast` y `Sponsors`, `function/miduCode.ts`, `function/konami.ts`, `lib/countdown.ts`, `components/DrawnXLogo.astro`, imágenes de `public/img` (`lvda.webp`, `flags/`, `sponsors/`…) y la configuración de Auth con Twitch.
-- **Adaptadores mezclados**: se usa Netlify, pero siguen `vercel.json` (Node 18), `@astrojs/vercel` y `@vercel/analytics`. Además, el `globDirectory` de Workbox apunta a `.vercel/output/static`, así que en Netlify es probable que el precache del service worker quede vacío.
+- **Adaptadores mezclados**: se usa Netlify, pero siguen `vercel.json` (Node 18), `@astrojs/vercel` y `@vercel/analytics`. Además, el `globDirectory` de Workbox apunta a `.vercel/output/static`: en local precachea una salida antigua de Vercel, y en un build limpio (CI de Netlify) el precache queda vacío.
 - **Metadatos duplicados**: `consts/metadata.ts` (el que usan las páginas) y `utils/seoConfig.ts` tienen títulos distintos. Los `canonical` de `consts/metadata.ts` no llevan `https://`, y el de las películas usa `veracines.com` en vez de `veracines.es`.
 - **Filtros de "próximas" inconsistentes**: `ProyeccionesPelicula.astro` decide con la *primera* fecha del grupo (`proyecciones[0].fecha >= now`). Así, un grupo que ya empezó no sale en la ficha de la película aunque le queden sesiones. `proyeccionesCine.astro` decide con la *última* fecha.
 - **Duplicados sin uso**: `components/Ubicacion/UbicacionCard.astro` (se usa `components/UbicacionCard.astro`), `SectionTitle.astro` y `sections/Info.astro`.

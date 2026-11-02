@@ -52,6 +52,6 @@ Variables en `:root` y `html.dark`, en `Layout.astro`:
 
 ## Build y salida
 
-- `yarn build` ejecuta `astro build --remote` (el flag de Astro DB pide `ASTRO_DB_APP_TOKEN`; `db/` está vacío).
+- `yarn build` ejecuta `astro build`. No necesita variables de entorno.
 - `dist/` incluye `sw.js`, `workbox-*.js`, `registerSW.js` y `sitemap-*.xml`.
 - `public/` se copia tal cual: imágenes, `robots.txt`, `manifest.webmanifest`, la verificación de Google y `add-to-calendar.{js,css}`.
