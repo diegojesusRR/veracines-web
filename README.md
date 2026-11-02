@@ -24,7 +24,7 @@ Hay dependencias configuradas que hoy no se usan: `auth-astro` con el proveedor 
 
 ## Puesta en marcha
 
-Requisitos: Node 20 (`.nvmrc`) y Yarn.
+Requisitos: Node 22 (`.nvmrc`; `@supabase/supabase-js` lo exige) y Yarn.
 
 ```bash
 nvm use
