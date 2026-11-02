@@ -1,4 +1,5 @@
 ---
+import { posterUrl } from "@/lib/imagenes"
 import { getCines } from "@/data/cartelera"
 const CINES = await getCines()
 import { getGruposProyeccion } from "@/data/cartelera"
@@ -49,12 +50,12 @@ const eventsSchema = gruposProyeccionesProximas.map(grupoProyeccion => {
                 "addressCountry": "ES",
             },
         },
-        "image": [`https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`],
+        "image": [posterUrl(grupoProyeccion.pelicula.image, { absolute: true })],
         "description": grupoProyeccion.pelicula.descripcion,
         "workPresented": {
             "@type": "Movie",
             "name": grupoProyeccion.pelicula.nombre,
-            "image": `https://www.veracines.es/img/peliculas/${grupoProyeccion.pelicula.image}`,
+            "image": posterUrl(grupoProyeccion.pelicula.image, { absolute: true }),
             "description": grupoProyeccion.pelicula.descripcion,
         },
     })).flat(1)

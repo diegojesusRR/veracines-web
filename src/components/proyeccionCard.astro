@@ -1,4 +1,5 @@
 ---
+import { posterUrl, logoUrl } from "@/lib/imagenes"
 import Action from "./Action.astro";
 import type {Colaboracion, Proyeccion} from "../types/Proyeccion";
 
@@ -46,7 +47,7 @@ const tieneProyecciones = proyeccionesFuturas.length > 0;
          style={`--cine-color: var(--color-${cine.color})`}>
     <a href={`/peliculas/${pelicula.id}`} class="relative min-h-[240px] overflow-hidden block group cursor-pointer">
         <img
-                src={`/img/peliculas/${pelicula.image}`}
+                src={posterUrl(pelicula.image)}
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
@@ -68,7 +69,7 @@ const tieneProyecciones = proyeccionesFuturas.length > 0;
                             </div>
                             {colaboracion.logo ? (
                                     <img
-                                            src={colaboracion.logo}
+                                            src={logoUrl(colaboracion.logo)}
                                             alt={colaboracion.nombre}
                                             class="h-6 w-auto object-contain dark:brightness-150"
                                             loading="lazy"
@@ -95,7 +96,7 @@ const tieneProyecciones = proyeccionesFuturas.length > 0;
             <div class="self-stretch">
                 <img
                         class="h-full w-full rounded-xl border-4 border-white/30 shadow-2xl object-cover"
-                        src={`/img/peliculas/${pelicula.image}`}
+                        src={posterUrl(pelicula.image)}
                         alt={`Cartel de ${pelicula.nombre}`}
                         loading="lazy"
                         decoding="async"
